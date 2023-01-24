@@ -11,7 +11,6 @@ import Swal from "sweetalert2";
 import ENDPOINT from "../config/ENDPOINT";
 import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
-import emailjs from "@emailjs/browser";
 
 export const Header = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);

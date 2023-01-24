@@ -20,6 +20,7 @@ import { Cta } from "../components/Cta";
 import questioncheck from "../assests/comments-question-check 1.svg";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Faqs } from "../components/Faqs";
 
 // import { Container } from "react-bootstrap";
 // import { OutlineBtn } from "../components/Btn";
@@ -413,6 +414,8 @@ export const Website = () => {
           <OutlineBtn title="Get Started" />
         </div>
       </Cta>
+
+      <Faqs catId={2}/>
     </>
   );
 };

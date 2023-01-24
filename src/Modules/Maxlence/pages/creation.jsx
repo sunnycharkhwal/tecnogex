@@ -24,15 +24,9 @@ export function Creation() {
       <div>Services</div>
       {queCat.map((cat) => {
         return (
-          <>
-            <a key={cat.id} onClick={()=> handleClick(cat.que_cat_id, cat.name)}>{cat.name}</a> <br />
-            {/* <br />
-            <a href="/mobile">Mobile App</a>
-            <br />
-            <a href="/saas">SaaS</a>
-            <br />
-            <a href="/webhost">Hosting, Maintenance & Support</a> */}
-          </>
+          <div key={cat.id}>
+            <a onClick={()=> handleClick(cat.id, cat.name)}>{cat.name}</a> <br />
+          </div>
         );
       })}
     </div>

@@ -1183,7 +1183,7 @@ export const Home = () => {
         }
       />
 
-      <Faqs />
+      <Faqs catId={1} />
     </>
   );
 };

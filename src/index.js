@@ -18,6 +18,7 @@ import { Jobform } from "../src/Modules/Maxlence/pages/jobform";
 import { Businessone } from "./Modules/Maxlence/pages/business1";
 import { Website } from "./Modules/Maxlence/pages/website";
 import Quest from "./Modules/Maxlence/pages/quest";
+import QuesPlan from "./Modules/Maxlence/pages/quesPlan";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,6 +30,7 @@ root.render(
         <Route path="/creation" element={<Creation />} />
         <Route path="/:name/:id" element={<Website />} />
         <Route path="/quest/:id" element={<Quest />} />
+        <Route path="/quest" element={<QuesPlan />} />
         <Route path="/growth" element={<Growth />} />
         <Route path="/design" element={<Design />} />
         <Route path="/shop" element={<Shop />} />
