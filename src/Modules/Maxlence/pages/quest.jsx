@@ -4,12 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import ENDPOINT from "../config/ENDPOINT";
 import "../../../styles/style.scss";
+import { useDispatch } from "react-redux";
+import { setShowLoginModal } from "../redux/modalStateSlice";
 
 export default function Quest() {
   const [questionare, setQuestionare] = useState([]);
   const [selectedIdx, setSelectedIdx] = useState(0);
+  const dispatch = useDispatch();
+
   let { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const fetchQuestionare = async () => {
     let res = await fetch(ENDPOINT + `questionare/${id}`);
@@ -56,15 +60,24 @@ export default function Quest() {
   };
 
   const submitData = () => {
-    try {
-      axios.post(ENDPOINT + "quest", { questionare }).then((res) => {
-        if (res.status === 200) {
-          // console.log("Posted successfully");
-          navigate("/quest")
-        } else console.log("Error while posting");
-      });
-    } catch (err) {
-      console.log(err);
+    let token = localStorage.getItem("token");
+    if (!token) dispatch(setShowLoginModal());
+    else {
+      try {
+        axios
+          .post(
+            ENDPOINT + "quest",
+            { questionare },
+            { headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") } }
+          )
+          .then((res) => {
+            if (res.status === 200) {
+              navigate(`/buyplans/${id}`);
+            } else console.log("Error while posting");
+          });
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 

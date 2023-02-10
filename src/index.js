@@ -19,10 +19,14 @@ import { Businessone } from "./Modules/Maxlence/pages/business1";
 import { Website } from "./Modules/Maxlence/pages/website";
 import Quest from "./Modules/Maxlence/pages/quest";
 import QuesPlan from "./Modules/Maxlence/pages/quesPlan";
+import Package from "./Modules/Maxlence/pages/package";
+import store from "./Modules/Maxlence/redux/store"
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Provider store={store} >
     <Router>
       <Header />
       <Routes>
@@ -30,7 +34,8 @@ root.render(
         <Route path="/creation" element={<Creation />} />
         <Route path="/:name/:id" element={<Website />} />
         <Route path="/quest/:id" element={<Quest />} />
-        <Route path="/quest" element={<QuesPlan />} />
+        <Route path="/buyplans/:id" element={<QuesPlan />} />
+        <Route path="/package/:id" element={<Package />} />
         <Route path="/growth" element={<Growth />} />
         <Route path="/design" element={<Design />} />
         <Route path="/shop" element={<Shop />} />
@@ -41,5 +46,6 @@ root.render(
       </Routes>
       <Footer />
     </Router>
+    </Provider>
   </React.StrictMode>
 );

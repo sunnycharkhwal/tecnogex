@@ -11,11 +11,19 @@ import Swal from "sweetalert2";
 import ENDPOINT from "../config/ENDPOINT";
 import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
+import { useDispatch, useSelector } from "react-redux";
+import { setShowLoginModal } from "../redux/modalStateSlice"
+import { setShowSignUpModal } from "../redux/modalStateSlice"
+import { setShowMenuModal } from "../redux/modalStateSlice"
 
 export const Header = () => {
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showSignUpModal, setShowSignUpModal] = useState(false);
-  const [showMenuModal, setShowMenuModal] = useState(false);
+  // const [showLoginModal, setShowLoginModal] = useState(false);
+  // const [showSignUpModal, setShowSignUpModal] = useState(false);
+  // const [showMenuModal, setShowMenuModal] = useState(false);
+  const showLoginModal = useSelector((state) => state.state.showLoginModal)
+  const showSignUpModal = useSelector((state) => state.state.showSignUpModal)
+  const showMenuModal = useSelector((state) => state.state.showMenuModal)
+  const dispatch = useDispatch()
 
   ////////////////////// Sign Up Modal //////////////////////////////
 
@@ -68,7 +76,7 @@ export const Header = () => {
                 timer: 1500,
               });
               // sendMail()
-              setShowLoginModal(true)
+              dispatch(setShowLoginModal())
             }
           })
           .catch((err) => {
@@ -114,9 +122,10 @@ export const Header = () => {
           <AccountMenu />
         ) : (
           <OutlineBtn
-            title="Sign up"
+            title="Log In"
             icon=""
-            onClick={() => setShowLoginModal(true)}
+            // onClick={() => setShowLoginModal(true)}
+            onClick={() => dispatch(setShowLoginModal())}
           />
         )}
 
@@ -124,13 +133,13 @@ export const Header = () => {
           animation={true}
           className="signupmodal fullwidthmodal"
           show={showSignUpModal}
-          onHide={() => setShowSignUpModal(false)}
+          onHide={() => dispatch(setShowSignUpModal())}
         >
           <Modal.Header closeButton>
             <Link
               to="/home"
               onClick={() => {
-                setShowSignUpModal(false);
+                dispatch(setShowSignUpModal())
               }}
             >
               <div className=" ">
@@ -211,8 +220,8 @@ export const Header = () => {
                             Already have an account ? &nbsp;
                             <span
                               onClick={() => {
-                                setShowSignUpModal(false);
-                                setShowLoginModal(true);
+                                dispatch(setShowSignUpModal())
+                                dispatch(setShowLoginModal())
                               }}
                             >
                               Login
@@ -297,7 +306,7 @@ export const Header = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              setShowLoginModal(false);
+              dispatch(setShowLoginModal())
               localStorage.setItem("token", JSON.stringify(res.data.token));
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
@@ -354,7 +363,7 @@ export const Header = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            localStorage.setItem("token", JSON.stringify(token));
+            localStorage.setItem("token", JSON.stringify(data.token));
             localStorage.setItem("user", JSON.stringify(data.user));
             window.location.reload();
           });
@@ -388,7 +397,7 @@ export const Header = () => {
         <Modal
           className="loginmodal fullwidthmodal"
           show={showLoginModal}
-          onHide={() => setShowLoginModal(false)}
+          onHide={() => dispatch(setShowLoginModal())}
         >
           <Modal.Header closeButton>
             <Link to="/home">
@@ -450,8 +459,8 @@ export const Header = () => {
                               Don't have an account ? &nbsp;
                               <span
                                 onClick={() => {
-                                  setShowLoginModal(false);
-                                  setShowSignUpModal(true);
+                                  dispatch(setShowLoginModal())
+                                  dispatch(setShowSignUpModal())
                                 }}
                               >
                                 Sign Up
@@ -494,12 +503,12 @@ export const Header = () => {
         <HiOutlineMenuAlt2
           className="mx-2"
           style={{ width: "2rem" }}
-          onClick={() => setShowMenuModal(true)}
+          onClick={() => dispatch(setShowMenuModal())}
         />
         <Modal
           className="menumodal fullwidthmodal"
           show={showMenuModal}
-          onHide={() => setShowMenuModal(false)}
+          onHide={() => dispatch(setShowMenuModal())}
         >
           <Modal.Header closeButton className="border-0"></Modal.Header>
           <Modal.Body className="p-0">

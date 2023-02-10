@@ -27,12 +27,8 @@ import { Faqs } from "../components/Faqs";
 // import { TextAreaBox } from "../components/form";
 
 export const Website = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   let { id } = useParams();
-
-  const handleClick = () => {
-    navigate(`/quest/${id}`)
-  }
 
   return (
     // <Getintouch />
@@ -57,7 +53,10 @@ export const Website = () => {
                     text This is a Dummy text
                   </p>
                   <div className="col-md-4 col-7">
-                    <BlueBtn onClick={handleClick} title="Get Started" />
+                    <BlueBtn
+                      onClick={() => navigate(`/quest/${id}`)}
+                      title="Get Started"
+                    />
                   </div>
                 </div>
                 <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -88,7 +87,8 @@ export const Website = () => {
 
       <div
         className="container-fluid py-3 crtwebsec1"
-        style={{ backgroundColor: "#E2F0FF" }}>
+        style={{ backgroundColor: "#E2F0FF" }}
+      >
         <div className="container">
           <div className="row py-3">
             <div className="col-md-6">
@@ -367,7 +367,8 @@ export const Website = () => {
 
       <div
         className="container-fluid py-3 latestprojects "
-        style={{ backgroundColor: "#FFD429F2" }}>
+        style={{ backgroundColor: "#FFD429F2" }}
+      >
         <div className="latestprojecttitle text-center">
           <h1 className="font-weight-bold my-sm-5 my-2">
             Our{" "}
@@ -409,13 +410,14 @@ export const Website = () => {
         bgcolor="greygradient"
         ctaheading="We’d love to be your partner"
         btntype="out_line_btn"
-        btntext="Get In Touch">
+        btntext="Get In Touch"
+      >
         <div className="mt-3">
           <OutlineBtn title="Get Started" />
         </div>
       </Cta>
 
-      <Faqs catId={2}/>
+      <Faqs catId={2} />
     </>
   );
 };

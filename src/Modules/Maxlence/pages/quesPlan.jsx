@@ -1,7 +1,11 @@
 import React from "react";
 import logo from "../../Maxlence/assests/maxlogodark.png";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function QuesPlan() {
+  const navigate = useNavigate()
+  let { id } = useParams();
+
   return (
     <div className="text-center my-5">
       <div class="text-center my-5">
@@ -14,7 +18,7 @@ export default function QuesPlan() {
           on the way to your <span> solution</span>
           <sup>
             <small>
-              <a href="#">Buy Plans</a>
+              <a onClick={()=> navigate(`/package/${id}`)}>Buy Plans</a>
             </small>
           </sup>
         </h3>
