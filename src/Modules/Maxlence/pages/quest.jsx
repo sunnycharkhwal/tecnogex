@@ -72,7 +72,7 @@ export default function Quest() {
           )
           .then((res) => {
             if (res.status === 200) {
-              navigate(`/buyplans/${id}`);
+              navigate(`/package/${id}`);
             } else console.log("Error while posting");
           });
       } catch (err) {

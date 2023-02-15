@@ -7,13 +7,17 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 export default function Cart({ pack_id, setShowCart }) {
   const [addedPackage, setAddedPackage] = useState([]);
   const [packagePlans, setPackagePlans] = useState([]);
-  const [price, setPrice] = useState(0);
+  const [pack, setPack] = useState({});
 
   const handleCreateOrder = async (data) => {
     try {
-      const res = await axios.post(ENDPOINT + "order", data);
+      let token = localStorage.getItem("token");
+
+      const res = await axios.post(ENDPOINT + "subscription", data, {
+        headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") },
+      });
       if (res.status === 200) {
-        alert("Order created successfully")
+        alert("Order created successfully");
       }
     } catch (err) {
       console.log(err);
@@ -31,6 +35,62 @@ export default function Cart({ pack_id, setShowCart }) {
   useEffect(() => {
     fetchPackage();
   }, [pack_id]);
+
+  function loadScript(src) {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  }
+
+  async function displayRazorpay() {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+
+    if (!res) {
+      alert("Razorpay SDK failed to load. Are you online?");
+      return;
+    }
+
+    let token = localStorage.getItem("token");
+    const {data} = await axios.post(
+      "http://localhost:5000/subscription/order",
+      {
+        package_plan_id: pack.id,
+      },
+      {
+        headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") },
+      }
+    );
+    
+    const options = {
+      key: data.key,
+      name: "Maxlence Digital Pvt Ltd",
+      description: "Test Transaction",
+      // image: { logo },
+      order_id: data.order_id,
+      handler: async function (response) {
+        alert("Payment successfull! Your razorpay order id is: " + response.razorpay_order_id);
+      },
+      prefill: {
+        name: "Test user",
+      },
+      theme: {
+        color: "#61dafb",
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  }
 
   return (
     <div
@@ -139,10 +199,16 @@ export default function Cart({ pack_id, setShowCart }) {
       Total: {selected} */}
       <div>
         <label htmlFor="plan">Select Plan: &nbsp;</label>
-        <select onChange={(e) => setPrice(e.target.value)}>
+        <select
+          onChange={(e) => {
+            let pack_id = e.target.value;
+            let pack = packagePlans.find((p) => p.id == pack_id);
+            setPack(pack);
+          }}
+        >
           {packagePlans.map((pack) => {
             return (
-              <option key={pack.id} value={pack.price}>
+              <option key={pack.id} value={pack.id}>
                 {pack.price}/{pack.title}
               </option>
             );
@@ -150,10 +216,10 @@ export default function Cart({ pack_id, setShowCart }) {
         </select>
         <br />
         <br />
-        Total Price : {price} &nbsp;
+        Total Price : {pack.price} &nbsp;
         <button
-          disabled={price === 0}
-          onClick={() => alert(`Your order of ${price} is successfull`)}
+          disabled={pack.price === 0}
+          onClick={() => alert(`Your order of ${pack.price} is successfull`)}
         >
           Buy Plan
         </button>
@@ -208,34 +274,34 @@ export default function Cart({ pack_id, setShowCart }) {
           <PayPalButtons
             style={{ layout: "horizontal" }}
             disabled={false}
-            forceReRender={[price]}
+            forceReRender={[pack]}
             createOrder={(data, actions) => {
-              return actions.order
-                .create({
-                  purchase_units: [
-                    {
-                      amount: {
-                        value: price,
-                      },
+              return actions.order.create({
+                purchase_units: [
+                  {
+                    amount: {
+                      value: pack.price,
                     },
-                  ],
-                })
+                  },
+                ],
+              });
             }}
             onApprove={(data, actions) => {
               return actions.order.capture().then((details) => {
                 console.log(details);
-                const name = details.payer.name.given_name;
-                const shipping = details.purchase_units[0].shipping;
+                const amount = details.purchase_units[0].amount.value;
                 // alert(`Transaction of ${price} is completed by ${name}`);
                 handleCreateOrder({
-                  order_id: details.id,
-                  user_id: 17,
-                  amount : price
-                })
+                  paypal_order_id: details.id,
+                  package_id: pack_id,
+                  package_plan_id: pack.id,
+                  amount: amount,
+                });
               });
             }}
           />
         </PayPalScriptProvider>
+        <button onClick={displayRazorpay}>Buy with Razorpay</button>
       </div>
     </div>
   );
