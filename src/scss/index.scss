@@ -1,0 +1,201 @@
+@import "--var.scss";
+@import "--mixing.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  user-select: none;
+}
+.login_menu_icon {
+  width: 24px;
+  height: 20px;
+  margin-right: 20px;
+}
+.menu_desbord_btn {
+  border: 1px solid #0a76e5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a76e5;
+  border-radius: 25px;
+  width: 12rem;
+  height: 43px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+  svg {
+    font-size: 22px;
+    margin-left: 11px;
+    color: #0a76e5;
+  }
+  &:hover {
+    color: white;
+    background-color: #0a76e5;
+    svg {
+      color: white;
+    }
+  }
+}
+.login_menu {
+  color: #0b1c3f;
+  &:hover {
+    color: #0b1c3f !important;
+  }
+}
+.acount_img {
+  @include bg_img;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 100%;
+  border: 12px solid #e2f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  position: relative;
+  &:hover {
+    .acount_img_inner_btn_div {
+      display: block;
+    }
+  }
+}
+.acount_img_inner {
+  transition: all 0.3s;
+
+  background-color: #0a76e59c;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.acount_img_inner_btn {
+  transition: all 0.3s;
+
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  svg {
+    font-size: 50px;
+  }
+}
+.acount_img_inner_btn_div {
+  transition: all 0.3s;
+
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.account_user_name_div {
+  h3 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #8e8e8e;
+  }
+}
+.outline_btn {
+  border: 1px solid #0a76e5 !important;
+  background-color: transparent;
+  color: #0a76e5 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: all 0.3s;
+  border-radius: 25px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  &:hover {
+    background-color: #0a76e5 !important;
+    color: white !important;
+  }
+}
+
+.full_btn {
+  border: 1px solid #0a76e5 !important;
+  background-color: #0a76e5 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: all 0.3s;
+  border-radius: 25px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  &:hover {
+    background-color: transparent !important;
+    color: #0a76e5 !important;
+  }
+}
+
+.account_btn_div {
+  text-align: end;
+}
+
+.acount_title_div {
+  display: flex;
+  align-items: center;
+}
+.form_input_div {
+  label {
+    font-weight: 500;
+    font-size: 18px;
+    color: #8e8e8e;
+    text-transform: capitalize;
+  }
+  input {
+    padding: 8px 10px;
+    gap: 10px;
+
+    width: 640px;
+    height: 37px;
+
+    background: #ffffff;
+    border: 1.5px solid #cacaca;
+    border-radius: 4px;
+    &::placeholder {
+      font-weight: 500;
+      font-size: 14px;
+      color: #212529;
+    }
+  }
+}
+.account_input_title {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #719a93;
+  }
+}
+.account_input_hr_div {
+  hr {
+    margin: 1.5rem 0;
+  }
+}
+.account_input_title_top {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.account_input_title_top_inner {
+  margin-left: 6rem;
+}
+.account_edit_icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: #0a76e5;
+}

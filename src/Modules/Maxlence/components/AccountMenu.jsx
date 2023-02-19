@@ -3,16 +3,15 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import Logout from "@mui/icons-material/Logout";
-import RoomServiceOutlinedIcon from "@mui/icons-material/RoomServiceOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 import Swal from "sweetalert2";
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-
+import A1 from "../../../img/a1.png";
+import A2 from "../../../img/a2.png";
+import A3 from "../../../img/a3.png";
+import A4 from "../../../img/a4.png";
+import { NavLink } from "react-router-dom";
+import { BsArrowRight } from "react-icons/bs";
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [user] = React.useState(JSON.parse(localStorage.getItem("user")));
@@ -24,8 +23,9 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  
+  const MenuIcon = (props) => {
+    return <img className="login_menu_icon" src={props.img} alt="icon" />;
+  };
   return (
     <React.Fragment>
       <Box>
@@ -38,8 +38,11 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            {user ? <Avatar sx={{ width: 32, height: 32 }} src={user.pic}></Avatar> : <Avatar sx={{ width: 32, height: 32 }}></Avatar>}
-            
+            {user ? (
+              <Avatar sx={{ width: 32, height: 32 }} src={user.pic}></Avatar>
+            ) : (
+              <Avatar sx={{ width: 32, height: 32 }}></Avatar>
+            )}
           </IconButton>
         </Tooltip>
       </Box>
@@ -79,34 +82,35 @@ export default function AccountMenu() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem>
-        <ListItemIcon>
-          <PersonOutlineIcon/> 
-        </ListItemIcon>
-          My Account
+          <NavLink className="login_menu" to={"/your_account"}>
+            <MenuIcon img={A1} />
+            My Account
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <ListItemIcon>
-            <RoomServiceOutlinedIcon fontSize="medium" />
-          </ListItemIcon>
-          My Service
+          <NavLink className="login_menu" to={"/"}>
+            <MenuIcon img={A2} />
+            My Service
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <ListItemIcon>
-            <ReceiptOutlinedIcon fontSize="small" />
-          </ListItemIcon>
-          Payment
+          <NavLink className="login_menu" to={"/"}>
+            <MenuIcon img={A3} />
+            Payment
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <ListItemIcon>
-            <DashboardOutlinedIcon fontSize="small" />
-          </ListItemIcon>
-          Dashboard
+          <NavLink className="login_menu" to={"/"}>
+            <span className="menu_desbord_btn">
+              Dashboard <BsArrowRight />
+            </span>
+          </NavLink>
         </MenuItem>
         <MenuItem
           onClick={() => {
             let token = localStorage.removeItem("token");
             let user = localStorage.removeItem("user");
-            if (!user && ! token) {
+            if (!user && !token) {
               Swal.fire({
                 position: "center",
                 icon: "success",
@@ -119,10 +123,10 @@ export default function AccountMenu() {
             }
           }}
         >
-          <ListItemIcon>
-            <Logout fontSize="small" />
-          </ListItemIcon>
-          Logout
+          <NavLink className="login_menu" to={"/"}>
+            <MenuIcon img={A4} />
+            Sign Out
+          </NavLink>
         </MenuItem>
       </Menu>
     </React.Fragment>

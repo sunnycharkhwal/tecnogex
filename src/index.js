@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./scss/index.scss";
+import "./scss/res.scss";
 import "./styles/style.scss";
 import "./styles/res.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,32 +22,34 @@ import { Website } from "./Modules/Maxlence/pages/website";
 import Quest from "./Modules/Maxlence/pages/quest";
 import QuesPlan from "./Modules/Maxlence/pages/quesPlan";
 import Package from "./Modules/Maxlence/pages/package";
-import store from "./Modules/Maxlence/redux/store"
+import store from "./Modules/Maxlence/redux/store";
 import { Provider } from "react-redux";
+import { YourAccount } from "./Modules/Maxlence/pages/YourAccount";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store} >
-    <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/creation" element={<Creation />} />
-        <Route path="/:name/:id" element={<Website />} />
-        <Route path="/quest/:id" element={<Quest />} />
-        <Route path="/buyplans/:id" element={<QuesPlan />} />
-        <Route path="/package/:id" element={<Package />} />
-        <Route path="/growth" element={<Growth />} />
-        <Route path="/design" element={<Design />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/getintouch" element={<Getintouch />} />
-        <Route path="/careersjd" element={<Careersjd />} />
-        <Route path="/jobform" element={<Jobform />} />
-        <Route path="/business1" element={<Businessone />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/creation" element={<Creation />} />
+          <Route path="/:name/:id" element={<Website />} />
+          <Route path="/quest/:id" element={<Quest />} />
+          <Route path="/buyplans/:id" element={<QuesPlan />} />
+          <Route path="/package/:id" element={<Package />} />
+          <Route path="/growth" element={<Growth />} />
+          <Route path="/design" element={<Design />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/getintouch" element={<Getintouch />} />
+          <Route path="/careersjd" element={<Careersjd />} />
+          <Route path="/jobform" element={<Jobform />} />
+          <Route path="/business1" element={<Businessone />} />
+          <Route path="/your_account" element={<YourAccount />} />
+        </Routes>
+        <Footer />
+      </Router>
     </Provider>
   </React.StrictMode>
 );

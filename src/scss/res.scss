@@ -1,0 +1,55 @@
+@import "--var.scss";
+@import "--mixing.scss";
+@media (max-width: 576px) {
+  .account_edit_icon {
+    right: 10px;
+  }
+  .account_input_title_top_inner {
+    margin-left: 0rem;
+  }
+  .form_input_div {
+    label {
+      margin-bottom: 5px;
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .acount_img {
+    margin: auto;
+  }
+  .account_btn_div {
+    text-align: center;
+  }
+  .acount_title_div {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .account_input_title_top_inner {
+    margin-left: 0rem;
+  }
+  .form_input_div {
+    label {
+      margin-bottom: 5px;
+    }
+    input {
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .form_input_div {
+    label {
+      margin-bottom: 0;
+    }
+    input {
+      width: 640px;
+    }
+  }
+  .account_input_title_top_inner {
+    margin-left: 6rem;
+  }
+}
+@media (min-width: 1440px) {
+}

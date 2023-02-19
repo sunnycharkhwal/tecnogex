@@ -12,18 +12,18 @@ import ENDPOINT from "../config/ENDPOINT";
 import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowLoginModal } from "../redux/modalStateSlice"
-import { setShowSignUpModal } from "../redux/modalStateSlice"
-import { setShowMenuModal } from "../redux/modalStateSlice"
+import { setShowLoginModal } from "../redux/modalStateSlice";
+import { setShowSignUpModal } from "../redux/modalStateSlice";
+import { setShowMenuModal } from "../redux/modalStateSlice";
 
 export const Header = () => {
   // const [showLoginModal, setShowLoginModal] = useState(false);
   // const [showSignUpModal, setShowSignUpModal] = useState(false);
   // const [showMenuModal, setShowMenuModal] = useState(false);
-  const showLoginModal = useSelector((state) => state.state.showLoginModal)
-  const showSignUpModal = useSelector((state) => state.state.showSignUpModal)
-  const showMenuModal = useSelector((state) => state.state.showMenuModal)
-  const dispatch = useDispatch()
+  const showLoginModal = useSelector((state) => state.state.showLoginModal);
+  const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
+  const showMenuModal = useSelector((state) => state.state.showMenuModal);
+  const dispatch = useDispatch();
 
   ////////////////////// Sign Up Modal //////////////////////////////
 
@@ -76,7 +76,7 @@ export const Header = () => {
                 timer: 1500,
               });
               // sendMail()
-              dispatch(setShowLoginModal())
+              dispatch(setShowLoginModal());
             }
           })
           .catch((err) => {
@@ -118,6 +118,7 @@ export const Header = () => {
 
     return (
       <>
+        <AccountMenu />
         {user ? (
           <AccountMenu />
         ) : (
@@ -139,7 +140,7 @@ export const Header = () => {
             <Link
               to="/home"
               onClick={() => {
-                dispatch(setShowSignUpModal())
+                dispatch(setShowSignUpModal());
               }}
             >
               <div className=" ">
@@ -220,8 +221,8 @@ export const Header = () => {
                             Already have an account ? &nbsp;
                             <span
                               onClick={() => {
-                                dispatch(setShowSignUpModal())
-                                dispatch(setShowLoginModal())
+                                dispatch(setShowSignUpModal());
+                                dispatch(setShowLoginModal());
                               }}
                             >
                               Login
@@ -306,7 +307,7 @@ export const Header = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              dispatch(setShowLoginModal())
+              dispatch(setShowLoginModal());
               localStorage.setItem("token", JSON.stringify(res.data.token));
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
@@ -459,8 +460,8 @@ export const Header = () => {
                               Don't have an account ? &nbsp;
                               <span
                                 onClick={() => {
-                                  dispatch(setShowLoginModal())
-                                  dispatch(setShowSignUpModal())
+                                  dispatch(setShowLoginModal());
+                                  dispatch(setShowSignUpModal());
                                 }}
                               >
                                 Sign Up
