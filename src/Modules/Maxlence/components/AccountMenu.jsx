@@ -88,13 +88,13 @@ export default function AccountMenu() {
           </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink className="login_menu" to={"/"}>
+          <NavLink className="login_menu" to={"/your_services"}>
             <MenuIcon img={A2} />
             My Service
           </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink className="login_menu" to={"/"}>
+          <NavLink className="login_menu" to={"/payment"}>
             <MenuIcon img={A3} />
             Payment
           </NavLink>

@@ -25,6 +25,8 @@ import Package from "./Modules/Maxlence/pages/package";
 import store from "./Modules/Maxlence/redux/store";
 import { Provider } from "react-redux";
 import { YourAccount } from "./Modules/Maxlence/pages/YourAccount";
+import { YourServices } from "./Modules/Maxlence/pages/YourServices";
+import { Payment } from "./Modules/Maxlence/pages/Payment";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -47,6 +49,8 @@ root.render(
           <Route path="/jobform" element={<Jobform />} />
           <Route path="/business1" element={<Businessone />} />
           <Route path="/your_account" element={<YourAccount />} />
+          <Route path="/your_services" element={<YourServices />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
         <Footer />
       </Router>

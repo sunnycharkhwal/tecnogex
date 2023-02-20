@@ -1,6 +1,50 @@
 @import "--var.scss";
 @import "--mixing.scss";
+@media (max-width: 320px) {
+  .saved_cards_number {
+    justify-content: left !important;
+  }
+}
 @media (max-width: 576px) {
+  .saved_cards_number {
+    justify-content: center;
+    p {
+      span {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+    img {
+      width: 39px;
+      margin-top: 4px;
+    }
+  }
+  .payment_card {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .my_proprogress_div_text {
+    margin-top: 1.5rem;
+  }
+  .my_proprogress_div {
+    margin-top: 6px;
+  }
+  .your_services_card_btn_Monthly {
+    position: unset;
+    margin-right: 15px;
+    border-radius: 25px;
+  }
+  .your_services_card {
+    margin: 0 0rem;
+    text-align: center;
+    h3 {
+      font-size: 20px;
+    }
+    .full_btn {
+      position: unset;
+      margin-top: 1.5rem;
+    }
+  }
   .account_edit_icon {
     right: 10px;
   }
@@ -26,6 +70,23 @@
   }
 }
 @media (min-width: 768px) {
+  .saved_cards_number {
+    p {
+      span {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+    img {
+      width: 45px;
+    }
+  }
+  .payment_card {
+    width: 65%;
+  }
+  .your_services_card {
+    margin: 0 0rem;
+  }
   .account_input_title_top_inner {
     margin-left: 0rem;
   }
@@ -39,6 +100,23 @@
   }
 }
 @media (min-width: 1024px) {
+  .saved_cards_number {
+    p {
+      span {
+        font-size: 15px;
+        margin-right: 7px;
+      }
+    }
+    img {
+      width: 45px;
+    }
+  }
+  .payment_card {
+    width: 48%;
+  }
+  .your_services_card {
+    margin: 0 0rem;
+  }
   .form_input_div {
     label {
       margin-bottom: 0;
@@ -52,4 +130,21 @@
   }
 }
 @media (min-width: 1440px) {
+  .saved_cards_number {
+    p {
+      span {
+        font-size: 27px;
+        margin-right: 10px;
+      }
+    }
+    img {
+      width: 45px;
+    }
+  }
+  .payment_card {
+    width: 35%;
+  }
+  .your_services_card {
+    margin: 0 10rem;
+  }
 }
