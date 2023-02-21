@@ -16,27 +16,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { setShowLoginModal } from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
-<<<<<<< Updated upstream
-
-export const Header = () => {
-  // const [showLoginModal, setShowLoginModal] = useState(false);
-  // const [showSignUpModal, setShowSignUpModal] = useState(false);
-  // const [showMenuModal, setShowMenuModal] = useState(false);
-=======
 import { handleExpiredUser } from "../HelperFunction/Helpers";
 
 export const Header = () => {
->>>>>>> Stashed changes
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
   const showMenuModal = useSelector((state) => state.state.showMenuModal);
   const dispatch = useDispatch();
-<<<<<<< Updated upstream
-
-=======
   const [user, setUser] = useState({});
   
->>>>>>> Stashed changes
   ////////////////////// Sign Up Modal //////////////////////////////
   let token = localStorage.getItem("token");
 
@@ -160,14 +148,8 @@ export const Header = () => {
     };
     return (
       <>
-<<<<<<< Updated upstream
-        <AccountMenu />
-        {user ? (
-          <AccountMenu />
-=======
         {token ? (
           <AccountMenu user={user} setUser={setUser} />
->>>>>>> Stashed changes
         ) : (
           <OutlineBtn
             title="Log In"
@@ -354,11 +336,7 @@ export const Header = () => {
                 timer: 1500,
               });
               dispatch(setShowLoginModal());
-<<<<<<< Updated upstream
-              localStorage.setItem("token", JSON.stringify(res.data.token));
-=======
               localStorage.setItem("token", res.data.token);
->>>>>>> Stashed changes
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
           })

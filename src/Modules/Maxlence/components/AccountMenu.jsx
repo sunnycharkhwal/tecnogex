@@ -6,19 +6,14 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Swal from "sweetalert2";
-<<<<<<< Updated upstream
 import A1 from "../../../img/a1.png";
 import A2 from "../../../img/a2.png";
 import A3 from "../../../img/a3.png";
 import A4 from "../../../img/a4.png";
 import { NavLink } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
-export default function AccountMenu() {
-=======
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
 export default function AccountMenu({user, setUser}) {
->>>>>>> Stashed changes
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -28,13 +23,9 @@ export default function AccountMenu({user, setUser}) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-<<<<<<< Updated upstream
   const MenuIcon = (props) => {
     return <img className="login_menu_icon" src={props.img} alt="icon" />;
   };
-=======
-
->>>>>>> Stashed changes
   return (
     <React.Fragment>
       <Box>
@@ -91,17 +82,10 @@ export default function AccountMenu({user, setUser}) {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem>
-<<<<<<< Updated upstream
           <NavLink className="login_menu" to={"/your_account"}>
             <MenuIcon img={A1} />
             My Account
           </NavLink>
-=======
-          <ListItemIcon>
-            <PersonOutlineIcon />
-          </ListItemIcon>
-          My Account
->>>>>>> Stashed changes
         </MenuItem>
         <MenuItem>
           <NavLink className="login_menu" to={"/your_services"}>
