@@ -9,23 +9,68 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { TextAreaBox } from "../components/form";
 import Swal from "sweetalert2";
 import ENDPOINT from "../config/ENDPOINT";
-import OAuth2Login from "react-simple-oauth2-login";
+import { LoginSocialFacebook } from "reactjs-social-login";
+import { FacebookLoginButton } from "react-social-login-buttons";
 import AccountMenu from "./AccountMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowLoginModal } from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
+<<<<<<< Updated upstream
 
 export const Header = () => {
   // const [showLoginModal, setShowLoginModal] = useState(false);
   // const [showSignUpModal, setShowSignUpModal] = useState(false);
   // const [showMenuModal, setShowMenuModal] = useState(false);
+=======
+import { handleExpiredUser } from "../HelperFunction/Helpers";
+
+export const Header = () => {
+>>>>>>> Stashed changes
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
   const showMenuModal = useSelector((state) => state.state.showMenuModal);
   const dispatch = useDispatch();
+<<<<<<< Updated upstream
 
+=======
+  const [user, setUser] = useState({});
+  
+>>>>>>> Stashed changes
   ////////////////////// Sign Up Modal //////////////////////////////
+  let token = localStorage.getItem("token");
+
+  React.useEffect(() => {
+    if (token) {
+      try {
+        axios
+          .get(ENDPOINT + "local", {
+            headers: {
+              "x-access-token": token,
+            },
+          })
+          .then((res) => {
+            if (res.status === 200) {
+              console.log("Success!");
+              setUser(res.data);
+            }
+          })
+          .catch((err) => {
+            if (err.response.status === 401) {
+              console.log("Token required!");
+              
+            }
+            else if(err.response.status === 405) {
+              handleExpiredUser();
+              setUser({})
+              console.log("Token expired!");
+            }
+          });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  },[token]);
 
   const SignUpmodal = () => {
     const [values, setValues] = useState({
@@ -113,19 +158,20 @@ export const Header = () => {
         [name]: value,
       });
     };
-
-    let user = localStorage.getItem("token");
-
     return (
       <>
+<<<<<<< Updated upstream
         <AccountMenu />
         {user ? (
           <AccountMenu />
+=======
+        {token ? (
+          <AccountMenu user={user} setUser={setUser} />
+>>>>>>> Stashed changes
         ) : (
           <OutlineBtn
             title="Log In"
             icon=""
-            // onClick={() => setShowLoginModal(true)}
             onClick={() => dispatch(setShowLoginModal())}
           />
         )}
@@ -308,7 +354,11 @@ export const Header = () => {
                 timer: 1500,
               });
               dispatch(setShowLoginModal());
+<<<<<<< Updated upstream
               localStorage.setItem("token", JSON.stringify(res.data.token));
+=======
+              localStorage.setItem("token", res.data.token);
+>>>>>>> Stashed changes
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
           })
@@ -357,16 +407,41 @@ export const Header = () => {
       headers.append("Content-Type", "application/x-www-form-urlencoded");
 
       try {
-        await fetch(ENDPOINT + "auth/google/login", {
+        axios({
+          url: ENDPOINT + "auth/google/login",
           method: "POST",
           headers,
-          body: urlencoded,
+          data: urlencoded,
         })
-          .then((res) => res.json())
-          .then((data) => {
-            localStorage.setItem("token", JSON.stringify(data.token));
-            localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.reload();
+          .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "success",
+                text: "Login Successfull",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              localStorage.setItem("token", (res.data.token));
+              localStorage.setItem("user", JSON.stringify(res.data.user));
+              window.location.reload();
+            }
+          })
+          .catch((err) => {
+            if (err.response.status === 401) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Error while creating new User!!",
+              });
+            } else if (err.response.status === 500) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Server Error!",
+              });
+            }
           });
       } catch (err) {
         console.log("Error logging in: " + err);
@@ -386,12 +461,59 @@ export const Header = () => {
           size: "large",
         }
       );
-      let user = localStorage.getItem("token");
-      if (!user) window.google?.accounts?.id.prompt();
+      if (!token) window.google?.accounts?.id.prompt();
     }, []);
 
-    const onSuccess = (response) => console.log(response);
-    const onFailure = (response) => console.error(response);
+    const handleFbResponse = async (res) => {
+      const token = res.data.accessToken;
+
+      var form = new URLSearchParams();
+      form.append("token", token);
+
+      let headers = new Headers();
+      headers.append("Content-Type", "application/x-www-form-urlencoded");
+
+      try {
+        axios({
+          url: ENDPOINT + "auth/facebook/login",
+          method: "POST",
+          headers,
+          data: form,
+        })
+          .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "success",
+                text: "Login Successfull",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              localStorage.setItem("token", (res.data.token));
+              localStorage.setItem("user", JSON.stringify(res.data.user));
+              dispatch(setShowLoginModal());
+            }
+          })
+          .catch((err) => {
+            if (err.response.status === 401) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Error while creating new User!!",
+              });
+            } else if (err.response.status === 500) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Server Error!",
+              });
+            }
+          });
+      } catch (err) {
+        console.log("Error logging in: " + err);
+      }
+    };
 
     return (
       <>
@@ -467,17 +589,18 @@ export const Header = () => {
                                 Sign Up
                               </span>
                             </p>
-
-                            <div className="googleicon d-flex justify-content-center my-2">
-                              <OAuth2Login
-                                buttonText="Log in with Facebook"
-                                authorizationUrl="https://www.facebook.com/dialog/oauth"
-                                responseType="token"
-                                clientId="9822046hvr4lnhi7g07grihpefahy5jb"
-                                redirectUri={ENDPOINT}
-                                onSuccess={onSuccess}
-                                onFailure={onFailure}
-                              />
+                            <div className="googleicon d-flex justify-content-center my-2" />
+                            <div className="fbicon d-flex justify-content-center my-2">
+                              <LoginSocialFacebook
+                                isOnlyGetToken
+                                appId="3789647204595344"
+                                onResolve={handleFbResponse}
+                                onReject={(err) => {
+                                  console.log(err);
+                                }}
+                              >
+                                <FacebookLoginButton />
+                              </LoginSocialFacebook>
                             </div>
                             <p>
                               <span>Forget Password</span>
