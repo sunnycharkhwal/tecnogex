@@ -9,56 +9,35 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { TextAreaBox } from "../components/form";
 import Swal from "sweetalert2";
 import ENDPOINT from "../config/ENDPOINT";
-import { LoginSocialFacebook } from "reactjs-social-login";
-import { FacebookLoginButton } from "react-social-login-buttons";
+import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowLoginModal } from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
-import { handleExpiredUser } from "../HelperFunction/Helpers";
+import { setShowForgotModal } from "../redux/modalStateSlice";
+import { setShowCheckYourEmailModal } from "../redux/modalStateSlice";
+import { setShowPasswordResetModal } from "../redux/modalStateSlice";
+import { setNewPasswordModal } from "../redux/modalStateSlice";
 
 export const Header = () => {
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
   const showMenuModal = useSelector((state) => state.state.showMenuModal);
-  const dispatch = useDispatch();
-  const [user, setUser] = useState({});
-  
-  ////////////////////// Sign Up Modal //////////////////////////////
-  let token = localStorage.getItem("token");
+  const showForgotModal = useSelector((state) => state.state.showForgotModal);
+  const showCheckYourEmailModal = useSelector(
+    (state) => state.state.showCheckYourEmailModal
+  );
+  const showPasswordResetModal = useSelector(
+    (state) => state.state.showPasswordResetModal
+  );
+  const showNewPasswordModal = useSelector(
+    (state) => state.state.showNewPasswordModal
+  );
 
-  React.useEffect(() => {
-    if (token) {
-      try {
-        axios
-          .get(ENDPOINT + "local", {
-            headers: {
-              "x-access-token": token,
-            },
-          })
-          .then((res) => {
-            if (res.status === 200) {
-              console.log("Success!");
-              setUser(res.data);
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              console.log("Token required!");
-              
-            }
-            else if(err.response.status === 405) {
-              handleExpiredUser();
-              setUser({})
-              console.log("Token expired!");
-            }
-          });
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  },[token]);
+  const dispatch = useDispatch();
+
+  ////////////////////// Sign Up Modal //////////////////////////////
 
   const SignUpmodal = () => {
     const [values, setValues] = useState({
@@ -146,14 +125,19 @@ export const Header = () => {
         [name]: value,
       });
     };
+
+    let user = localStorage.getItem("token");
+
     return (
       <>
-        {token ? (
-          <AccountMenu user={user} setUser={setUser} />
+        <AccountMenu />
+        {user ? (
+          <AccountMenu />
         ) : (
           <OutlineBtn
             title="Log In"
             icon=""
+            // onClick={() => setShowLoginModal(true)}
             onClick={() => dispatch(setShowLoginModal())}
           />
         )}
@@ -273,45 +257,6 @@ export const Header = () => {
       </>
     );
   };
-
-  // const Example = () => {
-  //   const values = [
-  //     true,
-  //     "sm-down",
-  //     "md-down",
-  //     "lg-down",
-  //     "xl-down",
-  //     "xxl-down",
-  //   ];
-
-  //   const [fullscreen, setFullscreen] = useState(true);
-  //   const [show, setShow] = useState(false);
-
-  //   function handleShow(breakpoint) {
-  //     setFullscreen(breakpoint);
-  //     setShow(true);
-  //   }
-
-  //   return (
-  //     <>
-  //       <OutlineBtn
-  //         title="Sign up"
-  //         icon=""
-  //         onClick={() => setShowSignUpModal(true)}onClick={() => handleShow(v)
-  //       />
-  //       <Modal
-  //         show={show}
-  //         fullscreen={fullscreen}
-  //         onHide={() => setShow(false)}>
-  //         <Modal.Header closeButton>
-  //           <Modal.Title>Modal</Modal.Title>
-  //         </Modal.Header>
-  //         <Modal.Body>Modal body content</Modal.Body>
-  //       </Modal>
-  //     </>
-  //   );
-  // };
-
   ////////////////////// Login Modal //////////////////////////////
 
   const LoginModal = () => {
@@ -336,7 +281,7 @@ export const Header = () => {
                 timer: 1500,
               });
               dispatch(setShowLoginModal());
-              localStorage.setItem("token", res.data.token);
+              localStorage.setItem("token", JSON.stringify(res.data.token));
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
           })
@@ -385,41 +330,16 @@ export const Header = () => {
       headers.append("Content-Type", "application/x-www-form-urlencoded");
 
       try {
-        axios({
-          url: ENDPOINT + "auth/google/login",
+        await fetch(ENDPOINT + "auth/google/login", {
           method: "POST",
           headers,
-          data: urlencoded,
+          body: urlencoded,
         })
-          .then((res) => {
-            if (res.status === 200 || res.status === 201) {
-              Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "success",
-                text: "Login Successfull",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              localStorage.setItem("token", (res.data.token));
-              localStorage.setItem("user", JSON.stringify(res.data.user));
-              window.location.reload();
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error while creating new User!!",
-              });
-            } else if (err.response.status === 500) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Server Error!",
-              });
-            }
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("token", JSON.stringify(data.token));
+            localStorage.setItem("user", JSON.stringify(data.user));
+            window.location.reload();
           });
       } catch (err) {
         console.log("Error logging in: " + err);
@@ -439,59 +359,12 @@ export const Header = () => {
           size: "large",
         }
       );
-      if (!token) window.google?.accounts?.id.prompt();
+      let user = localStorage.getItem("token");
+      if (!user) window.google?.accounts?.id.prompt();
     }, []);
 
-    const handleFbResponse = async (res) => {
-      const token = res.data.accessToken;
-
-      var form = new URLSearchParams();
-      form.append("token", token);
-
-      let headers = new Headers();
-      headers.append("Content-Type", "application/x-www-form-urlencoded");
-
-      try {
-        axios({
-          url: ENDPOINT + "auth/facebook/login",
-          method: "POST",
-          headers,
-          data: form,
-        })
-          .then((res) => {
-            if (res.status === 200 || res.status === 201) {
-              Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "success",
-                text: "Login Successfull",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              localStorage.setItem("token", (res.data.token));
-              localStorage.setItem("user", JSON.stringify(res.data.user));
-              dispatch(setShowLoginModal());
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error while creating new User!!",
-              });
-            } else if (err.response.status === 500) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Server Error!",
-              });
-            }
-          });
-      } catch (err) {
-        console.log("Error logging in: " + err);
-      }
-    };
+    const onSuccess = (response) => console.log(response);
+    const onFailure = (response) => console.error(response);
 
     return (
       <>
@@ -567,21 +440,27 @@ export const Header = () => {
                                 Sign Up
                               </span>
                             </p>
-                            <div className="googleicon d-flex justify-content-center my-2" />
-                            <div className="fbicon d-flex justify-content-center my-2">
-                              <LoginSocialFacebook
-                                isOnlyGetToken
-                                appId="3789647204595344"
-                                onResolve={handleFbResponse}
-                                onReject={(err) => {
-                                  console.log(err);
-                                }}
-                              >
-                                <FacebookLoginButton />
-                              </LoginSocialFacebook>
+
+                            <div className="googleicon d-flex justify-content-center my-2">
+                              <OAuth2Login
+                                buttonText="Log in with Facebook"
+                                authorizationUrl="https://www.facebook.com/dialog/oauth"
+                                responseType="token"
+                                clientId="9822046hvr4lnhi7g07grihpefahy5jb"
+                                redirectUri={ENDPOINT}
+                                onSuccess={onSuccess}
+                                onFailure={onFailure}
+                              />
                             </div>
                             <p>
-                              <span>Forget Password</span>
+                              <span
+                                onClick={() => {
+                                  dispatch(setShowLoginModal());
+                                  dispatch(setShowForgotModal());
+                                }}
+                              >
+                                Forget Password
+                              </span>
                             </p>
                           </div>
                         </div>
@@ -596,9 +475,362 @@ export const Header = () => {
       </>
     );
   };
+  //////////////////////  Forgot Modal //////////////////////////////
+  const ForgotModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showForgotModal}
+          onHide={() => dispatch(setShowForgotModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setShowForgotModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
 
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Forgot Password?</h1>
+                          <p>No worries, we’ll send you reset instructions.</p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TextAreaBox
+                                  type="email"
+                                  label="Email"
+                                  name="Email"
+                                  // required
+                                />
+                              </div>
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn
+                                  onClick={() => {
+                                    dispatch(setShowForgotModal());
+                                    dispatch(setShowCheckYourEmailModal());
+                                  }}
+                                  type="submit"
+                                  title="Reset Password"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            &nbsp;
+                            <span
+                              onClick={() => {
+                                dispatch(setShowForgotModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
+  ////////////////////// Check Your Email Modal //////////////////////////////
+  const CheckYourEmailModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showCheckYourEmailModal}
+          onHide={() => dispatch(setShowCheckYourEmailModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setShowCheckYourEmailModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
+
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Check your email</h1>
+                          <p>
+                            We sent a password reset link to
+                            akhilesh@maxlence.com.au
+                          </p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn
+                                  onClick={() => {
+                                    dispatch(setShowCheckYourEmailModal());
+                                    dispatch(setNewPasswordModal());
+                                  }}
+                                  type="submit"
+                                  title="Open Email"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            Didn't receive the email?{" "}
+                            <span
+                              onClick={() => {
+                                dispatch(setShowCheckYourEmailModal());
+                                dispatch(setShowPasswordResetModal());
+                              }}
+                            >
+                              Resend
+                            </span>
+                            <br />
+                            <span
+                              onClick={() => {
+                                dispatch(setShowCheckYourEmailModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
+  ////////////////////// Password Reset Modal //////////////////////////////
+  const PasswordResetModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showPasswordResetModal}
+          onHide={() => dispatch(setShowPasswordResetModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setShowPasswordResetModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
+
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Password Reset</h1>
+                          <p className="mb-0">
+                            Your password has been successfully reset.
+                          </p>
+                          <p>Click below to login.</p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn type="submit" title="Open Email" />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            <span
+                              onClick={() => {
+                                dispatch(setShowPasswordResetModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
+  //////////////////////  Set New Password Modal //////////////////////////////
+  const SetNewPasswordModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showNewPasswordModal}
+          onHide={() => dispatch(setNewPasswordModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setNewPasswordModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
+
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Set New Password</h1>
+                          <p>
+                            We sent a password reset link to
+                            akhilesh@maxlence.com.au
+                          </p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TextAreaBox
+                                  type="password"
+                                  label="Password"
+                                  name="Email"
+                                  // required
+                                />
+                              </div>
+                              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TextAreaBox
+                                  type="password"
+                                  label="Confirm Password"
+                                  name="Email"
+                                  // required
+                                />
+                              </div>
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn type="submit" title="Reset Password" />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            &nbsp;
+                            <span
+                              onClick={() => {
+                                dispatch(setNewPasswordModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
   ////////////////////// Menu Modal //////////////////////////////
-
   const MenuModal = () => {
     return (
       <>
@@ -688,10 +920,9 @@ export const Header = () => {
       </>
     );
   };
-
   return (
     <Container fluid bg="light" className="navbarmain px-md-5 ">
-      <Navbar expand="lg" className="">
+      <Navbar expand="lg">
         <Navbar.Brand
           className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 "
           href="/"
@@ -741,6 +972,10 @@ export const Header = () => {
           <SignUpmodal />
           <MenuModal />
           <LoginModal />
+          <ForgotModal />
+          <CheckYourEmailModal />
+          <PasswordResetModal />
+          <SetNewPasswordModal />
         </Nav>
       </Navbar>
     </Container>

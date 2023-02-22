@@ -82,6 +82,7 @@ export const Payment = () => {
                 <h3>Billing Address</h3>
               </div>
               <div className="payment_card">
+                <MdOutlineModeEdit />
                 <h3>Luno Electrical</h3>
                 <p>
                   525, 5th Floor, Tower A, Itech Business Park, Sohna Road,

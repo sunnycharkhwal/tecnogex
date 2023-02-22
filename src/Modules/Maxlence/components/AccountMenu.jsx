@@ -12,9 +12,9 @@ import A3 from "../../../img/a3.png";
 import A4 from "../../../img/a4.png";
 import { NavLink } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
-
-export default function AccountMenu({user, setUser}) {
+export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [user] = React.useState(JSON.parse(localStorage.getItem("user")));
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -100,7 +100,7 @@ export default function AccountMenu({user, setUser}) {
           </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink className="login_menu" to={"/"}>
+          <NavLink className="login_menu" to={"/forgot_password"}>
             <span className="menu_desbord_btn">
               Dashboard <BsArrowRight />
             </span>
@@ -119,7 +119,7 @@ export default function AccountMenu({user, setUser}) {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              setUser({})
+              window.location.reload(false);
             }
           }}
         >
