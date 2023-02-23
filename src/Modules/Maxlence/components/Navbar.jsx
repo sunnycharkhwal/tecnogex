@@ -12,7 +12,7 @@ import ENDPOINT from "../config/ENDPOINT";
 import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowLoginModal, setUser, resetUser } from "../redux/modalStateSlice";
+import { setShowLoginModal } from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
 import { setShowForgotModal } from "../redux/modalStateSlice";
@@ -34,50 +34,10 @@ export const Header = () => {
   const showNewPasswordModal = useSelector(
     (state) => state.state.showNewPasswordModal
   );
+
   const dispatch = useDispatch();
 
   ////////////////////// Sign Up Modal //////////////////////////////
-
-  const user = useSelector((state) => state.state.user);
-  const dispatch = useDispatch();
-  // const [user, setUser] = useState({});
-  
-  ////////////////////// Sign Up Modal //////////////////////////////
-  let token = localStorage.getItem("token");
-
-  React.useEffect(() => {
-    if (token) {
-      try {
-        axios
-          .get(ENDPOINT + "local", {
-            headers: {
-              "x-access-token": token,
-            },
-          })
-          .then((res) => {
-            if (res.status === 200) {
-              // console.log("Success!");
-              // setUser(res.data);
-              dispatch(setUser(res.data));
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              // console.log("Token required!");
-              
-            }
-            else if(err.response.status === 405) {
-              handleExpiredUser();
-              // setUser({})
-              dispatch(resetUser())
-              // console.log("Token expired!");
-            }
-          });
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  },[token]);
 
   const SignUpmodal = () => {
     const [values, setValues] = useState({
@@ -170,7 +130,8 @@ export const Header = () => {
 
     return (
       <>
-        {token ? (
+        <AccountMenu />
+        {user ? (
           <AccountMenu />
         ) : (
           <OutlineBtn
@@ -320,7 +281,7 @@ export const Header = () => {
                 timer: 1500,
               });
               dispatch(setShowLoginModal());
-              localStorage.setItem("token", res.data.token);
+              localStorage.setItem("token", JSON.stringify(res.data.token));
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
           })
@@ -369,41 +330,16 @@ export const Header = () => {
       headers.append("Content-Type", "application/x-www-form-urlencoded");
 
       try {
-        axios({
-          url: ENDPOINT + "auth/google/login",
+        await fetch(ENDPOINT + "auth/google/login", {
           method: "POST",
           headers,
-          data: urlencoded,
+          body: urlencoded,
         })
-          .then((res) => {
-            if (res.status === 200 || res.status === 201) {
-              Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "success",
-                text: "Login Successfull",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              localStorage.setItem("token", (res.data.token));
-              localStorage.setItem("user", JSON.stringify(res.data.user));
-              window.location.reload();
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error while creating new User!!",
-              });
-            } else if (err.response.status === 500) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Server Error!",
-              });
-            }
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("token", JSON.stringify(data.token));
+            localStorage.setItem("user", JSON.stringify(data.user));
+            window.location.reload();
           });
       } catch (err) {
         console.log("Error logging in: " + err);
@@ -423,59 +359,12 @@ export const Header = () => {
           size: "large",
         }
       );
-      if (!token) window.google?.accounts?.id.prompt();
+      let user = localStorage.getItem("token");
+      if (!user) window.google?.accounts?.id.prompt();
     }, []);
 
-    const handleFbResponse = async (res) => {
-      const token = res.data.accessToken;
-
-      var form = new URLSearchParams();
-      form.append("token", token);
-
-      let headers = new Headers();
-      headers.append("Content-Type", "application/x-www-form-urlencoded");
-
-      try {
-        axios({
-          url: ENDPOINT + "auth/facebook/login",
-          method: "POST",
-          headers,
-          data: form,
-        })
-          .then((res) => {
-            if (res.status === 200 || res.status === 201) {
-              Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "success",
-                text: "Login Successfull",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              localStorage.setItem("token", (res.data.token));
-              localStorage.setItem("user", JSON.stringify(res.data.user));
-              dispatch(setShowLoginModal());
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error while creating new User!!",
-              });
-            } else if (err.response.status === 500) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Server Error!",
-              });
-            }
-          });
-      } catch (err) {
-        console.log("Error logging in: " + err);
-      }
-    };
+    const onSuccess = (response) => console.log(response);
+    const onFailure = (response) => console.error(response);
 
     return (
       <>
@@ -551,21 +440,27 @@ export const Header = () => {
                                 Sign Up
                               </span>
                             </p>
-                            <div className="googleicon d-flex justify-content-center my-2" />
-                            <div className="fbicon d-flex justify-content-center my-2">
-                              <LoginSocialFacebook
-                                isOnlyGetToken
-                                appId="3789647204595344"
-                                onResolve={handleFbResponse}
-                                onReject={(err) => {
-                                  console.log(err);
-                                }}
-                              >
-                                <FacebookLoginButton />
-                              </LoginSocialFacebook>
+
+                            <div className="googleicon d-flex justify-content-center my-2">
+                              <OAuth2Login
+                                buttonText="Log in with Facebook"
+                                authorizationUrl="https://www.facebook.com/dialog/oauth"
+                                responseType="token"
+                                clientId="9822046hvr4lnhi7g07grihpefahy5jb"
+                                redirectUri={ENDPOINT}
+                                onSuccess={onSuccess}
+                                onFailure={onFailure}
+                              />
                             </div>
                             <p>
-                              <span>Forget Password</span>
+                              <span
+                                onClick={() => {
+                                  dispatch(setShowLoginModal());
+                                  dispatch(setShowForgotModal());
+                                }}
+                              >
+                                Forget Password
+                              </span>
                             </p>
                           </div>
                         </div>

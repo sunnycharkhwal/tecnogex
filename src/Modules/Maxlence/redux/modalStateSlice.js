@@ -6,14 +6,10 @@ const modalStateSlice = createSlice({
     showLoginModal: false,
     showSignUpModal: false,
     showMenuModal: false,
-
     showForgotModal: false,
     showCheckYourEmailModal: false,
     showPasswordResetModal: false,
     showNewPasswordModal: false,
-
-    user: {},
-
   },
   reducers: {
     setShowLoginModal: (state) => {
@@ -25,7 +21,6 @@ const modalStateSlice = createSlice({
     setShowMenuModal: (state) => {
       state.showMenuModal = !state.showMenuModal;
     },
-
     setShowForgotModal: (state) => {
       state.showForgotModal = !state.showForgotModal;
     },
@@ -37,13 +32,6 @@ const modalStateSlice = createSlice({
     },
     setNewPasswordModal: (state) => {
       state.showNewPasswordModal = !state.showNewPasswordModal;
-
-    setUser: (state, action) => {
-      state.user = action.payload;
-    },
-    resetUser: (state) => {
-      state.user = {};
-
     },
   },
 });
@@ -56,7 +44,5 @@ export const {
   setShowCheckYourEmailModal,
   setShowPasswordResetModal,
   setNewPasswordModal,
-  setUser,
-  resetUser,
 } = modalStateSlice.actions;
 export default modalStateSlice.reducer;
