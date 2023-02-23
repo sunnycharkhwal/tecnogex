@@ -13,7 +13,6 @@ const modalStateSlice = createSlice({
     showNewPasswordModal: false,
 
     user: {},
-
   },
   reducers: {
     setShowLoginModal: (state) => {
@@ -37,13 +36,12 @@ const modalStateSlice = createSlice({
     },
     setNewPasswordModal: (state) => {
       state.showNewPasswordModal = !state.showNewPasswordModal;
-
+    },
     setUser: (state, action) => {
       state.user = action.payload;
     },
     resetUser: (state) => {
       state.user = {};
-
     },
   },
 });

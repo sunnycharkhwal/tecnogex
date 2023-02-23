@@ -8,11 +8,17 @@ import Modal from "react-bootstrap/Modal";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { TextAreaBox } from "../components/form";
 import Swal from "sweetalert2";
+import { LoginSocialFacebook } from "reactjs-social-login";
+import { FacebookLoginButton } from "react-social-login-buttons";
 import ENDPOINT from "../config/ENDPOINT";
-import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
+import { handleExpiredUser } from "../HelperFunction/Helpers";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowLoginModal, setUser, resetUser } from "../redux/modalStateSlice";
+import {
+  setShowLoginModal,
+  setUser,
+  resetUser,
+} from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
 import { setShowForgotModal } from "../redux/modalStateSlice";
@@ -34,14 +40,10 @@ export const Header = () => {
   const showNewPasswordModal = useSelector(
     (state) => state.state.showNewPasswordModal
   );
-  const dispatch = useDispatch();
-
-  ////////////////////// Sign Up Modal //////////////////////////////
 
   const user = useSelector((state) => state.state.user);
   const dispatch = useDispatch();
-  // const [user, setUser] = useState({});
-  
+
   ////////////////////// Sign Up Modal //////////////////////////////
   let token = localStorage.getItem("token");
 
@@ -56,28 +58,21 @@ export const Header = () => {
           })
           .then((res) => {
             if (res.status === 200) {
-              // console.log("Success!");
-              // setUser(res.data);
               dispatch(setUser(res.data));
             }
           })
           .catch((err) => {
             if (err.response.status === 401) {
-              // console.log("Token required!");
-              
-            }
-            else if(err.response.status === 405) {
+            } else if (err.response.status === 405) {
               handleExpiredUser();
-              // setUser({})
-              dispatch(resetUser())
-              // console.log("Token expired!");
+              dispatch(resetUser());
             }
           });
       } catch (err) {
         console.log(err);
       }
     }
-  },[token]);
+  }, [token]);
 
   const SignUpmodal = () => {
     const [values, setValues] = useState({
@@ -385,7 +380,7 @@ export const Header = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              localStorage.setItem("token", (res.data.token));
+              localStorage.setItem("token", res.data.token);
               localStorage.setItem("user", JSON.stringify(res.data.user));
               window.location.reload();
             }
@@ -452,7 +447,7 @@ export const Header = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              localStorage.setItem("token", (res.data.token));
+              localStorage.setItem("token", res.data.token);
               localStorage.setItem("user", JSON.stringify(res.data.user));
               dispatch(setShowLoginModal());
             }
@@ -733,7 +728,7 @@ export const Header = () => {
 
                         <div className="text-center popuplink my-2">
                           <p>
-                            Didn't receive the email?{" "}
+                            Didn't receive the email?
                             <span
                               onClick={() => {
                                 dispatch(setShowCheckYourEmailModal());
