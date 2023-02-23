@@ -12,10 +12,14 @@ import A3 from "../../../img/a3.png";
 import A4 from "../../../img/a4.png";
 import { NavLink } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
+import { resetUser } from "../redux/modalStateSlice";
 
-export default function AccountMenu({user, setUser}) {
+export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const user = useSelector((state) => state.state.user);
+  const dispatch = useDispatch();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -26,6 +30,7 @@ export default function AccountMenu({user, setUser}) {
   const MenuIcon = (props) => {
     return <img className="login_menu_icon" src={props.img} alt="icon" />;
   };
+  
   return (
     <React.Fragment>
       <Box>
@@ -119,7 +124,7 @@ export default function AccountMenu({user, setUser}) {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              setUser({})
+              dispatch(resetUser())
             }
           }}
         >

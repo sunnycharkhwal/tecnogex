@@ -13,7 +13,7 @@ import { LoginSocialFacebook } from "reactjs-social-login";
 import { FacebookLoginButton } from "react-social-login-buttons";
 import AccountMenu from "./AccountMenu";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowLoginModal } from "../redux/modalStateSlice";
+import { setShowLoginModal, setUser, resetUser } from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
 import { handleExpiredUser } from "../HelperFunction/Helpers";
@@ -22,8 +22,9 @@ export const Header = () => {
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
   const showMenuModal = useSelector((state) => state.state.showMenuModal);
+  const user = useSelector((state) => state.state.user);
   const dispatch = useDispatch();
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   
   ////////////////////// Sign Up Modal //////////////////////////////
   let token = localStorage.getItem("token");
@@ -39,19 +40,21 @@ export const Header = () => {
           })
           .then((res) => {
             if (res.status === 200) {
-              console.log("Success!");
-              setUser(res.data);
+              // console.log("Success!");
+              // setUser(res.data);
+              dispatch(setUser(res.data));
             }
           })
           .catch((err) => {
             if (err.response.status === 401) {
-              console.log("Token required!");
+              // console.log("Token required!");
               
             }
             else if(err.response.status === 405) {
               handleExpiredUser();
-              setUser({})
-              console.log("Token expired!");
+              // setUser({})
+              dispatch(resetUser())
+              // console.log("Token expired!");
             }
           });
       } catch (err) {
@@ -149,7 +152,7 @@ export const Header = () => {
     return (
       <>
         {token ? (
-          <AccountMenu user={user} setUser={setUser} />
+          <AccountMenu />
         ) : (
           <OutlineBtn
             title="Log In"

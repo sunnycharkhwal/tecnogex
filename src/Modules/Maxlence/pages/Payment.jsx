@@ -3,7 +3,11 @@ import Sim from "../../../img/sim.png";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 export const Payment = () => {
+  const user = useSelector((state) => state.state.user);
+
   const CardData = [
     {
       cardType: "Credit Card",
@@ -82,13 +86,13 @@ export const Payment = () => {
                 <h3>Billing Address</h3>
               </div>
               <div className="payment_card">
-                <h3>Luno Electrical</h3>
+                <Link to="/your_account"><MdOutlineModeEdit /></Link>
+                <h3>{user.companyName ? user.companyName : user.fullname}</h3>
                 <p>
-                  525, 5th Floor, Tower A, Itech Business Park, Sohna Road,
-                  Sector 49, Gurgaon, Haryana 122101 - India
+                  {user.workingAddress ? user.workingAddress : user.homeAddress}
                 </p>
-                <p>Contact No - 9876543210</p>
-                <p>Email - info@lunoelectrical.com.au</p>
+                <p>Contact No - {user.phoneNumber}</p>
+                <p>Email - {user.companyEmail ? user.companyEmail : user.email}</p>
               </div>
             </div>
           </div>

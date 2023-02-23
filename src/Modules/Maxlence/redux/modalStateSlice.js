@@ -3,22 +3,35 @@ import { createSlice } from "@reduxjs/toolkit";
 const modalStateSlice = createSlice({
   name: "modal",
   initialState: {
-    showLoginModal : false,
-    showSignUpModal : false,
-    showMenuModal : false,
+    showLoginModal: false,
+    showSignUpModal: false,
+    showMenuModal: false,
+    user: {},
   },
   reducers: {
-    setShowLoginModal : (state)=> {
-        state.showLoginModal = !state.showLoginModal;
+    setShowLoginModal: (state) => {
+      state.showLoginModal = !state.showLoginModal;
     },
-    setShowSignUpModal : (state)=> {
-        state.showSignUpModal = !state.showSignUpModal
+    setShowSignUpModal: (state) => {
+      state.showSignUpModal = !state.showSignUpModal;
     },
-    setShowMenuModal : (state)=> {
-        state.showMenuModal = !state.showMenuModal
+    setShowMenuModal: (state) => {
+      state.showMenuModal = !state.showMenuModal;
+    },
+    setUser: (state, action) => {
+      state.user = action.payload;
+    },
+    resetUser: (state) => {
+      state.user = {};
     },
   },
 });
 
-export const { setShowLoginModal, setShowSignUpModal, setShowMenuModal } = modalStateSlice.actions;
+export const {
+  setShowLoginModal,
+  setShowSignUpModal,
+  setShowMenuModal,
+  setUser,
+  resetUser,
+} = modalStateSlice.actions;
 export default modalStateSlice.reducer;
