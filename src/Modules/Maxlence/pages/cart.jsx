@@ -1,308 +1,311 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import ENDPOINT from "../config/ENDPOINT";
-import GooglePayButton from "@google-pay/button-react";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import Slider from "react-slick";
+import React from "react";
+import youtubecamp from "../assests/youtubecamp.jpg";
+import pageseo from "../assests/pageseo.jpg";
+import socialmediamarketing from "../assests/socialmediamarketing.jpg";
+import emailmarketing from "../assests/emailmarketing.jpg";
+import Checkbox from "@mui/material/Checkbox";
+import { NavLink } from "react-router-dom";
+import Cart2 from "../../../img/cart2.png";
+export const Cart = () => {
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  const CardData = [
+    {
+      title: "Luno Electrical - Creation - Website",
+      price: "1200",
+      Monthly: "Monthly",
+      package: "Advanced",
+      link: "/",
+    },
+    {
+      title: "Luno Electrical - Creation - Website",
+      price: "1300",
+      Monthly: "Monthly",
+      package: "Advanced",
+      link: "/",
+    },
+    {
+      title: "Luno Electrical - Creation - Website",
+      price: "1400",
+      Monthly: "Monthly",
+      package: "Advanced",
+      link: "/",
+    },
+    {
+      title: "Luno Electrical - Creation - Website",
+      price: "1500",
+      Monthly: "Monthly",
+      package: "Advanced",
+      link: "/",
+    },
+    {
+      title: "Luno Electrical - Creation - Website",
+      price: "1200",
+      Monthly: "Monthly",
+      package: "Advanced",
+      link: "/",
+    },
+    {
+      title: "Luno Electrical - Creation - Website",
+      price: "1200",
+      Monthly: "Monthly",
+      package: "Advanced",
+      link: "/",
+    },
+  ];
+  const CardApp = (props) => {
+    return (
+      <>
+        <div className="col-12">
+          <div className="shopping_cart_name">
+            <Checkbox {...label} />
+            {props.title}
+            <p className="shopping_cart_price">${props.price}</p>
+          </div>
 
-export default function Cart({ pack_id, setShowCart }) {
-  const [addedPackage, setAddedPackage] = useState([]);
-  const [packagePlans, setPackagePlans] = useState([]);
-  const [pack, setPack] = useState({});
-
-  const handleCreateOrder = async (data) => {
-    try {
-      let token = localStorage.getItem("token");
-
-      const res = await axios.post(ENDPOINT + "subscription", data, {
-        headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") },
-      });
-      if (res.status === 200) {
-        alert("Order created successfully");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const fetchPackage = async () => {
-    let res = await fetch(ENDPOINT + `package/single/${pack_id}`);
-    let data = await res.json();
-    // console.log(data);
-    setAddedPackage(data.package);
-    setPackagePlans(data.package_plans);
-  };
-
-  useEffect(() => {
-    fetchPackage();
-  }, [pack_id]);
-
-  function loadScript(src) {
-    return new Promise((resolve) => {
-      const script = document.createElement("script");
-      script.src = src;
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-      document.body.appendChild(script);
-    });
-  }
-
-  async function displayRazorpay() {
-    const res = await loadScript(
-      "https://checkout.razorpay.com/v1/checkout.js"
+          <div className="shopping_cart_service">
+            <p className="your_services_card_btn_1">{props.package}</p>
+            <p className="shopping_cart_btn">{props.Monthly}</p>
+          </div>
+          <NavLink to={props.link}>
+            <img src={Cart2} alt="cart2" />
+            <label></label>
+            <span>See more service related this</span>
+          </NavLink>
+          <hr />
+        </div>
+      </>
     );
-
-    if (!res) {
-      alert("Razorpay SDK failed to load. Are you online?");
-      return;
-    }
-
-    let token = localStorage.getItem("token");
-    const {data} = await axios.post(
-      "http://localhost:5000/subscription/order",
-      {
-        package_plan_id: pack.id,
-      },
-      {
-        headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") },
-      }
-    );
-    
-    const options = {
-      key: data.key,
-      name: "Maxlence Digital Pvt Ltd",
-      description: "Test Transaction",
-      // image: { logo },
-      order_id: data.order_id,
-      handler: async function (response) {
-        alert("Payment successfull! Your razorpay order id is: " + response.razorpay_order_id);
-      },
-      prefill: {
-        name: "Test user",
-      },
-      theme: {
-        color: "#61dafb",
-      },
-    };
-
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
-  }
+  };
 
   return (
-    <div
-      style={{
-        width: "50vw",
-        height: "50vh",
-        position: "fixed",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "silver",
-        borderRadius: "5px",
-      }}
-    >
-      <span
-        style={{
-          width: "30px",
-          height: "30px",
-          color: "white",
-          position: "absolute",
-          top: "10px",
-          right: "10px",
-          cursor: "pointer",
-        }}
-        onClick={() => setShowCart(false)}
-      >
-        X
-      </span>
-      <h1>Cart</h1>
-      <h3>{addedPackage.title}</h3> <br />
-      {/* <div>
-        <div style={{ display: "flex" }}>
-          <input
-            name="radio"
-            type="radio"
-            id="radio"
-            value={addedPackage.monthly_price}
-            checked={selected === addedPackage.monthly_price}
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          &nbsp;
-          <label>
-            1 Month &nbsp; Price <strong>{addedPackage.monthly_price}</strong>
-          </label>
-        </div>
-
-        <div style={{ display: "flex" }}>
-          <input
-            name="radio"
-            type="radio"
-            value={
-              3 * ((addedPackage.monthly_price * addedPackage.discount) / 100)
-            }
-            checked={
-              selected ===
-              3 * ((addedPackage.monthly_price * addedPackage.discount) / 100)
-            }
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          &nbsp;
-          <label>
-            3 Months &nbsp; Price
-            <strong>
-              {3 * ((addedPackage.monthly_price * addedPackage.discount) / 100)}
-            </strong>
-          </label>
-        </div>
-
-        <div style={{ display: "flex" }}>
-          <input
-            name="radio"
-            type="radio"
-            value={
-              6 * ((addedPackage.monthly_price * addedPackage.discount) / 100)
-            }
-            checked={
-              selected ===
-              6 * ((addedPackage.monthly_price * addedPackage.discount) / 100)
-            }
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          &nbsp;
-          <label>
-            6 Months &nbsp; Price
-            <strong>
-              {6 * ((addedPackage.monthly_price * addedPackage.discount) / 100)}
-            </strong>
-          </label>
-        </div>
-
-        <div style={{ display: "flex" }}>
-          <input
-            name="radio"
-            type="radio"
-            value={addedPackage.yearly_price}
-            checked={selected === addedPackage.yearly_price}
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          &nbsp;
-          <label>
-            12 Months &nbsp; Price <strong>{addedPackage.yearly_price}</strong>
-          </label>
+    <>
+      <div className=" container mt-5 mb-5">
+        <div className="row g-3">
+          <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div className="shopping_cart">
+              <div className="row">
+                {CardData.map((val, i) => {
+                  return <CardApp key={i} {...val} />;
+                })}
+              </div>
+              <div className="shopping_cart_bottom">
+                <p>
+                  Subtotal (3 items) : <span>$6000</span>{" "}
+                </p>
+                <NavLink to="/" className="btn full_btn ">
+                  Proceed to Purchase
+                </NavLink>
+              </div>
+            </div>
+          </div>
+          <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <RightCard />
+          </div>
+          <div className="col-12">
+            <SliderBottom />
+          </div>
         </div>
       </div>
-      Total: {selected} */}
-      <div>
-        <label htmlFor="plan">Select Plan: &nbsp;</label>
-        <select
-          onChange={(e) => {
-            let pack_id = e.target.value;
-            let pack = packagePlans.find((p) => p.id == pack_id);
-            setPack(pack);
-          }}
-        >
-          {packagePlans.map((pack) => {
-            return (
-              <option key={pack.id} value={pack.id}>
-                {pack.price}/{pack.title}
-              </option>
-            );
-          })}
-        </select>
-        <br />
-        <br />
-        Total Price : {pack.price} &nbsp;
-        <button
-          disabled={pack.price === 0}
-          onClick={() => alert(`Your order of ${pack.price} is successfull`)}
-        >
-          Buy Plan
-        </button>
-        {/* <GooglePayButton
-          environment="PRODUCTION"
-          paymentRequest={{
-            apiVersion: 2,
-            apiVersionMinor: 0,
-            allowedPaymentMethods: [
-              {
-                type: "CARD",
-                parameters: {
-                  allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-                  allowedCardNetworks: ["MASTERCARD", "VISA"],
-                },
-                tokenizationSpecification: {
-                  type: "PAYMENT_GATEWAY",
-                  parameters: {
-                    gateway: "braintree",
-                    gatewayMerchantId: "mhnf6byzg96g7cfz",
-                  },
-                },
-              },
-            ],
-            merchantInfo: {
-              merchantId: "BCR2DN4TXK7ITJSP",
-              merchantName: "Shekhar Chauhan",
-            },
-            transactionInfo: {
-              totalPriceStatus: "FINAL",
-              totalPriceLabel: "Total",
-              totalPrice: "1.00",
-              currencyCode: "USD",
-              countryCode: "US",
-            },
-            callbackIntents: ["PAYMENT_AUTHORIZATION"]
-          }}
-          onLoadPaymentData={(paymentRequest) => {
-            console.log("load payment data", paymentRequest);
-          }}
-          onPaymentAuthorized={(paymentData) => {
-            console.log("Payment authorized success", paymentData);
-            return {transactionState : "SUCCESS"}
-          }}
-        /> */}
-        <PayPalScriptProvider
-          options={{
-            "client-id":
-              "AXK5pbzXY9J8pcOApb91gmxeE3FMpGdHSQdCiwJDCyIQvgMD0dSNk6lvnstzDQ7gpOci0UG1UorQ01oU",
-          }}
-        >
-          <PayPalButtons
-            style={{ layout: "horizontal" }}
-            disabled={false}
-            forceReRender={[pack]}
-            createOrder={(data, actions) => {
-              return actions.order.create({
-                purchase_units: [
-                  {
-                    amount: {
-                      value: pack.price,
-                    },
-                  },
-                ],
-              });
-            }}
-            onApprove={(data, actions) => {
-              return actions.order.capture().then((details) => {
-                console.log(details);
-                const amount = details.purchase_units[0].amount.value;
-                // alert(`Transaction of ${price} is completed by ${name}`);
-                handleCreateOrder({
-                  paypal_order_id: details.id,
-                  package_id: pack_id,
-                  package_plan_id: pack.id,
-                  amount: amount,
-                });
-              });
-            }}
-          />
-        </PayPalScriptProvider>
-        <button onClick={displayRazorpay}>Buy with Razorpay</button>
-      </div>
-    </div>
+    </>
   );
-}
+};
+
+const RightCard = () => {
+  return (
+    <>
+      <div className="my_slick_slider_title py-2">
+        <h2>Products related to items in your cart</h2>
+      </div>
+      <div className="row g-3">
+        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
+          <div className="productCards">
+            <div className="productImageContainer">
+              <img
+                className="productimg w-80 m-auto"
+                alt="Products"
+                src={youtubecamp}
+              />
+            </div>
+            <div className="productDetailsContainer ms-4 my-3">
+              <p className="productTitle mb-1">Youtube Campaign</p>
+              <h5 className="productPrice">$ &nbsp;100</h5>
+            </div>
+          </div>
+        </div>
+        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
+          <div className="productCards ">
+            <div className="productImageContainer">
+              <img
+                className="productimg w-80 m-auto"
+                alt="Products"
+                src={pageseo}
+              />
+            </div>
+            <div className="productDetailsContainer ms-4 my-3">
+              <p className="productTitle mb-1">Youtube Campaign</p>
+              <h5 className="productPrice">$ &nbsp;100</h5>
+            </div>
+          </div>
+        </div>
+        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
+          <div className="productCards ">
+            <div className="productImageContainer">
+              <img
+                className="productimg w-80 m-auto"
+                alt="Products"
+                src={socialmediamarketing}
+              />
+            </div>
+            <div className="productDetailsContainer ms-4 my-3">
+              <p className="productTitle mb-1">Youtube Campaign</p>
+              <h5 className="productPrice">$ &nbsp;100</h5>
+            </div>
+          </div>
+        </div>
+        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
+          <div className="productCards ">
+            <div className="productImageContainer">
+              <img
+                className="productimg w-80 m-auto"
+                alt="Products"
+                src={emailmarketing}
+              />
+            </div>
+            <div className="productDetailsContainer ms-4 my-3">
+              <p className="productTitle mb-1">Youtube Campaign</p>
+              <h5 className="productPrice">$ &nbsp;100</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const SliderBottom = () => {
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: false,
+    // autoplay: true,
+    // speed: 4000,
+    // autoplaySpeed: 4000,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
+  };
+  return (
+    <>
+      <div className="my_slick_slider_title">
+        <h2 className="py-2">Frequently purchased</h2>
+      </div>
+      <Slider className="slidebluearrows my_slick_slider py-2" {...settings}>
+        <div className="productCards col-md-3 col-6">
+          <div className="productImageContainer">
+            <img
+              className="productimg w-80 m-auto"
+              alt="Products"
+              src={youtubecamp}
+            />
+          </div>
+          <div className="productDetailsContainer ms-4 my-3">
+            <p className="productTitle mb-1">Youtube Campaign</p>
+            <h5 className="productPrice">$ &nbsp;100</h5>
+          </div>
+        </div>
+        <div className="productCards col-md-3 col-6">
+          <div className="productImageContainer">
+            <img
+              className="productimg w-80 m-auto"
+              alt="Products"
+              src={pageseo}
+            />
+          </div>
+          <div className="productDetailsContainer ms-4 my-3">
+            <p className="productTitle mb-1">Youtube Campaign</p>
+            <h5 className="productPrice">$ &nbsp;100</h5>
+          </div>
+        </div>
+        <div className="productCards col-md-3 col-6">
+          <div className="productImageContainer">
+            <img
+              className="productimg w-80 m-auto"
+              alt="Products"
+              src={socialmediamarketing}
+            />
+          </div>
+          <div className="productDetailsContainer ms-4 my-3">
+            <p className="productTitle mb-1">Youtube Campaign</p>
+            <h5 className="productPrice">$ &nbsp;100</h5>
+          </div>
+        </div>
+        <div className="productCards col-md-3 col-6">
+          <div className="productImageContainer">
+            <img
+              className="productimg w-80 m-auto"
+              alt="Products"
+              src={emailmarketing}
+            />
+          </div>
+          <div className="productDetailsContainer ms-4 my-3">
+            <p className="productTitle mb-1">Youtube Campaign</p>
+            <h5 className="productPrice">$ &nbsp;100</h5>
+          </div>
+        </div>
+        <div className="productCards col-md-3 col-6">
+          <div className="productImageContainer">
+            <img
+              className="productimg w-80 m-auto"
+              alt="Products"
+              src={youtubecamp}
+            />
+          </div>
+          <div className="productDetailsContainer ms-4 my-3">
+            <p className="productTitle mb-1">Youtube Campaign</p>
+            <h5 className="productPrice">$ &nbsp;100</h5>
+          </div>
+        </div>
+        <div className="productCards col-md-3 col-6">
+          <div className="productImageContainer">
+            <img
+              className="productimg w-80 m-auto"
+              alt="Products"
+              src={emailmarketing}
+            />
+          </div>
+          <div className="productDetailsContainer ms-4 my-3">
+            <p className="productTitle mb-1">Youtube Campaign</p>
+            <h5 className="productPrice">$ &nbsp;100</h5>
+          </div>
+        </div>
+      </Slider>
+    </>
+  );
+};

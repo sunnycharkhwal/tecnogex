@@ -19,11 +19,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { Nav, Container } from "react-bootstrap";
 import { PartnersList } from "../components/Partners";
-import {
-  BlueBtn,
-  OutlineBtn,
-  OutlineLinkBtn,
-} from "../components/Btn";
+import { BlueBtn, OutlineBtn, OutlineLinkBtn } from "../components/Btn";
 import { Faqs } from "../components/Faqs";
 import { ProductLists } from "../components/ProductLists";
 import { Cta } from "../components/Cta";
@@ -1141,7 +1137,7 @@ export const Home = () => {
       <MainSlider
         data={testimonial}
         SliderCard={TestimonialCard}
-        titleClass="text-md-end text-center"
+        titleclassName="text-md-end text-center"
         SliderTitle={
           <>
             <span>Thanks</span> for your <span>sweet</span> words
@@ -1175,7 +1171,7 @@ export const Home = () => {
       <MainSlider
         data={portfolio}
         SliderCard={VideoCard}
-        titleClass="text-md-start text-center"
+        titleclassName="text-md-start text-center"
         SliderTitle={
           <>
             A<span> Glance </span> at Our <span>Projects</span>

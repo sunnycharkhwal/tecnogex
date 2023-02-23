@@ -14,26 +14,26 @@ import { Businessone } from "./Modules/Maxlence/pages/business1";
 import { Website } from "./Modules/Maxlence/pages/website";
 import Quest from "./Modules/Maxlence/pages/quest";
 import QuesPlan from "./Modules/Maxlence/pages/quesPlan";
-import Package from "./Modules/Maxlence/pages/package";
 import store from "./Modules/Maxlence/redux/store";
 import { Provider } from "react-redux";
 import { YourAccount } from "./Modules/Maxlence/pages/YourAccount";
 import { YourServices } from "./Modules/Maxlence/pages/YourServices";
 import { Payment } from "./Modules/Maxlence/pages/Payment";
-
+import { Cart } from "./Modules/Maxlence/pages/cart";
+import { ActiveNav } from "./Modules/Maxlence/components/ActiveNav";
 export const App = () => {
   return (
     <React.StrictMode>
       <Provider store={store}>
         <Router>
           <Header />
+          <ActiveNav />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/creation" element={<Creation />} />
             <Route path="/:name/:id" element={<Website />} />
             <Route path="/quest/:id" element={<Quest />} />
             <Route path="/buyplans/:id" element={<QuesPlan />} />
-            <Route path="/package/:id" element={<Package />} />
             <Route path="/growth" element={<Growth />} />
             <Route path="/design" element={<Design />} />
             <Route path="/shop" element={<Shop />} />
@@ -44,6 +44,7 @@ export const App = () => {
             <Route path="/your_account" element={<YourAccount />} />
             <Route path="/your_services" element={<YourServices />} />
             <Route path="/payment" element={<Payment />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
         </Router>

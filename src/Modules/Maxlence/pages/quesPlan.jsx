@@ -3,12 +3,12 @@ import logo from "../../Maxlence/assests/maxlogodark.png";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function QuesPlan() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   let { id } = useParams();
 
   return (
     <div className="text-center my-5">
-      <div class="text-center my-5">
+      <div className="text-center my-5">
         <img src={logo} alt="logo" />
       </div>
 
@@ -18,7 +18,7 @@ export default function QuesPlan() {
           on the way to your <span> solution</span>
           <sup>
             <small>
-              <a onClick={()=> navigate(`/package/${id}`)}>Buy Plans</a>
+              <a onClick={() => navigate(`/package/${id}`)}>Buy Plans</a>
             </small>
           </sup>
         </h3>
