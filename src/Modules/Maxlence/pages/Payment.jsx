@@ -86,6 +86,7 @@ export const Payment = () => {
                 <h3>Billing Address</h3>
               </div>
               <div className="payment_card">
+
                 <Link to="/your_account"><MdOutlineModeEdit /></Link>
                 <h3>{user.companyName ? user.companyName : user.fullname}</h3>
                 <p>

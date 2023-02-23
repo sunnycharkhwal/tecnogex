@@ -9,19 +9,35 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { TextAreaBox } from "../components/form";
 import Swal from "sweetalert2";
 import ENDPOINT from "../config/ENDPOINT";
-import { LoginSocialFacebook } from "reactjs-social-login";
-import { FacebookLoginButton } from "react-social-login-buttons";
+import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowLoginModal, setUser, resetUser } from "../redux/modalStateSlice";
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
-import { handleExpiredUser } from "../HelperFunction/Helpers";
+import { setShowForgotModal } from "../redux/modalStateSlice";
+import { setShowCheckYourEmailModal } from "../redux/modalStateSlice";
+import { setShowPasswordResetModal } from "../redux/modalStateSlice";
+import { setNewPasswordModal } from "../redux/modalStateSlice";
 
 export const Header = () => {
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
   const showMenuModal = useSelector((state) => state.state.showMenuModal);
+  const showForgotModal = useSelector((state) => state.state.showForgotModal);
+  const showCheckYourEmailModal = useSelector(
+    (state) => state.state.showCheckYourEmailModal
+  );
+  const showPasswordResetModal = useSelector(
+    (state) => state.state.showPasswordResetModal
+  );
+  const showNewPasswordModal = useSelector(
+    (state) => state.state.showNewPasswordModal
+  );
+  const dispatch = useDispatch();
+
+  ////////////////////// Sign Up Modal //////////////////////////////
+
   const user = useSelector((state) => state.state.user);
   const dispatch = useDispatch();
   // const [user, setUser] = useState({});
@@ -149,6 +165,9 @@ export const Header = () => {
         [name]: value,
       });
     };
+
+    let user = localStorage.getItem("token");
+
     return (
       <>
         {token ? (
@@ -157,6 +176,7 @@ export const Header = () => {
           <OutlineBtn
             title="Log In"
             icon=""
+            // onClick={() => setShowLoginModal(true)}
             onClick={() => dispatch(setShowLoginModal())}
           />
         )}
@@ -276,45 +296,6 @@ export const Header = () => {
       </>
     );
   };
-
-  // const Example = () => {
-  //   const values = [
-  //     true,
-  //     "sm-down",
-  //     "md-down",
-  //     "lg-down",
-  //     "xl-down",
-  //     "xxl-down",
-  //   ];
-
-  //   const [fullscreen, setFullscreen] = useState(true);
-  //   const [show, setShow] = useState(false);
-
-  //   function handleShow(breakpoint) {
-  //     setFullscreen(breakpoint);
-  //     setShow(true);
-  //   }
-
-  //   return (
-  //     <>
-  //       <OutlineBtn
-  //         title="Sign up"
-  //         icon=""
-  //         onClick={() => setShowSignUpModal(true)}onClick={() => handleShow(v)
-  //       />
-  //       <Modal
-  //         show={show}
-  //         fullscreen={fullscreen}
-  //         onHide={() => setShow(false)}>
-  //         <Modal.Header closeButton>
-  //           <Modal.Title>Modal</Modal.Title>
-  //         </Modal.Header>
-  //         <Modal.Body>Modal body content</Modal.Body>
-  //       </Modal>
-  //     </>
-  //   );
-  // };
-
   ////////////////////// Login Modal //////////////////////////////
 
   const LoginModal = () => {
@@ -599,9 +580,362 @@ export const Header = () => {
       </>
     );
   };
+  //////////////////////  Forgot Modal //////////////////////////////
+  const ForgotModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showForgotModal}
+          onHide={() => dispatch(setShowForgotModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setShowForgotModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
 
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Forgot Password?</h1>
+                          <p>No worries, we’ll send you reset instructions.</p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TextAreaBox
+                                  type="email"
+                                  label="Email"
+                                  name="Email"
+                                  // required
+                                />
+                              </div>
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn
+                                  onClick={() => {
+                                    dispatch(setShowForgotModal());
+                                    dispatch(setShowCheckYourEmailModal());
+                                  }}
+                                  type="submit"
+                                  title="Reset Password"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            &nbsp;
+                            <span
+                              onClick={() => {
+                                dispatch(setShowForgotModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
+  ////////////////////// Check Your Email Modal //////////////////////////////
+  const CheckYourEmailModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showCheckYourEmailModal}
+          onHide={() => dispatch(setShowCheckYourEmailModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setShowCheckYourEmailModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
+
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Check your email</h1>
+                          <p>
+                            We sent a password reset link to
+                            akhilesh@maxlence.com.au
+                          </p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn
+                                  onClick={() => {
+                                    dispatch(setShowCheckYourEmailModal());
+                                    dispatch(setNewPasswordModal());
+                                  }}
+                                  type="submit"
+                                  title="Open Email"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            Didn't receive the email?{" "}
+                            <span
+                              onClick={() => {
+                                dispatch(setShowCheckYourEmailModal());
+                                dispatch(setShowPasswordResetModal());
+                              }}
+                            >
+                              Resend
+                            </span>
+                            <br />
+                            <span
+                              onClick={() => {
+                                dispatch(setShowCheckYourEmailModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
+  ////////////////////// Password Reset Modal //////////////////////////////
+  const PasswordResetModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showPasswordResetModal}
+          onHide={() => dispatch(setShowPasswordResetModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setShowPasswordResetModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
+
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Password Reset</h1>
+                          <p className="mb-0">
+                            Your password has been successfully reset.
+                          </p>
+                          <p>Click below to login.</p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn type="submit" title="Open Email" />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            <span
+                              onClick={() => {
+                                dispatch(setShowPasswordResetModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
+  //////////////////////  Set New Password Modal //////////////////////////////
+  const SetNewPasswordModal = () => {
+    return (
+      <>
+        <Modal
+          animation={true}
+          className="signupmodal fullwidthmodal"
+          show={showNewPasswordModal}
+          onHide={() => dispatch(setNewPasswordModal())}
+        >
+          <Modal.Header closeButton>
+            <Link
+              to="/home"
+              onClick={() => {
+                dispatch(setNewPasswordModal());
+              }}
+            >
+              <div className=" ">
+                <img width="100" src={logo} alt="companylogo" />
+              </div>
+            </Link>
+          </Modal.Header>
+          <Modal.Body className="p-0">
+            <div className="row h-100">
+              <div className="col-md-3 signleft">
+                <div className="contact-info">
+                  <h1 className="text-light">
+                    Let’s Craft <br /> Brilliance
+                  </h1>
+                </div>
+              </div>
+
+              <div className="col-md-9 signright">
+                <Container>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="row d-flex flex-column justify-content-center align-items-center ">
+                        <div className="col-6 my-4 signformstart text-center">
+                          <h1 className="signtitle">Set New Password</h1>
+                          <p>
+                            We sent a password reset link to
+                            akhilesh@maxlence.com.au
+                          </p>
+                        </div>
+                        <div className="col-md-6">
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TextAreaBox
+                                  type="password"
+                                  label="Password"
+                                  name="Email"
+                                  // required
+                                />
+                              </div>
+                              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TextAreaBox
+                                  type="password"
+                                  label="Confirm Password"
+                                  name="Email"
+                                  // required
+                                />
+                              </div>
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn type="submit" title="Reset Password" />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div className="text-center popuplink my-2">
+                          <p>
+                            &nbsp;
+                            <span
+                              onClick={() => {
+                                dispatch(setNewPasswordModal());
+                                dispatch(setShowLoginModal());
+                              }}
+                            >
+                              Back to login
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Container>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  };
   ////////////////////// Menu Modal //////////////////////////////
-
   const MenuModal = () => {
     return (
       <>
@@ -691,10 +1025,9 @@ export const Header = () => {
       </>
     );
   };
-
   return (
     <Container fluid bg="light" className="navbarmain px-md-5 ">
-      <Navbar expand="lg" className="">
+      <Navbar expand="lg">
         <Navbar.Brand
           className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 "
           href="/"
@@ -744,6 +1077,10 @@ export const Header = () => {
           <SignUpmodal />
           <MenuModal />
           <LoginModal />
+          <ForgotModal />
+          <CheckYourEmailModal />
+          <PasswordResetModal />
+          <SetNewPasswordModal />
         </Nav>
       </Navbar>
     </Container>

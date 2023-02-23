@@ -61,16 +61,16 @@ export default function Cart({ pack_id, setShowCart }) {
     }
 
     let token = localStorage.getItem("token");
-    const { data } = await axios.post(
-      ENDPOINT + "subscription/order",
+    const {data} = await axios.post(
+      "http://localhost:5000/subscription/order",
       {
         package_plan_id: pack.id,
       },
       {
-        headers: { "x-access-token": token },
+        headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") },
       }
     );
-
+    
     const options = {
       key: data.key,
       name: "Maxlence Digital Pvt Ltd",
@@ -78,22 +78,7 @@ export default function Cart({ pack_id, setShowCart }) {
       // image: { logo },
       order_id: data.order_id,
       handler: async function (response) {
-        const data = {
-          razorpayPaymentId: response.razorpay_payment_id,
-          razorpayOrderId: response.razorpay_order_id,
-        };
-
-        const result = await axios.post(
-          ENDPOINT + "subscription/payment-success",
-          data,
-          {
-            headers: { "x-access-token": token },
-          }
-        );
-
-        alert(
-          result.data.msg + " Your razorpay order ID is: " + result.data.orderId
-        );
+        alert("Payment successfull! Your razorpay order id is: " + response.razorpay_order_id);
       },
       prefill: {
         name: "Test user",
@@ -305,6 +290,7 @@ export default function Cart({ pack_id, setShowCart }) {
               return actions.order.capture().then((details) => {
                 console.log(details);
                 const amount = details.purchase_units[0].amount.value;
+                // alert(`Transaction of ${price} is completed by ${name}`);
                 handleCreateOrder({
                   paypal_order_id: details.id,
                   package_id: pack_id,

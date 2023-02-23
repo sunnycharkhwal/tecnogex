@@ -105,7 +105,7 @@ export default function AccountMenu() {
           </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink className="login_menu" to={"/"}>
+          <NavLink className="login_menu" to={"/forgot_password"}>
             <span className="menu_desbord_btn">
               Dashboard <BsArrowRight />
             </span>
