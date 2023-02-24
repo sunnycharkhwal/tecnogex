@@ -84,6 +84,10 @@ export const Cart = () => {
         <div className="row g-3">
           <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
             <div className="shopping_cart">
+              <div className="shopping_cart_top_title">
+                <p>Shopping Cart</p>
+                <NavLink to="/">Select all</NavLink>
+              </div>
               <div className="row">
                 {CardData.map((val, i) => {
                   return <CardApp key={i} {...val} />;
