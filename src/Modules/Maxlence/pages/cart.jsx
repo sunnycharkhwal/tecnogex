@@ -6,7 +6,7 @@ import socialmediamarketing from "../assests/socialmediamarketing.jpg";
 import emailmarketing from "../assests/emailmarketing.jpg";
 import Checkbox from "@mui/material/Checkbox";
 import { NavLink } from "react-router-dom";
-import Cart2 from "../../../img/cart2.png";
+import Cart2 from "../../../img/cart2.svg";
 export const Cart = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const CardData = [
@@ -58,7 +58,6 @@ export const Cart = () => {
       <>
         <div className="col-12">
           <div className="shopping_cart_name">
-            <Checkbox {...label} />
             {props.title}
             <p className="shopping_cart_price">${props.price}</p>
           </div>
@@ -67,11 +66,14 @@ export const Cart = () => {
             <p className="your_services_card_btn_1">{props.package}</p>
             <p className="shopping_cart_btn">{props.Monthly}</p>
           </div>
-          <NavLink to={props.link}>
+
+          <div className="shopping_cart_a_div">
             <img src={Cart2} alt="cart2" />
             <label></label>
-            <span>See more service related this</span>
-          </NavLink>
+            <NavLink to={props.link}>
+              <span>See more service related this</span>
+            </NavLink>
+          </div>
           <hr />
         </div>
       </>
@@ -97,7 +99,7 @@ export const Cart = () => {
                 <p>
                   Subtotal (3 items) : <span>$6000</span>{" "}
                 </p>
-                <NavLink to="/" className="btn full_btn ">
+                <NavLink to="/checkout" className="btn full_btn ">
                   Proceed to Purchase
                 </NavLink>
               </div>

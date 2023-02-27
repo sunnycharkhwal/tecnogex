@@ -12,7 +12,6 @@ import homelogo3 from "../assests/homelogo3.jpg";
 import homegif from "../assests/homegif.gif";
 import webview from "../assests/webview.png";
 import demovideo from "../assests/demovideo.mp4";
-import demovideo2 from "../assests/demovideo2.mp4";
 import arrowup from "../assests/arrowup.png";
 import dashboardagency from "../assests/dashboardagency.svg";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -102,6 +101,7 @@ export const Home = () => {
           width="100%"
           height="100%"
           src={ENDPOINT + "uploads/" + props.img}
+          alt="demo"
         />
       </div>
     );
@@ -122,7 +122,11 @@ export const Home = () => {
       <div className="SlidercontentContainer">
         <div className="row justify-content-start g-1">
           <div className="col-3 testimg">
-            <img width="100%" src={ENDPOINT + "uploads/" + props.pic} alt="" />
+            <img
+              width="100%"
+              src={ENDPOINT + "uploads/" + props.pic}
+              alt="demo"
+            />
           </div>
           <div className="col-6 testname">
             <h5>{props.client_name}</h5>
@@ -206,7 +210,7 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <img className="w-md-80 w-100" alt="" src={homehero1} />
+                    <img className="w-md-80 w-100" alt="demo" src={homehero1} />
                   </div>
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
@@ -229,7 +233,7 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <img className="w-md-80 w-100" alt="" src={homehero2} />
+                    <img className="w-md-80 w-100" alt="demo" src={homehero2} />
                   </div>
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
@@ -252,7 +256,7 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <img className="w-md-80 w-100" alt="" src={homehero3} />
+                    <img className="w-md-80 w-100" alt="demo" src={homehero3} />
                   </div>
                 </div>
               </Slider>
@@ -295,7 +299,7 @@ export const Home = () => {
         <Container>
           <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4 webview">
             <div className="col-12 col-md-12 col-lg-6 col-xl-6">
-              <img width="100%" alt="" src={webview} />
+              <img width="100%" alt="demo" src={webview} />
             </div>
             <div className="col-12 col-md-12 col-lg-6 col-xl-6">
               <h1>
@@ -379,7 +383,7 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="col-12 col-md-12 col-lg-5">
-                    <img className="w-md-80 w-100" alt="" src={homelogo1} />
+                    <img className="w-md-80 w-100" alt="demo" src={homelogo1} />
                   </div>
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
@@ -401,7 +405,7 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="col-12 col-md-12 col-lg-5">
-                    <img className="w-md-80 w-100" alt="" src={homelogo2} />
+                    <img className="w-md-80 w-100" alt="demo" src={homelogo2} />
                   </div>
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
@@ -423,7 +427,7 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="col-12 col-md-12 col-lg-5">
-                    <img className="w-md-80 w-100" alt="" src={homelogo3} />
+                    <img className="w-md-80 w-100" alt="demo" src={homelogo3} />
                   </div>
                 </div>
               </Slider>
@@ -462,7 +466,7 @@ export const Home = () => {
         <Container className="py-3 mt-3">
           <div className="row align-items-center py-3 g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
             <div className="col-12 col-md-12 col-lg-6">
-              <img width="100%" src={homegif} className="" alt="" />
+              <img width="100%" src={homegif} className="" alt="demo" />
             </div>
             <div className="col-12 col-md-12 col-lg-6">
               <h1>
@@ -1078,7 +1082,7 @@ export const Home = () => {
                     </h1>
                   </div>
                   <div>
-                    <img className="" src={arrowup} alt="" />
+                    <img className="" src={arrowup} alt="demo" />
                   </div>
                 </div>
                 <div>
@@ -1095,7 +1099,7 @@ export const Home = () => {
                     </h1>
                   </div>
                   <div>
-                    <img className="" src={arrowup} alt="" />
+                    <img className="" src={arrowup} alt="demo" />
                   </div>
                 </div>
                 <div>
@@ -1112,7 +1116,7 @@ export const Home = () => {
                     </h1>
                   </div>
                   <div>
-                    <img className="" src={arrowup} alt="" />
+                    <img className="" src={arrowup} alt="demo" />
                   </div>
                 </div>
                 <div>

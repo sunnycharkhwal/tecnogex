@@ -18,7 +18,9 @@ export default function QuesPlan() {
           on the way to your <span> solution</span>
           <sup>
             <small>
-              <a onClick={() => navigate(`/package/${id}`)}>Buy Plans</a>
+              <button onClick={() => navigate(`/package/${id}`)}>
+                Buy Plans
+              </button>
             </small>
           </sup>
         </h3>

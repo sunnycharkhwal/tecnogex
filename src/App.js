@@ -21,6 +21,7 @@ import { YourServices } from "./Modules/Maxlence/pages/YourServices";
 import { Payment } from "./Modules/Maxlence/pages/Payment";
 import { Cart } from "./Modules/Maxlence/pages/cart";
 import { ActiveNav } from "./Modules/Maxlence/components/ActiveNav";
+import { Checkout } from "./Modules/Maxlence/pages/Checkout";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -45,6 +46,7 @@ export const App = () => {
             <Route path="/your_services" element={<YourServices />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
         </Router>

@@ -6,6 +6,109 @@
   }
 }
 @media (max-width: 576px) {
+  .shopping_cart {
+    .shopping_cart_a_div {
+      margin-left: 0;
+      justify-content: center;
+    }
+  }
+  .getintouch_bottom_btn_div {
+    text-align: center;
+  }
+  .getintouch_upload_div {
+    display: block;
+    .getintouch_upload_btn {
+      text-align: center;
+    }
+  }
+  .getintouch_title_top_div {
+    width: 100%;
+    .getintouch_title_big_title {
+      span {
+        height: 67px;
+        top: 6px;
+        left: -7px;
+      }
+    }
+    h2 {
+      font-size: 15px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h4 {
+      font-size: 19px;
+      margin-top: 1rem;
+      span {
+        width: auto;
+        font-size: 15px;
+      }
+    }
+  }
+  .checkout_back_btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .checkout_btn {
+    justify-content: center;
+  }
+  .payment_modes_tab_div {
+    .nav-link {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .nav {
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .checkout_address {
+    width: 100%;
+  }
+  .shopping_cart_top_title {
+    margin-left: 0;
+    a {
+      margin-left: 1rem !important;
+    }
+  }
+  .shopping_cart_name {
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    line-height: 3px;
+  }
+  .shopping_cart_price {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .shopping_cart_service {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .shopping_cart {
+    a {
+      margin-left: 0;
+      justify-content: center;
+    }
+  }
+  .my_slick_slider_title {
+    text-align: center;
+  }
+  .my_slick_slider {
+    .slick-prev {
+      left: -3% !important;
+      top: 6rem !important;
+    }
+    .slick-next {
+      right: 2% !important;
+      top: 6rem !important;
+    }
+  }
   .saved_cards_number {
     justify-content: center;
     p {
@@ -70,6 +173,19 @@
   }
 }
 @media (min-width: 768px) {
+  .getintouch_title_top_div {
+    width: 100%;
+  }
+  .payment_modes_tab_div {
+    .nav-link {
+      width: 12rem;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   .saved_cards_number {
     p {
       span {
@@ -100,6 +216,32 @@
   }
 }
 @media (min-width: 1024px) {
+  .getintouch_title_top_div {
+    width: 90%;
+  }
+  .payment_modes_tab_div {
+    .nav-link {
+      width: 12rem;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+  }
+  .checkout_address {
+    width: 80%;
+  }
+  .my_slick_slider {
+    .slick-prev {
+      left: -4% !important;
+      top: 6rem !important;
+    }
+    .slick-next {
+      right: -2% !important;
+      top: 6rem !important;
+    }
+  }
   .saved_cards_number {
     p {
       span {
@@ -130,6 +272,32 @@
   }
 }
 @media (min-width: 1440px) {
+  .getintouch_title_top_div {
+    width: 53%;
+  }
+  .payment_modes_tab_div {
+    .nav-link {
+      width: 13rem;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+  }
+  .checkout_address {
+    width: 45%;
+  }
+  .my_slick_slider {
+    .slick-prev {
+      left: -2% !important;
+      top: 6rem !important;
+    }
+    .slick-next {
+      right: -2% !important;
+      top: 6rem !important;
+    }
+  }
   .saved_cards_number {
     p {
       span {
