@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { OutlineBtn, OutlineLinkBtn, BlueBtn } from "../components/Btn";
 import logo from "../assests/maxlogodark.png";
@@ -8,29 +8,25 @@ import Modal from "react-bootstrap/Modal";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { TextAreaBox } from "../components/form";
 import Swal from "sweetalert2";
+import { LoginSocialFacebook } from "reactjs-social-login";
+import { FacebookLoginButton } from "react-social-login-buttons";
 import ENDPOINT from "../config/ENDPOINT";
-import OAuth2Login from "react-simple-oauth2-login";
 import AccountMenu from "./AccountMenu";
+import { handleExpiredUser } from "../HelperFunction/Helpers";
 import { useDispatch, useSelector } from "react-redux";
-<<<<<<< Updated upstream
-import { setShowLoginModal } from "../redux/modalStateSlice";
-=======
 import {
   setShowLoginModal,
   setUser,
   resetUser,
-  setShowLoginModalTrue,
 } from "../redux/modalStateSlice";
->>>>>>> Stashed changes
 import { setShowSignUpModal } from "../redux/modalStateSlice";
 import { setShowMenuModal } from "../redux/modalStateSlice";
 import { setShowForgotModal } from "../redux/modalStateSlice";
 import { setShowCheckYourEmailModal } from "../redux/modalStateSlice";
 import { setShowPasswordResetModal } from "../redux/modalStateSlice";
-import { setNewPasswordModal, setUserEmail } from "../redux/modalStateSlice";
+import { setNewPasswordModal } from "../redux/modalStateSlice";
 
 export const Header = () => {
-  const navigate = useNavigate();
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
   const showMenuModal = useSelector((state) => state.state.showMenuModal);
@@ -44,12 +40,39 @@ export const Header = () => {
   const showNewPasswordModal = useSelector(
     (state) => state.state.showNewPasswordModal
   );
-  const showToken = useSelector((state) => state.state.token.token);
-  const userEmail = useSelector((state) => state.state.userEmail);
 
+  const user = useSelector((state) => state.state.user);
   const dispatch = useDispatch();
 
   ////////////////////// Sign Up Modal //////////////////////////////
+  let token = localStorage.getItem("token");
+
+  React.useEffect(() => {
+    if (token) {
+      try {
+        axios
+          .get(ENDPOINT + "local", {
+            headers: {
+              "x-access-token": token,
+            },
+          })
+          .then((res) => {
+            if (res.status === 200) {
+              dispatch(setUser(res.data));
+            }
+          })
+          .catch((err) => {
+            if (err.response.status === 401) {
+            } else if (err.response.status === 405) {
+              handleExpiredUser();
+              dispatch(resetUser());
+            }
+          });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }, [token]);
 
   const SignUpmodal = () => {
     const [values, setValues] = useState({
@@ -58,6 +81,31 @@ export const Header = () => {
       password: "",
       confirmPassword: "",
     });
+
+    // const templateParams = {
+    //   to_name: values.fullname,
+    //   from_name: "Maxlence team",
+    //   to_email: values.email,
+    //   message : "Thanks for registering on our website"
+    // };
+
+    // const sendMail = () => {
+    //   emailjs
+    //     .send(
+    //       "service_7j5gb3l",
+    //       "template_e1lw4xh",
+    //       templateParams,
+    //       "N75Wr8f2e4xB17KGn"
+    //     )
+    //     .then(
+    //       (response) => {
+    //         console.log("SUCCESS!", response.status, response.text);
+    //       },
+    //       (err) => {
+    //         console.log("FAILED...", err);
+    //       }
+    //     );
+    // };
 
     const handleCreate = (e) => {
       e.preventDefault();
@@ -117,13 +165,13 @@ export const Header = () => {
 
     return (
       <>
-        <AccountMenu />
-        {user ? (
+        {token ? (
           <AccountMenu />
         ) : (
           <OutlineBtn
             title="Log In"
             icon=""
+            // onClick={() => setShowLoginModal(true)}
             onClick={() => dispatch(setShowLoginModal())}
           />
         )}
@@ -267,7 +315,7 @@ export const Header = () => {
                 timer: 1500,
               });
               dispatch(setShowLoginModal());
-              localStorage.setItem("token", JSON.stringify(res.data.token));
+              localStorage.setItem("token", res.data.token);
               localStorage.setItem("user", JSON.stringify(res.data.user));
             }
           })
@@ -316,16 +364,41 @@ export const Header = () => {
       headers.append("Content-Type", "application/x-www-form-urlencoded");
 
       try {
-        await fetch(ENDPOINT + "auth/google/login", {
+        axios({
+          url: ENDPOINT + "auth/google/login",
           method: "POST",
           headers,
-          body: urlencoded,
+          data: urlencoded,
         })
-          .then((res) => res.json())
-          .then((data) => {
-            localStorage.setItem("token", JSON.stringify(data.token));
-            localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.reload();
+          .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "success",
+                text: "Login Successfull",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              localStorage.setItem("token", res.data.token);
+              localStorage.setItem("user", JSON.stringify(res.data.user));
+              window.location.reload();
+            }
+          })
+          .catch((err) => {
+            if (err.response.status === 401) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Error while creating new User!!",
+              });
+            } else if (err.response.status === 500) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Server Error!",
+              });
+            }
           });
       } catch (err) {
         console.log("Error logging in: " + err);
@@ -345,12 +418,59 @@ export const Header = () => {
           size: "large",
         }
       );
-      let user = localStorage.getItem("token");
-      if (!user) window.google?.accounts?.id.prompt();
+      if (!token) window.google?.accounts?.id.prompt();
     }, []);
 
-    const onSuccess = (response) => console.log(response);
-    const onFailure = (response) => console.error(response);
+    const handleFbResponse = async (res) => {
+      const token = res.data.accessToken;
+
+      var form = new URLSearchParams();
+      form.append("token", token);
+
+      let headers = new Headers();
+      headers.append("Content-Type", "application/x-www-form-urlencoded");
+
+      try {
+        axios({
+          url: ENDPOINT + "auth/facebook/login",
+          method: "POST",
+          headers,
+          data: form,
+        })
+          .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "success",
+                text: "Login Successfull",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              localStorage.setItem("token", res.data.token);
+              localStorage.setItem("user", JSON.stringify(res.data.user));
+              dispatch(setShowLoginModal());
+            }
+          })
+          .catch((err) => {
+            if (err.response.status === 401) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Error while creating new User!!",
+              });
+            } else if (err.response.status === 500) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Server Error!",
+              });
+            }
+          });
+      } catch (err) {
+        console.log("Error logging in: " + err);
+      }
+    };
 
     return (
       <>
@@ -426,31 +546,21 @@ export const Header = () => {
                                 Sign Up
                               </span>
                             </p>
-
-                            <div className="googleicon d-flex justify-content-center my-2">
-                              <OAuth2Login
-                                buttonText="Log in with Facebook"
-                                authorizationUrl="https://www.facebook.com/dialog/oauth"
-                                responseType="token"
-                                clientId="9822046hvr4lnhi7g07grihpefahy5jb"
-                                redirectUri={ENDPOINT}
-                                onSuccess={onSuccess}
-                                onFailure={onFailure}
-                              />
+                            <div className="googleicon d-flex justify-content-center my-2" />
+                            <div className="fbicon d-flex justify-content-center my-2">
+                              <LoginSocialFacebook
+                                isOnlyGetToken
+                                appId="3789647204595344"
+                                onResolve={handleFbResponse}
+                                onReject={(err) => {
+                                  console.log(err);
+                                }}
+                              >
+                                <FacebookLoginButton />
+                              </LoginSocialFacebook>
                             </div>
                             <p>
-                              <span
-<<<<<<< Updated upstream
-                                onClick={() => {
-                                  dispatch(setShowLoginModal());
-                                  dispatch(setShowForgotModal());
-                                }}
-=======
-                                onClick={() => dispatch(setShowForgotModal())}
->>>>>>> Stashed changes
-                              >
-                                Forget Password
-                              </span>
+                              <span>Forget Password</span>
                             </p>
                           </div>
                         </div>
@@ -467,55 +577,13 @@ export const Header = () => {
   };
   //////////////////////  Forgot Modal //////////////////////////////
   const ForgotModal = () => {
-    const [email, setEmail] = useState("");
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-
-      try {
-        axios
-          .post(ENDPOINT + "api/auth/forgotpassword", { email })
-          .then((res) => {
-            if (res.status === 200) {
-              dispatch(setShowForgotModal());
-              dispatch(setShowCheckYourEmailModal());
-              dispatch(setUserEmail(email));
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 401) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Email is not registered!",
-              });
-            } else if (err.response.status === 400) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: " Invalid Email!",
-              });
-            }
-          });
-      } catch (err) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Server error!",
-        });
-      }
-    };
-
     return (
       <>
         <Modal
           animation={true}
           className="signupmodal fullwidthmodal"
           show={showForgotModal}
-          onHide={() => {
-            dispatch(setShowForgotModal());
-            dispatch(setShowLoginModal(false));
-          }}
+          onHide={() => dispatch(setShowForgotModal())}
         >
           <Modal.Header closeButton>
             <Link
@@ -549,19 +617,25 @@ export const Header = () => {
                           <p>No worries, we’ll send you reset instructions.</p>
                         </div>
                         <div className="col-md-6">
-                          <form onSubmit={handleSubmit} method="post">
+                          <form method="post">
                             <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
                               <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <TextAreaBox
                                   type="email"
                                   label="Email"
                                   name="Email"
-                                  required
-                                  onChange={(e) => setEmail(e.target.value)}
+                                  // required
                                 />
                               </div>
                               <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                                <BlueBtn type="submit" title="Reset Password" />
+                                <BlueBtn
+                                  onClick={() => {
+                                    dispatch(setShowForgotModal());
+                                    dispatch(setShowCheckYourEmailModal());
+                                  }}
+                                  type="submit"
+                                  title="Reset Password"
+                                />
                               </div>
                             </div>
                           </form>
@@ -573,7 +647,7 @@ export const Header = () => {
                             <span
                               onClick={() => {
                                 dispatch(setShowForgotModal());
-                                dispatch(setShowLoginModalTrue(true));
+                                dispatch(setShowLoginModal());
                               }}
                             >
                               Back to login
@@ -593,62 +667,13 @@ export const Header = () => {
   };
   ////////////////////// Check Your Email Modal //////////////////////////////
   const CheckYourEmailModal = () => {
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(0);
-
-    const handleSubmit = () => {
-      try {
-        axios.post(ENDPOINT + "api/auth/forgotpassword", { email: userEmail });
-      } catch (err) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Server error!",
-        });
-      }
-    };
-
-    const handleClick = () => {
-      handleSubmit();
-      resetTimer();
-    };
-
-    useEffect(() => {
-      const interval = setInterval(() => {
-        if (seconds > 0) {
-          setSeconds(seconds - 1);
-        }
-
-        if (seconds === 0) {
-          if (minutes === 0) {
-            clearInterval(interval);
-          } else {
-            setSeconds(59);
-            setMinutes(minutes - 1);
-          }
-        }
-      }, 1000);
-
-      return () => {
-        clearInterval(interval);
-      };
-    });
-
-    const resetTimer = function () {
-      setMinutes(0);
-      setSeconds(59);
-    };
-
     return (
       <>
         <Modal
           animation={true}
           className="signupmodal fullwidthmodal"
           show={showCheckYourEmailModal}
-          onHide={() => {
-            dispatch(setShowCheckYourEmailModal());
-            dispatch(setShowLoginModal(false));
-          }}
+          onHide={() => dispatch(setShowCheckYourEmailModal())}
         >
           <Modal.Header closeButton>
             <Link
@@ -680,24 +705,30 @@ export const Header = () => {
                         <div className="col-6 my-4 signformstart text-center">
                           <h1 className="signtitle">Check your email</h1>
                           <p>
-                            We sent a password reset link to <br />
-                            {userEmail}
+                            We sent a password reset link to
+                            akhilesh@maxlence.com.au
                           </p>
                         </div>
                         <div className="col-md-6">
-                          <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
-                            <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                              <a href="https://mail.google.com">
-                                <BlueBtn title="Open Email" />
-                              </a>
+                          <form method="post">
+                            <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
+                              <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                                <BlueBtn
+                                  onClick={() => {
+                                    dispatch(setShowCheckYourEmailModal());
+                                    dispatch(setNewPasswordModal());
+                                  }}
+                                  type="submit"
+                                  title="Open Email"
+                                />
+                              </div>
                             </div>
-<<<<<<< Updated upstream
                           </form>
                         </div>
 
                         <div className="text-center popuplink my-2">
                           <p>
-                            Didn't receive the email?{" "}
+                            Didn't receive the email?
                             <span
                               onClick={() => {
                                 dispatch(setShowCheckYourEmailModal());
@@ -716,40 +747,7 @@ export const Header = () => {
                               Back to login
                             </span>
                           </p>
-=======
-                          </div>
->>>>>>> Stashed changes
                         </div>
-                        <form method="post">
-                          <div className="text-center popuplink my-2">
-                            <p>
-                              Didn't receive the email? &nbsp;
-                              {seconds > 0 || minutes > 0 ? (
-                                <p>
-                                  Time Remaining:
-                                  {minutes < 10 ? `0${minutes}` : minutes}:
-                                  {seconds < 10 ? `0${seconds}` : seconds}
-                                </p>
-                              ) : (
-                                <span
-                                  type="submit"
-                                  onClick={() => handleClick()}
-                                >
-                                  Resend
-                                </span>
-                              )}
-                              <br />
-                              <span
-                                onClick={() => {
-                                  dispatch(setShowCheckYourEmailModal());
-                                  dispatch(setShowLoginModalTrue(true));
-                                }}
-                              >
-                                Back to login
-                              </span>
-                            </p>
-                          </div>
-                        </form>
                       </div>
                     </div>
                   </div>
@@ -769,10 +767,7 @@ export const Header = () => {
           animation={true}
           className="signupmodal fullwidthmodal"
           show={showPasswordResetModal}
-          onHide={() => {
-            dispatch(setShowPasswordResetModal());
-            dispatch(setShowLoginModal(false));
-          }}
+          onHide={() => dispatch(setShowPasswordResetModal())}
         >
           <Modal.Header closeButton>
             <Link
@@ -808,7 +803,7 @@ export const Header = () => {
                           </p>
                           <p>Click below to login.</p>
                         </div>
-                        {/* <div className="col-md-6">
+                        <div className="col-md-6">
                           <form method="post">
                             <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
                               <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
@@ -816,15 +811,14 @@ export const Header = () => {
                               </div>
                             </div>
                           </form>
-                        </div> */}
+                        </div>
 
                         <div className="text-center popuplink my-2">
                           <p>
                             <span
                               onClick={() => {
-                                navigate("/");
                                 dispatch(setShowPasswordResetModal());
-                                dispatch(setShowLoginModalTrue(true));
+                                dispatch(setShowLoginModal());
                               }}
                             >
                               Back to login
@@ -844,66 +838,13 @@ export const Header = () => {
   };
   //////////////////////  Set New Password Modal //////////////////////////////
   const SetNewPasswordModal = () => {
-    const [values, setValues] = useState({
-      password: "",
-      confirmPassword: "",
-    });
-
-    const handleInputChange = (e) => {
-      const name = e.target.name;
-      const value = e.target.value;
-      setValues({
-        ...values,
-        [name]: value,
-      });
-    };
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-
-      try {
-        axios
-          .patch(ENDPOINT + `api/auth/resetpassword/${showToken}`, values)
-          .then((res) => {
-            if (res.status === 200) {
-              dispatch(setShowPasswordResetModal());
-              dispatch(setNewPasswordModal());
-            }
-          })
-          .catch((err) => {
-            if (err.response.status === 400) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Password not updated!",
-              });
-            } else if (err.response.status === 401) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Unauthorized access!",
-              });
-            }
-          });
-      } catch (err) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Server error!",
-        });
-      }
-    };
-
     return (
       <>
         <Modal
           animation={true}
           className="signupmodal fullwidthmodal"
           show={showNewPasswordModal}
-          onHide={() => {
-            dispatch(setNewPasswordModal());
-            dispatch(setShowLoginModalTrue(false));
-          }}
+          onHide={() => dispatch(setNewPasswordModal())}
         >
           <Modal.Header closeButton>
             <Link
@@ -934,30 +875,28 @@ export const Header = () => {
                       <div className="row d-flex flex-column justify-content-center align-items-center ">
                         <div className="col-6 my-4 signformstart text-center">
                           <h1 className="signtitle">Set New Password</h1>
-                          {/* <p>
+                          <p>
                             We sent a password reset link to
                             akhilesh@maxlence.com.au
-                          </p> */}
+                          </p>
                         </div>
                         <div className="col-md-6">
-                          <form onSubmit={handleSubmit} method="patch">
+                          <form method="post">
                             <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-3 g-3">
                               <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <TextAreaBox
                                   type="password"
                                   label="Password"
-                                  name="password"
-                                  onChange={handleInputChange}
-                                  required
+                                  name="Email"
+                                  // required
                                 />
                               </div>
                               <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <TextAreaBox
                                   type="password"
                                   label="Confirm Password"
-                                  name="confirmPassword"
-                                  onChange={handleInputChange}
-                                  required
+                                  name="Email"
+                                  // required
                                 />
                               </div>
                               <div className="col-xxl-5 mx-auto col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
@@ -973,7 +912,7 @@ export const Header = () => {
                             <span
                               onClick={() => {
                                 dispatch(setNewPasswordModal());
-                                dispatch(setShowLoginModalTrue(true));
+                                dispatch(setShowLoginModal());
                               }}
                             >
                               Back to login
