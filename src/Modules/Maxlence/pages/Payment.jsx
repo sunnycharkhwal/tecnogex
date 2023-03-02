@@ -4,39 +4,6 @@ import Sim from "../../../img/sim.png";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
-<<<<<<< Updated upstream
-export const Payment = () => {
-  const CardData = [
-    {
-      cardType: "Credit Card",
-      cardCompany: "visa",
-      holder: "Jack Lewis",
-      month: "01",
-      years: "30",
-    },
-    {
-      cardType: "Credit Card",
-      cardCompany: "visa",
-      holder: "Jack Lewis",
-      month: "01",
-      years: "30",
-    },
-    {
-      cardType: "Credit Card",
-      cardCompany: "visa",
-      holder: "Jack Lewis",
-      month: "01",
-      years: "30",
-    },
-    {
-      cardType: "Credit Card",
-      cardCompany: "visa",
-      holder: "Jack Lewis",
-      month: "01",
-      years: "30",
-    },
-  ];
-=======
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Backdrop from "@mui/material/Backdrop";
@@ -105,7 +72,6 @@ export const Payment = () => {
     setEditModalOpen(true);
   };
 
->>>>>>> Stashed changes
   const CardApp = (props) => {
     const savedCard = props.number
       .toString()
@@ -598,28 +564,17 @@ export const Payment = () => {
                 <h3>Billing Address</h3>
               </div>
               <div className="payment_card">
-<<<<<<< Updated upstream
-                <MdOutlineModeEdit />
-                <h3>Luno Electrical</h3>
-=======
                 <Link to="/your_account">
                   <MdOutlineModeEdit />
                 </Link>
                 <h3>{user.companyName ? user.companyName : user.fullname}</h3>
->>>>>>> Stashed changes
                 <p>
-                  525, 5th Floor, Tower A, Itech Business Park, Sohna Road,
-                  Sector 49, Gurgaon, Haryana 122101 - India
+                  {user.workingAddress ? user.workingAddress : user.homeAddress}
                 </p>
-<<<<<<< Updated upstream
-                <p>Contact No - 9876543210</p>
-                <p>Email - info@lunoelectrical.com.au</p>
-=======
                 <p>Contact No - {user.phoneNumber}</p>
                 <p>
                   Email - {user.companyEmail ? user.companyEmail : user.email}
                 </p>
->>>>>>> Stashed changes
               </div>
             </div>
           </div>

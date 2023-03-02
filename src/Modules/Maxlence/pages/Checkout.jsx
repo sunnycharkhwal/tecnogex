@@ -13,11 +13,7 @@ import React, { useState } from "react";
 
 import {
   formatCreditCardNumber,
-<<<<<<< Updated upstream
-  formatCVC,
-=======
   formatCVV,
->>>>>>> Stashed changes
   formatExpirationDate,
 } from "./utils";
 
@@ -263,11 +259,7 @@ const CardForm = () => {
     number: "",
     name: "",
     expiry: "",
-<<<<<<< Updated upstream
-    cvc: "",
-=======
     cvv: "",
->>>>>>> Stashed changes
     issuer: "",
     focused: "",
     formData: null,
@@ -290,13 +282,8 @@ const CardForm = () => {
       target.value = formatCreditCardNumber(target.value);
     } else if (target.name === "expiry") {
       target.value = formatExpirationDate(target.value);
-<<<<<<< Updated upstream
-    } else if (target.name === "cvc") {
-      target.value = formatCVC(target.value);
-=======
     } else if (target.name === "cvv") {
       target.value = formatCVV(target.value);
->>>>>>> Stashed changes
     }
 
     setState({ [target.name]: target.value });
@@ -310,11 +297,7 @@ const CardForm = () => {
     //   number: "",
     //   name: "",
     //   expiry: "",
-<<<<<<< Updated upstream
-    //   cvc: "",
-=======
     //   cvv: "",
->>>>>>> Stashed changes
     //   issuer: "",
     //   focused: "",
     //   formData: null,
@@ -419,15 +402,9 @@ const CardForm = () => {
                     <small>CVC</small>
                     <input
                       type="tel"
-<<<<<<< Updated upstream
-                      name="cvc"
-                      className="form-control"
-                      placeholder="CVC"
-=======
                       name="cvv"
                       className="form-control"
                       placeholder="CVV"
->>>>>>> Stashed changes
                       pattern="\d{3}"
                       required
                       onChange={handleInputChange}
@@ -460,11 +437,7 @@ const CardForm = () => {
                     <span>
                       <HiArrowNarrowLeft />
                     </span>
-<<<<<<< Updated upstream
-                    Back to cartt
-=======
                     Back to cart
->>>>>>> Stashed changes
                   </div>
                 </div>
                 <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 checkout_btn">
