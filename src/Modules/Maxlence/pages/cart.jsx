@@ -88,7 +88,6 @@ export const Cart = () => {
             <div className="shopping_cart">
               <div className="shopping_cart_top_title">
                 <p>Shopping Cart</p>
-                <NavLink to="/">Select all</NavLink>
               </div>
               <div className="row">
                 {CardData.map((val, i) => {

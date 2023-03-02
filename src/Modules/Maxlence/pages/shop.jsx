@@ -14,6 +14,7 @@ import youtubecamp from "../assests/youtubecamp.jpg";
 import pageseo from "../assests/pageseo.jpg";
 import socialmediamarketing from "../assests/socialmediamarketing.jpg";
 import emailmarketing from "../assests/emailmarketing.jpg";
+import { NavLink } from "react-router-dom";
 
 export const Shop = () => {
   const settings = {
@@ -86,6 +87,7 @@ export const Shop = () => {
       </div>
 
       <Container className="shoptabs py-3 mt-3">
+        <NavLink to="/product_details">product details</NavLink>
         <h1 className="text-left my-2">Product Overview</h1>
         <Shoptabs className="my-4" itemsLimit={itemsLimit} />
         <div className="col-md-3 col-7 m-auto">

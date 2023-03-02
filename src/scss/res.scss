@@ -6,6 +6,16 @@
   }
 }
 @media (max-width: 576px) {
+  .get_in_touch_video {
+    padding: 2rem 0;
+  }
+  .get_in_touch_video_inner {
+    h3 {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 1rem;
+    }
+  }
   .package_card {
     h3 {
       font-size: 25px;
