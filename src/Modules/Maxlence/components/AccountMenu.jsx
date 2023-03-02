@@ -26,6 +26,10 @@ export default function AccountMenu() {
   const MenuIcon = (props) => {
     return <img className="login_menu_icon" src={props.img} alt="icon" />;
   };
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   return (
     <React.Fragment>
       <Box>
@@ -81,31 +85,31 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem>
-          <NavLink className="login_menu" to={"/your_account"}>
+        <NavLink className="login_menu" to={"/your_account"}>
+          <MenuItem>
             <MenuIcon img={A1} />
             My Account
-          </NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink className="login_menu" to={"/your_services"}>
+          </MenuItem>
+        </NavLink>
+        <NavLink className="login_menu" to={"/your_services"}>
+          <MenuItem>
             <MenuIcon img={A2} />
             My Service
-          </NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink className="login_menu" to={"/payment"}>
+          </MenuItem>
+        </NavLink>
+        <NavLink className="login_menu" to={"/payment"}>
+          <MenuItem>
             <MenuIcon img={A3} />
             Payment
-          </NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink className="login_menu" to={"/forgot_password"}>
+          </MenuItem>
+        </NavLink>
+        <NavLink className="login_menu" to={"/forgot_password"}>
+          <MenuItem>
             <span className="menu_desbord_btn">
               Dashboard <BsArrowRight />
             </span>
-          </NavLink>
-        </MenuItem>
+          </MenuItem>
+        </NavLink>
         <MenuItem
           onClick={() => {
             let token = localStorage.removeItem("token");
@@ -119,7 +123,11 @@ export default function AccountMenu() {
                 showConfirmButton: false,
                 timer: 1500,
               });
+<<<<<<< Updated upstream
               window.location.reload(false);
+=======
+              dispatch(resetUser());
+>>>>>>> Stashed changes
             }
           }}
         >

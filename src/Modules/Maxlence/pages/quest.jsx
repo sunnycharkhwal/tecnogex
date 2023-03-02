@@ -68,7 +68,7 @@ export default function Quest() {
           .post(
             ENDPOINT + "quest",
             { questionare },
-            { headers: { "x-access-token": token.replace(/^"(.*)"$/, "$1") } }
+            { headers: { "x-access-token": token } }
           )
           .then((res) => {
             if (res.status === 200) {

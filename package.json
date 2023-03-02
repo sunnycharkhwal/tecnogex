@@ -26,7 +26,10 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-calendly": "^4.1.0",
+<<<<<<< Updated upstream
     "react-countup": "^6.4.1",
+=======
+>>>>>>> Stashed changes
     "react-credit-card-input": "^1.1.5",
     "react-credit-cards": "^0.8.3",
     "react-dom": "^18.2.0",
@@ -38,6 +41,8 @@
     "react-scripts": "5.0.1",
     "react-simple-oauth2-login": "^0.5.4",
     "react-slick": "^0.29.0",
+    "react-social-login-buttons": "^3.6.1",
+    "reactjs-social-login": "^2.6.2",
     "sass": "^1.58.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",

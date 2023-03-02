@@ -22,8 +22,11 @@ import { Payment } from "./Modules/Maxlence/pages/Payment";
 import { Cart } from "./Modules/Maxlence/pages/cart";
 import { ActiveNav } from "./Modules/Maxlence/components/ActiveNav";
 import { Checkout } from "./Modules/Maxlence/pages/Checkout";
+<<<<<<< Updated upstream
 import { VideoMarketing } from "./Modules/Maxlence/pages/VideoMarketing";
 import { ProductDetails } from "./Modules/Maxlence/pages/ProductDetails";
+=======
+>>>>>>> Stashed changes
 export const App = () => {
   return (
     <React.StrictMode>
@@ -49,8 +52,11 @@ export const App = () => {
             <Route path="/payment" element={<Payment />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+<<<<<<< Updated upstream
             <Route path="/video_marketing" element={<VideoMarketing />} />
             <Route path="/product_details" element={<ProductDetails />} />
+=======
+>>>>>>> Stashed changes
           </Routes>
           <Footer />
         </Router>

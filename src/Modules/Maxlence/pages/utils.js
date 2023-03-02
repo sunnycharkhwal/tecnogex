@@ -37,7 +37,11 @@ export function formatCreditCardNumber(value) {
   return nextValue.trim();
 }
 
+<<<<<<< Updated upstream
 export function formatCVC(value, prevValue, allValues = {}) {
+=======
+export function formatCVV(value, prevValue, allValues = {}) {
+>>>>>>> Stashed changes
   const clearValue = clearNumber(value);
   let maxLength = 3;
 

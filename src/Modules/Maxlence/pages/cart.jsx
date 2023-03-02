@@ -88,6 +88,10 @@ export const Cart = () => {
             <div className="shopping_cart">
               <div className="shopping_cart_top_title">
                 <p>Shopping Cart</p>
+<<<<<<< Updated upstream
+=======
+                <NavLink to="/">Select all</NavLink>
+>>>>>>> Stashed changes
               </div>
               <div className="row">
                 {CardData.map((val, i) => {
@@ -313,4 +317,8 @@ const SliderBottom = () => {
       </Slider>
     </>
   );
+<<<<<<< Updated upstream
 };
+=======
+};
+>>>>>>> Stashed changes
