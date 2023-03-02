@@ -26,6 +26,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-calendly": "^4.1.0",
+    "react-countup": "^6.4.1",
     "react-credit-card-input": "^1.1.5",
     "react-credit-cards": "^0.8.3",
     "react-dom": "^18.2.0",
