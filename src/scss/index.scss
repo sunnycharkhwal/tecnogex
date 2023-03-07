@@ -886,9 +886,12 @@
     }
   }
 }
+.getintouch_title_main_top {
+  display: flex;
+  justify-content: center;
+}
 .getintouch_title_top_div {
   text-transform: capitalize;
-  width: 53%;
   p {
     font-weight: 500 !important;
     font-size: 14px;
@@ -1121,6 +1124,7 @@
 .package_card {
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 1.5rem;
   h3 {
     font-weight: 700 !important;
     font-size: 40px;
@@ -1131,7 +1135,7 @@
     }
   }
   p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
@@ -1154,7 +1158,7 @@
   z-index: 0;
   transition: transform 0.3s;
 
-  min-height: 45rem;
+  min-height: 60rem;
   overflow: hidden;
   &:hover {
     -ms-transform: scale(0.1); /* IE 9 */
@@ -1187,7 +1191,7 @@
 .package_card_box_header {
   text-align: center;
   text-transform: capitalize;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   h3 {
     font-weight: 500 !important;
     font-size: 24px;
@@ -1203,6 +1207,7 @@
 .package_card_box_price {
   text-align: center;
   text-transform: capitalize;
+  margin-top: 1rem;
   del {
     font-weight: 500 !important;
     font-size: 36px;
@@ -1221,7 +1226,7 @@
 }
 .package_card_box_overview {
   text-transform: capitalize;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   h3 {
     font-weight: 500 !important;
     font-size: 16px;
@@ -1236,22 +1241,22 @@
   }
 }
 .package_card_box_list_div {
-  margin-top: 10px;
+  margin-top: 1rem;
   .package_card_box_list {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     img {
       height: 20px;
       width: 20px;
+      margin-top: 2px;
     }
     p {
-      margin-bottom: 0;
+      margin-bottom: 10px;
       font-weight: 400 !important;
       font-size: 14px;
       margin-left: 10px;
-      line-height: 17px;
+      line-height: 25px;
       text-transform: capitalize;
     }
   }
@@ -1299,4 +1304,208 @@
     color: #212529;
     margin-bottom: 2rem;
   }
+}
+.questionare_page_ul_div {
+  display: flex;
+  padding: 0;
+  li {
+    margin: auto;
+    position: relative;
+  }
+}
+// .questionare_page_li_inner_div {
+//   position: relative;
+//   label {
+//     position: absolute;
+//     top: -4px;
+//     left: 19px;
+//     color: white;
+//   }
+// }
+.questionare_page_dote1 {
+  background-color: #5e9aff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: white;
+    font-family: unset !important;
+    letter-spacing: normal !important;
+  }
+}
+.questionare_page_dote2 {
+  background-color: #f0f0f0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: black;
+    font-family: unset !important;
+    letter-spacing: normal !important;
+  }
+}
+.questionare_page_top_div {
+  position: relative;
+  progress {
+    width: 90%;
+    position: absolute;
+    top: 12px;
+    left: 74px;
+  }
+}
+.questionare_page_top_div_inner {
+  width: 100%;
+}
+.Client_Profile_main_top_div_inner {
+  progress {
+    border: none;
+    background: #5e9aff;
+    height: 3px;
+  }
+
+  progress {
+    color: #5e9aff;
+  }
+
+  progress::-webkit-progress-value {
+    background: #5e9aff;
+  }
+
+  progress::-moz-progress-bar {
+    background: #5e9aff;
+  }
+}
+.location_dropdown {
+  .css-1dimb5e-singleValue {
+    text-transform: capitalize;
+  }
+  .css-13cymwt-control {
+    border: none;
+  }
+  .css-10wo9uf-option {
+    text-transform: capitalize;
+  }
+  .css-d7l1ni-option {
+    text-transform: capitalize;
+  }
+  .css-tr4s17-option {
+    text-transform: capitalize;
+  }
+}
+.Step6_inner_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  textarea {
+    width: 50%;
+  }
+}
+.step_title_div {
+  text-align: center;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .step_title_div_inner {
+    width: 65%;
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    text-transform: capitalize;
+    font-size: 28px !important;
+    font-weight: 550 !important;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #666 !important;
+  }
+}
+.step_btn_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  .previous {
+    margin-right: 10px;
+  }
+  .next {
+    margin-left: 10px;
+  }
+  .Finish_btn {
+    color: white;
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+.step_inner_main_top_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .MuiStepConnector-alternativeLabel {
+    left: calc(-50% + 0px);
+    right: calc(50% + 0px);
+    z-index: 0;
+  }
+  .MuiStepLabel-iconContainer {
+    position: relative;
+    z-index: 25;
+    background: white;
+  }
+  .MuiStepIcon-root.MuiStepIcon-active {
+    color: #5e9aff;
+
+    .MuiStepIcon-text {
+      fill: white;
+    }
+  }
+  .MuiStepIcon-root {
+    color: #f0f0f0;
+    display: block;
+  }
+  .MuiStepIcon-text {
+    fill: #666666ab;
+  }
+  .MuiStepIcon-root.MuiStepIcon-completed {
+    color: #5e9aff;
+  }
+}
+.stepper_inner_div {
+  width: 75%;
+}
+.stepper_inner_title_div {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  h3 {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400 !important;
+  }
+}
+.IOSSwitch_div {
+  .css-jsexje-MuiSwitch-thumb {
+    color: white;
+  }
+  .css-j204z7-MuiFormControlLabel-root {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.IOSSwitch_top_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

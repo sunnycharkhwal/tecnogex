@@ -24,6 +24,8 @@ import { ActiveNav } from "./Modules/Maxlence/components/ActiveNav";
 import { Checkout } from "./Modules/Maxlence/pages/Checkout";
 import { VideoMarketing } from "./Modules/Maxlence/pages/VideoMarketing";
 import { ProductDetails } from "./Modules/Maxlence/pages/ProductDetails";
+import { QuestionarePage } from "./Modules/Maxlence/pages/QuestionarePage";
+import { BuyPlans } from "./Modules/Maxlence/pages/BuyPlans";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -51,6 +53,8 @@ export const App = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/video_marketing" element={<VideoMarketing />} />
             <Route path="/product_details" element={<ProductDetails />} />
+            <Route path="/Questionare_Page" element={<QuestionarePage />} />
+            <Route path="/buy_plans" element={<BuyPlans />} />
           </Routes>
           <Footer />
         </Router>

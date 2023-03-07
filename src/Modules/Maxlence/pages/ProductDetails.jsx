@@ -12,6 +12,9 @@ import Videocamptool6 from "../assests/videocamptool6.png";
 import Downloadicon from "../assests/downloadicon.png";
 import Spreadcamp from "../assests/spreadcamp.jpg";
 import { Faqs } from "../components/Faqs";
+import { NavLink } from "react-router-dom";
+import Select from "react-select";
+
 export const ProductDetails = () => {
   return (
     <>
@@ -204,6 +207,30 @@ const Flexible = () => {
   );
 };
 const Questions = () => {
+  const City = [
+    { value: "delhi", label: "delhi" },
+    { value: "gurgaon", label: "gurgaon" },
+  ];
+  const Area = [
+    { value: "Delhi/NCR", label: "Delhi/NCR" },
+    { value: "gurgaon", label: "gurgaon" },
+  ];
+  const Age = [
+    { value: "18-24", label: "18-24" },
+    { value: "25-35", label: "25-35" },
+  ];
+  const Occupation = [
+    { value: "Designer", label: "Designer" },
+    { value: "Designer2", label: "Designer2" },
+  ];
+  const Income = [
+    { value: "1Lakh", label: "1Lakh" },
+    { value: "2Lakh", label: "2Lakh" },
+  ];
+  const Others = [
+    { value: "Delhi/NCR", label: "Delhi/NCR" },
+    { value: "Gurugram", label: "Gurugram" },
+  ];
   return (
     <>
       <div
@@ -225,27 +252,39 @@ const Questions = () => {
                 <div className="row my-4 flex-sm-row flex-column justify-content-around align-items-center">
                   <div className="col-sm-6 col-12 my-2">
                     <input type="checkbox" name="foodindus" />
-                    <label for="foodindus">Food</label>
+                    <label htmlhtmlFor="foodindus" className=" ms-1">
+                      Food
+                    </label>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
                     <input type="checkbox" name="entindus" />
-                    <label for="entindus">Entertainment</label>
+                    <label htmlhtmlFor="entindus" className=" ms-1">
+                      Entertainment
+                    </label>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
                     <input type="checkbox" name="realsindus" />
-                    <label for="realsindus">Real Estate</label>
+                    <label htmlhtmlFor="realsindus" className=" ms-1">
+                      Real Estate
+                    </label>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
                     <input type="checkbox" name="eventindus" />
-                    <label for="eventindus">Events</label>
+                    <label htmlhtmlFor="eventindus" className=" ms-1">
+                      Events
+                    </label>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
                     <input type="checkbox" name="fitindus" />
-                    <label for="fitindus">Fitness & Health</label>
+                    <label htmlhtmlFor="fitindus" className=" ms-1">
+                      Fitness & Health
+                    </label>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
                     <input type="checkbox" name="elecindus" />
-                    <label for="elecindus">Electronics</label>
+                    <label htmlhtmlFor="elecindus" className=" ms-1">
+                      Electronics
+                    </label>
                   </div>
                 </div>
               </div>
@@ -263,43 +302,21 @@ const Questions = () => {
                 </div>
                 <div className="row my-4 justify-content-around align-items-center">
                   <div className="col-sm-6 col-12 my-2">
-                    <div className="form-group">
-                      <div className="t-dropdown-block">
-                        <div className="t-dropdown-select">
-                          <input
-                            type="text"
-                            className="t-dropdown-input"
-                            placeholder="City"
-                          />
-                          <span className="t-select-btn"> </span>
-                        </div>
-                        <ul className="t-dropdown-list">
-                          <li className="t-dropdown-item">Delhi/NCR</li>
-                          <li className="t-dropdown-item">Gurugram</li>
-                          <li className="t-dropdown-item">Faridabad</li>
-                          <li className="t-dropdown-item">Hyderabad</li>
-                        </ul>
-                      </div>
+                    <div className="location_dropdown">
+                      <Select
+                        // menuIsOpen={true}
+                        options={City}
+                        placeholder="City"
+                      />
                     </div>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
-                    <div className="form-group">
-                      <div className="t-dropdown-block">
-                        <div className="t-dropdown-select">
-                          <input
-                            type="text"
-                            className="t-dropdown-input"
-                            placeholder="Area"
-                          />
-                          <span className="t-select-btn"> </span>
-                        </div>
-                        <ul className="t-dropdown-list">
-                          <li className="t-dropdown-item">Delhi/NCR</li>
-                          <li className="t-dropdown-item">Gurugram</li>
-                          <li className="t-dropdown-item">Faridabad</li>
-                          <li className="t-dropdown-item">Hyderabad</li>
-                        </ul>
-                      </div>
+                    <div className="location_dropdown">
+                      <Select
+                        // menuIsOpen={true}
+                        options={Area}
+                        placeholder="Area"
+                      />
                     </div>
                   </div>
                 </div>
@@ -318,84 +335,41 @@ const Questions = () => {
                 </div>
                 <div className="row my-4 justify-content-around align-items-center">
                   <div className="col-sm-6 col-12 my-2">
-                    <div className="form-group">
-                      <div className="t-dropdown-block">
-                        <div className="t-dropdown-select">
-                          <input
-                            type="text"
-                            className="t-dropdown-input"
-                            placeholder="Age"
-                          />
-                          <span className="t-select-btn"> </span>
-                        </div>
-                        <ul className="t-dropdown-list">
-                          <li className="t-dropdown-item">18-24</li>
-                          <li className="t-dropdown-item">25-35</li>
-                          <li className="t-dropdown-item">35 +</li>
-                        </ul>
-                      </div>
+                    <div className="location_dropdown">
+                      <Select
+                        // menuIsOpen={true}
+                        options={Age}
+                        placeholder="Age"
+                      />
                     </div>
                   </div>
                   <div className="col-sm-6 col-12 my-2">
-                    <div className="form-group">
-                      <div className="t-dropdown-block">
-                        <div className="t-dropdown-select">
-                          <input
-                            type="text"
-                            className="t-dropdown-input"
-                            placeholder="Occupation"
-                          />
-                          <span className="t-select-btn"> </span>
-                        </div>
-                        <ul className="t-dropdown-list">
-                          <li className="t-dropdown-item">Designer</li>
-                          <li className="t-dropdown-item">Designer</li>
-                          <li className="t-dropdown-item">Designer</li>
-                          <li className="t-dropdown-item">Designer</li>
-                        </ul>
-                      </div>
+                    <div className="location_dropdown">
+                      <Select
+                        // menuIsOpen={true}
+                        options={Occupation}
+                        placeholder="Occupation"
+                      />
                     </div>
                   </div>
 
                   <div className="col-sm-6 col-12 my-2">
-                    <div className="form-group">
-                      <div className="t-dropdown-block">
-                        <div className="t-dropdown-select">
-                          <input
-                            type="text"
-                            className="t-dropdown-input"
-                            placeholder="Income"
-                          />
-                          <span className="t-select-btn"> </span>
-                        </div>
-                        <ul className="t-dropdown-list">
-                          <li className="t-dropdown-item">1Lakh</li>
-                          <li className="t-dropdown-item">2Lakh</li>
-                          <li className="t-dropdown-item">3Lakh</li>
-                          <li className="t-dropdown-item">4Lakh</li>
-                        </ul>
-                      </div>
+                    <div className="location_dropdown">
+                      <Select
+                        // menuIsOpen={true}
+                        options={Income}
+                        placeholder="Income"
+                      />
                     </div>
                   </div>
 
                   <div className="col-sm-6 col-12 my-2">
-                    <div className="form-group">
-                      <div className="t-dropdown-block">
-                        <div className="t-dropdown-select">
-                          <input
-                            type="text"
-                            className="t-dropdown-input"
-                            placeholder="Others"
-                          />
-                          <span className="t-select-btn"> </span>
-                        </div>
-                        <ul className="t-dropdown-list">
-                          <li className="t-dropdown-item">Delhi/NCR</li>
-                          <li className="t-dropdown-item">Gurugram</li>
-                          <li className="t-dropdown-item">Faridabad</li>
-                          <li className="t-dropdown-item">Hyderabad</li>
-                        </ul>
-                      </div>
+                    <div className="location_dropdown">
+                      <Select
+                        // menuIsOpen={true}
+                        options={Others}
+                        placeholder="Others"
+                      />
                     </div>
                   </div>
                 </div>
@@ -446,7 +420,7 @@ const Questions = () => {
 
                       <div className="my-3">
                         <input type="checkbox" id="cbox" />
-                        <label for="cbox">
+                        <label htmlhtmlFor="cbox">
                           I don’t want to submit any file.
                         </label>
                       </div>
@@ -460,9 +434,9 @@ const Questions = () => {
         <div className="row justify-content-center">
           <div className="col-12">
             <div className="getstarteds text-center wow animate__animated animate__fadeInUp">
-              <a className="whitebgbtn fontrale" href="#">
+              <NavLink className="whitebgbtn fontrale" to="/">
                 Submit
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

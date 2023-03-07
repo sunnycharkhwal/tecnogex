@@ -1121,10 +1121,10 @@ nav.navbar.navbar-expand-lg.navbar-light.homenav.d-flex.fontrale.fixed-top {
   text-shadow: var(--box-shadow);
   font-family: "poppins";
 }
-#email:focus ~ label[for="email"] {
+#email:focus ~ label[htmlhtmlFor="email"] {
   margin: -76px 70px;
 }
-#password:focus ~ label[for="password"] {
+#password:focus ~ label[htmlhtmlFor="password"] {
   margin: -76px 70px;
 }
 
@@ -2575,7 +2575,7 @@ ul.ab-form-list {
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .defultbox h6 {
   margin: 0.3rem 0rem 0rem 0.8rem;
@@ -2583,7 +2583,7 @@ ul.ab-form-list {
 
 .creationsublinks {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   position: absolute;
   top: 50%;
   left: 25%;

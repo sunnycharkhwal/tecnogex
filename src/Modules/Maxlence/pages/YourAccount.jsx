@@ -23,8 +23,8 @@ export const YourAccount = () => {
     URL: "",
   });
   const [file, setFile] = useState(null);
-  const [form1disable, setForm1disable] = useState(true)
-  const [form2disable, setForm2disable] = useState(true)
+  const [form1disable, setForm1disable] = useState(true);
+  const [form2disable, setForm2disable] = useState(true);
 
   const fetchUser = async () => {
     let res = await fetch(ENDPOINT + `user/user`, {
@@ -62,7 +62,7 @@ export const YourAccount = () => {
               showConfirmButton: false,
               timer: 1500,
             });
-            navigate("/")
+            navigate("/");
           }
         })
         .catch((err) => {
@@ -131,7 +131,7 @@ export const YourAccount = () => {
             name: "fullname",
             defaultValue: values.fullname,
             onBlur: handleInputChange,
-            disabled: form1disable
+            disabled: form1disable,
           },
           {
             label: "Contact No.",
@@ -139,7 +139,7 @@ export const YourAccount = () => {
             name: "phoneNumber",
             defaultValue: values.phoneNumber,
             onBlur: handleInputChange,
-            disabled: form1disable
+            disabled: form1disable,
           },
           {
             label: "Email ID",
@@ -153,13 +153,12 @@ export const YourAccount = () => {
             name: "designation",
             defaultValue: values.designation,
             onBlur: handleInputChange,
-            disabled: form1disable
+            disabled: form1disable,
           },
         ],
       },
-      
     ];
-    
+
     const FormData2 = [
       {
         formTitle: "Business Information",
@@ -170,7 +169,7 @@ export const YourAccount = () => {
             name: "companyName",
             defaultValue: values.companyName,
             onBlur: handleInputChange,
-            disabled: form2disable
+            disabled: form2disable,
           },
           {
             label: "Address",
@@ -178,7 +177,7 @@ export const YourAccount = () => {
             name: "workingAddress",
             defaultValue: values.workingAddress,
             onBlur: handleInputChange,
-            disabled: form2disable
+            disabled: form2disable,
           },
           {
             label: "Email ID",
@@ -186,7 +185,7 @@ export const YourAccount = () => {
             name: "companyEmail",
             defaultValue: values.companyEmail,
             onBlur: handleInputChange,
-            disabled: form2disable
+            disabled: form2disable,
           },
           {
             label: "URL",
@@ -194,16 +193,20 @@ export const YourAccount = () => {
             name: "URL",
             defaultValue: values.URL,
             onBlur: handleInputChange,
-            disabled: form2disable
+            disabled: form2disable,
           },
         ],
       },
-    ]
+    ];
 
     const FormApp1 = (props) => {
       return (
         <div className="account_input_title_top">
-          <MdOutlineEdit title="Edit" onClick={()=> setForm1disable(!form1disable)} className="account_edit_icon" />
+          <MdOutlineEdit
+            title="Edit"
+            onClick={() => setForm1disable(!form1disable)}
+            className="account_edit_icon"
+          />
           <div className="account_input_title">
             <h3>{props.formTitle}</h3>
           </div>
@@ -243,7 +246,11 @@ export const YourAccount = () => {
     const FormApp2 = (props) => {
       return (
         <div className="account_input_title_top">
-          <MdOutlineEdit title="Edit" onClick={()=> setForm2disable(!form2disable)} className="account_edit_icon" />
+          <MdOutlineEdit
+            title="Edit"
+            onClick={() => setForm2disable(!form2disable)}
+            className="account_edit_icon"
+          />
           <div className="account_input_title">
             <h3>{props.formTitle}</h3>
           </div>
@@ -303,8 +310,14 @@ export const YourAccount = () => {
           >
             <div className="col-12">
               <div className="account_btn_div">
-                <Link to="/"><a className="btn outline_btn me-1">Cancel</a></Link>
-                <button type="submit" disabled={form1disable && form2disable} className="btn full_btn ms-1">
+                <Link to="/">
+                  <a className="btn outline_btn me-1">Cancel</a>
+                </Link>
+                <button
+                  type="submit"
+                  disabled={form1disable && form2disable}
+                  className="btn full_btn ms-1"
+                >
                   save
                 </button>
               </div>

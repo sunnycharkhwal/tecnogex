@@ -100,7 +100,7 @@ export default function Quest() {
                     updateMultiAnswersState(e.target.value, idx);
                   }}
                 />
-                <label htmlFor="question">{answer}</label>
+                <label htmlhtmlhtmlFor="question">{answer}</label>
               </div>
             );
           })}
@@ -118,7 +118,7 @@ export default function Quest() {
               type="radio"
               onChange={(e) => updateAnswersState(e.target.value, idx)}
             />
-            <label htmlFor="question">
+            <label htmlhtmlhtmlFor="question">
               <h6>{ans}</h6>
             </label>
           </div>

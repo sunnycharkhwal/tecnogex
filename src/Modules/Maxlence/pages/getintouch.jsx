@@ -33,7 +33,7 @@ export const Getintouch = () => {
   }
   return (
     <>
-      <section className=" container mt-5 mb-5">
+      <section className=" container mt-5 mb-5 getintouch_title_main_top">
         <div className="getintouch_title_top_div">
           <p>Let’s Talk</p>
           <h3>Project</h3>

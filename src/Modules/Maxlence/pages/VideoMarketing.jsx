@@ -5,15 +5,252 @@ import VM3 from "../../../img/vm3.svg";
 import VM4 from "../../../img/vm4.svg";
 import VM5 from "../../../img/vm5.svg";
 import VM6 from "../../../img/vm6.svg";
+import React from "react";
+import CountUp from "react-countup";
 import PackageBlack from "../../../img/packageBlack.svg";
 import PackageBlue from "../../../img/packageBlue.svg";
 import PackageBlue2 from "../../../img/packageBlue2.svg";
 import packageOrange from "../../../img/packageOrange.svg";
 import packageGreen2 from "../../../img/packageGreen2.svg";
 import packageGreen from "../../../img/packageGreen.svg";
-
-import React from "react";
-import CountUp from "react-countup";
+import { PackageCard } from "../components/PackageCard";
+const CardData = [
+  {
+    BtnBuyLink: "/",
+    CustomeQuote: "/",
+    MostPopularDisplay: "none",
+    cardColor: "#50B432",
+    defaultPackagePointListIcon: packageGreen,
+    packageName: "Explainer",
+    packageBrif:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    delPrice: "4,595",
+    Price: "4,395",
+    OverviewText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    PackagePointList: [
+      {
+        text: "On location and/or studio video shoot by crew",
+      },
+      {
+        text: "Script and storyboard writing (one script review)",
+      },
+      {
+        text: "Royalty free music (if required)",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Video conversion for online delivery",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Professional edit suite post-production including",
+      },
+      {
+        text: "One video review for changes",
+      },
+      {
+        text: "Professional Talent can also be provided if required",
+      },
+      {
+        text: "Digital images and logo provided by you",
+      },
+      {
+        text: "Titles, pans, fades, dissolves and transitions-zooms",
+      },
+    ],
+  },
+  {
+    BtnBuyLink: "/",
+    CustomeQuote: "/",
+    MostPopularDisplay: "block",
+    cardColor: "#0A76E5",
+    defaultPackagePointListIcon: PackageBlue,
+    packageName: "Starter",
+    packageBrif:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    delPrice: "4,595",
+    Price: "4,395",
+    OverviewText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    PackagePointList: [
+      {
+        text: "On location and/or studio video shoot by crew",
+      },
+      {
+        text: "Script and storyboard writing (one script review)",
+      },
+      {
+        text: "Royalty free music (if required)",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Video conversion for online delivery",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Professional edit suite post-production including",
+      },
+      {
+        text: "One video review for changes",
+      },
+      {
+        text: "Professional Talent can also be provided if required",
+      },
+      {
+        text: "Digital images and logo provided by you",
+      },
+      {
+        text: "Titles, pans, fades, dissolves and transitions-zooms",
+      },
+    ],
+  },
+  {
+    BtnBuyLink: "/",
+    CustomeQuote: "/",
+    MostPopularDisplay: "none",
+    cardColor: "#4000C9",
+    defaultPackagePointListIcon: PackageBlue2,
+    packageName: "Popup",
+    packageBrif:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    delPrice: "4,595",
+    Price: "4,395",
+    OverviewText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    PackagePointList: [
+      {
+        text: "On location and/or studio video shoot by crew",
+      },
+      {
+        text: "Script and storyboard writing (one script review)",
+      },
+      {
+        text: "Royalty free music (if required)",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Video conversion for online delivery",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Professional edit suite post-production including",
+      },
+      {
+        text: "One video review for changes",
+      },
+      {
+        text: "Professional Talent can also be provided if required",
+      },
+      {
+        text: "Digital images and logo provided by you",
+      },
+      {
+        text: "Titles, pans, fades, dissolves and transitions-zooms",
+      },
+    ],
+  },
+  {
+    BtnBuyLink: "/",
+    CustomeQuote: "/",
+    MostPopularDisplay: "none",
+    cardColor: "#C93C00",
+    defaultPackagePointListIcon: packageGreen2,
+    packageName: "Live",
+    packageBrif:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    delPrice: "4,595",
+    Price: "4,395",
+    OverviewText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    PackagePointList: [
+      {
+        text: "On location and/or studio video shoot by crew",
+      },
+      {
+        text: "Script and storyboard writing (one script review)",
+      },
+      {
+        text: "Royalty free music (if required)",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Video conversion for online delivery",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Professional edit suite post-production including",
+      },
+      {
+        text: "One video review for changes",
+      },
+      {
+        text: "Professional Talent can also be provided if required",
+      },
+      {
+        text: "Digital images and logo provided by you",
+      },
+      {
+        text: "Titles, pans, fades, dissolves and transitions-zooms",
+      },
+    ],
+  },
+  {
+    BtnBuyLink: "/",
+    CustomeQuote: "/",
+    MostPopularDisplay: "none",
+    cardColor: "#F59300",
+    defaultPackagePointListIcon: packageOrange,
+    packageName: "Custom",
+    packageBrif:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    delPrice: "4,595",
+    Price: "4,395",
+    OverviewText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    PackagePointList: [
+      {
+        text: "On location and/or studio video shoot by crew",
+      },
+      {
+        text: "Script and storyboard writing (one script review)",
+      },
+      {
+        text: "Royalty free music (if required)",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Video conversion for online delivery",
+      },
+      {
+        img: PackageBlack,
+        textColor: "black",
+        text: "Professional edit suite post-production including",
+      },
+      {
+        text: "One video review for changes",
+      },
+      {
+        text: "Professional Talent can also be provided if required",
+      },
+      {
+        text: "Digital images and logo provided by you",
+      },
+      {
+        text: "Titles, pans, fades, dissolves and transitions-zooms",
+      },
+    ],
+  },
+];
 export const VideoMarketing = () => {
   return (
     <>
@@ -30,7 +267,7 @@ export const VideoMarketing = () => {
         <Banner />
       </section>
       <section className="container mt-5">
-        <PackageCard />
+        <PackageCard data={CardData} />
       </section>
       <section className="mt-5 ">
         <GetInTouchVideo />
@@ -204,334 +441,7 @@ const Banner = () => {
     </>
   );
 };
-const PackageCard = () => {
-  const CardData = [
-    {
-      BtnBuyLink: "/",
-      CustomeQuote: "/",
-      MostPopularDisplay: "none",
-      cardColor: "#50B432",
-      defaultPackagePointListIcon: packageGreen,
-      packageName: "Explainer",
-      packageBrif:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      delPrice: "4,595",
-      Price: "4,395",
-      OverviewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      PackagePointList: [
-        {
-          text: "On location and/or studio video shoot by crew",
-        },
-        {
-          text: "Script and storyboard writing (one script review)",
-        },
-        {
-          text: "Royalty free music (if required)",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Video conversion for online delivery",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Professional edit suite post-production including",
-        },
-        {
-          text: "One video review for changes",
-        },
-        {
-          text: "Professional Talent can also be provided if required",
-        },
-        {
-          text: "Digital images and logo provided by you",
-        },
-        {
-          text: "Titles, pans, fades, dissolves and transitions-zooms",
-        },
-      ],
-    },
-    {
-      BtnBuyLink: "/",
-      CustomeQuote: "/",
-      MostPopularDisplay: "block",
-      cardColor: "#0A76E5",
-      defaultPackagePointListIcon: PackageBlue,
-      packageName: "Starter",
-      packageBrif:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      delPrice: "4,595",
-      Price: "4,395",
-      OverviewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      PackagePointList: [
-        {
-          text: "On location and/or studio video shoot by crew",
-        },
-        {
-          text: "Script and storyboard writing (one script review)",
-        },
-        {
-          text: "Royalty free music (if required)",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Video conversion for online delivery",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Professional edit suite post-production including",
-        },
-        {
-          text: "One video review for changes",
-        },
-        {
-          text: "Professional Talent can also be provided if required",
-        },
-        {
-          text: "Digital images and logo provided by you",
-        },
-        {
-          text: "Titles, pans, fades, dissolves and transitions-zooms",
-        },
-      ],
-    },
-    {
-      BtnBuyLink: "/",
-      CustomeQuote: "/",
-      MostPopularDisplay: "none",
-      cardColor: "#4000C9",
-      defaultPackagePointListIcon: PackageBlue2,
-      packageName: "Popup",
-      packageBrif:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      delPrice: "4,595",
-      Price: "4,395",
-      OverviewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      PackagePointList: [
-        {
-          text: "On location and/or studio video shoot by crew",
-        },
-        {
-          text: "Script and storyboard writing (one script review)",
-        },
-        {
-          text: "Royalty free music (if required)",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Video conversion for online delivery",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Professional edit suite post-production including",
-        },
-        {
-          text: "One video review for changes",
-        },
-        {
-          text: "Professional Talent can also be provided if required",
-        },
-        {
-          text: "Digital images and logo provided by you",
-        },
-        {
-          text: "Titles, pans, fades, dissolves and transitions-zooms",
-        },
-      ],
-    },
-    {
-      BtnBuyLink: "/",
-      CustomeQuote: "/",
-      MostPopularDisplay: "none",
-      cardColor: "#C93C00",
-      defaultPackagePointListIcon: packageGreen2,
-      packageName: "Live",
-      packageBrif:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      delPrice: "4,595",
-      Price: "4,395",
-      OverviewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      PackagePointList: [
-        {
-          text: "On location and/or studio video shoot by crew",
-        },
-        {
-          text: "Script and storyboard writing (one script review)",
-        },
-        {
-          text: "Royalty free music (if required)",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Video conversion for online delivery",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Professional edit suite post-production including",
-        },
-        {
-          text: "One video review for changes",
-        },
-        {
-          text: "Professional Talent can also be provided if required",
-        },
-        {
-          text: "Digital images and logo provided by you",
-        },
-        {
-          text: "Titles, pans, fades, dissolves and transitions-zooms",
-        },
-      ],
-    },
-    {
-      BtnBuyLink: "/",
-      CustomeQuote: "/",
-      MostPopularDisplay: "none",
-      cardColor: "#F59300",
-      defaultPackagePointListIcon: packageOrange,
-      packageName: "Custom",
-      packageBrif:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      delPrice: "4,595",
-      Price: "4,395",
-      OverviewText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-      PackagePointList: [
-        {
-          text: "On location and/or studio video shoot by crew",
-        },
-        {
-          text: "Script and storyboard writing (one script review)",
-        },
-        {
-          text: "Royalty free music (if required)",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Video conversion for online delivery",
-        },
-        {
-          img: PackageBlack,
-          textColor: "black",
-          text: "Professional edit suite post-production including",
-        },
-        {
-          text: "One video review for changes",
-        },
-        {
-          text: "Professional Talent can also be provided if required",
-        },
-        {
-          text: "Digital images and logo provided by you",
-        },
-        {
-          text: "Titles, pans, fades, dissolves and transitions-zooms",
-        },
-      ],
-    },
-  ];
 
-  const CardApp = (props) => {
-    return (
-      <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 package_card_box_col">
-        <div
-          className="package_card_box"
-          style={{ borderColor: props.cardColor }}
-        >
-          <div
-            className="package_card_box_bage"
-            style={{
-              display: props.MostPopularDisplay,
-              backgroundColor: props.cardColor,
-            }}
-          ></div>
-          <div
-            className="package_card_box_bage_text"
-            style={{ display: props.MostPopularDisplay }}
-          >
-            Most <br /> Popular
-          </div>
-          <div className="package_card_box_header">
-            <h3 style={{ color: props.cardColor }}>{props.packageName}</h3>
-            <p>{props.packageBrif}</p>
-          </div>
-          <div className="package_card_box_price">
-            <del>${props.delPrice}</del>
-            <div>
-              From<span style={{ color: props.cardColor }}>${props.Price}</span>
-              / mo
-            </div>
-          </div>
-          <div className="package_card_box_overview">
-            <h3>Overview</h3>
-            <p>{props.OverviewText}</p>
-          </div>
-          <div className="package_card_box_list_div">
-            {props.PackagePointList.map((val, i) => {
-              return (
-                <div key={i} className="package_card_box_list">
-                  <img
-                    src={val.img || props.defaultPackagePointListIcon}
-                    alt="list icon"
-                  />
-                  <p style={{ color: val.textColor || props.cardColor }}>
-                    {val.text}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="package_card_box_btn_div">
-            <div>
-              <NavLink
-                to={props.BtnBuyLink}
-                className="full_btn2"
-                style={{ backgroundColor: props.cardColor }}
-              >
-                BUY nOW
-              </NavLink>
-            </div>
-            <div className="mt-2">
-              <NavLink
-                to={props.CustomeQuote}
-                className="package_card_box_btn_bottom"
-              >
-                GET A cUSTOME QUOTE
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  return (
-    <>
-      <div className="package_card">
-        <h3>
-          Pick the perfect <span>pricing plan</span>
-        </h3>
-        <p>We have the right plans for you</p>
-      </div>
-      <div className="row package_card_row">
-        {CardData.map((val, i) => {
-          return <CardApp key={i} {...val} />;
-        })}
-      </div>
-    </>
-  );
-};
 const GetInTouchVideo = () => {
   return (
     <>

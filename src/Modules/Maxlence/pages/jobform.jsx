@@ -111,7 +111,7 @@ export const Jobform = () => {
                   placeholder=""
                   required
                 />
-                <label htmlFor="firstname">
+                <label htmlhtmlhtmlFor="firstname">
                   First Name<sup>*</sup>
                 </label>
               </div>
@@ -127,7 +127,7 @@ export const Jobform = () => {
                   value={values.middlename}
                   placeholder=""
                 />
-                <label htmlFor="middlename">
+                <label htmlhtmlhtmlFor="middlename">
                   Middle Name <sup>*</sup>
                 </label>
               </div>
@@ -144,7 +144,7 @@ export const Jobform = () => {
                   placeholder=""
                   required
                 />
-                <label htmlFor="lastname">
+                <label htmlhtmlhtmlFor="lastname">
                   Last Name <sup>*</sup>
                 </label>
               </div>
@@ -168,7 +168,7 @@ export const Jobform = () => {
                   placeholder=""
                   required
                 />
-                <label htmlFor="city">
+                <label htmlhtmlhtmlFor="city">
                   City<sup>*</sup>
                 </label>
               </div>
@@ -185,7 +185,7 @@ export const Jobform = () => {
                   placeholder=""
                   required
                 />
-                <label htmlFor="state">
+                <label htmlhtmlhtmlFor="state">
                   State/Province <sup>*</sup>
                 </label>
               </div>
@@ -209,7 +209,7 @@ export const Jobform = () => {
                   placeholder=""
                   required
                 />
-                <label htmlFor="email">
+                <label htmlhtmlhtmlFor="email">
                   example@example.com<sup>*</sup>
                 </label>
               </div>
@@ -233,7 +233,7 @@ export const Jobform = () => {
                   placeholder=""
                   required
                 />
-                <label htmlFor="phone">
+                <label htmlhtmlhtmlFor="phone">
                   example@example.com<sup>*</sup>
                 </label>
               </div>

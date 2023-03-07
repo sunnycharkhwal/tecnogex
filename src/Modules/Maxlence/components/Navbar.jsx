@@ -165,6 +165,8 @@ export const Header = () => {
 
     return (
       <>
+        <AccountMenu />
+
         {token ? (
           <AccountMenu />
         ) : (
