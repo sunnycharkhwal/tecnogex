@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "../src/Modules/Maxlence/components/Navbar";
 import { Footer } from "../src/Modules/Maxlence/components/Footer";
 import { Creation } from "../src/Modules/Maxlence/pages/creation";
-import { Growth } from "../src/Modules/Maxlence/pages/growth";
+import { Growth } from "../src/Modules/Maxlence/pages/Growth";
 import { Home } from "../src/Modules/Maxlence/pages/home";
 import { Design } from "../src/Modules/Maxlence/pages/design";
 import { Shop } from "../src/Modules/Maxlence/pages/shop";
@@ -26,6 +26,7 @@ import { VideoMarketing } from "./Modules/Maxlence/pages/VideoMarketing";
 import { ProductDetails } from "./Modules/Maxlence/pages/ProductDetails";
 import { QuestionarePage } from "./Modules/Maxlence/pages/QuestionarePage";
 import { BuyPlans } from "./Modules/Maxlence/pages/BuyPlans";
+import { GoogleAds } from "./Modules/Maxlence/pages/GoogleAds";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -55,6 +56,7 @@ export const App = () => {
             <Route path="/product_details" element={<ProductDetails />} />
             <Route path="/Questionare_Page" element={<QuestionarePage />} />
             <Route path="/buy_plans" element={<BuyPlans />} />
+            <Route path="/google_ads" element={<GoogleAds />} />
           </Routes>
           <Footer />
         </Router>

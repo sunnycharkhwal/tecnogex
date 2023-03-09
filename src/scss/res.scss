@@ -6,6 +6,20 @@
   }
 }
 @media (max-width: 576px) {
+  .grleads {
+    background-image: none;
+  }
+  .services_modal_page_div {
+    .services_modal_page_inner {
+      top: 0rem;
+      left: 0rem;
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+  .creationsublink {
+    font-size: 20px;
+  }
   .stepper_inner_title_div {
     text-align: center;
     margin-top: 1.5rem;

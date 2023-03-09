@@ -2594,6 +2594,8 @@ ul.ab-form-list {
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
+  transition: 0.4s ease-in;
+  text-transform: capitalize;
 }
 .creationsublink:hover {
   font-size: 30px;
@@ -2756,9 +2758,6 @@ ul.ab-form-list {
 }
 
 @media screen and (max-width: 768px) {
-  .grleads {
-    background-image: none;
-  }
   ul.webextralinks li {
     font-size: 1.2rem;
   }
