@@ -135,8 +135,8 @@ export const PackageCard = (props) => {
           Pick the perfect <span>pricing plan</span>
         </h3>
         <p>We have the right plans for you</p>
-        <div class="IOSSwitch_top_div">
-          <span class="text-secondary mx-2">
+        <div className="IOSSwitch_top_div">
+          <span className="text-secondary mx-2">
             <b>Monthly</b>
           </span>
           <div className="IOSSwitch_div">
@@ -146,7 +146,7 @@ export const PackageCard = (props) => {
               />
             </FormGroup>
           </div>
-          <span class="text-secondary mx-2">
+          <span className="text-secondary mx-2">
             <b>Yearly</b>
           </span>
         </div>

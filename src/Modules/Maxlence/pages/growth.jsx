@@ -7,7 +7,7 @@ export const Growth = () => {
     <>
       <div className="container-fluid position-relative py-3 bgproperty growthhero">
         <div className="container py-0 my-0">
-          <DrawerLeft />
+          <DrawerLeft data="growth_page" />
           <div className="row mt-n4 mb-4 justify-content-center align-items-center text-left">
             <div className="col-sm-6 col-12 my-5 ">
               <h1 className="font-weight-bold my-sm-4">

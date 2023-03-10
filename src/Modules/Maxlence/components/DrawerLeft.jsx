@@ -3,26 +3,46 @@ import Box from "@mui/material/Box";
 import React from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-export const DrawerLeft = () => {
-  const [state, setState] = React.useState(false);
-  const LinkData = [
+const AllData = {
+  growth_page: [
     {
       title: "google Ads",
       link: "/google_ads",
     },
     {
       title: "Social Media Marketing",
-      link: "/",
+      link: "/social_media_marketing",
     },
     {
       title: "SEO",
-      link: "/",
+      link: "/seo",
     },
     {
       title: "Email Marketing",
+      link: "/email_marketing",
+    },
+  ],
+  creation_page: [
+    {
+      title: "Website",
+      link: "/website/6",
+    },
+    {
+      title: "Mobile App",
+      link: "/mobile_app",
+    },
+    {
+      title: "SaaS",
       link: "/",
     },
-  ];
+    {
+      title: "Hosting, Maintenance & Support",
+      link: "/",
+    },
+  ],
+};
+export const DrawerLeft = (props) => {
+  const [state, setState] = React.useState(false);
   const LinkApp = (props) => {
     return (
       <>
@@ -71,7 +91,7 @@ export const DrawerLeft = () => {
               />
             </div>
             <div className="row g-3 flex-column creationsublinks">
-              {LinkData.map((val, i) => {
+              {AllData[props.data].map((val, i) => {
                 return <LinkApp key={i} {...val} />;
               })}
             </div>

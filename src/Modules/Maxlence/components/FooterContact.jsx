@@ -10,7 +10,7 @@ export const FooterContact = () => {
             </h1>
           </div>
           <div className="getstarted text-center col-12 ">
-            <NavLink to="/getintouch2" className="whitebgbtn fontrale mt-3">
+            <NavLink to="/getintouch" className="whitebgbtn fontrale mt-3">
               Get In Touch &#10230;
             </NavLink>
           </div>

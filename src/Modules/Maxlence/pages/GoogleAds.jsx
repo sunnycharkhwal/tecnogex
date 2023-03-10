@@ -17,7 +17,7 @@ export const GoogleAds = () => {
     <>
       <div className="container-fluid py-sm-5 py-3 mb-5 grleads bgproperty services_modal_page_div">
         <div className="services_modal_page_inner">
-          <DrawerLeft />
+          <DrawerLeft data="growth_page" />
         </div>
         <div className="container py-sm-5">
           <div

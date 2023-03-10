@@ -410,7 +410,7 @@ body.modal-open {
 }
 .slidebluearrows .slick-prev:before,
 .slidebluearrows .slick-next:before {
-  color: #0a76e5 !important;
+  color: #0a76e5;
   font-size: 35px;
 }
 
@@ -481,10 +481,10 @@ body.modal-open {
 //Slider
 .slick-prev {
   z-index: 999;
-  left: -40px !important;
+  left: -40px;
 }
 .slick-next {
-  right: -25px !important;
+  right: -25px;
   z-index: 999;
 }
 

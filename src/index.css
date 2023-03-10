@@ -2661,6 +2661,7 @@ ul.ab-form-list {
   min-height: 250px;
   height: 200px;
   position: relative;
+  width: auto !important;
 }
 .mobileapp_process p {
   font-family: "Poppins";

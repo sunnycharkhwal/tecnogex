@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-// import { Getintouch } from "../components/getintouchform";
+import React from "react";
 import homehero2 from "../assests/homehero2.png";
-import { BlueBtn, OutlineBtn, OutlineLinkBtn } from "../components/Btn";
+import { BlueBtn, OutlineLinkBtn } from "../components/Btn";
 import velaqualogo from "../assests/partners/velaqualogo.png";
 import flooring from "../assests/partners/logo 1.png";
 import latestproj1 from "../assests/latestproj1.png";
@@ -16,15 +15,12 @@ import creatimg2 from "../assests/creatimg2.jpg";
 import creatopti from "../assests/creatopti.jpg";
 import aligncenter from "../assests/01 align center.svg";
 import lightbulb from "../assests/lightbulb-dollar 1.svg";
-import { Cta } from "../components/Cta";
 import questioncheck from "../assests/comments-question-check 1.svg";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Faqs } from "../components/Faqs";
-
-// import { Container } from "react-bootstrap";
-// import { OutlineBtn } from "../components/Btn";
-// import { TextAreaBox } from "../components/form";
+import { DrawerLeft } from "../components/DrawerLeft";
+import { FooterContact } from "../components/FooterContact";
 
 export const Website = () => {
   const navigate = useNavigate();
@@ -37,6 +33,7 @@ export const Website = () => {
         <div className="container py-3 mt-3">
           <div className="row py-3">
             <div>
+              <DrawerLeft data="creation_page" />
               <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                   <h1>
@@ -405,19 +402,8 @@ export const Website = () => {
           </div>
         </div>
       </div>
-
-      <Cta
-        bgcolor="greygradient"
-        ctaheading="We’d love to be your partner"
-        btntype="out_line_btn"
-        btntext="Get In Touch"
-      >
-        <div className="mt-3">
-          <OutlineBtn title="Get Started" />
-        </div>
-      </Cta>
-
       <Faqs catId={2} />
+      <FooterContact />
     </>
   );
 };

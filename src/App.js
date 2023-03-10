@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "../src/Modules/Maxlence/components/Navbar";
 import { Footer } from "../src/Modules/Maxlence/components/Footer";
-import { Creation } from "../src/Modules/Maxlence/pages/creation";
+import { Creation } from "./Modules/Maxlence/pages/Creation";
 import { Growth } from "../src/Modules/Maxlence/pages/Growth";
 import { Home } from "../src/Modules/Maxlence/pages/home";
 import { Design } from "../src/Modules/Maxlence/pages/design";
@@ -11,7 +11,7 @@ import { Getintouch } from "../src/Modules/Maxlence/pages/getintouch";
 import { Careersjd } from "../src/Modules/Maxlence/pages/careersjd";
 import { Jobform } from "../src/Modules/Maxlence/pages/jobform";
 import { Businessone } from "./Modules/Maxlence/pages/business1";
-import { Website } from "./Modules/Maxlence/pages/website";
+import { Website } from "./Modules/Maxlence/pages/Website";
 import Quest from "./Modules/Maxlence/pages/quest";
 import QuesPlan from "./Modules/Maxlence/pages/quesPlan";
 import store from "./Modules/Maxlence/redux/store";
@@ -27,6 +27,10 @@ import { ProductDetails } from "./Modules/Maxlence/pages/ProductDetails";
 import { QuestionarePage } from "./Modules/Maxlence/pages/QuestionarePage";
 import { BuyPlans } from "./Modules/Maxlence/pages/BuyPlans";
 import { GoogleAds } from "./Modules/Maxlence/pages/GoogleAds";
+import { SocialMediaMarketing } from "./Modules/Maxlence/pages/SocialMediaMarketing";
+import { Seo } from "./Modules/Maxlence/components/Seo";
+import { EmailMarketing } from "./Modules/Maxlence/pages/EmailMarketing";
+import { MobileApp } from "./Modules/Maxlence/pages/MobileApp";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -57,6 +61,13 @@ export const App = () => {
             <Route path="/Questionare_Page" element={<QuestionarePage />} />
             <Route path="/buy_plans" element={<BuyPlans />} />
             <Route path="/google_ads" element={<GoogleAds />} />
+            <Route
+              path="/social_media_marketing"
+              element={<SocialMediaMarketing />}
+            />
+            <Route path="/seo" element={<Seo />} />
+            <Route path="/email_marketing" element={<EmailMarketing />} />
+            <Route path="/mobile_app" element={<MobileApp />} />
           </Routes>
           <Footer />
         </Router>
