@@ -1577,3 +1577,11 @@
     color: transparent !important;
   }
 }
+.mobile_app_tab {
+  .nav-item {
+    margin: auto;
+    .nav-link {
+      font-size: 15px;
+    }
+  }
+}

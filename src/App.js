@@ -31,6 +31,9 @@ import { SocialMediaMarketing } from "./Modules/Maxlence/pages/SocialMediaMarket
 import { Seo } from "./Modules/Maxlence/components/Seo";
 import { EmailMarketing } from "./Modules/Maxlence/pages/EmailMarketing";
 import { MobileApp } from "./Modules/Maxlence/pages/MobileApp";
+import { Saas } from "./Modules/Maxlence/pages/Saas";
+import { CreationWebhost } from "./Modules/Maxlence/pages/CreationWebhost";
+import { Careers } from "./Modules/Maxlence/pages/Careers";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -68,6 +71,9 @@ export const App = () => {
             <Route path="/seo" element={<Seo />} />
             <Route path="/email_marketing" element={<EmailMarketing />} />
             <Route path="/mobile_app" element={<MobileApp />} />
+            <Route path="/saas" element={<Saas />} />
+            <Route path="/creation_webhost" element={<CreationWebhost />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
           <Footer />
         </Router>

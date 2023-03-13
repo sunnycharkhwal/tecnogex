@@ -6,6 +6,19 @@
   }
 }
 @media (max-width: 576px) {
+  .mobile_app_tab {
+    .nav {
+      overflow-x: scroll;
+      width: 100%;
+      flex-wrap: nowrap;
+      display: flex;
+      .nav-link {
+        width: 12rem;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
   .grleads {
     background-image: none;
   }
@@ -330,6 +343,19 @@
   }
 }
 @media (min-width: 768px) {
+  .mobile_app_tab {
+    .nav {
+      overflow-x: scroll;
+      width: 100%;
+      flex-wrap: nowrap;
+      display: flex;
+      .nav-link {
+        width: 12rem;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
   .stepper_inner_div {
     width: 100%;
   }
@@ -420,6 +446,22 @@
   }
 }
 @media (min-width: 1024px) {
+  .mobile_app_tab {
+    .nav {
+      overflow-x: unset;
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+    }
+    .nav-item {
+      margin: auto;
+      .nav-link {
+        width: unset;
+        text-align: unset;
+        font-size: 13px;
+      }
+    }
+  }
   .stepper_inner_div {
     width: 75%;
   }
@@ -523,6 +565,14 @@
   }
 }
 @media (min-width: 1440px) {
+  .mobile_app_tab {
+    .nav-item {
+      margin: auto;
+      .nav-link {
+        font-size: 15px;
+      }
+    }
+  }
   .step_title_div {
     .step_title_div_inner {
       width: 65%;

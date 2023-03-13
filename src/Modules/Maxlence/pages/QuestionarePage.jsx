@@ -3,7 +3,7 @@ import Instabox from "../assests/instabox.png";
 import Googleadwordbox from "../assests/googleadwordbox.png";
 import Googleseobox from "../assests/googleseobox.png";
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Typography, Stepper, Step, StepLabel } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 
@@ -28,7 +28,7 @@ export const QuestionarePage = () => {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -73,7 +73,7 @@ export const QuestionarePage = () => {
         >
           Previous
         </button>
-        <button className="next  action-button" onClick={handleNext}>
+        {/* <button className="next  action-button" onClick={handleNext}>
           {activeStep === steps.length - 1 ? (
             <NavLink to="/buy_plans" className="Finish_btn">
               Finish
@@ -81,16 +81,16 @@ export const QuestionarePage = () => {
           ) : (
             "Submit ➙"
           )}
-        </button>
-        {/* <button
+        </button> */}
+        <button
           className="next  action-button"
           onClick={() => {
             setActiveStep((old) => old + 1);
-            if (steps.length === activeStep + 1) navigate("/");
+            if (steps.length === activeStep + 1) navigate("/buy_plans");
           }}
         >
           {steps.length === activeStep + 1 ? "Finish" : "Submit ➙"}
-        </button> */}
+        </button>
       </div>
     </div>
   );
