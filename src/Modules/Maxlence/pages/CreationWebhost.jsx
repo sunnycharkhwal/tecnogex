@@ -16,8 +16,8 @@ export const CreationWebhost = () => {
           <DrawerLeft data="creation_page" />
         </div>
       </div>
-      <div class="container websitetemp my-md-5 py-md-3 mt-2 pt-5 ">
-        <div class="text-center">
+      <div className="container websitetemp my-md-5 py-md-3 mt-2 pt-5 ">
+        <div className="text-center">
           <p>
             <b>Hosting, Maintenance & Support</b>
           </p>
@@ -25,7 +25,7 @@ export const CreationWebhost = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
             vitae condimentum risus.
           </h1>
-          <div class="py-4">
+          <div className="py-4">
             <NavLink
               to="/Questionare_Page"
               className="getstartbtn  fontrale my-5"
@@ -36,12 +36,12 @@ export const CreationWebhost = () => {
         </div>
       </div>
       <div
-        class="container my-sm-4 py-sm-5 py-0 my-0
+        className="container my-sm-4 py-sm-5 py-0 my-0
          domainsection"
       >
-        <div class="row justify-content-between align-items-start">
-          <div class="col-md-5 my-3 text-end ">
-            <h2 class="font-weight-bold my-3 ">
+        <div className="row justify-content-between align-items-start">
+          <div className="col-md-5 my-3 text-end ">
+            <h2 className="font-weight-bold my-3 ">
               <b>
                 <span>
                   <b>Domain Name </b>
@@ -61,23 +61,23 @@ export const CreationWebhost = () => {
             </p>
           </div>
 
-          <div class="col-md-7 rounded text-center wow animate__animated animate__fadeInUp animate__slow ">
-            <img class="w-100 w-sm-200" src={Domainsec} alt="img" />
+          <div className="col-md-7 rounded text-center wow animate__animated animate__fadeInUp animate__slow ">
+            <img className="w-100 w-sm-200" src={Domainsec} alt="img" />
           </div>
         </div>
       </div>
-      <div class="container my-3">
-        <div class="row justify-content-around align-items-center">
-          <div class="col-md-3 my-3 text-center wow animate__animated animate__fadeInUp animate__faster animate__delay-1s">
-            <div class="domainserviceicon">
+      <div className="container my-3">
+        <div className="row justify-content-around align-items-center">
+          <div className="col-md-3 my-3 text-center wow animate__animated animate__fadeInUp animate__faster animate__delay-1s">
+            <div className="domainserviceicon">
               <img src={Tslcerti} alt="img" />
             </div>
-            <div class="domainsertitle my-3">
+            <div className="domainsertitle my-3">
               <h6>
                 <b>TLS 1.2</b>
               </h6>
             </div>
-            <div class="domainsertext">
+            <div className="domainsertext">
               <small>
                 Feel safe knowing that Maxlence adds extra layers of website
                 security like TLS 1.2 to keep all transactions on your site
@@ -86,16 +86,16 @@ export const CreationWebhost = () => {
             </div>
           </div>
 
-          <div class="col-md-3 my-3 text-center wow animate__animated animate__fadeInUp animate__faster animate__delay-2s">
-            <div class="domainserviceicon">
+          <div className="col-md-3 my-3 text-center wow animate__animated animate__fadeInUp animate__faster animate__delay-2s">
+            <div className="domainserviceicon">
               <img src={Certificateicon} alt="img" />
             </div>
-            <div class="domainsertitle my-3">
+            <div className="domainsertitle my-3">
               <h6>
                 <b>ISO 27001 & 27018 Certificates</b>
               </h6>
             </div>
-            <div class="domainsertext">
+            <div className="domainsertext">
               <small>
                 Maxlence maintains industry best practices for handling personal
                 information (PII) and managing website security risks.
@@ -103,16 +103,16 @@ export const CreationWebhost = () => {
             </div>
           </div>
 
-          <div class="col-md-3 my-3 text-center wow animate__animated animate__fadeInUp animate__faster animate__delay-3s">
-            <div class="domainserviceicon">
+          <div className="col-md-3 my-3 text-center wow animate__animated animate__fadeInUp animate__faster animate__delay-3s">
+            <div className="domainserviceicon">
               <img src={Sslcerti} alt="img" />
             </div>
-            <div class="domainsertitle my-3">
+            <div className="domainsertitle my-3">
               <h6>
                 <b>SSL Certificate</b>
               </h6>
             </div>
-            <div class="domainsertext">
+            <div className="domainsertext">
               <small>
                 Gain your visitors’ trust by having SSL web security to keep
                 connections secure and private over an HTTPS connection.
@@ -121,14 +121,14 @@ export const CreationWebhost = () => {
           </div>
         </div>
       </div>
-      <div class="container  my-sm-4 py-sm-5 py-0 my-0 freehost ">
-        <div class="row justify-content-around align-items-center">
-          <div class="col-md-6 rounded text-center wow animate__animated animate__fadeInUp animate__slow ">
-            <img class="w-100" src={Freehosting} alt="img" />
+      <div className="container  my-sm-4 py-sm-5 py-0 my-0 freehost ">
+        <div className="row justify-content-around align-items-center">
+          <div className="col-md-6 rounded text-center wow animate__animated animate__fadeInUp animate__slow ">
+            <img className="w-100" src={Freehosting} alt="img" />
           </div>
 
-          <div class="col-md-4 my-3 text-sm-left">
-            <h2 class="font-weight-bold my-4 ">
+          <div className="col-md-4 my-3 text-sm-left">
+            <h2 className="font-weight-bold my-4 ">
               <b>
                 World Class
                 <span>
@@ -137,25 +137,25 @@ export const CreationWebhost = () => {
               </b>
             </h2>
             <p
-              class="bullets d-flex align-items-center mb-1"
+              className="bullets d-flex align-items-center mb-1"
               style={{ fontSize: "14px" }}
             >
               <b>Lorem ipsum dolor sit amet.</b>
             </p>
             <p
-              class="bullets d-flex align-items-center mb-1"
+              className="bullets d-flex align-items-center mb-1"
               style={{ fontSize: "14px" }}
             >
               <b>Lorem ipsum dolor sit.</b>
             </p>
             <p
-              class="bullets d-flex align-items-center mb-1"
+              className="bullets d-flex align-items-center mb-1"
               style={{ fontSize: "14px" }}
             >
               <b>Lorem, ipsum.</b>
             </p>
 
-            <div class="py-4">
+            <div className="py-4">
               <NavLink
                 to="/Questionare_Page"
                 className="getstartbtn  fontrale my-5"
@@ -166,16 +166,16 @@ export const CreationWebhost = () => {
           </div>
         </div>
       </div>
-      <div class="container my-md-5 py-md-3 mt-2 pt-5">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-10">
+      <div className="container my-md-5 py-md-3 mt-2 pt-5">
+        <div className="row justify-content-center text-center">
+          <div className="col-md-10">
             <h1>
               <b>
                 We provide ad-hoc and retained support and maintenance for
                 websites
               </b>
             </h1>
-            <p class="my-5">
+            <p className="my-5">
               No matter how tight our product cycles are, we never jump straight
               into Sketch too early. We invest time in bringing order to your
               requirements and understanding what we're about to design. This
@@ -184,73 +184,73 @@ export const CreationWebhost = () => {
           </div>
         </div>
 
-        <div class="row justify-content-around text-md-left text-center">
-          <div class="col-md-4 my-2">
-            <div class="my-4">
-              <span class="numpink">1</span>
+        <div className="row justify-content-around text-md-left text-center">
+          <div className="col-md-4 my-2">
+            <div className="my-4">
+              <span className="numpink">1</span>
             </div>
             <div>
-              <p class="text-md-left text-center mb-0 font-weight-bold">
+              <p className="text-md-left text-center mb-0 font-weight-bold">
                 Technical optimisation
               </p>
             </div>
           </div>
-          <div class="col-md-4 my-2">
-            <div class="my-4">
-              <span class="numpink">2</span>
+          <div className="col-md-4 my-2">
+            <div className="my-4">
+              <span className="numpink">2</span>
             </div>
             <div>
-              <p class="text-md-left text-center mb-0 font-weight-bold">
+              <p className="text-md-left text-center mb-0 font-weight-bold">
                 Content alterations, additions and planning
               </p>
             </div>
           </div>
-          <div class="col-md-4 my-2">
-            <div class="my-4">
-              <span class="numpink">3</span>
+          <div className="col-md-4 my-2">
+            <div className="my-4">
+              <span className="numpink">3</span>
             </div>
             <div>
-              <p class="text-md-left text-center mb-0 font-weight-bold">
+              <p className="text-md-left text-center mb-0 font-weight-bold">
                 Site Structure optimisation
               </p>
             </div>
           </div>
         </div>
-        <div class="row justify-content-around text-md-left text-center">
-          <div class="col-md-4 my-2">
-            <div class="my-4">
-              <span class="numpink">4</span>
+        <div className="row justify-content-around text-md-left text-center">
+          <div className="col-md-4 my-2">
+            <div className="my-4">
+              <span className="numpink">4</span>
             </div>
             <div>
-              <p class="text-md-left text-center mb-0 font-weight-bold">
+              <p className="text-md-left text-center mb-0 font-weight-bold">
                 Plugins
               </p>
             </div>
           </div>
 
-          <div class="col-md-4 my-2">
-            <div class="my-4">
-              <span class="numpink">5</span>
+          <div className="col-md-4 my-2">
+            <div className="my-4">
+              <span className="numpink">5</span>
             </div>
             <div>
-              <p class="text-md-left text-center mb-0 font-weight-bold ">
+              <p className="text-md-left text-center mb-0 font-weight-bold ">
                 Themes and templates
               </p>
             </div>
           </div>
 
-          <div class="col-md-4 my-2">
-            <div class="my-4">
-              <span class="numpink">6</span>
+          <div className="col-md-4 my-2">
+            <div className="my-4">
+              <span className="numpink">6</span>
             </div>
             <div>
-              <p class="text-md-left text-center mb-0 font-weight-bold">
+              <p className="text-md-left text-center mb-0 font-weight-bold">
                 WordPress updates
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-12 px-md-5 px-2 my-5 text-center">
+        <div className="col-md-12 px-md-5 px-2 my-5 text-center">
           <div>
             <p>
               We’re flexible with our support and understand that sometimes you

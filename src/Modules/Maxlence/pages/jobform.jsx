@@ -393,7 +393,7 @@ export const Jobform = () => {
             </div>
           </div>
           <div className="submitcv mt-5 text-center">
-            <div className=" col-md-2 col-7 m-auto my-3 ">
+            <div className=" col-md-2 col-7 text-center my-3 ">
               <BlueBtn type="submit" title="Submit"></BlueBtn>
             </div>
           </div>

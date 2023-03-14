@@ -1045,10 +1045,12 @@ export const Header = () => {
             <Nav.Link href="/design">Design</Nav.Link>
             <NavDropdown title="Business" id="navbarScrollingDropdown">
               <NavDropdown.Item href="business1">Business1</NavDropdown.Item>
-              <NavDropdown.Item href="#">Business 2</NavDropdown.Item>
+              <NavDropdown.Item href="business2">Business 2</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Resources" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#">Design Inspiration</NavDropdown.Item>
+              <NavDropdown.Item href="/design_inspiration">
+                Design Inspiration
+              </NavDropdown.Item>
               <NavDropdown.Item href="#">Brochure</NavDropdown.Item>
               <NavDropdown.Item href="#">Case Study</NavDropdown.Item>
               <NavDropdown.Item href="#">Blogs</NavDropdown.Item>

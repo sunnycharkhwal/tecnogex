@@ -6,6 +6,31 @@
   }
 }
 @media (max-width: 576px) {
+  .careers_profile_text_div {
+    h3 {
+      font-size: 16px !important;
+    }
+  }
+  .tab_main_top_div {
+    .nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-x: scroll;
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+  }
+  .careers_profile_text_left {
+    p {
+      width: 100%;
+      margin-top: 1.5rem;
+      font-size: 13px;
+      line-height: 19px;
+      padding-left: 10px;
+      text-align: justify;
+    }
+  }
   .mobile_app_tab {
     .nav {
       overflow-x: scroll;
@@ -343,6 +368,11 @@
   }
 }
 @media (min-width: 768px) {
+  .careers_profile_text_left {
+    p {
+      width: 100%;
+    }
+  }
   .mobile_app_tab {
     .nav {
       overflow-x: scroll;
@@ -446,6 +476,11 @@
   }
 }
 @media (min-width: 1024px) {
+  .careers_profile_text_left {
+    p {
+      width: 92%;
+    }
+  }
   .mobile_app_tab {
     .nav {
       overflow-x: unset;

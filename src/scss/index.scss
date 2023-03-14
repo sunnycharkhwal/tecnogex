@@ -17,6 +17,40 @@
 //
 //
 // old css
+.job_vac_table {
+  margin-top: 3rem;
+}
+
+.table td,
+.table th {
+  border-top: none;
+}
+
+.text-blue {
+  color: #0a76e5;
+}
+.job_vac_table table td,
+.job_vac_table table th {
+  border-bottom: none !important;
+}
+
+.job_vac_table .table > table > tr > td {
+  vertical-align: middle;
+}
+.c1 {
+  background-image: linear-gradient(
+      -180deg,
+      rgba(0, 0, 0, 0.4) -99.72%,
+      rgba(0, 0, 0, 0.5) 109.86%
+    ),
+    url(../Modules/Maxlence/assests/abouthero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  background-size: 100%;
+}
 .wedobullets li::marker {
   color: #0a76e5 !important;
 }
@@ -1585,3 +1619,85 @@
     }
   }
 }
+// careers
+.careers_profile_div {
+  position: relative;
+  img {
+    @include bg_img;
+    height: 19rem;
+    width: 100%;
+    border-radius: 6px;
+    margin: auto;
+  }
+}
+.careers_profile_text_div {
+  background: rgba(57, 148, 242, 0.4);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 1rem;
+  color: white;
+  h3 {
+    font-size: 16px;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+.careers_profile_text_left {
+  p {
+    font-style: normal;
+    font-weight: 500;
+    color: #383838;
+    line-height: 28px;
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 20px;
+    width: 92%;
+    &::before {
+      content: "";
+      width: 0.2rem;
+      height: 4rem;
+      background: #0a76e5;
+      position: absolute;
+      left: 0;
+      top: 6px;
+    }
+  }
+}
+.tab_main_div {
+  img {
+    @include bg_img;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    border: 2px solid transparent;
+  }
+}
+.tab_main_top_div {
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: transparent;
+
+    margin: 0;
+    border-radius: 100%;
+    img {
+      border: 2px solid #0a76e5;
+    }
+  }
+}
+// careers end

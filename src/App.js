@@ -10,7 +10,8 @@ import { Shop } from "../src/Modules/Maxlence/pages/shop";
 import { Getintouch } from "../src/Modules/Maxlence/pages/getintouch";
 import { Careersjd } from "../src/Modules/Maxlence/pages/careersjd";
 import { Jobform } from "../src/Modules/Maxlence/pages/jobform";
-import { Businessone } from "./Modules/Maxlence/pages/business1";
+import { Businessone } from "./Modules/Maxlence/pages/Business1";
+
 import { Website } from "./Modules/Maxlence/pages/Website";
 import Quest from "./Modules/Maxlence/pages/quest";
 import QuesPlan from "./Modules/Maxlence/pages/quesPlan";
@@ -34,6 +35,8 @@ import { MobileApp } from "./Modules/Maxlence/pages/MobileApp";
 import { Saas } from "./Modules/Maxlence/pages/Saas";
 import { CreationWebhost } from "./Modules/Maxlence/pages/CreationWebhost";
 import { Careers } from "./Modules/Maxlence/pages/Careers";
+import { Business2 } from "./Modules/Maxlence/pages/Business2";
+import { DesignInspiration } from "./Modules/Maxlence/pages/DesignInspiration";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -74,6 +77,8 @@ export const App = () => {
             <Route path="/saas" element={<Saas />} />
             <Route path="/creation_webhost" element={<CreationWebhost />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/business2" element={<Business2 />} />
+            <Route path="/design_inspiration" element={<DesignInspiration />} />
           </Routes>
           <Footer />
         </Router>
