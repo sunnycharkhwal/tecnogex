@@ -6,6 +6,10 @@
   }
 }
 @media (max-width: 576px) {
+  .design_inspiration_img {
+    height: 100%;
+    width: 100%;
+  }
   .careers_profile_text_div {
     h3 {
       font-size: 16px !important;
@@ -476,6 +480,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .design_inspiration_img {
+    height: 13rem;
+    width: 100%;
+  }
   .careers_profile_text_left {
     p {
       width: 92%;
@@ -600,6 +608,10 @@
   }
 }
 @media (min-width: 1440px) {
+  .design_inspiration_img {
+    height: 15rem;
+    width: 100%;
+  }
   .mobile_app_tab {
     .nav-item {
       margin: auto;

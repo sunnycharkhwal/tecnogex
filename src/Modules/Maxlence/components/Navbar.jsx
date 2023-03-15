@@ -1051,9 +1051,9 @@ export const Header = () => {
               <NavDropdown.Item href="/design_inspiration">
                 Design Inspiration
               </NavDropdown.Item>
-              <NavDropdown.Item href="#">Brochure</NavDropdown.Item>
-              <NavDropdown.Item href="#">Case Study</NavDropdown.Item>
-              <NavDropdown.Item href="#">Blogs</NavDropdown.Item>
+              <NavDropdown.Item href="/brochure">Brochure</NavDropdown.Item>
+              <NavDropdown.Item href="/case_study">Case Study</NavDropdown.Item>
+              <NavDropdown.Item href="/blogs">Blogs</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Enterprise" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#">SEO Service</NavDropdown.Item>

@@ -37,6 +37,9 @@ import { CreationWebhost } from "./Modules/Maxlence/pages/CreationWebhost";
 import { Careers } from "./Modules/Maxlence/pages/Careers";
 import { Business2 } from "./Modules/Maxlence/pages/Business2";
 import { DesignInspiration } from "./Modules/Maxlence/pages/DesignInspiration";
+import { Brochure } from "./Modules/Maxlence/pages/Brochure";
+import { Blogs } from "./Modules/Maxlence/pages/Blogs";
+import { CaseStudy } from "./Modules/Maxlence/pages/CaseStudy";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -79,6 +82,9 @@ export const App = () => {
             <Route path="/careers" element={<Careers />} />
             <Route path="/business2" element={<Business2 />} />
             <Route path="/design_inspiration" element={<DesignInspiration />} />
+            <Route path="/brochure" element={<Brochure />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/case_study" element={<CaseStudy />} />
           </Routes>
           <Footer />
         </Router>

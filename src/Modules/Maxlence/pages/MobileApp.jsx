@@ -510,7 +510,7 @@ const Tabs = () => {
           defaultActiveKey="first"
           unmountOnExit="true"
         >
-          <Nav variant="" className="flex-row mb-3 mt-5">
+          <Nav variant="pills" className="flex-row mb-3 mt-5">
             <Nav.Item>
               <Nav.Link eventKey="first">Mobile Technologies</Nav.Link>
             </Nav.Item>
