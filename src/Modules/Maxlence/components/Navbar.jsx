@@ -1056,14 +1056,24 @@ export const Header = () => {
               <NavDropdown.Item href="/blogs">Blogs</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Enterprise" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#">SEO Service</NavDropdown.Item>
-              <NavDropdown.Item href="#">Google Ads Service</NavDropdown.Item>
-              <NavDropdown.Item href="#">Social Media Service</NavDropdown.Item>
+              <NavDropdown.Item href="/Seo_service">
+                SEO Service
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/google_ads_service">
+                Google Ads Service
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/social_media_service">
+                Social Media Service
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/shop">Shop</Nav.Link>
             <NavDropdown title="Solutions" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#">API Integration</NavDropdown.Item>
-              <NavDropdown.Item href="#">Form Tracker</NavDropdown.Item>
+              <NavDropdown.Item href="/api_integration">
+                API Integration
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/form_tracker">
+                Form Tracker
+              </NavDropdown.Item>
               <NavDropdown.Item href="#">Review Tracker</NavDropdown.Item>
               <NavDropdown.Item href="#">Agencies</NavDropdown.Item>
             </NavDropdown>

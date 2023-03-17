@@ -40,6 +40,13 @@ import { DesignInspiration } from "./Modules/Maxlence/pages/DesignInspiration";
 import { Brochure } from "./Modules/Maxlence/pages/Brochure";
 import { Blogs } from "./Modules/Maxlence/pages/Blogs";
 import { CaseStudy } from "./Modules/Maxlence/pages/CaseStudy";
+import { Bepeseo } from "./Modules/Maxlence/pages/Bepeseo";
+import { Tpruiux } from "./Modules/Maxlence/pages/Tpruiux";
+import { SeoService } from "./Modules/Maxlence/pages/SeoService";
+import { GoogleAdsService } from "./Modules/Maxlence/pages/GoogleAdsService";
+import { SocialMediaService } from "./Modules/Maxlence/pages/SocialMediaService";
+import { APIIntegration } from "./Modules/Maxlence/pages/APIIntegration";
+import { FormTracker } from "./Modules/Maxlence/pages/FormTracker";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -85,6 +92,16 @@ export const App = () => {
             <Route path="/brochure" element={<Brochure />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/case_study" element={<CaseStudy />} />
+            <Route path="/bepeseo" element={<Bepeseo />} />
+            <Route path="/tpruiux" element={<Tpruiux />} />
+            <Route path="/Seo_service" element={<SeoService />} />
+            <Route path="/google_ads_service" element={<GoogleAdsService />} />
+            <Route
+              path="/social_media_service"
+              element={<SocialMediaService />}
+            />
+            <Route path="/api_integration" element={<APIIntegration />} />
+            <Route path="/form_tracker" element={<FormTracker />} />
           </Routes>
           <Footer />
         </Router>

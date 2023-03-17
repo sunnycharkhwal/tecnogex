@@ -4,7 +4,6 @@ import youtubecamp from "../assests/youtubecamp.jpg";
 import pageseo from "../assests/pageseo.jpg";
 import socialmediamarketing from "../assests/socialmediamarketing.jpg";
 import emailmarketing from "../assests/emailmarketing.jpg";
-import Checkbox from "@mui/material/Checkbox";
 import { NavLink } from "react-router-dom";
 import Cart2 from "../../../img/cart2.svg";
 export const Cart = () => {

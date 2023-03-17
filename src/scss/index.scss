@@ -17,6 +17,68 @@
 //
 //
 // old css
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.getstartmob.getstartbtn {
+  padding: 0.4rem 1rem;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.base {
+  font-weight: bold;
+  -webkit-margin-before: 0.3em;
+  -webkit-margin-after: 0.2em;
+  color: #00c99c !important;
+}
+.casestudytitle::before {
+  content: "";
+  width: 4px;
+  height: 30px;
+  background-color: #0a76e5;
+  position: absolute;
+  left: -2%;
+  top: 10px;
+}
+
+.bepestat {
+  padding: 1rem;
+  min-height: 30px;
+  min-width: 10rem;
+}
+
+.bluebox {
+  background-color: #1a73e8;
+}
+
+.redbox {
+  background-color: #d93025;
+}
+
+.yellowbox {
+  background-color: #f9ab00;
+}
+
+.greenbox {
+  background-color: #1e8e3e;
+}
+.seostats {
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  text-align: center;
+  border-radius: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .job_vac_table {
   margin-top: 3rem;
 }
@@ -1746,3 +1808,49 @@
   height: 15rem;
 }
 // case_study_card_img end
+// seo_service_rating_div
+.seo_service_rating_div {
+  background-color: #e6f3ff;
+  height: 20rem;
+  padding: 2rem;
+  position: relative;
+  width: 95%;
+  h6 {
+    font-size: 15px;
+    font-weight: 400 !important;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    line-height: 22px;
+  }
+  .seo_service_rating_inner_div {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+      margin-left: 18px;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    img {
+      width: 5rem;
+      height: 5rem;
+      box-shadow: 5px 8px 10px rgba(73, 73, 73, 0.25),
+        -5px -8px 12px -6px #ffffff;
+      background: #e6f3ff;
+      padding: 8px;
+      border-top-left-radius: 25px;
+    }
+  }
+}
+.seo_service_rating_star_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  svg {
+    font-size: 27px;
+    margin-left: 5px;
+  }
+}
+// seo_service_rating_div end

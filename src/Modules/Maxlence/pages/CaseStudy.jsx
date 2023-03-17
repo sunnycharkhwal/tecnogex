@@ -88,7 +88,7 @@ const AllList = () => {
       img: Bepecase,
       title: "BEPE",
       position: "SEO",
-      link: "/",
+      link: "/bepeseo",
     },
     {
       img: Casestudy3,
@@ -154,7 +154,7 @@ const Seo = () => {
       img: Bepecase,
       title: "BEPE",
       position: "SEO",
-      link: "/",
+      link: "/bepeseo",
     },
   ];
   const CaseStudyApp = (props) => {
@@ -196,7 +196,7 @@ const GOOGLEADS = () => {
       img: Bepecase,
       title: "BEPE",
       position: "SEO",
-      link: "/",
+      link: "/bepeseo",
     },
   ];
   const CaseStudyApp = (props) => {
@@ -320,9 +320,9 @@ const Design = () => {
   const CaseStudyCard = [
     {
       img: Casestudy2,
-      title: "Design",
-      position: "Social Media Marketing",
-      link: "/",
+      title: "TPR",
+      position: "UI UX",
+      link: "/tpruiux",
     },
   ];
   const CaseStudyApp = (props) => {
