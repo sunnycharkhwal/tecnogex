@@ -1074,8 +1074,10 @@ export const Header = () => {
               <NavDropdown.Item href="/form_tracker">
                 Form Tracker
               </NavDropdown.Item>
-              <NavDropdown.Item href="#">Review Tracker</NavDropdown.Item>
-              <NavDropdown.Item href="#">Agencies</NavDropdown.Item>
+              <NavDropdown.Item href="/review_tracker">
+                Review Tracker
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/agencies">Agencies</NavDropdown.Item>
             </NavDropdown>
             {/* <Nav.Link href="#" disabled>
                 Link

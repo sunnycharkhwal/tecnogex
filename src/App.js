@@ -47,6 +47,9 @@ import { GoogleAdsService } from "./Modules/Maxlence/pages/GoogleAdsService";
 import { SocialMediaService } from "./Modules/Maxlence/pages/SocialMediaService";
 import { APIIntegration } from "./Modules/Maxlence/pages/APIIntegration";
 import { FormTracker } from "./Modules/Maxlence/pages/FormTracker";
+import { ReviewTracker } from "./Modules/Maxlence/pages/ReviewTracker";
+import { Agencies } from "./Modules/Maxlence/pages/Agencies";
+import { Support } from "./Modules/Maxlence/pages/Support";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -102,6 +105,9 @@ export const App = () => {
             />
             <Route path="/api_integration" element={<APIIntegration />} />
             <Route path="/form_tracker" element={<FormTracker />} />
+            <Route path="/review_tracker" element={<ReviewTracker />} />
+            <Route path="/agencies" element={<Agencies />} />
+            <Route path="/support" element={<Support />} />
           </Routes>
           <Footer />
         </Router>
