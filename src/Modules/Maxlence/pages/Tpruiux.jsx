@@ -477,7 +477,7 @@ export const Tpruiux = () => {
             <div>
               <img
                 src={Tprservice1}
-                alt=""
+                alt="f"
                 style={{ width: "100%", height: "auto" }}
               />
             </div>
@@ -486,7 +486,7 @@ export const Tpruiux = () => {
             <div>
               <img
                 src={Tprservice2}
-                alt=""
+                alt="f"
                 style={{ width: "100%", height: "auto" }}
               />
             </div>

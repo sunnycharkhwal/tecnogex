@@ -112,7 +112,7 @@ export const Design = () => {
                 <img
                   key={des.id}
                   src={ENDPOINT + "uploads/" + des.img}
-                  alt=""
+                  alt="f"
                 />
               );
             })}
@@ -128,7 +128,7 @@ export const Design = () => {
         <h1>{props.customlogoTitle}</h1>
         <div className="row row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4 my-4 justify-content-between align-items-center">
           <div className="col-sm-5">
-            <img className="w-100" src={props.src} alt="" />
+            <img className="w-100" src={props.src} alt="f" />
           </div>
           <div className="col-sm-6">
             <div className="customisepoints ml-0">
@@ -525,7 +525,7 @@ export const Design = () => {
 
       {/* <div className="row my-5 justify-content-center">
         <div className="col-md-8 col-12">
-          <img className="w-100" src={calendly} alt="" />
+          <img className="w-100" src={calendly} alt="f" />
         </div>
       </div> */}
 

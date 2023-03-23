@@ -57,7 +57,7 @@ export const Website = () => {
                   </div>
                 </div>
                 <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                  <img className="w-md-80 w-100" alt="" src={homehero2} />
+                  <img className="w-md-80 w-100" alt="f" src={homehero2} />
                 </div>
               </div>
             </div>
@@ -68,16 +68,16 @@ export const Website = () => {
       <div className="container my-5 homepartners">
         <div className="row g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4 text-center align-items-center ">
           <div className="partnerName col-sm-3 col-6">
-            <img src={flooring} alt="" />
+            <img src={flooring} alt="f" />
           </div>
           <div className=" partnerName col-sm-3 col-6 ">
-            <img src={gekkologo} alt="" />
+            <img src={gekkologo} alt="f" />
           </div>
           <div className="partnerName col-sm-3 col-6">
-            <img src={tylerlogo} alt="" />
+            <img src={tylerlogo} alt="f" />
           </div>
           <div className=" partnerName col-sm-3 col-6 ">
-            <img src={velaqualogo} alt="" />
+            <img src={velaqualogo} alt="f" />
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@ export const Website = () => {
               </p>
             </div>
             <div className="col-md-6">
-              <img className="w-100" src={creatweb1} alt="" />
+              <img className="w-100" src={creatweb1} alt="f" />
             </div>
           </div>
         </div>
@@ -189,12 +189,12 @@ export const Website = () => {
           </div>
         </div>
         <div className="my-3 col-12 px-0">
-          <img className="w-100" src={creatimg2} alt="" />
+          <img className="w-100" src={creatimg2} alt="f" />
         </div>
 
         <div className="row my-md-5 py-md-5 my-2 py-2 justify-content-between">
           <div className="col-md-5 order-md-1 order-sm-2 order-2 my-2">
-            <img className="w-100 mb-4" src={creatopti} alt="" />
+            <img className="w-100 mb-4" src={creatopti} alt="f" />
           </div>
           <div className="col-md-6 order-md-2 order-sm-1 order-1 my-2">
             <h2>
@@ -210,7 +210,7 @@ export const Website = () => {
             <div className="d-flex my-4 flex-wrap my-4">
               <div className="col-md-6 pl-0">
                 <div className="my-4">
-                  <img src={palette} alt="" />
+                  <img src={palette} alt="f" />
                 </div>
                 <div>
                   <p>
@@ -227,7 +227,7 @@ export const Website = () => {
 
               <div className="col-md-6 pl-0">
                 <div className="my-4">
-                  <img src={stats} alt="" />
+                  <img src={stats} alt="f" />
                 </div>
                 <div>
                   <p>
@@ -262,7 +262,7 @@ export const Website = () => {
             <div className="d-flex my-4 flex-wrap my-4">
               <div className="col-md-6 pl-0">
                 <div className="my-4">
-                  <img src={aligncenter} alt="" />
+                  <img src={aligncenter} alt="f" />
                 </div>
                 <div>
                   <p>
@@ -280,7 +280,7 @@ export const Website = () => {
 
               <div className="col-md-6 pl-0">
                 <div className="my-4">
-                  <img src={questioncheck} alt="" />
+                  <img src={questioncheck} alt="f" />
                 </div>
                 <div>
                   <p>
@@ -298,13 +298,13 @@ export const Website = () => {
           </div>
 
           <div className="col-md-5 my-2">
-            <img className="w-100 mb-4" src={creatopti} alt="" />
+            <img className="w-100 mb-4" src={creatopti} alt="f" />
           </div>
         </div>
 
         <div className="row my-md-5 py-md-5 my-2 py-2 justify-content-between">
           <div className="col-md-5 order-md-1 order-sm-2 order-2 my-2">
-            <img className="w-100 mb-4" src={creatopti} alt="" />
+            <img className="w-100 mb-4" src={creatopti} alt="f" />
           </div>
           <div className="col-md-6 order-md-2 order-sm-1 order-1">
             <h2>
@@ -320,7 +320,7 @@ export const Website = () => {
             <div className="d-flex my-4 flex-wrap">
               <div className="col-md-6 pl-0">
                 <div className="my-4">
-                  <img src={lightbulb} alt="" />
+                  <img src={lightbulb} alt="f" />
                 </div>
                 <div>
                   <p>
@@ -340,7 +340,7 @@ export const Website = () => {
 
               <div className="col-md-6 pl-0">
                 <div className="my-4">
-                  <img src={desktop} alt="" />
+                  <img src={desktop} alt="f" />
                 </div>
                 <div>
                   <p>
@@ -388,12 +388,12 @@ export const Website = () => {
             <OutlineLinkBtn title="View Project" to="" />
 
             <div className="my-3 d-none d-sm-block">
-              <img className="w-100" src={latestproj1} alt="" />
+              <img className="w-100" src={latestproj1} alt="f" />
             </div>
           </div>
 
           <div className="col-md-5 rounded text-center">
-            <img className="w-100" src={latestproj2} alt="" />
+            <img className="w-100" src={latestproj2} alt="f" />
             <div className="py-4">
               <div className="col-md-5 col-7 m-auto">
                 <BlueBtn to="/creation" title="View Case Studies" />

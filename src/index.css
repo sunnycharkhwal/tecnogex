@@ -1016,31 +1016,6 @@ i.fa.fa-quote-right {
   line-height: 1.5rem;
 }
 
-/* Footer Section */
-
-#footer li {
-  font-weight: 500;
-  margin: 1rem 0.2rem;
-}
-#footer li a {
-  color: #fff !important;
-}
-#footer ul li {
-  list-style: none;
-  padding-left: 0px !important;
-  margin: 1rem 0.5rem;
-  font-family: "Raleway";
-  font-size: 0.85rem;
-}
-.footercol p {
-  color: #fff;
-  font-weight: 600;
-}
-
-ul.footercol {
-  padding-left: 0px;
-}
-
 /* SignIn Page */
 
 #signupform .modal-dialog {

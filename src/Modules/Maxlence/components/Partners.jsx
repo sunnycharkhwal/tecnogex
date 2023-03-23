@@ -2,7 +2,7 @@ import ENDPOINT from "../config/ENDPOINT";
 import { useEffect, useState } from "react";
 
 export const PartnersList = () => {
- const [partners, setPartners] = useState([]);
+  const [partners, setPartners] = useState([]);
 
   async function getPartners() {
     let res = await fetch(ENDPOINT + `logo-partners?limit=12`);
@@ -18,7 +18,7 @@ export const PartnersList = () => {
     return (
       <div className=" text-center col-sm-4 col-6">
         <div className="partnerName">
-          <img width="100%" src={ENDPOINT + "uploads/" + props.img} alt="" />
+          <img width="100%" src={ENDPOINT + "uploads/" + props.img} alt="f" />
         </div>
       </div>
     );

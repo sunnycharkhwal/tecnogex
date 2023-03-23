@@ -80,7 +80,7 @@ export const Shop = () => {
               </div>
             </div>
             <div className="col-sm-6 pe-0 wow animate__animated animate__fadeInUp">
-              <img className="w-100" src={shophero} alt="" />
+              <img className="w-100" src={shophero} alt="f" />
             </div>
           </div>
         </div>
@@ -98,10 +98,10 @@ export const Shop = () => {
       <Container>
         <div className="row mt-5 mb-2 g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4 justify-content-center align-items-center  ">
           <div className="col-sm-5 my-3">
-            <img className="w-100" src={seoshopbanner} alt="" />
+            <img className="w-100" src={seoshopbanner} alt="f" />
           </div>
           <div className="col-sm-5 my-3 justify-content-around align-items-center ">
-            <img className="w-100" src={socialmediabanner} alt="" />
+            <img className="w-100" src={socialmediabanner} alt="f" />
           </div>
         </div>
       </Container>
@@ -115,7 +115,7 @@ export const Shop = () => {
       >
         <div className="row  g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4 justify-content-around py-3">
           <div className="col-md-4 text-center border-right border-xs-right-none">
-            <img className="my-2" src={freetrial} alt="" />
+            <img className="my-2" src={freetrial} alt="f" />
             <h6>Free Trial</h6>
             <small>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
@@ -124,7 +124,7 @@ export const Shop = () => {
           </div>
 
           <div className="col-md-4 text-center vendorbenifits border-right border-xs-right-none ">
-            <img className="my-2" src={secureshopicon} alt="" />
+            <img className="my-2" src={secureshopicon} alt="f" />
             <h6>Secure Payment</h6>
             <small>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
@@ -133,7 +133,7 @@ export const Shop = () => {
           </div>
 
           <div className="col-md-4 text-center vendorbenifits">
-            <img className="my-2" src={shop24icon} alt="" />
+            <img className="my-2" src={shop24icon} alt="f" />
             <h6>24/7 Service</h6>
             <small>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,

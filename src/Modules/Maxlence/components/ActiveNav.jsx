@@ -31,7 +31,7 @@ export const ActiveNav = () => {
                     <br />
                     <div className="input-form-append">
                       <button type="submit" className="active_nav_my">
-                        <img className="searchnavicon" src={Glass} alt="" />
+                        <img className="searchnavicon" src={Glass} alt="f" />
                       </button>
                     </div>
                   </div>

@@ -49,13 +49,13 @@ export const Agencies = () => {
   const OurAreaApp = (props) => {
     const OurAreaInnerApp = (val) => {
       return (
-        <div class="my-2">
+        <div className="my-2">
           <NavLink to={val.link}>{val.text}</NavLink>
         </div>
       );
     };
     return (
-      <div class="col-md-3">
+      <div className="col-md-3">
         {props.val.map((val, i) => {
           return <OurAreaInnerApp key="i" {...val} />;
         })}
@@ -189,11 +189,11 @@ export const Agencies = () => {
   ];
   const BrandingProcessApp = (props) => {
     return (
-      <div class="col-md-3 my-2">
+      <div className="col-md-3 my-2">
         <h4>{props.title}</h4>
         {props.BrandingProcessInnerData.map((val, i) => {
           return (
-            <div class="my-1" key={i}>
+            <div className="my-1" key={i}>
               <NavLink to={val.link}>{val.name}</NavLink>
             </div>
           );
@@ -203,34 +203,34 @@ export const Agencies = () => {
   };
   return (
     <>
-      <div class="container-fluid  py-5 bgproperty growthhero">
-        <div class="container my-sm-4 py-0 my-0">
-          <div class="row my-4 justify-content-around align-items-center text-sm-start text-center">
-            <div class="col-sm-6 col-12 my-3 ">
-              <h1 class="font-weight-bold my-sm-4 ">
+      <div className="container-fluid  py-5 bgproperty growthhero">
+        <div className="container my-sm-4 py-0 my-0">
+          <div className="row my-4 justify-content-around align-items-center text-sm-start text-center">
+            <div className="col-sm-6 col-12 my-3 ">
+              <h1 className="font-weight-bold my-sm-4 ">
                 Our business is <span>taking care</span> of your business
               </h1>
               <p>A place to help an agency to grow up in global environment</p>
 
-              <div class="py-sm-3">
+              <div className="py-sm-3">
                 <NavLink className="getstartbtn fontpop">Create Now</NavLink>
               </div>
             </div>
-            <div class="col-sm-5 my-2 wow animate__animated animate__fadeInUp">
-              <img class="w-100" src={Agencyhead} alt="fd" />
+            <div className="col-sm-5 my-2 wow animate__animated animate__fadeInUp">
+              <img className="w-100" src={Agencyhead} alt="fd" />
             </div>
           </div>
         </div>
       </div>
-      <div class="container py-3 mb-1 secoservices">
+      <div className="container py-3 mb-1 secoservices">
         <div>
           <h1
-            class="font-weight-bold my-4 text-center "
+            className="font-weight-bold my-4 text-center "
             style={{ visibility: "visible", animationName: "fadeInDown" }}
           >
             Get more done with less staff
           </h1>
-          <small class="text-left">
+          <small className="text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
             consequuntur architecto neque maxime, autem cupiditate, laborum sunt
             et repudiandae ad sequi eius ipsa at! Mollitia atque dicta
@@ -244,7 +244,7 @@ export const Agencies = () => {
             ullam sit unde ipsam perspiciatis, assumenda eius error quis? Quae!
           </small>
         </div>
-        <div class="my-4">
+        <div className="my-4">
           <h5>Our area of expertise</h5>
         </div>
         <div className="row">
@@ -252,24 +252,24 @@ export const Agencies = () => {
             return <OurAreaApp key={i} val={val} />;
           })}
         </div>
-        <div class="container">
-          <div class="row justify-content-around align-items-center">
+        <div className="container">
+          <div className="row justify-content-around align-items-center">
             <div
-              class="col-md-5 mt-4"
+              className="col-md-5 mt-4"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <img class="w-100" src={Agencyrevenue} alt="d" />
+              <img className="w-100" src={Agencyrevenue} alt="d" />
             </div>
-            <div class="homesec3info col-sm-7 mt-3 py-3 text-sm-start">
+            <div className="homesec3info col-sm-7 mt-3 py-3 text-sm-start">
               <div
-                class="m-0 p-0"
+                className="m-0 p-0"
                 style={{ visibility: "visible", animationName: "fadeInUp" }}
               >
                 <h1>
                   Generate more monthly <span>recurring revenue</span>
                 </h1>
                 <br />
-                <small class="text-start">
+                <small className="text-start">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
                   tempora suscipit excepturi nihil porro temporibus cumque
                   autem, minus quae soluta iusto dicta ex non facere totam culpa
@@ -277,9 +277,9 @@ export const Agencies = () => {
                 </small>
               </div>
 
-              <div class="row mt-4 ">
+              <div className="row mt-4 ">
                 <div
-                  class="col-12 col-md-6 text-start mb-2 wow animate__ animate__fadeInUp animate__slow animated"
+                  className="col-12 col-md-6 text-start mb-2 wow animate__ animate__fadeInUp animate__slow animated"
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <p>Lorem ipsum dolor sit amet.</p>
@@ -290,7 +290,7 @@ export const Agencies = () => {
                   </p>
                 </div>
                 <div
-                  class="col-12 col-md-6 text-start mb-2 "
+                  className="col-12 col-md-6 text-start mb-2 "
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <p> Lorem ipsum dolor sit amet. </p>
@@ -304,9 +304,9 @@ export const Agencies = () => {
             </div>
           </div>
         </div>
-        <div class="container py-3 mb-1 secoservices">
-          <div class="row mt-md-5 mt-2 justify-content-around align-items-center">
-            <div class="col-md-6 my-3">
+        <div className="container py-3 mb-1 secoservices">
+          <div className="row mt-md-5 mt-2 justify-content-around align-items-center">
+            <div className="col-md-6 my-3">
               <h1>
                 Easily track your projects through <span>client dashborad</span>
               </h1>
@@ -315,21 +315,21 @@ export const Agencies = () => {
                 our powerful platform helps your business grow.
               </p>
             </div>
-            <div class="col-md-6">
-              <img class="w-100" src={Dashboardagency} alt="df" />
+            <div className="col-md-6">
+              <img className="w-100" src={Dashboardagency} alt="df" />
             </div>
           </div>
         </div>
-        <div class="container py-4 mb-1 secoservices">
-          <div class="my-3">
+        <div className="container py-4 mb-1 secoservices">
+          <div className="my-3">
             <h1
-              class="font-weight-bold my-4 text-md-center text-left"
+              className="font-weight-bold my-4 text-md-center text-left"
               style={{ visibility: "visible", animationName: "fadeInDown" }}
             >
               Our unique branding process to build a future-proof brand
             </h1>
           </div>
-          <div class="row mt-5">
+          <div className="row mt-5">
             {BrandingProcessData.map((val, i) => {
               return <BrandingProcessApp key={i} {...val} />;
             })}

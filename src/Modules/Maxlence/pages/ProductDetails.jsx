@@ -88,23 +88,23 @@ const Flexible = () => {
               <div className="logosubcard py-4 bg-white text-dark text-center">
                 <ul className="list-unstyled" style={{ textAlign: "left" }}>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     10 Marketing Posts
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Free Mockups
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Final Formats (PNG, JPEG)
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Lorem ipsum dolor sit amet
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Lorem, ipsum dolor.
                   </li>
                 </ul>
@@ -129,23 +129,23 @@ const Flexible = () => {
               <div className="logosubcard py-4 bg-white text-dark text-center">
                 <ul className="list-unstyled " style={{ textAlign: "left" }}>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     10 Marketing Posts
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Free Mockups
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Final Formats (PNG, JPEG)
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Lorem ipsum dolor sit amet
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Lorem, ipsum dolor.
                   </li>
                 </ul>
@@ -170,23 +170,23 @@ const Flexible = () => {
               <div className="logosubcard py-4 bg-white text-dark text-center">
                 <ul className="list-unstyled " style={{ textAlign: "left" }}>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     10 Marketing Posts
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Free Mockups
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Final Formats (PNG, JPEG)
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Lorem ipsum dolor sit amet
                   </li>
                   <li className="lead">
-                    <img src={Planscheckicon} alt="" className="mx-3" />
+                    <img src={Planscheckicon} alt="f" className="mx-3" />
                     Lorem, ipsum dolor.
                   </li>
                 </ul>
@@ -484,7 +484,7 @@ const RecentPurchase = () => {
           <div className="row py-3">
             <div className="div featcamp col-sm-3 col-6">
               <div className="seoshop shopfeat wow animate__animated animate__fadeIn animate__slow">
-                <img className="w-100" src={Pageseo} alt="" />
+                <img className="w-100" src={Pageseo} alt="f" />
               </div>
               <p className="mt-2 mt-sm-3 mb-1">
                 <b>On Page SEO</b>
@@ -498,7 +498,7 @@ const RecentPurchase = () => {
 
             <div className="div featcamp col-sm-3 col-6">
               <div className="seoshop shopfeat wow animate__animated animate__fadeIn animate__slow">
-                <img className="w-100" src={Youtubecamp} alt="" />
+                <img className="w-100" src={Youtubecamp} alt="f" />
               </div>
               <p className="mt-2 mt-sm-3 mb-1">
                 <b>Video Campaign</b>
@@ -512,7 +512,7 @@ const RecentPurchase = () => {
 
             <div className="div featcamp col-sm-3 col-6">
               <div className="seoshop shopfeat wow animate__animated animate__fadeIn animate__slow">
-                <img className="w-100" src={socialmediamarketing} alt="" />
+                <img className="w-100" src={socialmediamarketing} alt="f" />
               </div>
               <p className="mt-2 mt-sm-3 mb-1">
                 <b>Organic Instagram Marketing</b>
@@ -526,7 +526,7 @@ const RecentPurchase = () => {
 
             <div className="div featcamp col-sm-3 col-6">
               <div className="seoshop shopfeat wow animate__animated animate__fadeIn animate__slow">
-                <img className="w-100" src={Emailmarketing} alt="" />
+                <img className="w-100" src={Emailmarketing} alt="f" />
               </div>
               <p className="mt-2 mt-sm-3 mb-1">
                 <b>Email Marketing</b>
@@ -589,7 +589,7 @@ const CampaignWork = () => {
 
           <div className="col-sm-3 m-3 text-center campaignwork wow animate__animated animate__fadeInUp animate__delay-1s">
             <div className="videocamptoolicon campworkicon">
-              <img src={Videocamptool3} alt="" />
+              <img src={Videocamptool3} alt="f" />
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>

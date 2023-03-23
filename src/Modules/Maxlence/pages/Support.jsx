@@ -42,13 +42,13 @@ export const Support = () => {
   const CardApp = (props) => {
     return (
       <>
-        <div class="col-md-6 col-lg-4 col-12 ">
-          <div class="card border-0 p-3">
-            <div class="row">
-              <div class="col-2">
+        <div className="col-md-6 col-lg-4 col-12 ">
+          <div className="card border-0 p-3">
+            <div className="row">
+              <div className="col-2">
                 <img src={props.img} alt="vc" />
               </div>
-              <div class="col-10 mt-2">
+              <div className="col-10 mt-2">
                 <div>
                   <p>
                     <b>{props.title}</b>
@@ -64,11 +64,11 @@ export const Support = () => {
   };
   return (
     <>
-      <div class="container support_title text-start py-3 mt-5 mb-2">
+      <div className="container support_title text-start py-3 mt-5 mb-2">
         <h1>Hello, How Can We Help You?</h1>
       </div>
-      <div class="container support_feats">
-        <div class="row g-4">
+      <div className="container support_feats">
+        <div className="row g-4">
           {CardData.map((val, i) => {
             return <CardApp key={i} {...val} />;
           })}

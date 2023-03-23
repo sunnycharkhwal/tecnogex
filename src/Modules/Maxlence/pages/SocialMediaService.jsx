@@ -154,55 +154,55 @@ export const SocialMediaService = () => {
           </div>
         </div>
       </div>
-      <div class="container-fluid  py-5" style={{ background: "#fff" }}>
-        <div class="container seoservices">
+      <div className="container-fluid  py-5" style={{ background: "#fff" }}>
+        <div className="container seoservices">
           <div
-            class=" text-center my-3 "
+            className=" text-center my-3 "
             style={{ visibility: "visible", animationName: "fadeInDown" }}
           >
-            <h1 class="font-weight-bold my-sm-4 ">
+            <h1 className="font-weight-bold my-sm-4 ">
               What services are covered in <span> Enterprise Social Media</span>
             </h1>
           </div>
 
           <div
-            class="row py-2 justify-content-around align-items-centerwow animate__ animate__fadeInDown animate__slow animated"
+            className="row py-2 justify-content-around align-items-centerwow animate__ animate__fadeInDown animate__slow animated"
             style={{ visibility: "visible", animationName: "fadeInDown" }}
           >
-            <div class="col-md-3 my-3 col-6">
+            <div className="col-md-3 my-3 col-6">
               <div>
-                <img class="w-100" src={Facebookcard} alt="d" />
+                <img className="w-100" src={Facebookcard} alt="d" />
               </div>
             </div>
-            <div class="col-md-3 my-3 col-6">
+            <div className="col-md-3 my-3 col-6">
               <div>
-                <img class="w-100" src={Instagramcard} alt="d" />
+                <img className="w-100" src={Instagramcard} alt="d" />
               </div>
             </div>
-            <div class="col-md-3 my-3 col-6">
+            <div className="col-md-3 my-3 col-6">
               <div>
-                <img class="w-100" src={Linkedincard} alt="d" />
+                <img className="w-100" src={Linkedincard} alt="d" />
               </div>
             </div>
           </div>
 
           <div
-            class="row justify-content-around wow animate__ animate__fadeInDown animate__slow animated"
+            className="row justify-content-around wow animate__ animate__fadeInDown animate__slow animated"
             style={{ visibility: "visible", animationName: "fadeInDown" }}
           >
-            <div class="col-md-3 my-3 col-6">
+            <div className="col-md-3 my-3 col-6">
               <div>
-                <img class="w-100" src={Pinterestcard} alt="d" />
+                <img className="w-100" src={Pinterestcard} alt="d" />
               </div>
             </div>
-            <div class="col-md-3 my-3 col-6">
+            <div className="col-md-3 my-3 col-6">
               <div>
-                <img class="w-100" src={Twittercard} alt="d" />
+                <img className="w-100" src={Twittercard} alt="d" />
               </div>
             </div>
-            <div class="col-md-3 my-3 col-6">
+            <div className="col-md-3 my-3 col-6">
               <div>
-                <img class="w-100" src={Youtubecard} alt="d" />
+                <img className="w-100" src={Youtubecard} alt="d" />
               </div>
             </div>
           </div>
@@ -304,90 +304,90 @@ export const SocialMediaService = () => {
           </h1>
         </div>
 
-        <table class="table  table-bordered planpricetable   table-striped">
+        <table className="table  table-bordered planpricetable   table-striped">
           <thead>
             <tr>
-              <th class="base" colspan="15">
+              <th className="base" colspan="15">
                 <h3>Features</h3>
               </th>
-              <th class=" text-center base" colspan="2">
+              <th className=" text-center base" colspan="2">
                 <h3>Enterprise</h3>
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Facebook Ads</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Facebook cataloge for ecommerce</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Facebook shop</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Instagram shop</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Facebook conversion API</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Increasing ROI through bid optimization</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Instagram reel ads</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Remarketing</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">
                 {" "}
                 Retargeting & targeting different types of audiences (Hot & Cold
                 Audience)
               </td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Linkedin ads</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
+            <tr className="smediarow">
               <td colspan="15">Linkedin sales navigator for lead generation</td>
-              <td class=" text-center ">
+              <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
-            <tr class="smediarow">
-              <td colspan="20" class=" py-4 text-center ">
+            <tr className="smediarow">
+              <td colspan="20" className=" py-4 text-center ">
                 <b>
                   <NavLink
                     className="getstartbtn fontpop"

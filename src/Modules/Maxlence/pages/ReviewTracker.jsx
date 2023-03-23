@@ -9,15 +9,15 @@ import { InlineWidget } from "react-calendly";
 export const ReviewTracker = () => {
   return (
     <>
-      <div class="container-fluid py-md-5 py-3 bgproperty">
-        <div class="container my-sm-4 py-0 my-0">
-          <div class="row my-4 text-sm-start text-center">
+      <div className="container-fluid py-md-5 py-3 bgproperty">
+        <div className="container my-sm-4 py-0 my-0">
+          <div className="row my-4 text-sm-start text-center">
             <div
-              class="col-sm-8 col-12 my-3"
+              className="col-sm-8 col-12 my-3"
               style={{ visibility: "visible " }}
             >
-              <div class="row py-4 align-items-start">
-                <div class="col-3 mt-3 text-right d-md-block d-none">
+              <div className="row py-4 align-items-start">
+                <div className="col-3 mt-3 text-right d-md-block d-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="121"
@@ -31,14 +31,17 @@ export const ReviewTracker = () => {
                     />
                   </svg>
                 </div>
-                <div class="col-md-9 mt-n5 col-12">
-                  <div class=" col-12 text-md-start text-center">
-                    <p class="font-weight-light" style={{ color: "#85C1FF" }}>
+                <div className="col-md-9 mt-n5 col-12">
+                  <div className=" col-12 text-md-start text-center">
+                    <p
+                      className="font-weight-light"
+                      style={{ color: "#85C1FF" }}
+                    >
                       REVIEW TRACKER
                     </p>
                   </div>
                   <h1
-                    class="font-weight-bold mb-sm-4 mt-0"
+                    className="font-weight-bold mb-sm-4 mt-0"
                     style={{ fontSize: "48px" }}
                   >
                     The <span>all-in-one</span> review management
@@ -56,31 +59,31 @@ export const ReviewTracker = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <img class="w-100" src={Reviewhead} alt="sd" />
+            <div className="col-md-4">
+              <img className="w-100" src={Reviewhead} alt="sd" />
             </div>
           </div>
         </div>
       </div>
-      <div class="container my-2 py-3 mb-1 ">
-        <div class="latestprojecttitle text-center">
+      <div className="container my-2 py-3 mb-1 ">
+        <div className="latestprojecttitle text-center">
           <h1
-            class="font-weight-bold my-4"
+            className="font-weight-bold my-4"
             style={{ visibility: "visible", animationName: "fadeInDown" }}
           >
             Every part of the review lifecycle covered
           </h1>
         </div>
-        <div class="row justify-content-around align-items-start">
-          <div class="col-md-4 col-12 my-2">
-            <div class="reviewbox">
-              <div class="my-2">
+        <div className="row justify-content-around align-items-start">
+          <div className="col-md-4 col-12 my-2">
+            <div className="reviewbox">
+              <div className="my-2">
                 <img src={Reviewstar} alt="ds" />
                 <sup>
                   <img src={Getreviews} alt="sd" />
                 </sup>
               </div>
-              <div class="mt-5">
+              <div className="mt-5">
                 <h5>Get Reviews</h5>
                 <small>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
@@ -90,15 +93,15 @@ export const ReviewTracker = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-12 my-2">
-            <div class="reviewbox">
-              <div class="my-2">
+          <div className="col-md-4 col-12 my-2">
+            <div className="reviewbox">
+              <div className="my-2">
                 <img src={Reviewstar} alt="ds" />
                 <sup>
                   <img src={Monitorreview} alt="ds" />
                 </sup>
               </div>
-              <div class="mt-5">
+              <div className="mt-5">
                 <h5>Monitor Reviews</h5>
                 <small>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -108,15 +111,15 @@ export const ReviewTracker = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-12 my-2">
-            <div class="reviewbox">
-              <div class="my-2">
+          <div className="col-md-4 col-12 my-2">
+            <div className="reviewbox">
+              <div className="my-2">
                 <img src={Reviewstar} alt="ds" />
                 <sup>
                   <img src={Showcasereview} alt="dc" />
                 </sup>
               </div>
-              <div class="mt-5">
+              <div className="mt-5">
                 <h5>Showcase Reviews</h5>
                 <small>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
@@ -128,9 +131,9 @@ export const ReviewTracker = () => {
           </div>
         </div>
       </div>
-      <div class="container py-3 mb-1 secoservices">
-        <div class="row mt-md-5 mt-3 justify-content-around align-items-center">
-          <div class="col-md-6 my-3">
+      <div className="container py-3 mb-1 secoservices">
+        <div className="row mt-md-5 mt-3 justify-content-around align-items-center">
+          <div className="col-md-6 my-3">
             <h1>
               Lorem ipsum dolor sit amet <span>consectetur</span>
             </h1>
@@ -146,16 +149,16 @@ export const ReviewTracker = () => {
               placeat.
             </p>
           </div>
-          <div class="col-md-6">
-            <img class="w-100" src={Home} alt="c" />
+          <div className="col-md-6">
+            <img className="w-100" src={Home} alt="c" />
           </div>
         </div>
 
-        <div class="row mt-5 justify-content-around align-items-center">
-          <div class="col-md-6 order-md-1 order-sm-2 order-2">
-            <img class="w-100" src={Home} alt="ds" />
+        <div className="row mt-5 justify-content-around align-items-center">
+          <div className="col-md-6 order-md-1 order-sm-2 order-2">
+            <img className="w-100" src={Home} alt="ds" />
           </div>
-          <div class="col-md-6 my-3 order-md-2 order-sm-1 order-1">
+          <div className="col-md-6 my-3 order-md-2 order-sm-1 order-1">
             <h1>
               Lorem ipsum dolor sit amet <span>consectetur</span>
             </h1>

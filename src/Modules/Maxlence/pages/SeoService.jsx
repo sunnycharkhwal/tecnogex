@@ -672,7 +672,7 @@ export const SeoService = () => {
 
           <div className="col-sm-3 m-3 text-center campaignwork wow animate__animated animate__fadeInUp animate__delay-1s">
             <div className="videocamptoolicon campworkicon">
-              <img src={Videocamptool3} alt="" />
+              <img src={Videocamptool3} alt="f" />
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>

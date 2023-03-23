@@ -25,7 +25,7 @@ export const Bepeseo = () => {
             <div className="col-md-7 d-flex justify-content-between align-items-center px-0">
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <img src={Bulletgray} alt="" style={{ width: "0.6rem" }} />
+                  <img src={Bulletgray} alt="f" style={{ width: "0.6rem" }} />
                 </div>
                 <div>
                   <small style={{ fontSize: "10px" }}>
@@ -35,7 +35,7 @@ export const Bepeseo = () => {
               </div>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <img src={Bulletgray} alt="" style={{ width: "0.6rem" }} />
+                  <img src={Bulletgray} alt="f" style={{ width: "0.6rem" }} />
                 </div>
                 <div>
                   <small style={{ fontSize: "10px" }}> &nbsp; Australia </small>
@@ -43,7 +43,7 @@ export const Bepeseo = () => {
               </div>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <img src={Bulletgray} alt="" style={{ width: "0.6rem" }} />
+                  <img src={Bulletgray} alt="f" style={{ width: "0.6rem" }} />
                 </div>
                 <div>
                   <small style={{ fontSize: "10px" }}> &nbsp; SEO </small>

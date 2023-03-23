@@ -15,25 +15,25 @@ export const APIIntegration = () => {
   return (
     <>
       <div
-        class="container-fluid  py-5 bgproperty"
+        className="container-fluid  py-5 bgproperty"
         style={{ backgroundColor: "#3599FF" }}
       >
-        <div class="container my-sm-4 py-3 my-0">
-          <div class="row my-4 text-sm-start text-center">
-            <div class="col-md-5 col-12 text-md-end text-left">
+        <div className="container my-sm-4 py-3 my-0">
+          <div className="row my-4 text-sm-start text-center">
+            <div className="col-md-5 col-12 text-md-end text-left">
               <p
-                class="text-white font-weight-light"
+                className="text-white font-weight-light"
                 style={{ opacity: "0.5 " }}
               >
                 API INTEGRATION
               </p>
             </div>
             <div
-              class="col-sm-12 col-12 my-3 "
+              className="col-sm-12 col-12 my-3 "
               style={{ visibility: "visible " }}
             >
-              <div class="row align-items-start">
-                <div class="col-3 mt-3 text-end d-md-block d-none">
+              <div className="row align-items-start">
+                <div className="col-3 mt-3 text-end d-md-block d-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="121"
@@ -47,20 +47,20 @@ export const APIIntegration = () => {
                     />
                   </svg>
                 </div>
-                <div class="col-md-8 col-12">
+                <div className="col-md-8 col-12">
                   <h1
-                    class="font-weight-bold mb-sm-4 mt-0"
+                    className="font-weight-bold mb-sm-4 mt-0"
                     style={{ fontSize: "48px" }}
                   >
                     Lorem ipsum dolor sit amet
-                    <span class="text-white"> consectetur</span>
+                    <span className="text-white"> consectetur</span>
                   </h1>
-                  <p class="text-white pb-3">
+                  <p className="text-white pb-3">
                     sodales lectus, vel tincidunt purus feugiat vitae. Donec at
                     viverra dolor
                   </p>
                   <a
-                    class="whitebgbtn mt-5 text-white border-white fontrale "
+                    className="whitebgbtn mt-5 text-white border-white fontrale "
                     href="#"
                     style={{ visibility: "visible" }}
                   >
@@ -72,17 +72,17 @@ export const APIIntegration = () => {
           </div>
         </div>
       </div>
-      <div class="container mt-5 growthmail">
-        <div class="row justify-content-around align-items-center">
+      <div className="container mt-5 growthmail">
+        <div className="row justify-content-around align-items-center">
           <div
-            class="col-sm-6 rounded text-center"
+            className="col-sm-6 rounded text-center"
             style={{ visibility: "visible" }}
           >
-            <img class="w-100" src={Solusermngtech} alt="ds" />
+            <img className="w-100" src={Solusermngtech} alt="ds" />
           </div>
-          <div class="col-sm-6 my-3 text-sm-start text-center">
+          <div className="col-sm-6 my-3 text-sm-start text-center">
             <h1
-              class="font-weight-bold my-4 "
+              className="font-weight-bold my-4 "
               style={{ visibility: "visible" }}
             >
               Lorem ipsum dolor, sit amet <span>consectetur adipisicing</span>{" "}
@@ -97,15 +97,15 @@ export const APIIntegration = () => {
           </div>
         </div>
       </div>
-      <div class="container my-5 usermng_feats">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 col-12 my-2">
-            <div class="card p-3" style={{ boxShadow: "none" }}>
-              <div class="row">
-                <div class="col-2">
+      <div className="container my-5 usermng_feats">
+        <div className="row">
+          <div className="col-md-6 col-lg-4 col-12 my-2">
+            <div className="card p-3" style={{ boxShadow: "none" }}>
+              <div className="row">
+                <div className="col-2">
                   <img src={Securedicon} alt="sd" />
                 </div>
-                <div class="col-10 mt-2">
+                <div className="col-10 mt-2">
                   <div>
                     <p>
                       <b>Secured</b>
@@ -116,13 +116,13 @@ export const APIIntegration = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 col-12 my-2">
-            <div class="card p-3" style={{ boxShadow: "none" }}>
-              <div class="row">
-                <div class="col-2">
+          <div className="col-md-6 col-lg-4 col-12 my-2">
+            <div className="card p-3" style={{ boxShadow: "none" }}>
+              <div className="row">
+                <div className="col-2">
                   <img src={Scaleableicon} alt="d" />
                 </div>
-                <div class="col-10 mt-2">
+                <div className="col-10 mt-2">
                   <div>
                     <p>
                       <b>Scalable</b>
@@ -133,13 +133,13 @@ export const APIIntegration = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 col-12 my-2">
-            <div class="card p-3" style={{ boxShadow: "none" }}>
-              <div class="row">
-                <div class="col-2">
+          <div className="col-md-6 col-lg-4 col-12 my-2">
+            <div className="card p-3" style={{ boxShadow: "none" }}>
+              <div className="row">
+                <div className="col-2">
                   <img src={Flexibleicon} alt="d" />
                 </div>
-                <div class="col-10 mt-2">
+                <div className="col-10 mt-2">
                   <div>
                     <p>
                       <b>Flexible</b>
@@ -275,27 +275,27 @@ const Service = () => {
   const ServiceApp = (props) => {
     return (
       <>
-        <div class="container mt-5 py-3 mb-1 ">
-          <div class="latestprojecttitle text-center">
+        <div className="container mt-5 py-3 mb-1 ">
+          <div className="latestprojecttitle text-center">
             <small style={{ visibility: "visible", animationName: "fadeInUp" }}>
               {props.subTitle}
             </small>
             <h1
-              class="font-weight-light my-4  "
+              className="font-weight-light my-4  "
               style={{ visibility: "visible", animationName: "fadeInDown" }}
             >
               {props.title}
             </h1>
           </div>
-          <div class="row justify-content-around align-items-start">
+          <div className="row justify-content-around align-items-start">
             {props.ServiceInnerData.map((val, i) => {
               return (
-                <div key={i} class="col-md-3 col-6 my-2">
+                <div key={i} className="col-md-3 col-6 my-2">
                   <div>
-                    <div class="my-2">
-                      <img class="w-100" src={val.icon} alt="d" />
+                    <div className="my-2">
+                      <img className="w-100" src={val.icon} alt="d" />
                     </div>
-                    <div class="my-2">
+                    <div className="my-2">
                       <h6>{val.title}</h6>
                       <p>{val.text}</p>
                     </div>
@@ -303,7 +303,7 @@ const Service = () => {
                 </div>
               );
             })}
-            <div class="col-12 my-5 text-center">
+            <div className="col-12 my-5 text-center">
               <NavLink to={props.link} className="getstartbtn fontpop">
                 {props.linkTitle}
               </NavLink>
