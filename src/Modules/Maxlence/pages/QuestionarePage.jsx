@@ -5,7 +5,6 @@ import Googleseobox from "../assests/googleseobox.png";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Typography, Stepper, Step, StepLabel } from "@material-ui/core";
-import { NavLink } from "react-router-dom";
 
 export const QuestionarePage = () => {
   const [activeStep, setActiveStep] = useState(0);

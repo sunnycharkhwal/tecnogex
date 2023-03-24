@@ -25,6 +25,7 @@ import { setShowForgotModal } from "../redux/modalStateSlice";
 import { setShowCheckYourEmailModal } from "../redux/modalStateSlice";
 import { setShowPasswordResetModal } from "../redux/modalStateSlice";
 import { setNewPasswordModal } from "../redux/modalStateSlice";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
@@ -1022,13 +1023,12 @@ export const Header = () => {
       </>
     );
   };
+  const navigate = useNavigate();
+
   return (
     <Container fluid bg="light" className="navbarmain px-md-5 ">
       <Navbar expand="lg">
-        <Navbar.Brand
-          className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 "
-          href="/"
-        >
+        <Navbar.Brand className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 ">
           <img width="100%" src={logo} alt="companylogo" />
         </Navbar.Brand>
         {/* <div className="d-lg-none d-sm-block">
@@ -1040,48 +1040,59 @@ export const Header = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/creation">Creation</Nav.Link>
-            <Nav.Link href="/growth">Growth</Nav.Link>
-            <Nav.Link href="/design">Design</Nav.Link>
+            <Nav.Link onClick={() => navigate("/creation")}>Creation</Nav.Link>
+            <Nav.Link onClick={() => navigate("/growth")}>Growth</Nav.Link>
+            <Nav.Link onClick={() => navigate("/design")}>Design</Nav.Link>
             <NavDropdown title="Business" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="business1">Business1</NavDropdown.Item>
-              <NavDropdown.Item href="business2">Business 2</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/business1")}>
+                Business1
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/business2")}>
+                Business 2
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Resources" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/design_inspiration">
+              <NavDropdown.Item onClick={() => navigate("/design_inspiration")}>
                 Design Inspiration
               </NavDropdown.Item>
-              <NavDropdown.Item href="/brochure">Brochure</NavDropdown.Item>
-              <NavDropdown.Item href="/case_study">Case Study</NavDropdown.Item>
-              <NavDropdown.Item href="/blogs">Blogs</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/brochure")}>
+                Brochure
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/case_study")}>
+                Case Study
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/blogs")}>
+                Blogs
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Enterprise" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/Seo_service">
+              <NavDropdown.Item onClick={() => navigate("/Seo_service")}>
                 SEO Service
               </NavDropdown.Item>
-              <NavDropdown.Item href="/google_ads_service">
+              <NavDropdown.Item onClick={() => navigate("/google_ads_service")}>
                 Google Ads Service
               </NavDropdown.Item>
-              <NavDropdown.Item href="/social_media_service">
+              <NavDropdown.Item
+                onClick={() => navigate("/social_media_service")}
+              >
                 Social Media Service
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/shop">Shop</Nav.Link>
+            <Nav.Link onClick={() => navigate("/shop")}>Shop</Nav.Link>
             <NavDropdown title="Solutions" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/api_integration">
+              <NavDropdown.Item onClick={() => navigate("/api_integration")}>
                 API Integration
               </NavDropdown.Item>
-              <NavDropdown.Item href="/form_tracker">
+              <NavDropdown.Item onClick={() => navigate("/form_tracker")}>
                 Form Tracker
               </NavDropdown.Item>
-              <NavDropdown.Item href="/review_tracker">
+              <NavDropdown.Item onClick={() => navigate("/review_tracker")}>
                 Review Tracker
               </NavDropdown.Item>
-              <NavDropdown.Item href="/agencies">Agencies</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/agencies")}>
+                Agencies
+              </NavDropdown.Item>
             </NavDropdown>
-            {/* <Nav.Link href="#" disabled>
-                Link
-              </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
         <Nav className="d-flex flex-row align-items-center justify-content-around">
