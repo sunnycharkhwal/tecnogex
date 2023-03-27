@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const BlueBtn = (props) => {
+  const navigate = useNavigate();
   const Fillbtn = () => {
     return (
       <>
-        <button className="BlueBtn" onClick={props.onClick}>
+        <button className="BlueBtn" onClick={() => navigate(props.link)}>
           {props.title}
         </button>
       </>
@@ -13,7 +14,7 @@ export const BlueBtn = (props) => {
   const Fillbtnicon = () => {
     return (
       <>
-        <button className="BlueBtn" onClick={props.onClick}>
+        <button className="BlueBtn" onClick={() => navigate(props.link)}>
           {props.title}
           <span>{props.icon}</span>
         </button>

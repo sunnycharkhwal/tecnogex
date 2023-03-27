@@ -51,7 +51,7 @@ export const Website = () => {
                   </p>
                   <div className="col-md-4 col-7">
                     <BlueBtn
-                      onClick={() => navigate(`/quest/${id}`)}
+                      onClick={() => navigate(`/Questionare_Page`)}
                       title="Get Started"
                     />
                   </div>
@@ -396,7 +396,7 @@ export const Website = () => {
             <img className="w-100" src={latestproj2} alt="f" />
             <div className="py-4">
               <div className="col-md-5 col-7 m-auto">
-                <BlueBtn to="/creation" title="View Case Studies" />
+                <BlueBtn link="/Questionare_Page" title="View Case Studies" />
               </div>
             </div>
           </div>

@@ -21,6 +21,10 @@ const AllData = {
       title: "Email Marketing",
       link: "/email_marketing",
     },
+    {
+      title: "video Marketing",
+      link: "/video_marketing",
+    },
   ],
   creation_page: [
     {

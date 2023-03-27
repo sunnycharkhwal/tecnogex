@@ -238,7 +238,10 @@ export const GoogleAds = () => {
             </p>
 
             <div className="text-right py-4">
-              <NavLink className="getstartbtn fontrale my-2" to="/">
+              <NavLink
+                className="getstartbtn fontrale my-2"
+                to="/Questionare_Page"
+              >
                 Get Started
               </NavLink>
             </div>

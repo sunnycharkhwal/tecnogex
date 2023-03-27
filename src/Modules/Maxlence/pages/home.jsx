@@ -165,6 +165,7 @@ export const Home = () => {
 
   const settings = {
     dots: false,
+    arrows: false,
     fade: true,
     infinite: true,
     speed: 500,

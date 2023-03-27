@@ -155,7 +155,7 @@ export const Business2 = () => {
               </div>
 
               <div className="col-sm-12 px-0 pt-3 text-sm-left ">
-                <NavLink to="/" className="whitebgbtn fontrale">
+                <NavLink to="/Questionare_Page" className="whitebgbtn fontrale">
                   Get Started
                 </NavLink>
               </div>

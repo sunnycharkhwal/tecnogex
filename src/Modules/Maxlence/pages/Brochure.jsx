@@ -1,3 +1,4 @@
+import { NavLink } from "react-bootstrap";
 import Downloadicon2 from "../assests/downloadicon2.png";
 export const Brochure = () => {
   const CardData = [
@@ -80,9 +81,9 @@ export const Brochure = () => {
               </div>
             </div>
             <div className="col-md-2 my-3 brochuredownload text-md-right text-center">
-              <a href={props.pdfLink} download="GoogleAdsBrochure">
+              <NavLink to={props.pdfLink} download="GoogleAdsBrochure">
                 <img src={Downloadicon2} alt="DownloadIcon" />
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -101,9 +102,10 @@ export const Brochure = () => {
               <p className="text-dark font-weight-bold">
                 Get easy access to our brochure. Learn what you can get.
               </p>
-              <a href="/#" className="getstartbtn fontpop">
+              <NavLink to="/" className="getstartbtn fontpop">
+                {" "}
                 Shop Now
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

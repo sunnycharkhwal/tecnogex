@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { OutlineBtn, OutlineLinkBtn, BlueBtn } from "../components/Btn";
+import { OutlineBtn, BlueBtn } from "../components/Btn";
 import logo from "../assests/maxlogodark.png";
 import Modal from "react-bootstrap/Modal";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
@@ -935,6 +935,7 @@ export const Header = () => {
   };
   ////////////////////// Menu Modal //////////////////////////////
   const MenuModal = () => {
+    const navigate = useNavigate();
     return (
       <>
         <HiOutlineMenuAlt2
@@ -956,43 +957,152 @@ export const Header = () => {
                     className="ms-auto my-2 my-lg-0 align-items-center"
                     navbarScroll
                   >
-                    <Nav.Link href="/creation">Creation</Nav.Link>
-                    <Nav.Link href="/growth">Growth</Nav.Link>
-                    <Nav.Link href="/design">Design</Nav.Link>
+                    <Nav.Link
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/creation");
+                      }}
+                    >
+                      Creation
+                    </Nav.Link>
+                    <Nav.Link
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/growth");
+                      }}
+                    >
+                      Growth
+                    </Nav.Link>
+                    <Nav.Link
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/design");
+                      }}
+                    >
+                      Design
+                    </Nav.Link>
                     <NavDropdown title="Business" id="navbarScrollingDropdown">
-                      <NavDropdown.Item href="#">Business1</NavDropdown.Item>
-                      <NavDropdown.Item href="#">Business 2</NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/business1");
+                        }}
+                      >
+                        Business1
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/business2");
+                        }}
+                      >
+                        Business 2
+                      </NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Resources" id="navbarScrollingDropdown">
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/design_inspiration");
+                        }}
+                      >
                         Design Inspiration
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#">Brochure</NavDropdown.Item>
-                      <NavDropdown.Item href="#">Case Study</NavDropdown.Item>
-                      <NavDropdown.Item href="#">Blogs</NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/brochure");
+                        }}
+                      >
+                        Brochure
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/case_study");
+                        }}
+                      >
+                        Case Study
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/blogs");
+                        }}
+                      >
+                        Blogs
+                      </NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown
                       title="Enterprise"
                       id="navbarScrollingDropdown"
                     >
-                      <NavDropdown.Item href="#">SEO Service</NavDropdown.Item>
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/Seo_service");
+                        }}
+                      >
+                        SEO Service
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/google_ads_service");
+                        }}
+                      >
                         Google Ads Service
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/social_media_service");
+                        }}
+                      >
                         Social Media Service
                       </NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/shop">Shop</Nav.Link>
+                    <Nav.Link
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/shop");
+                      }}
+                    >
+                      Shop
+                    </Nav.Link>
                     <NavDropdown title="Solutions" id="navbarScrollingDropdown">
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/api_integration");
+                        }}
+                      >
                         API Integration
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#">Form Tracker</NavDropdown.Item>
-                      <NavDropdown.Item href="#">
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/form_tracker");
+                        }}
+                      >
+                        Form Tracker
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/review_tracker");
+                        }}
+                      >
                         Review Tracker
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#">Agencies</NavDropdown.Item>
+                      <NavDropdown.Item
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/agencies");
+                        }}
+                      >
+                        Agencies
+                      </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
                 </div>
@@ -1003,14 +1113,21 @@ export const Header = () => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="row d-flex flex-column justify-content-center align-items-center ">
-                        <div className="col-6 my-4 signformstart text-center">
-                          <h1 className="">We’d love to be your partner</h1>
+                        <div className="col-md-8 col-sm-12 col-12 my-4 signformstart text-center">
+                          <h1 className="mobile_nav_div_text">
+                            We’d love to be your partner
+                          </h1>
                         </div>
-                        <div className="col-4">
-                          <OutlineLinkBtn
-                            title="Get In Touch"
-                            to="getintouchform"
-                          />
+                        <div className="col-12 mobile_nav_div">
+                          <button
+                            onClick={() => {
+                              dispatch(setShowMenuModal());
+                              navigate("/getintouch");
+                            }}
+                            className=" getstartbtn"
+                          >
+                            Get In Touch
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1024,16 +1141,18 @@ export const Header = () => {
     );
   };
   const navigate = useNavigate();
-
   return (
-    <Container fluid bg="light" className="navbarmain px-md-5 ">
+    <Container
+      fluid
+      bg="light"
+      className="navbarmain  px-xl-5  px-lg-3 px-md-5 "
+    >
       <Navbar expand="lg">
-        <Navbar.Brand className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 ">
-          <img width="100%" src={logo} alt="companylogo" />
+        <Navbar.Brand className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 m-0 ">
+          <NavLink to="/">
+            <img width="100%" src={logo} alt="companylogo" />
+          </NavLink>
         </Navbar.Brand>
-        {/* <div className="d-lg-none d-sm-block">
-          <HiOutlineMenuAlt1 />
-        </div> */}
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="mx-3 w-100 justify-content-around my-2 my-lg-0 align-items-center"
@@ -1097,7 +1216,9 @@ export const Header = () => {
         </Navbar.Collapse>
         <Nav className="d-flex flex-row align-items-center justify-content-around">
           <SignUpmodal />
-          <MenuModal />
+          <span className=" d-block d-xxl-none d-xl-none d-lg-none">
+            <MenuModal />
+          </span>
           <LoginModal />
           <ForgotModal />
           <CheckYourEmailModal />

@@ -14,6 +14,8 @@ import packageOrange from "../../../img/packageOrange.svg";
 import packageGreen2 from "../../../img/packageGreen2.svg";
 import packageGreen from "../../../img/packageGreen.svg";
 import { PackageCard } from "../components/PackageCard";
+import { DrawerLeft } from "../components/DrawerLeft";
+
 const CardData = [
   {
     BtnBuyLink: "/",
@@ -254,7 +256,10 @@ const CardData = [
 export const VideoMarketing = () => {
   return (
     <>
-      <div className="video_top_main_div">
+      <div className="video_top_main_div services_modal_page_div">
+        <div className="services_modal_page_inner" style={{ left: "0" }}>
+          <DrawerLeft data="growth_page" />
+        </div>
         <TopDiv />
       </div>
       <section className=" container mt-5 mb-5">
@@ -290,7 +295,7 @@ const TopDiv = () => {
               video marketing campaigns that reach your potential customers
               where and when they’re buying.
             </p>
-            <NavLink to="/" className="btn full_btn">
+            <NavLink to="/Questionare_Page" className="btn full_btn">
               Get Started
             </NavLink>
           </div>
@@ -448,7 +453,7 @@ const GetInTouchVideo = () => {
       <div className="get_in_touch_video">
         <div className="get_in_touch_video_inner">
           <h3>We’d love to be your partner</h3>
-          <NavLink to="/" className="btn outline_btn">
+          <NavLink to="/getintouch" className="btn outline_btn">
             Get In Touch
           </NavLink>
         </div>

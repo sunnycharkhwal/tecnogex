@@ -1,4 +1,5 @@
 import { InlineWidget } from "react-calendly";
+import { NavLink } from "react-router-dom";
 import Formtrackerhead from "../assests/formtrackerhead.jpg";
 import Homegif from "../assests/homegif.gif";
 export const FormTracker = () => {
@@ -42,10 +43,14 @@ export const FormTracker = () => {
                     viverra dolor
                   </small>
                   <div className="my-5">
-                    <a href="quest.html" className="getstartbtn fontpop ">
+                    <NavLink
+                      to="/Questionare_Page"
+                      className="getstartbtn fontpop "
+                    >
                       Create Now
-                    </a>
+                    </NavLink>
                   </div>
+
                   <div>
                     <small className="text-secondary">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.

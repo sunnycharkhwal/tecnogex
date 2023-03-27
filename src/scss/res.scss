@@ -6,6 +6,15 @@
   }
 }
 @media (max-width: 576px) {
+  .mobile_nav_div {
+    margin-bottom: 3rem;
+  }
+  .mobile_nav_div_text {
+    font-size: 21px !important;
+  }
+  .getstartbtn_new {
+    width: 100% !important;
+  }
   .CenterMode_top {
     .slick-slider {
       padding: 0 0rem;
@@ -385,6 +394,9 @@
   }
 }
 @media (min-width: 768px) {
+  .getstartbtn_new {
+    width: 40% !important;
+  }
   .new3 {
     img {
       width: 58%;
@@ -508,6 +520,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .getstartbtn_new {
+    width: 28% !important;
+  }
   .new3 {
     img {
       width: 70%;
@@ -652,6 +667,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .getstartbtn_new {
+    width: 22% !important;
+  }
   .CenterMode_top {
     .slick-next {
       right: 146px;

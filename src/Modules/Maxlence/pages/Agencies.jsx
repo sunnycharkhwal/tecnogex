@@ -213,7 +213,9 @@ export const Agencies = () => {
               <p>A place to help an agency to grow up in global environment</p>
 
               <div className="py-sm-3">
-                <NavLink className="getstartbtn fontpop">Create Now</NavLink>
+                <NavLink to="/getintouch" className="getstartbtn fontpop">
+                  Create Now
+                </NavLink>
               </div>
             </div>
             <div className="col-sm-5 my-2 wow animate__animated animate__fadeInUp">

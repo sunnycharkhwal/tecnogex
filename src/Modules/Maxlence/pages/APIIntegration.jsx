@@ -3,14 +3,13 @@ import Securedicon from "../assests/securedicon.svg";
 import Scaleableicon from "../assests/scaleableicon.svg";
 import Flexibleicon from "../assests/flexibleicon.svg";
 
+import React, { useState } from "react";
 import Slack from "../assests/slack.jpg";
 import Dropbox from "../assests/dropbox.jpg";
 import Gdrive from "../assests/gdrive.jpg";
 import Gmeet from "../assests/gmeet.jpg";
 import { InlineWidget } from "react-calendly";
-
 import { NavLink } from "react-router-dom";
-
 export const APIIntegration = () => {
   return (
     <>
@@ -59,13 +58,13 @@ export const APIIntegration = () => {
                     sodales lectus, vel tincidunt purus feugiat vitae. Donec at
                     viverra dolor
                   </p>
-                  <a
+                  <NavLink
                     className="whitebgbtn mt-5 text-white border-white fontrale "
-                    href="#"
                     style={{ visibility: "visible" }}
+                    to="/getintouch"
                   >
                     Start Free Trial
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -273,6 +272,29 @@ const Service = () => {
     },
   ];
   const ServiceApp = (props) => {
+    const ReadMore = ({ children }) => {
+      const text = children;
+      const [isReadMore, setIsReadMore] = useState(true);
+      const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+      };
+      return (
+        <>
+          <p className="text">{isReadMore ? text.slice(0, 0) : text}</p>
+          <span onClick={toggleReadMore} className="read-or-hide">
+            {isReadMore ? (
+              <button class="getstartbtn getstartbtn_new fontpop ">
+                View More Integration
+              </button>
+            ) : (
+              <button class="getstartbtn getstartbtn_new fontpop ">
+                Less Integration
+              </button>
+            )}
+          </span>
+        </>
+      );
+    };
     return (
       <>
         <div className="container mt-5 py-3 mb-1 ">
@@ -303,11 +325,9 @@ const Service = () => {
                 </div>
               );
             })}
-            <div className="col-12 my-5 text-center">
-              <NavLink to={props.link} className="getstartbtn fontpop">
-                {props.linkTitle}
-              </NavLink>
-            </div>
+          </div>
+          <div className=" text-center">
+            <ReadMore>more</ReadMore>
           </div>
         </div>
       </>

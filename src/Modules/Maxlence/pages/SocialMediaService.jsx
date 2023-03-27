@@ -43,7 +43,10 @@ export const SocialMediaService = () => {
                 harum minima. Eum?
               </p>
               <div className="mt-5">
-                <NavLink className="getstartbtn fontpop mx-2 my-2">
+                <NavLink
+                  to="/getintouch"
+                  className="getstartbtn fontpop mx-2 my-2"
+                >
                   Send Me A Proposal
                 </NavLink>
                 <a
@@ -88,7 +91,10 @@ export const SocialMediaService = () => {
                 harum minima. Eum?
               </p>
               <div className="mt-4">
-                <NavLink className="getstartbtn fontpop mx-2 my-2">
+                <NavLink
+                  to="/getintouch"
+                  className="getstartbtn fontpop mx-2 my-2"
+                >
                   Request A Demo
                 </NavLink>
 
@@ -220,8 +226,9 @@ export const SocialMediaService = () => {
             >
               Send Me a Proposal
             </a>
+
             <NavLink
-              to="/"
+              to="/getintouch"
               className="ctabtn bg-white border-none fontpop  mx-2 my-2"
             >
               Get In Touch &#10230;
@@ -307,65 +314,65 @@ export const SocialMediaService = () => {
         <table className="table  table-bordered planpricetable   table-striped">
           <thead>
             <tr>
-              <th className="base" colspan="15">
+              <th className="base" colSpan="15">
                 <h3>Features</h3>
               </th>
-              <th className=" text-center base" colspan="2">
+              <th className=" text-center base" colSpan="2">
                 <h3>Enterprise</h3>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr className="smediarow">
-              <td colspan="15">Facebook Ads</td>
+              <td colSpan="15">Facebook Ads</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Facebook cataloge for ecommerce</td>
+              <td colSpan="15">Facebook cataloge for ecommerce</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Facebook shop</td>
+              <td colSpan="15">Facebook shop</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Instagram shop</td>
+              <td colSpan="15">Instagram shop</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Facebook conversion API</td>
+              <td colSpan="15">Facebook conversion API</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Increasing ROI through bid optimization</td>
+              <td colSpan="15">Increasing ROI through bid optimization</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Instagram reel ads</td>
+              <td colSpan="15">Instagram reel ads</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Remarketing</td>
+              <td colSpan="15">Remarketing</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">
+              <td colSpan="15">
                 {" "}
                 Retargeting & targeting different types of audiences (Hot & Cold
                 Audience)
@@ -375,19 +382,19 @@ export const SocialMediaService = () => {
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Linkedin ads</td>
+              <td colSpan="15">Linkedin ads</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="15">Linkedin sales navigator for lead generation</td>
+              <td colSpan="15">Linkedin sales navigator for lead generation</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="20" className=" py-4 text-center ">
+              <td colSpan="20" className=" py-4 text-center ">
                 <b>
                   <NavLink
                     className="getstartbtn fontpop"
@@ -602,8 +609,8 @@ const SliderBottom = () => {
     arrows: false,
     infinite: true,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 5000,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,

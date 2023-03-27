@@ -21,9 +21,9 @@ export const Careers = () => {
                 Exceed your potential… come join us!
               </h4>
               <div className="my-4 d-flex justify-content-center">
-                <a href="#section1" className="getstartbtn fontpop">
+                <NavLink to="#section1" className="getstartbtn fontpop">
                   Apply Now
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

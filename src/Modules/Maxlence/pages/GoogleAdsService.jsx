@@ -42,10 +42,12 @@ export const GoogleAdsService = () => {
                 harum minima. Eum?
               </p>
               <div className="mt-4">
-                <NavLink className="getstartbtn fontpop mx-2 my-2">
+                <NavLink
+                  to="/getintouch"
+                  className="getstartbtn fontpop mx-2 my-2"
+                >
                   Request A Demo
                 </NavLink>
-
                 <a
                   className="ctabtn viewjectbtn fontpop mx-2 my-2 "
                   href="tel:+496170961709"
@@ -74,7 +76,10 @@ export const GoogleAdsService = () => {
                 harum minima. Eum?
               </p>
               <div className="mt-5">
-                <NavLink className="getstartbtn fontpop mx-2 my-2">
+                <NavLink
+                  to="/getintouch"
+                  className="getstartbtn fontpop mx-2 my-2"
+                >
                   Send Me A Proposal
                 </NavLink>
                 <a
@@ -163,7 +168,7 @@ export const GoogleAdsService = () => {
               Send Me a Proposal
             </a>
             <NavLink
-              to="/"
+              to="/getintouch"
               className="ctabtn bg-white border-none fontpop  mx-2 my-2"
             >
               Get In Touch &#10230;
@@ -249,119 +254,119 @@ export const GoogleAdsService = () => {
         <table className="table  table-bordered planpricetable   table-striped">
           <thead>
             <tr>
-              <th className="base" colspan="15">
+              <th className="base" colSpan="15">
                 <h3>Features</h3>
               </th>
-              <th className=" text-center base" colspan="2">
+              <th className=" text-center base" colSpan="2">
                 <h3>Enterprise</h3>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr className="gadsrow">
-              <td colspan="15">Monthly PPC spend with PPC networks</td>
+              <td colSpan="15">Monthly PPC spend with PPC networks</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Keywords in campaign</td>
+              <td colSpan="15">Keywords in campaign</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Google PPC network</td>
+              <td colSpan="15">Google PPC network</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Video campaign for brand awareness </td>
+              <td colSpan="15">Video campaign for brand awareness </td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Video campaign for lead generation </td>
+              <td colSpan="15">Video campaign for lead generation </td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Google display network</td>
+              <td colSpan="15">Google display network</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Google customer match & audience match</td>
+              <td colSpan="15">Google customer match & audience match</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Initial campaign development & strategy</td>
+              <td colSpan="15">Initial campaign development & strategy</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Advanced keyword research and selection</td>
+              <td colSpan="15">Advanced keyword research and selection</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Industry analysis</td>
+              <td colSpan="15">Industry analysis</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Ad campaign copywriting</td>
+              <td colSpan="15">Ad campaign copywriting</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Ad copy performance testing</td>
+              <td colSpan="15">Ad copy performance testing</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Ongoing keyword development and tweaking</td>
+              <td colSpan="15">Ongoing keyword development and tweaking</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Dynamic keyword insertion into ads</td>
+              <td colSpan="15">Dynamic keyword insertion into ads</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Dynamic keyword insertion into ads</td>
+              <td colSpan="15">Dynamic keyword insertion into ads</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Strategic bid management</td>
+              <td colSpan="15">Strategic bid management</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Results analysis/reporting</td>
+              <td colSpan="15">Results analysis/reporting</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Campaigns will be managed through client's Google Ads account
                 (client will retain Admin/owner access of all campaigns created)
               </td>
@@ -370,13 +375,13 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Single account representative</td>
+              <td colSpan="15">Single account representative</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Up to two personal consultations per month (biweekely)
               </td>
               <td className=" text-center ">
@@ -384,7 +389,7 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Up to 100 lead phone calls tracked per month (The number might
                 vary in the first 3 months as the campaign is being optimised)
               </td>
@@ -393,13 +398,13 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Single account representative</td>
+              <td colSpan="15">Single account representative</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Monitoring clicks, conversions and click fraud activity
               </td>
               <td className=" text-center ">
@@ -407,19 +412,19 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Setup of 1 unbounce landing page (optional)</td>
+              <td colSpan="15">Setup of 1 unbounce landing page (optional)</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">Website conversion analysis reporting</td>
+              <td colSpan="15">Website conversion analysis reporting</td>
               <td className=" text-center ">
                 <b>Yes</b>
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Initial banner ad design for display & remarketing
               </td>
               <td className=" text-center ">
@@ -427,7 +432,7 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Quarterly banner ad design for display & remarketing (a total of
                 4 banner ad sets a year)
               </td>
@@ -436,7 +441,7 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="gadsrow">
-              <td colspan="15">
+              <td colSpan="15">
                 Google text ad remarketing & banner remarketing (if banner ads
                 are included, provided by the client, or creative banner design
                 is paid for)
@@ -446,7 +451,7 @@ export const GoogleAdsService = () => {
               </td>
             </tr>
             <tr className="smediarow">
-              <td colspan="20" className=" py-4 text-center ">
+              <td colSpan="20" className=" py-4 text-center ">
                 <b>
                   <NavLink
                     to="/Questionare_Page"

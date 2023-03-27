@@ -35,7 +35,10 @@ export const SeoService = () => {
                 harum minima. Eum?
               </p>
               <div>
-                <NavLink to="/" className="getstartbtn fontpop mx-2 my-2">
+                <NavLink
+                  to="/getintouch"
+                  className="getstartbtn fontpop mx-2 my-2"
+                >
                   Request A Demo
                 </NavLink>
                 <NavLink
@@ -70,7 +73,10 @@ export const SeoService = () => {
                 harum minima. Eum?
               </p>
               <div>
-                <NavLink to="/" className="getstartbtn fontpop mx-2 my-2">
+                <NavLink
+                  to="/getintouch"
+                  className="getstartbtn fontpop mx-2 my-2"
+                >
                   Send Me A Proposal
                 </NavLink>
                 <a
@@ -257,7 +263,7 @@ export const SeoService = () => {
               Send Me a Proposal
             </a>
             <NavLink
-              to="/"
+              to="/getintouch"
               className="ctabtn bg-white border-none fontpop  mx-2 my-2"
             >
               Get In Touch &#10230;
@@ -346,13 +352,13 @@ export const SeoService = () => {
               <th className="base">
                 <h3>Features</h3>
               </th>
-              <th className="text-center base" colspan="2">
+              <th className="text-center base" colSpan="2">
                 <h3>Silver</h3>
               </th>
-              <th className="text-center base" colspan="2">
+              <th className="text-center base" colSpan="2">
                 <h3>Gold</h3>
               </th>
-              <th className="text-center base" colspan="2">
+              <th className="text-center base" colSpan="2">
                 <h3>Platinum</h3>
               </th>
             </tr>
@@ -360,94 +366,94 @@ export const SeoService = () => {
           <tbody>
             <tr>
               <th scope="row">Number of Keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Up to 40</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Up to 80</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Up to 120</b>
               </td>
             </tr>
             <tr>
               <th scope="row">Dedicated pages as per keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>20</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>40</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>60</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Technical SEO management</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Mothly reports</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row">High authority link building</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row"></th>
-              <td className="py-4 text-center" colspan="2">
+              <td className="py-4 text-center" colSpan="2">
                 <b>
-                  <a
-                    href="seoenterprisequest.html"
-                    className="getstartbtn fontpop wow animate__animated animate__delay-1s animate__slow animate__bounceIn mx-2 my-2"
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn fontpop  mx-2 my-2"
                   >
                     Get Started
-                  </a>
+                  </NavLink>
                 </b>
               </td>
-              <td className="py-4 text-center" colspan="2">
+              <td className="py-4 text-center" colSpan="2">
                 <b>
-                  <a
-                    href="seoenterprisequest.html"
-                    className="getstartbtn fontpop wow animate__animated animate__delay-1s animate__slow animate__bounceIn mx-2 my-2"
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn fontpop  mx-2 my-2"
                   >
                     Get Started
-                  </a>
+                  </NavLink>
                 </b>
               </td>
-              <td className="py-4 text-center" colspan="2">
+              <td className="py-4 text-center" colSpan="2">
                 <b>
-                  <a
-                    href="seoenterprisequest.html"
-                    className="getstartbtn fontpop wow animate__animated animate__delay-1s animate__slow animate__bounceIn mx-2 my-2"
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn fontpop  mx-2 my-2"
                   >
                     Get Started
-                  </a>
+                  </NavLink>
                 </b>
               </td>
             </tr>
@@ -466,7 +472,7 @@ export const SeoService = () => {
               <th className="base">
                 <h5>Features</h5>
               </th>
-              <th className="text-center base" colspan="2">
+              <th className="text-center base" colSpan="2">
                 <h5>Silver</h5>
               </th>
             </tr>
@@ -474,36 +480,36 @@ export const SeoService = () => {
           <tbody>
             <tr>
               <th scope="row">Number of Keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Up to 40</b>
               </td>
             </tr>
             <tr>
               <th scope="row">Dedicated pages as per keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>20</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Technical SEO management</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Mothly reports</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row">High authority link building</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
-              <td className="py-4 text-center" colspan="2">
+              <td className="py-4 text-center" colSpan="2">
                 <b>
                   <a
                     href="seoenterprisequest.html"
@@ -522,7 +528,7 @@ export const SeoService = () => {
               <th className="base">
                 <h5>Features</h5>
               </th>
-              <th className="text-center base" colspan="2">
+              <th className="text-center base" colSpan="2">
                 <h5>Gold</h5>
               </th>
             </tr>
@@ -530,36 +536,36 @@ export const SeoService = () => {
           <tbody>
             <tr>
               <th scope="row">Number of Keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Up to 80</b>
               </td>
             </tr>
             <tr>
               <th scope="row">Dedicated pages as per keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>40</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Technical SEO management</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Mothly reports</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row">High authority link building</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
-              <td className="py-4 text-center" colspan="2">
+              <td className="py-4 text-center" colSpan="2">
                 <b>
                   <a
                     href="seoenterprisequest.html"
@@ -578,7 +584,7 @@ export const SeoService = () => {
               <th className="base">
                 <h5>Features</h5>
               </th>
-              <th className="text-center base" colspan="2">
+              <th className="text-center base" colSpan="2">
                 <h5>Platinum</h5>
               </th>
             </tr>
@@ -586,36 +592,36 @@ export const SeoService = () => {
           <tbody>
             <tr>
               <th scope="row">Number of Keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Up to 120</b>
               </td>
             </tr>
             <tr>
               <th scope="row">Dedicated pages as per keywords</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>80</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Technical SEO management</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row text-left">Mothly reports</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
               <th scope="row">High authority link building</th>
-              <td className="text-center" colspan="2">
+              <td className="text-center" colSpan="2">
                 <b>Yes</b>
               </td>
             </tr>
             <tr>
-              <td className="py-4 text-center" colspan="2">
+              <td className="py-4 text-center" colSpan="2">
                 <b>
                   <a
                     href="seoenterprisequest.html"
@@ -749,8 +755,8 @@ const SliderBottom = () => {
     arrows: false,
     infinite: true,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 5000,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,

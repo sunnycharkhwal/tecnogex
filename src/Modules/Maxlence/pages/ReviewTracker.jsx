@@ -51,6 +51,7 @@ export const ReviewTracker = () => {
                     showcase your success with style.
                   </p>
                   <NavLink
+                    to="/getintouch"
                     className="whitebgbtn mt-2"
                     style={{ visibility: "visible " }}
                   >

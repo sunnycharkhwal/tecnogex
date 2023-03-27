@@ -83,9 +83,9 @@ export const Footer = () => {
             </div>
             <div className="col-sm-3 col-12 ">
               <div className="footlogo text-center mb-3">
-                <a href="index.html">
+                <NavLink to="/">
                   <img src={logolight} alt="f" />
-                </a>
+                </NavLink>
               </div>
               <div className="footabout fontrale font500">
                 <p>
