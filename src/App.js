@@ -51,6 +51,7 @@ import { ReviewTracker } from "./Modules/Maxlence/pages/ReviewTracker";
 import { Agencies } from "./Modules/Maxlence/pages/Agencies";
 import { Support } from "./Modules/Maxlence/pages/Support";
 import { AboutUs } from "./Modules/Maxlence/pages/AboutUs";
+import { YourServicesDetails } from "./Modules/Maxlence/pages/YourServicesDetails";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -110,6 +111,10 @@ export const App = () => {
             <Route path="/agencies" element={<Agencies />} />
             <Route path="/support" element={<Support />} />
             <Route path="/about_us" element={<AboutUs />} />
+            <Route
+              path="/your_services_details"
+              element={<YourServicesDetails />}
+            />
           </Routes>
           <Footer />
         </Router>

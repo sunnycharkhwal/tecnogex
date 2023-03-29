@@ -116,72 +116,58 @@ export const Cart = () => {
 };
 
 const RightCard = () => {
+  const CardData = [
+    {
+      img: youtubecamp,
+      title: "Luno Electrical - Creation - Website",
+      price: "100",
+    },
+    {
+      img: youtubecamp,
+      title: "Luno Electrical - Creation - Website",
+      price: "100",
+    },
+    {
+      img: youtubecamp,
+      title: "Luno Electrical - Creation - Website",
+      price: "100",
+    },
+    {
+      img: youtubecamp,
+      title: "Luno Electrical - Creation - Website",
+      price: "100",
+    },
+  ];
+  const CardApp = (props) => {
+    return (
+      <>
+        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-12 ">
+          <ul className="cart_div_new">
+            <li>
+              <img
+                className="productimg w-80 m-auto"
+                alt="Products"
+                src={props.img}
+              />
+            </li>
+            <li>
+              <p className="cart_div_new_title">{props.title}</p>
+              <p className="cart_div_new_price">${props.price}</p>
+            </li>
+          </ul>
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <div className="my_slick_slider_title py-2">
         <h2>Products related to items in your cart</h2>
       </div>
-      <div className="row g-3">
-        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
-          <div className="productCards">
-            <div className="productImageContainer">
-              <img
-                className="productimg w-80 m-auto"
-                alt="Products"
-                src={youtubecamp}
-              />
-            </div>
-            <div className="productDetailsContainer ms-4 my-3">
-              <p className="productTitle mb-1">Youtube Campaign</p>
-              <h5 className="productPrice">$ &nbsp;100</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
-          <div className="productCards ">
-            <div className="productImageContainer">
-              <img
-                className="productimg w-80 m-auto"
-                alt="Products"
-                src={pageseo}
-              />
-            </div>
-            <div className="productDetailsContainer ms-4 my-3">
-              <p className="productTitle mb-1">Youtube Campaign</p>
-              <h5 className="productPrice">$ &nbsp;100</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
-          <div className="productCards ">
-            <div className="productImageContainer">
-              <img
-                className="productimg w-80 m-auto"
-                alt="Products"
-                src={socialmediamarketing}
-              />
-            </div>
-            <div className="productDetailsContainer ms-4 my-3">
-              <p className="productTitle mb-1">Youtube Campaign</p>
-              <h5 className="productPrice">$ &nbsp;100</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-4 col-sm-12 col-12">
-          <div className="productCards ">
-            <div className="productImageContainer">
-              <img
-                className="productimg w-80 m-auto"
-                alt="Products"
-                src={emailmarketing}
-              />
-            </div>
-            <div className="productDetailsContainer ms-4 my-3">
-              <p className="productTitle mb-1">Youtube Campaign</p>
-              <h5 className="productPrice">$ &nbsp;100</h5>
-            </div>
-          </div>
-        </div>
+      <div className="row g-4">
+        {CardData.map((val, i) => {
+          return <CardApp key={i} {...val} />;
+        })}
       </div>
     </>
   );

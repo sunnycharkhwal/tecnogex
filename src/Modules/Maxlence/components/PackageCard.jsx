@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+import Dropdown from "react-bootstrap/Dropdown";
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
@@ -81,9 +82,34 @@ export const PackageCard = (props) => {
           </div>
           <div className="package_card_box_price">
             <del>${props.delPrice}</del>
-            <div>
-              From<span style={{ color: props.cardColor }}>${props.Price}</span>
-              / mo
+            <div className="buy_packig_new_dropdown_div">
+              <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                  <div>
+                    From
+                    <span style={{ color: props.cardColor }}>
+                      ${props.Price}
+                    </span>
+                    / mo
+                  </div>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  {props.DropdownData.map((val, i) => {
+                    return (
+                      <Dropdown.Item key={i}>
+                        <div>
+                          From
+                          <span style={{ color: props.cardColor }}>
+                            ${val.PriceDropdownPrice}
+                          </span>
+                          / mo
+                        </div>
+                      </Dropdown.Item>
+                    );
+                  })}
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
           <div className="package_card_box_overview">

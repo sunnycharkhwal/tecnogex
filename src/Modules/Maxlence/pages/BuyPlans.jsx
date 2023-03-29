@@ -20,6 +20,20 @@ const CardData = [
     Price: "4,395",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    DropdownData: [
+      {
+        PriceDropdownPrice: "123",
+      },
+      {
+        PriceDropdownPrice: "124",
+      },
+      {
+        PriceDropdownPrice: "125",
+      },
+      {
+        PriceDropdownPrice: "126",
+      },
+    ],
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -67,6 +81,20 @@ const CardData = [
     Price: "4,395",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    DropdownData: [
+      {
+        PriceDropdownPrice: "123",
+      },
+      {
+        PriceDropdownPrice: "124",
+      },
+      {
+        PriceDropdownPrice: "125",
+      },
+      {
+        PriceDropdownPrice: "126",
+      },
+    ],
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -114,6 +142,20 @@ const CardData = [
     Price: "4,395",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    DropdownData: [
+      {
+        PriceDropdownPrice: "123",
+      },
+      {
+        PriceDropdownPrice: "124",
+      },
+      {
+        PriceDropdownPrice: "125",
+      },
+      {
+        PriceDropdownPrice: "126",
+      },
+    ],
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -161,6 +203,20 @@ const CardData = [
     Price: "4,395",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    DropdownData: [
+      {
+        PriceDropdownPrice: "123",
+      },
+      {
+        PriceDropdownPrice: "124",
+      },
+      {
+        PriceDropdownPrice: "125",
+      },
+      {
+        PriceDropdownPrice: "126",
+      },
+    ],
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -208,6 +264,20 @@ const CardData = [
     Price: "4,395",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    DropdownData: [
+      {
+        PriceDropdownPrice: "123",
+      },
+      {
+        PriceDropdownPrice: "124",
+      },
+      {
+        PriceDropdownPrice: "125",
+      },
+      {
+        PriceDropdownPrice: "126",
+      },
+    ],
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",

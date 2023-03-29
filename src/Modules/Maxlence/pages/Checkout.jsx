@@ -1,8 +1,7 @@
 import Wifi from "../../../img/wifi.png";
 import Sim from "../../../img/sim.png";
 import { MdOutlineModeEdit } from "react-icons/md";
-import { Nav, Tab } from "react-bootstrap";
-import GpayImg from "../../../img/gpay.png";
+import GpayImg from "../../../img/gpay.svg";
 import { styled } from "@mui/material/styles";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -11,7 +10,12 @@ import { useNavigate } from "react-router-dom";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import React, { useState } from "react";
 import Master from "../../../img/master.png";
-
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import {
   formatCreditCardNumber,
   formatCVV,
@@ -19,7 +23,6 @@ import {
 } from "./utils";
 
 import "react-credit-cards/es/styles-compiled.css";
-
 export const Checkout = () => {
   return (
     <>
@@ -212,6 +215,7 @@ const OrderSummary = () => {
 };
 
 const AddNewCard = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="col-12">
@@ -219,36 +223,30 @@ const AddNewCard = () => {
           <h3>Other Payment Modes</h3>
         </div>
         <div>
-          <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-            <div className="row">
-              <div className="col-12">
-                <div className="payment_modes_tab_div">
-                  <Nav variant="pills">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Credit / Debit Card</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Net Banking</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="upi" className="gpay_link">
-                        Pay with <img src={GpayImg} alt="gpay" />
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </div>
-              </div>
-              <div className="col-12">
-                <Tab.Content className="mt-3">
-                  <Tab.Pane eventKey="first">
-                    <CardForm />
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="second">2</Tab.Pane>
-                  <Tab.Pane eventKey="upi">3</Tab.Pane>
-                </Tab.Content>
+          <MyAccordion />
+        </div>
+        <div className=" mt-5">
+          <hr />
+          <div className="row">
+            <div className="col-xxl-9 col-xl-9 col-lg-8 col-md-6 col-sm-12 col-12 checkout_back_btn_div">
+              <div className="checkout_back_btn" onClick={() => navigate(-1)}>
+                <span>
+                  <HiArrowNarrowLeft />
+                </span>
+                Back to cart
               </div>
             </div>
-          </Tab.Container>
+            <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 checkout_btn">
+              <div>
+                <input type="hidden" name="issuer" />
+                <div className="form-actions">
+                  <button className=" brn full_btn checkout_btn">
+                    Make Payment
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -339,7 +337,7 @@ const CardForm = () => {
       margin: 2,
     },
   }));
-  const navigate = useNavigate();
+
   return (
     <div key="Payment">
       <div className="App-payment">
@@ -428,37 +426,111 @@ const CardForm = () => {
                 </FormGroup>
               </div>
             </div>
-            <div className="col-12">
-              <hr />
-            </div>
-            <div className="col-12">
-              <div className="row">
-                <div className="col-xxl-9 col-xl-9 col-lg-8 col-md-6 col-sm-12 col-12 checkout_back_btn_div">
-                  <div
-                    className="checkout_back_btn"
-                    onClick={() => navigate(-1)}
-                  >
-                    <span>
-                      <HiArrowNarrowLeft />
-                    </span>
-                    Back to cart
-                  </div>
-                </div>
-                <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 checkout_btn">
-                  <div>
-                    <input type="hidden" name="issuer" value={issuer} />
-                    <div className="form-actions">
-                      <button className=" brn full_btn checkout_btn">
-                        Make Payment
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </form>
       </div>
     </div>
+  );
+};
+const MyAccordion = () => {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
+  return (
+    <>
+      <div className="checkout_div">
+        <Accordion
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
+          className={
+            expanded === "panel1" ? "checkout_inner_bg" : "checkout_inner_bg1"
+          }
+        >
+          <AccordionSummary
+            expandIcon={
+              expanded === "panel1" ? (
+                <RadioButtonCheckedIcon className="checkout_inner_icon" />
+              ) : (
+                <RadioButtonUncheckedIcon />
+              )
+            }
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+            sx={{ pt: 1, pb: 1 }}
+          >
+            <Typography sx={{ width: "100%", flexShrink: 3, pl: 3 }}>
+              Credit / Debit Card
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <CardForm />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel2"}
+          onChange={handleChange("panel2")}
+          className={
+            expanded === "panel2" ? "checkout_inner_bg" : "checkout_inner_bg1"
+          }
+        >
+          <AccordionSummary
+            expandIcon={
+              expanded === "panel2" ? (
+                <RadioButtonCheckedIcon className="checkout_inner_icon" />
+              ) : (
+                <RadioButtonUncheckedIcon />
+              )
+            }
+            aria-controls="panel2bh-content"
+            id="panel2bh-header"
+            sx={{ pt: 1, pb: 1 }}
+          >
+            <Typography sx={{ width: "100%", flexShrink: 3, pl: 3 }}>
+              Net Banking
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <CardForm />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel3"}
+          onChange={handleChange("panel3")}
+          className={
+            expanded === "panel3" ? "checkout_inner_bg" : "checkout_inner_bg1"
+          }
+        >
+          <AccordionSummary
+            expandIcon={
+              expanded === "panel3" ? (
+                <RadioButtonCheckedIcon className="checkout_inner_icon" />
+              ) : (
+                <RadioButtonUncheckedIcon />
+              )
+            }
+            aria-controls="panel3bh-content"
+            id="panel3bh-header"
+            sx={{ pt: 1, pb: 1 }}
+          >
+            <Typography sx={{ width: "100%", flexShrink: 3, pl: 3 }}>
+              Pay with
+              <img className="my_new_gpay_img" src={GpayImg} alt="GPay icon" />
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <CardForm />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
+    </>
   );
 };
