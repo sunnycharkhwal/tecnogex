@@ -5,8 +5,38 @@ import Googleseobox from "../assests/googleseobox.png";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Typography, Stepper, Step, StepLabel } from "@material-ui/core";
-
+import StartedIcon from "../../../img/start.svg";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 export const QuestionarePage = () => {
+  const [showStartPage, setShowStartPage] = useState(true);
+  const QuestionarePageStart = () => {
+    return (
+      <>
+        <div className="questionare_page_start">
+          <div className="questionare_page_start_inner">
+            <p>
+              Okay thanks for considering Maxlence a good fit for helping you
+              grow your business
+            </p>
+            <p>
+              We’ve got few questions . It won’t take much time. Pinky promise
+              <img src={StartedIcon} alt="icon" />
+            </p>
+            <button
+              onClick={() => setShowStartPage(false)}
+              className="previous  action-button"
+            >
+              Start Now <HiOutlineArrowNarrowRight />
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  };
+  return <>{showStartPage ? <QuestionarePageStart /> : <Questionare />}</>;
+};
+
+const Questionare = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [skippedSteps, setSkippedSteps] = useState([]);
   const steps = getSteps();
@@ -97,7 +127,6 @@ export const QuestionarePage = () => {
 const getSteps = () => {
   return ["1", "2", "3", "4", "5", "5", "7", "8", "9", "10", "11"];
 };
-
 const getStepContent = (step) => {
   switch (step) {
     case 0:
@@ -171,7 +200,6 @@ const getStepContent = (step) => {
       return "unknown step";
   }
 };
-
 const Step1 = () => {
   const ListData = [
     {

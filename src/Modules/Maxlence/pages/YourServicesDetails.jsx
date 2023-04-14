@@ -38,6 +38,18 @@ export const YourServicesDetails = () => {
           title: "GST 12%",
           price: "$19",
         },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
       ],
     },
   ];
@@ -119,6 +131,7 @@ export const YourServicesDetails = () => {
             >
               Track Service
             </button>
+
             <div className="YourServices_new_address_div">
               <ul>
                 <li>

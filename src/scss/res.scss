@@ -6,6 +6,35 @@
   }
 }
 @media (max-width: 576px) {
+  .delete_modal_my {
+    width: 95% !important;
+  }
+  .questionare_page_end h3 {
+    font-weight: 600 !important;
+    font-size: 21px !important;
+  }
+  .questionare_page_end_hr_div {
+    hr {
+      margin-top: -35px;
+      width: 90%;
+    }
+  }
+  .gif_img {
+    height: 15rem;
+    width: 100%;
+  }
+  .questionare_page_start {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .questionare_page_start_inner {
+    padding: 0 15px;
+    p {
+      margin-bottom: 5px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
   .YourServices_new_img_text_btn2 {
     position: absolute;
     right: 1rem;

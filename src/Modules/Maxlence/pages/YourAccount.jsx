@@ -7,7 +7,19 @@ import ENDPOINT from "../config/ENDPOINT";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
+//
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import { BsFillInfoCircleFill } from "react-icons/bs";
+
 export const YourAccount = () => {
+  // delete
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  // delete end
+
   const user = useSelector((state) => state.state.user);
   const [loggedUser, setLoggedUser] = useState([]);
   const inputElement = useRef(null);
@@ -54,30 +66,30 @@ export const YourAccount = () => {
       })
         .then((res) => {
           if (res.status === 200) {
-            Swal.fire({
-              position: "center",
-              icon: "success",
-              title: "success",
-              text: "User updated Successfully",
-              showConfirmButton: false,
-              timer: 1500,
-            });
+            // Swal.fire({
+            //   position: "center",
+            //   icon: "success",
+            //   title: "success",
+            //   text: "User updated Successfully",
+            //   showConfirmButton: false,
+            //   timer: 1500,
+            // });
             navigate("/");
           }
         })
         .catch((err) => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "No user updated!",
-          });
+          // Swal.fire({
+          //   icon: "error",
+          //   title: "Oops...",
+          //   text: "No user updated!",
+          // });
         });
     } catch (err) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Server error!",
-      });
+      // Swal.fire({
+      //   icon: "error",
+      //   title: "Oops...",
+      //   text: "Server error!",
+      // });
       console.log("Update error", err);
     }
   };
@@ -299,9 +311,61 @@ export const YourAccount = () => {
       </>
     );
   };
+  // delete
+  const DeleteModal = () => {
+    const style = {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 400,
+      bgcolor: "background.paper",
+      boxShadow: 24,
+      p: 4,
+    };
+    return (
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+      >
+        <Fade in={open}>
+          <Box sx={style} className="delete_modal_my">
+            <div className="delete_modal">
+              <ul>
+                <li>
+                  <BsFillInfoCircleFill />
+                </li>
+                <li>
+                  <h3>Delete ?</h3>
+                  <p>will be deleted permanently and cannot be recovered.</p>
+                </li>
+              </ul>
+              <div className="delete_modal_btn_div">
+                <ul>
+                  <li className="btn_one">
+                    <button onClick={handleClose} className="outline_btn btn">
+                      Cancel
+                    </button>
+                  </li>
+                  <li className="btn_two">
+                    <button className="btn full_btn ms-1">Delete</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Box>
+        </Fade>
+      </Modal>
+    );
+  };
+  // delete end
   return (
     <>
       <section className=" container mb-5 mt-5">
+        <DeleteModal />
         <div className="row g-3">
           <form
             onSubmit={handleUpdate}
@@ -313,11 +377,7 @@ export const YourAccount = () => {
                 <Link to="/">
                   <a className="btn outline_btn me-1">Cancel</a>
                 </Link>
-                <button
-                  type="submit"
-                  disabled={form1disable && form2disable}
-                  className="btn full_btn ms-1"
-                >
+                <button className="btn full_btn ms-1" onClick={handleOpen}>
                   save
                 </button>
               </div>
