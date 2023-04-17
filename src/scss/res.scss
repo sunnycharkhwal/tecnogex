@@ -6,6 +6,21 @@
   }
 }
 @media (max-width: 576px) {
+  .YourServices_new_address_div_inner_li {
+    width: 100%;
+  }
+  .YourServices_new_img_text_btn2_div {
+    text-align: center;
+  }
+  .YourServices_new_inner_new {
+    .YourServices_new_img_text_btn2 {
+      position: relative;
+      right: unset;
+      top: unset;
+      width: 100%;
+      margin-top: 13px;
+    }
+  }
   .delete_modal_my {
     width: 95% !important;
   }
@@ -479,6 +494,9 @@
   }
 }
 @media (min-width: 768px) {
+  .YourServices_new_address_div_inner_li {
+    width: 70%;
+  }
   .buy_packig_new_dropdown_div {
     .dropdown-menu.show {
       width: 100%;
@@ -491,7 +509,7 @@
     }
   }
   .YourServices_new_address_inner {
-    position: absolute;
+    // position: absolute;
     right: 7rem;
   }
   .getstartbtn_new {
@@ -620,6 +638,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .YourServices_new_address_div_inner_li {
+    width: 80%;
+  }
   .cart_div_new {
     img {
       height: 5rem;
@@ -645,7 +666,7 @@
     }
   }
   .YourServices_new_address_inner {
-    position: absolute;
+    // position: absolute;
     right: 10rem;
   }
   .getstartbtn_new {

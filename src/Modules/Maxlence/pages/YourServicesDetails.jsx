@@ -25,14 +25,50 @@ export const YourServicesDetails = () => {
       ServiceDate: "19/02/2023",
       BillingName: "Luno Electrical",
       OrderNumber: "122546659261",
-      title: "Creation - Website",
-      icon: YourServicesicon,
-      price: "$143",
-      typeService: "Premium",
+      CardDataInner: [
+        {
+          title: "Creation - Website",
+          icon: YourServicesicon,
+          price: "$143",
+          typeService: "Premium",
+        },
+        {
+          title: "Creation - Website",
+          icon: YourServicesicon,
+          price: "$143",
+          typeService: "Premium",
+        },
+        {
+          title: "Creation - Website",
+          icon: YourServicesicon,
+          price: "$143",
+          typeService: "Premium",
+        },
+      ],
       OrderSummary: [
         {
           title: "Sub Total",
           price: "$122",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
+        },
+        {
+          title: "GST 12%",
+          price: "$19",
         },
         {
           title: "GST 12%",
@@ -113,28 +149,36 @@ export const YourServicesDetails = () => {
             </div>
           </div>
           <div className="YourServices_new_img_div">
-            <ul>
-              <li>
-                <img src={props.icon} alt="icon" />
-              </li>
-              <li>
-                <p className="YourServices_new_img_text">{props.title}</p>
-                <p className="YourServices_new_img_text2">{props.price}</p>
-                <p className="YourServices_new_img_text3">
-                  {props.typeService}
-                </p>
-              </li>
-            </ul>
-            <button
-              onClick={handleOpen}
-              className="btn full_btn YourServices_new_img_text_btn2 "
-            >
-              Track Service
-            </button>
+            {props.CardDataInner.map((val, i) => {
+              return (
+                <div key={i} className="YourServices_new_inner_new">
+                  <ul>
+                    <li>
+                      <img src={val.icon} alt="icon" />
+                    </li>
+                    <li>
+                      <p className="YourServices_new_img_text">{val.title}</p>
+                      <p className="YourServices_new_img_text2">{val.price}</p>
+                      <p className="YourServices_new_img_text3">
+                        {val.typeService}
+                      </p>
+                    </li>
+                  </ul>
+                  <div className="YourServices_new_img_text_btn2_div">
+                    <button
+                      onClick={handleOpen}
+                      className="btn full_btn YourServices_new_img_text_btn2 "
+                    >
+                      Track Service
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
 
             <div className="YourServices_new_address_div">
               <ul>
-                <li>
+                <li className="YourServices_new_address_div_inner_li">
                   <h3>Billing Address</h3>
                   <p className="address_div">
                     525, 5th Floor, Tower A, Itech Business Park, Sohna Road,

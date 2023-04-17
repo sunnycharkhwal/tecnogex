@@ -44,37 +44,39 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div
-        className="wrapper position-relative container-fluid"
-        style={{
-          zIndex: "0",
-          background: "linear-gradient(180deg, #00C99C 0%, #035946 100%)",
-          height: "12rem",
-        }}
-      >
-        <div className="CenterMode_top">
-          <MultipleItems />
-        </div>
-        <div className="timetri new2 ">
-          <img src={Whitetriangle} alt="k" />
-        </div>
+      <div>
+        <div
+          className="wrapper position-relative container-fluid"
+          style={{
+            zIndex: "0",
+            background: "linear-gradient(180deg, #00C99C 0%, #035946 100%)",
+            height: "12rem",
+          }}
+        >
+          <div className="CenterMode_top">
+            <MultipleItems />
+          </div>
+          <div className="timetri new2 ">
+            <img src={Whitetriangle} alt="k" />
+          </div>
 
-        <div className="new3">
-          <img src={Timelinefadeline} alt="ds" />
+          <div className="new3">
+            <img src={Timelinefadeline} alt="ds" />
+          </div>
         </div>
-      </div>
-      <div className="container-fluid d-flex align-items-center new4">
-        <div className="container py-5">
-          <div className="row justify-content-center align-items-center">
-            <div>
-              <p className="text-white text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                vero cum iusto aliquid odit praesentium minus expedita, et nam
-                reiciendis explicabo ea esse dignissimos, corporis blanditiis
-                illo? Ullam iusto asperiores iste veniam velit accusantium quo
-                perferendis mollitia quos. Atque, iusto recusandae repudiandae
-                necessitatibus at asperiores.
-              </p>
+        <div className="container-fluid d-flex align-items-center new4">
+          <div className="container py-5">
+            <div className="row justify-content-center align-items-center">
+              <div>
+                <p className="text-white text-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  vero cum iusto aliquid odit praesentium minus expedita, et nam
+                  reiciendis explicabo ea esse dignissimos, corporis blanditiis
+                  illo? Ullam iusto asperiores iste veniam velit accusantium quo
+                  perferendis mollitia quos. Atque, iusto recusandae repudiandae
+                  necessitatibus at asperiores.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -292,6 +294,21 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
+      <div className="new_slider_div_top">
+        <div className="">
+          <div className="new_slider_div"></div>
+          <div className="CenterMode_top">
+            <MultipleItems2 />
+          </div>
+          <div>
+            <img
+              className="new_slider_botom_img"
+              src="https://wewakedev.github.io/Maxlence-Official-Website/assests/aboutslidecontent.jpg"
+              alt="img"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -338,12 +355,131 @@ const MultipleItems = () => {
     <>
       <div>
         <Slider {...settings}>
+          <div>
+            <span>
+              2014
+              <span>
+                <GoPrimitiveDot />
+              </span>
+            </span>
+          </div>
           <span>
-            2014
+            2015
             <span>
               <GoPrimitiveDot />
             </span>
           </span>
+          <span>
+            2016
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2017
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2018
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2019
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2020
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2021
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2022
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+          <span>
+            2023
+            <span>
+              <GoPrimitiveDot />
+            </span>
+          </span>
+        </Slider>
+      </div>
+    </>
+  );
+};
+
+const MultipleItems2 = () => {
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    centerMode: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    autoplay: false,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <>
+      <div>
+        <Slider {...settings}>
+          <div>
+            <span>
+              2014
+              <span>
+                <GoPrimitiveDot />
+              </span>
+            </span>
+            <p className="slider_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores laborum, sunt ab veritatis, aliquid molestiae odit
+              voluptatum beatae, harum incidunt pariatur tenetur recusandae
+              ipsum mollitia corrupti modi officiis voluptate omnis.
+            </p>
+          </div>
           <span>
             2015
             <span>

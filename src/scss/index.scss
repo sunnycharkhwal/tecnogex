@@ -1979,6 +1979,15 @@
     }
   }
 }
+.YourServices_new_inner_new {
+  position: relative;
+  margin-bottom: 1.5rem;
+  .YourServices_new_img_text_btn2 {
+    position: absolute;
+    right: 0rem;
+    top: 32%;
+  }
+}
 .YourServices_new_top {
   position: relative;
   background-color: #434343;
@@ -2103,7 +2112,7 @@
   }
 }
 .YourServices_new_address_inner {
-  position: absolute;
+  // position: absolute;
   right: 10rem;
   top: 0;
   p {
@@ -2116,6 +2125,9 @@
       color: #252525;
     }
   }
+}
+.YourServices_new_address_div_inner_li {
+  width: 80%;
 }
 .YourServices_new_address_price_div {
   display: flex;
@@ -2130,7 +2142,7 @@
   }
   .price_inner {
     position: absolute;
-    right: -79%;
+    right: 0;
     font-weight: 600;
     font-size: 16px;
     color: #212529;
@@ -2333,3 +2345,60 @@ ul {
     }
   }
 }
+// slider 2
+.slider_text_bottom {
+  position: absolute;
+  color: white;
+  bottom: 0;
+}
+.new_slider_div {
+  background-color: black;
+  width: 100%;
+  height: 13rem;
+}
+.new_slider_div_top {
+  .slick-center {
+    .slider_text {
+      display: block;
+    }
+  }
+  position: relative;
+  .CenterMode_top {
+    transform: unset;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    .slick-slider {
+      padding: 0 0rem;
+    }
+  }
+  .slick-list {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30rem;
+  }
+  // .CenterMode_top .slick-slide span {
+  //   color: #000000;
+  // }
+}
+.new_slider_botom_img {
+  @include bg_img;
+  width: 100%;
+  height: 20rem;
+}
+.slider_text {
+  // position: absolute;
+  // bottom: -49px;
+  display: block;
+  color: white;
+  width: 53rem;
+  left: -11rem;
+  position: relative;
+  bottom: -13rem;
+}
+// slider 2
