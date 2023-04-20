@@ -2451,3 +2451,40 @@ ul {
   right: 45px;
 }
 // Testimonial end
+// design inspiration
+.design_inspiration_modal_div {
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #212529;
+    text-transform: capitalize;
+  }
+}
+
+.design_inspiration_share_div_inner {
+  cursor: pointer;
+  background-color: #f2f2ff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  img {
+    @include bg_img;
+    width: 40px;
+    height: 40px;
+  }
+}
+.design_inspiration_share_div_inner_title {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.design_inspiration_share_div_inner_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// design inspiration end

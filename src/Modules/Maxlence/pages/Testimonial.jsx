@@ -1,5 +1,7 @@
 import { FaStar } from "react-icons/fa";
 import QuoteIcon from "../../../img/quote.svg";
+import { FooterContact } from "../components/FooterContact";
+
 export const Testimonial = () => {
   const SliderData = [
     {
@@ -85,6 +87,7 @@ export const Testimonial = () => {
           </div>
         </div>
       </section>
+      <FooterContact />
     </>
   );
 };
