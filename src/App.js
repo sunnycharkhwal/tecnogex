@@ -52,6 +52,8 @@ import { Agencies } from "./Modules/Maxlence/pages/Agencies";
 import { Support } from "./Modules/Maxlence/pages/Support";
 import { AboutUs } from "./Modules/Maxlence/pages/AboutUs";
 import { YourServicesDetails } from "./Modules/Maxlence/pages/YourServicesDetails";
+import { Testimonial } from "./Modules/Maxlence/pages/Testimonial";
+import { DesignInspirationDetail } from "./Modules/Maxlence/pages/DesignInspirationDetail";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -114,6 +116,11 @@ export const App = () => {
             <Route
               path="/your_services_details"
               element={<YourServicesDetails />}
+            />
+            <Route path="/testimonial" element={<Testimonial />} />
+            <Route
+              path="/design_inspiration_detail"
+              element={<DesignInspirationDetail />}
             />
           </Routes>
           <Footer />

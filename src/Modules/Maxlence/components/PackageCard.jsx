@@ -1,62 +1,20 @@
 import { NavLink } from "react-router-dom";
-import * as React from "react";
+import { Tab, Nav } from "react-bootstrap";
 import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import Dropdown from "react-bootstrap/Dropdown";
-const IOSSwitch = styled((props) => (
-  <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-))(({ theme }) => ({
-  width: 42,
-  height: 26,
-  padding: 0,
-  "& .MuiSwitch-switchBase": {
-    padding: 0,
-    margin: 2,
-    transitionDuration: "300ms",
-    "&.Mui-checked": {
-      transform: "translateX(16px)",
-      color: "#fff",
-      "& + .MuiSwitch-track": {
-        backgroundColor: theme.palette.mode === "dark" ? "#2ECA45" : "#50BFE6",
-        opacity: 1,
-        border: 0,
-      },
-      "&.Mui-disabled + .MuiSwitch-track": {
-        opacity: 0.5,
-      },
-    },
-    "&.Mui-focusVisible .MuiSwitch-thumb": {
-      color: "#33cf4d",
-      border: "6px solid #fff",
-    },
-    "&.Mui-disabled .MuiSwitch-thumb": {
-      color:
-        theme.palette.mode === "light"
-          ? theme.palette.grey[100]
-          : theme.palette.grey[600],
-    },
-    "&.Mui-disabled + .MuiSwitch-track": {
-      opacity: theme.palette.mode === "light" ? 0.7 : 0.3,
-    },
-  },
-  "& .MuiSwitch-thumb": {
-    boxSizing: "border-box",
-    width: 22,
-    height: 22,
-  },
-  "& .MuiSwitch-track": {
-    borderRadius: 26 / 2,
-    backgroundColor: theme.palette.mode === "light" ? "#DCECFF" : "#39393D",
-    opacity: 1,
-    transition: theme.transitions.create(["background-color"], {
-      duration: 500,
-    }),
-  },
-}));
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+import * as React from "react";
 export const PackageCard = (props) => {
   const CardApp = (props) => {
+    const BootstrapTooltip = styled(({ className, ...props }) => (
+      <Tooltip {...props} arrow classes={{ popper: className }} />
+    ))(({ theme }) => ({
+      [`& .${tooltipClasses.arrow}`]: {
+        color: theme.palette.common.black,
+      },
+      [`& .${tooltipClasses.tooltip}`]: {
+        backgroundColor: theme.palette.common.black,
+      },
+    }));
     return (
       <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 package_card_box_col">
         <div
@@ -81,35 +39,17 @@ export const PackageCard = (props) => {
             <p>{props.packageBrif}</p>
           </div>
           <div className="package_card_box_price">
-            <del>${props.delPrice}</del>
-            <div className="buy_packig_new_dropdown_div">
-              <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  <div>
-                    From
-                    <span style={{ color: props.cardColor }}>
-                      ${props.Price}
-                    </span>
-                    / mo
-                  </div>
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  {props.DropdownData.map((val, i) => {
-                    return (
-                      <Dropdown.Item key={i}>
-                        <div>
-                          From
-                          <span style={{ color: props.cardColor }}>
-                            ${val.PriceDropdownPrice}
-                          </span>
-                          / mo
-                        </div>
-                      </Dropdown.Item>
-                    );
-                  })}
-                </Dropdown.Menu>
-              </Dropdown>
+            {/* <del>
+              {props.PriceType}
+              <label className="ms-1">{props.delPrice}</label>
+            </del> */}
+            <div>
+              From
+              <span style={{ color: props.cardColor }}>
+                {props.PriceType}
+                <label className="ms-1">{props.Price}</label>
+              </span>
+              / mo
             </div>
           </div>
           <div className="package_card_box_overview">
@@ -124,9 +64,11 @@ export const PackageCard = (props) => {
                     src={val.img || props.defaultPackagePointListIcon}
                     alt="list icon"
                   />
-                  <p style={{ color: val.textColor || props.cardColor }}>
-                    {val.text}
-                  </p>
+                  <BootstrapTooltip title={val.TooltipTitle} placement="right">
+                    <p style={{ color: val.textColor || props.cardColor }}>
+                      {val.text}
+                    </p>
+                  </BootstrapTooltip>
                 </div>
               );
             })}
@@ -161,27 +103,46 @@ export const PackageCard = (props) => {
           Pick the perfect <span>pricing plan</span>
         </h3>
         <p>We have the right plans for you</p>
-        <div className="IOSSwitch_top_div">
-          <span className="text-secondary mx-2">
-            <b>Monthly</b>
-          </span>
-          <div className="IOSSwitch_div">
-            <FormGroup>
-              <FormControlLabel
-                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-              />
-            </FormGroup>
-          </div>
-          <span className="text-secondary mx-2">
-            <b>Yearly</b>
-          </span>
-        </div>
       </div>
-
-      <div className="row package_card_row">
-        {props.data.map((val, i) => {
-          return <CardApp key={i} {...val} />;
-        })}
+      <div>
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <div className="package_card_tab_div">
+            <Nav variant="pills" className="d-flex">
+              <Nav.Item className="package_card_tab_one_div">
+                <Nav.Link eventKey="first">Monthly</Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="package_card_tab_second_div">
+                <Nav.Link eventKey="second">Quarterly</Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="package_card_tab_last_div">
+                <Nav.Link eventKey="Yearly">Yearly</Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </div>
+          <Tab.Content className="mt-5">
+            <Tab.Pane eventKey="first">
+              <div className="row package_card_row">
+                {props.data.map((val, i) => {
+                  return <CardApp key={i} {...val} />;
+                })}
+              </div>
+            </Tab.Pane>
+            <Tab.Pane eventKey="second">
+              <div className="row package_card_row">
+                {props.data.map((val, i) => {
+                  return <CardApp key={i} {...val} />;
+                })}
+              </div>
+            </Tab.Pane>
+            <Tab.Pane eventKey="Yearly">
+              <div className="row package_card_row">
+                {props.data.map((val, i) => {
+                  return <CardApp key={i} {...val} />;
+                })}
+              </div>
+            </Tab.Pane>
+          </Tab.Content>
+        </Tab.Container>
       </div>
     </>
   );

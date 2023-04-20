@@ -71,7 +71,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Nav.Link>
-                    <NavLink to="/">Testimonial</NavLink>
+                    <NavLink to="/testimonial">Testimonial</NavLink>
                   </Nav.Link>
                 </li>
                 <li>

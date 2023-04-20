@@ -23,7 +23,7 @@ const style = {
 export const DesignInspiration = () => {
   const CardData = [
     {
-      MoreLinkPage: "/",
+      MoreLinkPage: "/design_inspiration_detail",
       title: "Website",
       ImgList: [
         {
@@ -41,7 +41,7 @@ export const DesignInspiration = () => {
       ],
     },
     {
-      MoreLinkPage: "/",
+      MoreLinkPage: "/design_inspiration_detail",
       title: "Logos",
       ImgList: [
         {
@@ -59,7 +59,7 @@ export const DesignInspiration = () => {
       ],
     },
     {
-      MoreLinkPage: "/",
+      MoreLinkPage: "/design_inspiration_detail",
       title: "Social Media Creatives",
       ImgList: [
         {
@@ -77,7 +77,7 @@ export const DesignInspiration = () => {
       ],
     },
     {
-      MoreLinkPage: "/",
+      MoreLinkPage: "/design_inspiration_detail",
       title: "Landing Pages",
       ImgList: [
         {

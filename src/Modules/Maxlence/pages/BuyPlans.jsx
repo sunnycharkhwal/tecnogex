@@ -15,29 +15,19 @@ const CardData = [
     cardColor: "#50B432",
     defaultPackagePointListIcon: packageGreen,
     packageName: "Explainer",
+
     packageBrif:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
     delPrice: "4,595",
     Price: "4,395",
+    PriceType: "$",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-    DropdownData: [
-      {
-        PriceDropdownPrice: "123",
-      },
-      {
-        PriceDropdownPrice: "124",
-      },
-      {
-        PriceDropdownPrice: "125",
-      },
-      {
-        PriceDropdownPrice: "126",
-      },
-    ],
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
+        TooltipTitle:
+          "Lorem ipsum dolor sit amet consectetur. Felis enim ac sed nec faucibus pellentesque cursus velit. Et elementum sed fringilla sit volutpat lorem a.",
       },
       {
         text: "Script and storyboard writing (one script review)",
@@ -80,22 +70,10 @@ const CardData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
     delPrice: "4,595",
     Price: "4,395",
+    PriceType: "$",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-    DropdownData: [
-      {
-        PriceDropdownPrice: "123",
-      },
-      {
-        PriceDropdownPrice: "124",
-      },
-      {
-        PriceDropdownPrice: "125",
-      },
-      {
-        PriceDropdownPrice: "126",
-      },
-    ],
+
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -141,22 +119,10 @@ const CardData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
     delPrice: "4,595",
     Price: "4,395",
+    PriceType: "$",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-    DropdownData: [
-      {
-        PriceDropdownPrice: "123",
-      },
-      {
-        PriceDropdownPrice: "124",
-      },
-      {
-        PriceDropdownPrice: "125",
-      },
-      {
-        PriceDropdownPrice: "126",
-      },
-    ],
+
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -202,22 +168,10 @@ const CardData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
     delPrice: "4,595",
     Price: "4,395",
+    PriceType: "$",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-    DropdownData: [
-      {
-        PriceDropdownPrice: "123",
-      },
-      {
-        PriceDropdownPrice: "124",
-      },
-      {
-        PriceDropdownPrice: "125",
-      },
-      {
-        PriceDropdownPrice: "126",
-      },
-    ],
+
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",
@@ -263,22 +217,10 @@ const CardData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
     delPrice: "4,595",
     Price: "4,395",
+    PriceType: "$",
     OverviewText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
-    DropdownData: [
-      {
-        PriceDropdownPrice: "123",
-      },
-      {
-        PriceDropdownPrice: "124",
-      },
-      {
-        PriceDropdownPrice: "125",
-      },
-      {
-        PriceDropdownPrice: "126",
-      },
-    ],
+
     PackagePointList: [
       {
         text: "On location and/or studio video shoot by crew",

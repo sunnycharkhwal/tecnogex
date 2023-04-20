@@ -6,6 +6,31 @@
   }
 }
 @media (max-width: 576px) {
+  .testimonial_riv_div {
+    padding: 0 0rem;
+  }
+  .testimonial_top_inner_div {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    h3 {
+      font-size: 26px !important;
+      br {
+        display: none;
+      }
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 1rem;
+      br {
+        display: none;
+      }
+    }
+    .video {
+      width: 100%;
+      height: 315px;
+    }
+  }
   .YourServices_new_address_div_inner_li {
     width: 100%;
   }
@@ -494,6 +519,9 @@
   }
 }
 @media (min-width: 768px) {
+  .testimonial_riv_div {
+    padding: 0 0rem;
+  }
   .YourServices_new_address_div_inner_li {
     width: 70%;
   }
@@ -638,6 +666,11 @@
   }
 }
 @media (min-width: 1024px) {
+  .testimonial_riv_div {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0 0rem;
+  }
   .YourServices_new_address_div_inner_li {
     width: 80%;
   }
@@ -816,6 +849,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .testimonial_riv_div {
+    padding: 0 7rem;
+  }
   .cart_div_new {
     img {
       height: 5rem;
