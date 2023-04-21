@@ -6,6 +6,12 @@
   }
 }
 @media (max-width: 576px) {
+  .img_view_modal_inner_div {
+    max-height: 33rem;
+  }
+  .img_view_modal_div {
+    width: 95%;
+  }
   .design_inspiration_modal_div {
     width: 95% !important;
   }
@@ -157,7 +163,7 @@
     }
   }
   .design_inspiration_img {
-    height: 100%;
+    height: 13rem;
     width: 100%;
   }
   .careers_profile_text_div {
@@ -522,6 +528,13 @@
   }
 }
 @media (min-width: 768px) {
+  .img_view_modal_inner_div {
+    max-height: 33rem;
+  }
+  .img_view_modal_div {
+    width: 70%;
+    // height: 40rem;
+  }
   .testimonial_riv_div {
     padding: 0 0rem;
   }
@@ -669,6 +682,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .img_view_modal_inner_div {
+    max-height: 43rem;
+  }
+  .img_view_modal_div {
+    width: 70%;
+  }
   .testimonial_riv_div {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -852,6 +871,12 @@
   }
 }
 @media (min-width: 1440px) {
+  .img_view_modal_inner_div {
+    max-height: 43rem;
+  }
+  .img_view_modal_div {
+    width: 50%;
+  }
   .testimonial_riv_div {
     padding: 0 7rem;
   }

@@ -11,18 +11,9 @@ import WhatsappIcon from "../../../img/wh.svg";
 import FaceboonIcon from "../../../img/fa.svg";
 import TwitterIcon from "../../../img/tw.svg";
 import GmailIcon from "../../../img/gm.svg";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "none",
-  boxShadow: 24,
-  p: 4,
-};
+import CopyIcon from "../../../img/copy.svg";
+import WebPage from "../../../img/web.png";
+import { MdOutlineClose } from "react-icons/md";
 export const DesignInspiration = () => {
   const CardData = [
     {
@@ -30,7 +21,15 @@ export const DesignInspiration = () => {
       title: "Website",
       ImgList: [
         {
-          imgLink: "/",
+          imgLink: "https://lunoelectrical.com.au/",
+          img: WebPage,
+        },
+        {
+          imgLink: "https://lunoelectrical.com.au/",
+          img: Websitetemp1,
+        },
+        {
+          imgLink: "https://lunoelectrical.com.au/",
           img: Websitetemp1,
         },
       ],
@@ -90,11 +89,115 @@ export const DesignInspiration = () => {
       ],
     },
   ];
+
   const CardApp = (props) => {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const ImageCard = (val) => {
+      const [openShare, setOpenShare] = React.useState(false);
+      const [openImgView, setOpenImgView] = React.useState(false);
+      const handleOpenShare = () => setOpenShare(true);
+      const handleCloseShare = () => setOpenShare(false);
+
+      const handleOpenImgView = () => setOpenImgView(true);
+      const handleCloseImgView = () => setOpenImgView(false);
+      const ImgViewModal = () => {
+        const style = {
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          // width: 400,
+          bgcolor: "background.paper",
+          border: "none",
+          boxShadow: 24,
+          p: 4,
+        };
+        return (
+          <div>
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              open={openImgView}
+              onClose={handleCloseImgView}
+              closeAfterTransition
+              slots={{ backdrop: Backdrop }}
+              slotProps={{
+                backdrop: {
+                  timeout: 500,
+                },
+              }}
+            >
+              <Fade in={openImgView}>
+                <Box sx={style} className="img_view_modal_div">
+                  <div className="img_view_modal_inner_div">
+                    <img src={val.img} alt="sd" />
+                  </div>
+                  <span
+                    onClick={handleCloseImgView}
+                    className="close_img_view_btn_div"
+                  >
+                    <MdOutlineClose />
+                  </span>
+                  <div className="delete_modal_btn_div">
+                    <ul>
+                      <li className="btn_one">
+                        <button
+                          onClick={handleCloseImgView}
+                          className="outline_btn btn"
+                        >
+                          Cancel
+                        </button>
+                      </li>
+                      <li className="btn_two">
+                        <a
+                          href={val.imgLink}
+                          className="btn full_btn ms-1"
+                          target="_blank"
+                        >
+                          website link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </Box>
+              </Fade>
+            </Modal>
+          </div>
+        );
+      };
+      return (
+        <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <TransitionsModal
+            {...val}
+            openShare={openShare}
+            handleCloseShare={handleCloseShare}
+          />
+          <ImgViewModal {...val} />
+          <div className="design_inspiration_div">
+            <NavLink onClick={handleOpenImgView}>
+              <div
+                className="design_inspiration_img"
+                style={{
+                  backgroundImage: `url(${val.img})`,
+                }}
+              ></div>
+            </NavLink>
+            <BiShareAlt onClick={handleOpenShare} />
+          </div>
+        </div>
+      );
+    };
     const TransitionsModal = (props) => {
+      const style = {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: 400,
+        bgcolor: "background.paper",
+        border: "none",
+        boxShadow: 24,
+        p: 4,
+      };
       const ShareData = [
         {
           link: "https://www.google.com/",
@@ -117,33 +220,13 @@ export const DesignInspiration = () => {
           title: "Gmail",
         },
       ];
-      const ShareApp = (props) => {
-        return (
-          <>
-            <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
-              <div>
-                <a href={props.link} target="_blank" className=" text-center">
-                  <div className="design_inspiration_share_div_inner_top">
-                    <div className="design_inspiration_share_div_inner">
-                      <img src={props.icon} alt="icon" />
-                    </div>
-                  </div>
-                  <p className="design_inspiration_share_div_inner_title">
-                    {props.title}
-                  </p>
-                </a>
-              </div>
-            </div>
-          </>
-        );
-      };
       return (
         <div>
           <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
-            open={open}
-            onClose={handleClose}
+            open={props.openShare}
+            onClose={props.handleCloseShare}
             closeAfterTransition
             slots={{ backdrop: Backdrop }}
             slotProps={{
@@ -152,25 +235,46 @@ export const DesignInspiration = () => {
               },
             }}
           >
-            <Fade in={open}>
+            <Fade in={props.openShare}>
               <Box sx={style} className="design_inspiration_modal_div">
                 <div>
                   <h3>Share</h3>
                   <div className="row g-1">
                     {ShareData.map((val, i) => {
-                      return <ShareApp key={i} {...val} />;
+                      return (
+                        <div
+                          key={i}
+                          className="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6"
+                        >
+                          <div>
+                            <a
+                              href={val.link}
+                              target="_blank"
+                              className=" text-center"
+                            >
+                              <div className="design_inspiration_share_div_inner_top">
+                                <div className="design_inspiration_share_div_inner">
+                                  <img src={val.icon} alt="icon" />
+                                </div>
+                              </div>
+                              <p className="design_inspiration_share_div_inner_title">
+                                {val.title}
+                              </p>
+                            </a>
+                          </div>
+                        </div>
+                      );
                     })}
                     <div className="col-12">
-                      <div>
-                        <button
+                      <div className="design_inspiration_modal_copy">
+                        {props.imgLink}
+                        <span
                           onClick={() =>
-                            navigator.clipboard.writeText(
-                              "Copy this text to clipboard"
-                            )
+                            navigator.clipboard.writeText(props.imgLink)
                           }
                         >
-                          Copy
-                        </button>
+                          <img src={CopyIcon} alt="icon" />
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -184,7 +288,6 @@ export const DesignInspiration = () => {
     return (
       <>
         <div className="container websitetemp my-5">
-          <TransitionsModal />
           <div className="row justify-content-between mb-3">
             <div className="col-4">
               <h5>
@@ -200,25 +303,9 @@ export const DesignInspiration = () => {
             </div>
           </div>
           <div className="row g-4">
-            {props.ImgList.map((val, i) => {
-              return (
-                <div
-                  key={i}
-                  className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12"
-                >
-                  <div className="design_inspiration_div">
-                    <NavLink to={val.imgLink}>
-                      <img
-                        className="design_inspiration_img"
-                        src={val.img}
-                        alt="sd"
-                      />
-                    </NavLink>
-                    <BiShareAlt onClick={handleOpen} />
-                  </div>
-                </div>
-              );
-            })}
+            {props.ImgList.map((val, i) => (
+              <ImageCard key={i} {...val} />
+            ))}
           </div>
         </div>
       </>

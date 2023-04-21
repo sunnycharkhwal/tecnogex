@@ -1885,6 +1885,7 @@
 // design_inspiration
 .design_inspiration_img {
   @include bg_img;
+  background-position: top !important;
   height: 15rem;
   width: 100%;
   margin: auto;
@@ -2454,10 +2455,11 @@ ul {
 // design inspiration
 .design_inspiration_modal_div {
   h3 {
-    font-weight: 600;
+    font-weight: 600 !important;
     font-size: 18px;
     color: #212529;
     text-transform: capitalize;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2486,5 +2488,56 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.design_inspiration_modal_copy {
+  margin-top: 1.2rem;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #f2f2ff;
+  padding: 5px 10px 5px 10px;
+  position: relative;
+  img {
+    width: 15px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    cursor: pointer;
+  }
+}
+.img_view_modal_div {
+  padding: 13px !important;
+  width: 50%;
+  border-radius: 10px;
+  position: relative;
+  img {
+    height: auto;
+    width: 100%;
+    @include bg_img;
+  }
+}
+.img_view_modal_inner_div {
+  overflow: scroll;
+  max-height: 43rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.close_img_view_btn_div {
+  position: absolute;
+  background: black;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  svg {
+    font-size: 20px;
+    color: white;
+  }
 }
 // design inspiration end
