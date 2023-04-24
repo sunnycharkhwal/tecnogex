@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Websitetemp1 from "../assests/websitetemp1.jpg";
 import { BiShareAlt } from "react-icons/bi";
+import { MdOutlineClose } from "react-icons/md";
 
 // mui
 import * as React from "react";
@@ -30,8 +31,12 @@ export const DesignInspirationDetail = () => {
   ];
   const CardApp = (props) => {
     const [openShare, setOpenShare] = React.useState(false);
+    const [openImgView, setOpenImgView] = React.useState(false);
+
     const handleOpenShare = () => setOpenShare(true);
     const handleCloseShare = () => setOpenShare(false);
+    const handleOpenImgView = () => setOpenImgView(true);
+    const handleCloseImgView = () => setOpenImgView(false);
     const TransitionsModal = () => {
       const style = {
         position: "absolute",
@@ -131,12 +136,78 @@ export const DesignInspirationDetail = () => {
         </div>
       );
     };
+    const ImgViewModal = () => {
+      const style = {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        // width: 400,
+        bgcolor: "background.paper",
+        border: "none",
+        boxShadow: 24,
+        p: 4,
+      };
+      return (
+        <div>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={openImgView}
+            onClose={handleCloseImgView}
+            closeAfterTransition
+            slots={{ backdrop: Backdrop }}
+            slotProps={{
+              backdrop: {
+                timeout: 500,
+              },
+            }}
+          >
+            <Fade in={openImgView}>
+              <Box sx={style} className="img_view_modal_div">
+                <div className="img_view_modal_inner_div">
+                  <img src={props.img} alt="sd" />
+                </div>
+                <span
+                  onClick={handleCloseImgView}
+                  className="close_img_view_btn_div"
+                >
+                  <MdOutlineClose />
+                </span>
+                <div className="delete_modal_btn_div">
+                  <ul>
+                    <li className="btn_one">
+                      <button
+                        onClick={handleCloseImgView}
+                        className="outline_btn btn"
+                      >
+                        Cancel
+                      </button>
+                    </li>
+                    <li className="btn_two">
+                      <a
+                        href={props.imgLink}
+                        className="btn full_btn ms-1"
+                        target="_blank"
+                      >
+                        website link
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </Box>
+            </Fade>
+          </Modal>
+        </div>
+      );
+    };
     return (
       <>
         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
           <TransitionsModal />
+          <ImgViewModal />
           <div className="design_inspiration_div">
-            <NavLink to={props.imgLink}>
+            <NavLink onClick={handleOpenImgView}>
               <div
                 className="design_inspiration_img"
                 style={{
