@@ -2541,3 +2541,136 @@ ul {
   }
 }
 // design inspiration end
+// cart
+.td_body_cart_div {
+  tr {
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+  }
+  td {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    div {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.cart_title_div {
+  width: 10rem;
+}
+.cart_title_div_price {
+  color: #252525;
+  font-size: 24px !important;
+}
+.cart_title_div_monthly {
+  color: #474747;
+}
+.cart_title_div_Type {
+  color: #4000c9;
+}
+.cart_title_div_td {
+  vertical-align: middle;
+}
+.list_icon_cart {
+  @include bg_img;
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-right: 17px;
+}
+.cart_title_div_delete_icon {
+  text-align: center;
+  img {
+    width: 20px;
+    height: 24px;
+    @include bg_img;
+    cursor: pointer;
+  }
+}
+.cart_title_div_top_tr {
+  background-color: #434343;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+.td_body_cart_div_mb {
+  width: 100px;
+  height: 10px;
+}
+.cart_total_top {
+  background-color: #434343;
+  padding: 5px 11px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  p {
+    margin-bottom: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+  }
+}
+.cart_total_top_inner {
+  background-color: #f8f8f8;
+  padding: 5px 11px;
+  p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #8b8b8b;
+  }
+  .cart_total_top_inner_color {
+    text-align: end;
+    p {
+      color: #212529;
+    }
+  }
+}
+.cart_total_top_btn {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 11px;
+  }
+}
+.cart_total_top_call {
+  p {
+    font-weight: 600;
+    font-size: 14px;
+    color: #252525;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  a {
+    font-weight: 400;
+    font-size: 18px;
+
+    span {
+      color: #252525;
+      cursor: text;
+      margin-right: 6px;
+    }
+  }
+}
+.cart_slider_top_div {
+  background-color: #e7e7e7;
+  padding: 2rem 0;
+  .my_slick_slider_title {
+    margin-bottom: 1rem;
+  }
+}

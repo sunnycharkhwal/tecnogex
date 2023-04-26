@@ -6,6 +6,10 @@
   }
 }
 @media (max-width: 576px) {
+  .cart_tabel {
+    overflow-x: auto;
+    display: block;
+  }
   .img_view_modal_inner_div {
     max-height: 33rem;
   }

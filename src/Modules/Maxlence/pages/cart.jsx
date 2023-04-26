@@ -4,110 +4,29 @@ import youtubecamp from "../assests/youtubecamp.jpg";
 import pageseo from "../assests/pageseo.jpg";
 import socialmediamarketing from "../assests/socialmediamarketing.jpg";
 import emailmarketing from "../assests/emailmarketing.jpg";
+import DeleteIcon from "../../../img/del.svg";
+import ListIcon from "../../../img/serv.svg";
 import { NavLink } from "react-router-dom";
-import Cart2 from "../../../img/cart2.svg";
+
 export const Cart = () => {
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
-  const CardData = [
-    {
-      title: "Luno Electrical - Creation - Website",
-      price: "1200",
-      Monthly: "Monthly",
-      package: "Advanced",
-      link: "/",
-    },
-    {
-      title: "Luno Electrical - Creation - Website",
-      price: "1300",
-      Monthly: "Monthly",
-      package: "Advanced",
-      link: "/",
-    },
-    {
-      title: "Luno Electrical - Creation - Website",
-      price: "1400",
-      Monthly: "Monthly",
-      package: "Advanced",
-      link: "/",
-    },
-    {
-      title: "Luno Electrical - Creation - Website",
-      price: "1500",
-      Monthly: "Monthly",
-      package: "Advanced",
-      link: "/",
-    },
-    {
-      title: "Luno Electrical - Creation - Website",
-      price: "1200",
-      Monthly: "Monthly",
-      package: "Advanced",
-      link: "/",
-    },
-    {
-      title: "Luno Electrical - Creation - Website",
-      price: "1200",
-      Monthly: "Monthly",
-      package: "Advanced",
-      link: "/",
-    },
-  ];
-  const CardApp = (props) => {
-    return (
-      <>
-        <div className="col-12">
-          <div className="shopping_cart_name">
-            {props.title}
-            <p className="shopping_cart_price">${props.price}</p>
-          </div>
-
-          <div className="shopping_cart_service">
-            <p className="your_services_card_btn_1">{props.package}</p>
-            <p className="shopping_cart_btn">{props.Monthly}</p>
-          </div>
-
-          <div className="shopping_cart_a_div">
-            <img src={Cart2} alt="cart2" />
-            <label></label>
-            <NavLink to={props.link}>
-              <span>See more service related this</span>
-            </NavLink>
-          </div>
-          <hr />
-        </div>
-      </>
-    );
-  };
-
   return (
     <>
       <div className=" container mt-5 mb-5">
         <div className="row g-3">
           <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-            <div className="shopping_cart">
-              <div className="shopping_cart_top_title">
-                <p>Shopping Cart</p>
-              </div>
-              <div className="row">
-                {CardData.map((val, i) => {
-                  return <CardApp key={i} {...val} />;
-                })}
-              </div>
-              <div className="shopping_cart_bottom">
-                <p>
-                  Subtotal (3 items) : <span>$6000</span>{" "}
-                </p>
-                <NavLink to="/checkout" className="btn full_btn ">
-                  Proceed to Purchase
-                </NavLink>
-              </div>
-            </div>
+            <CartList />
           </div>
           <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-            <RightCard />
+            <CartTotal />
           </div>
-          <div className="col-12">
-            <SliderBottom />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <div className="cart_slider_top_div">
+            <div className="container">
+              <SliderBottom />
+            </div>
           </div>
         </div>
       </div>
@@ -115,59 +34,161 @@ export const Cart = () => {
   );
 };
 
-const RightCard = () => {
-  const CardData = [
+const CartList = () => {
+  const ListData = [
     {
-      img: youtubecamp,
-      title: "Luno Electrical - Creation - Website",
-      price: "100",
+      ListImg: ListIcon,
+      ListTitle: "Luno Electrical - Creation - Website",
+      type: "Advanced",
+      Frequency: "Monthly",
+      price: "$2000",
     },
     {
-      img: youtubecamp,
-      title: "Luno Electrical - Creation - Website",
-      price: "100",
+      ListImg: ListIcon,
+      ListTitle: "Luno Electrical - Creation - Website",
+      type: "Advanced",
+      Frequency: "Monthly",
+      price: "$2000",
     },
     {
-      img: youtubecamp,
-      title: "Luno Electrical - Creation - Website",
-      price: "100",
+      ListImg: ListIcon,
+      ListTitle: "Luno Electrical - Creation - Website",
+      type: "Advanced",
+      Frequency: "Monthly",
+      price: "$2000",
     },
     {
-      img: youtubecamp,
-      title: "Luno Electrical - Creation - Website",
-      price: "100",
+      ListImg: ListIcon,
+      ListTitle: "Luno Electrical - Creation - Website",
+      type: "Advanced",
+      Frequency: "Monthly",
+      price: "$2000",
+    },
+    {
+      ListImg: ListIcon,
+      ListTitle: "Luno Electrical - Creation - Website",
+      type: "Advanced",
+      Frequency: "Monthly",
+      price: "$2000",
     },
   ];
-  const CardApp = (props) => {
+  const ListApp = (props) => {
     return (
       <>
-        <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-12 ">
-          <ul className="cart_div_new">
-            <li>
-              <img
-                className="productimg w-80 m-auto"
-                alt="Products"
-                src={props.img}
-              />
-            </li>
-            <li>
-              <p className="cart_div_new_title">{props.title}</p>
-              <p className="cart_div_new_price">${props.price}</p>
-            </li>
-          </ul>
-        </div>
+        <tr>
+          <td>
+            <div>
+              <ul>
+                <li>
+                  <img
+                    className="list_icon_cart"
+                    src={props.ListImg}
+                    alt="icon"
+                  />
+                </li>
+                <li className="cart_title_div">{props.ListTitle}</li>
+              </ul>
+            </div>
+          </td>
+          <td className="cart_title_div_td cart_title_div_Type">
+            {props.type}
+          </td>
+          <td className="cart_title_div_td cart_title_div_monthly">
+            {props.Frequency}
+          </td>
+          <td className="cart_title_div_td cart_title_div_price">
+            {props.price}
+          </td>
+          <td className="cart_title_div_td cart_title_div_delete_icon">
+            <img src={DeleteIcon} alt="icon" />
+          </td>
+        </tr>
+        <div className="td_body_cart_div_mb"></div>
       </>
     );
   };
   return (
     <>
-      <div className="my_slick_slider_title py-2">
-        <h2>Products related to items in your cart</h2>
+      <table class="table cart_tabel">
+        <thead>
+          <tr className="cart_title_div_top_tr">
+            <th scope="col">Product/Service Title</th>
+            <th scope="col">Type</th>
+            <th scope="col">Frequency</th>
+            <th scope="col">Price</th>
+            <th scope="col">action</th>
+          </tr>
+        </thead>
+        <tbody className="td_body_cart_div">
+          {ListData.map((val, i) => {
+            return <ListApp key={i} {...val} />;
+          })}
+        </tbody>
+      </table>
+    </>
+  );
+};
+const CartTotal = () => {
+  const PriceData = [
+    {
+      title: "Sub Total",
+      price: "$6000",
+    },
+    {
+      title: "GST 12%",
+      price: "$720",
+    },
+  ];
+  const PriceApp = (props) => {
+    return (
+      <div className="row">
+        <div className="col-6">
+          <p>{props.title}</p>
+        </div>
+        <div className="col-6 cart_total_top_inner_color">
+          <p>{props.price}</p>
+        </div>
       </div>
-      <div className="row g-4">
-        {CardData.map((val, i) => {
-          return <CardApp key={i} {...val} />;
+    );
+  };
+  return (
+    <>
+      <div className="cart_total_top">
+        <div className="row">
+          <div className="col-6">
+            <p>Sub Total</p>
+          </div>
+          <div className="col-6 text-end">
+            <p>Amount</p>
+          </div>
+        </div>
+      </div>
+      <div className="cart_total_top_inner">
+        {PriceData.map((val, i) => {
+          return <PriceApp key={i} {...val} />;
         })}
+        <hr />
+        <div className="row">
+          <div className="col-6">
+            <p>Total</p>
+          </div>
+          <div className="col-6 cart_total_top_inner_color">
+            <p>$6720</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 cart_total_top_btn ">
+            <NavLink to="/checkout" className="btn full_btn">
+              Checkout
+            </NavLink>
+          </div>
+        </div>
+      </div>
+      <div className="cart_total_top_call">
+        <p>Need Help?</p>
+        <a href="tel:+ 877-685-2222">
+          <span>Call</span> 877-685-2222
+        </a>
       </div>
     </>
   );

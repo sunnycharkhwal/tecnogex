@@ -21,7 +21,7 @@ import {
   formatCVV,
   formatExpirationDate,
 } from "./utils";
-
+import { NavLink } from "react-router-dom";
 import "react-credit-cards/es/styles-compiled.css";
 export const Checkout = () => {
   return (
@@ -167,9 +167,11 @@ const OrderSummary = () => {
       </>
     );
   };
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="order_summary_div">
+      <div className="order_summary_div mb-0">
         <div className="order_summary_div_title">
           order summary <MdOutlineModeEdit /> <span>03</span>
           <hr />
@@ -206,6 +208,19 @@ const OrderSummary = () => {
                 <div className="col-6 order_summary_total_title">Total</div>
                 <div className="col-6 order_summary_total_price">$6720</div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 cart_total_top_btn mb-0">
+            <NavLink className="btn full_btn ">Checkout</NavLink>
+          </div>
+          <div className="col-12 mt-3 d-flex justify-content-center">
+            <div className="checkout_back_btn" onClick={() => navigate(-1)}>
+              <span>
+                <HiArrowNarrowLeft />
+              </span>
+              Back to cart
             </div>
           </div>
         </div>
