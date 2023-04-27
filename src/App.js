@@ -54,6 +54,11 @@ import { AboutUs } from "./Modules/Maxlence/pages/AboutUs";
 import { YourServicesDetails } from "./Modules/Maxlence/pages/YourServicesDetails";
 import { Testimonial } from "./Modules/Maxlence/pages/Testimonial";
 import { DesignInspirationDetail } from "./Modules/Maxlence/pages/DesignInspirationDetail";
+import ScrollToTop from "react-scroll-to-top";
+import { FaChevronUp } from "react-icons/fa";
+import { PrivacyPolicy } from "./Modules/Maxlence/pages/PrivacyPolicy";
+import { RefundPolicy } from "./Modules/Maxlence/pages/RefundPolicy";
+import { TermsConditions } from "./Modules/Maxlence/pages/TermsConditions";
 export const App = () => {
   return (
     <React.StrictMode>
@@ -61,6 +66,9 @@ export const App = () => {
         <Router>
           <Header />
           <ActiveNav />
+          <div className="scroll_to_top">
+            <ScrollToTop component={<FaChevronUp />} smooth />
+          </div>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/creation" element={<Creation />} />
@@ -122,6 +130,9 @@ export const App = () => {
               path="/design_inspiration_detail"
               element={<DesignInspirationDetail />}
             />
+            <Route path="/privacy_policy" element={<PrivacyPolicy />} />
+            <Route path="/refund_policy" element={<RefundPolicy />} />
+            <Route path="/terms_conditions" element={<TermsConditions />} />
           </Routes>
           <Footer />
         </Router>

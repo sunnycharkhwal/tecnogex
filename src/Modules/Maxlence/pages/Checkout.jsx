@@ -213,7 +213,7 @@ const OrderSummary = () => {
         </div>
         <div className="row">
           <div className="col-12 cart_total_top_btn mb-0">
-            <NavLink className="btn full_btn ">Checkout</NavLink>
+            <NavLink className="btn full_btn">Make Payment</NavLink>
           </div>
           <div className="col-12 mt-3 d-flex justify-content-center">
             <div className="checkout_back_btn" onClick={() => navigate(-1)}>

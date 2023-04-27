@@ -1313,203 +1313,7 @@
     color: rgba(33, 37, 41, 0.7);
   }
 }
-.package_card {
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 1.5rem;
-  h3 {
-    font-weight: 700 !important;
-    font-size: 40px;
-    line-height: 47px;
-    color: #212529;
-    span {
-      color: #0a76e5;
-    }
-  }
-  p {
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-  }
-}
-.package_card_row {
-  display: flex;
-  justify-content: center;
-}
-.package_card_box_col {
-  margin-right: -25px;
-  margin-bottom: 2rem;
-}
-.package_card_box {
-  padding: 1rem;
-  border-top: 7px solid #0a76e5;
-  position: relative;
-  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.16);
-  background-color: white;
-  z-index: 0;
-  transition: transform 0.3s;
 
-  min-height: 60rem;
-  overflow: hidden;
-  &:hover {
-    -ms-transform: scale(0.1); /* IE 9 */
-    -webkit-transform: scale(0.1); /* Safari 3-8 */
-    transform: scale(0.9);
-  }
-  .package_card_box_bage {
-    height: 7rem;
-    width: 7rem;
-    background-color: #0a76e5;
-    position: absolute;
-    top: -65px;
-    right: -48px;
-    z-index: -1;
-    transform: rotate(129deg);
-  }
-  .package_card_box_bage_text {
-    position: absolute;
-    color: white;
-    top: 5px;
-    right: 0px;
-    transform: rotate(39deg);
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: capitalize;
-    text-align: center;
-  }
-}
-.package_card_box_header {
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: 1.5rem;
-  h3 {
-    font-weight: 500 !important;
-    font-size: 24px;
-  }
-  p {
-    font-weight: 400 !important;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 0;
-    color: #7a7a7a;
-  }
-}
-.package_card_tab_div {
-  .nav {
-    justify-content: center;
-  }
-  .nav-link {
-    background: #dcedff !important;
-    border-radius: 0 !important;
-    color: #898989;
-    font-weight: 600;
-    text-transform: capitalize;
-    &:hover {
-      color: #898989 !important;
-    }
-  }
-  .nav-pills .nav-link.active,
-  .nav-pills .show > .nav-link {
-    color: var(--bs-nav-pills-link-active-color);
-    background-color: #0a76e5 !important;
-    &:hover {
-      color: white !important;
-    }
-  }
-}
-.package_card_tab_one_div {
-  .nav-link {
-    border-top-left-radius: 10px !important;
-    border-bottom-left-radius: 10px !important;
-  }
-}
-.package_card_tab_last_div {
-  .nav-link {
-    border-top-right-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
-  }
-}
-.package_card_tab_second_div {
-  .nav-link {
-    border-left: 1px solid black !important;
-    border-right: 1px solid black !important;
-  }
-}
-.package_card_box_price {
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: 1rem;
-  del {
-    font-weight: 500 !important;
-    font-size: 36px;
-  }
-  div {
-    font-weight: 600 !important;
-    font-size: 14px;
-    color: #7a7a7a;
-    margin-top: 6px;
-    border: 1px solid #e8d8d8;
-    padding: 26px 0;
-    border-radius: 6px;
-    span {
-      font-weight: 500 !important;
-      font-size: 36px;
-      margin: 0 8px;
-    }
-  }
-}
-.package_card_box_overview {
-  text-transform: capitalize;
-  margin-top: 1.5rem;
-  h3 {
-    font-weight: 500 !important;
-    font-size: 16px;
-    color: #212529;
-    margin-bottom: 5px;
-  }
-  p {
-    font-weight: 500 !important;
-    font-size: 14px;
-    color: #7a7a7a;
-    margin-bottom: 0;
-  }
-}
-.package_card_box_list_div {
-  margin-top: 1rem;
-  .package_card_box_list {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 0;
-    img {
-      height: 20px;
-      width: 20px;
-      margin-top: 2px;
-    }
-    p {
-      margin-bottom: 10px;
-      font-weight: 400 !important;
-      font-size: 14px;
-      margin-left: 10px;
-      line-height: 25px;
-      text-transform: capitalize;
-    }
-  }
-}
-.package_card_box_btn_div {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  position: absolute;
-  bottom: 1rem;
-  left: 110px;
-  .package_card_box_btn_bottom {
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-}
 .full_btn2 {
   color: white !important;
   font-weight: 600;
@@ -2674,3 +2478,17 @@ ul {
     margin-bottom: 1rem;
   }
 }
+//
+// scroll_to_top
+.scroll_to_top {
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      font-size: 18px !important;
+      color: black;
+    }
+  }
+}
+// scroll_to_top end

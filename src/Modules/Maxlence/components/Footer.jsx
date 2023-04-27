@@ -18,12 +18,6 @@ export const Footer = () => {
                 <li>
                   <NavLink to="/your_account">Accounts</NavLink>
                 </li>
-
-                <li>
-                  <Nav.Link>
-                    <NavLink to="/refundpolicy">Refund Policy</NavLink>
-                  </Nav.Link>
-                </li>
                 <li>
                   <Nav.Link>
                     <NavLink to="/support">Support</NavLink>
@@ -31,17 +25,22 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Nav.Link>
-                    <NavLink to="/">Privacy Policy</NavLink>
-                  </Nav.Link>
-                </li>
-                <li>
-                  <Nav.Link>
-                    <NavLink to="/"> Refund Policy</NavLink>
-                  </Nav.Link>
-                </li>
-                <li>
-                  <Nav.Link>
                     <NavLink to="/getintouch">Get In Touch</NavLink>
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link>
+                    <NavLink to="/privacy_policy">Privacy Policy</NavLink>
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link>
+                    <NavLink to="/refund_policy"> Refund Policy</NavLink>
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link>
+                    <NavLink to="/terms_conditions">Terms & conditions</NavLink>
                   </Nav.Link>
                 </li>
               </ul>
