@@ -6,6 +6,59 @@
   }
 }
 @media (max-width: 576px) {
+  .desktop_tab_div_title {
+    h3 {
+      font-weight: 700 !important;
+      font-size: 22px !important;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+  }
+  .mobile_tab_div {
+    display: block;
+  }
+  .package_card_top_right {
+    margin-top: 1rem;
+  }
+  .package_card_header {
+    h3 {
+      font-weight: 700 !important;
+      font-size: 17px !important;
+    }
+  }
+  .package_card_box {
+    min-height: auto;
+  }
+  .package_card_top_3 {
+    overflow: unset;
+    height: auto;
+  }
+  .package_card_up {
+    display: none;
+  }
+  .package_card_top_4 {
+    display: none;
+  }
+  .package_card_box {
+    h3 {
+      position: relative;
+      top: unset;
+      left: unset;
+      font-size: 14px !important;
+    }
+  }
+  .package_card_bottom {
+    margin-top: 15px !important;
+    .package_card_header {
+      display: block;
+    }
+    .package_card_recommended_div {
+      display: unset;
+    }
+  }
   .cart_tabel {
     overflow-x: auto;
     display: block;
@@ -510,6 +563,27 @@
   }
 }
 @media (min-width: 768px) {
+  .mobile_tab_div {
+    display: none;
+  }
+  .package_card_top_right {
+    margin-top: 1rem;
+  }
+  .package_card_header {
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .package_card_top_4 {
+    display: none;
+  }
+  .package_card_box {
+    h3 {
+      position: relative;
+      top: unset;
+      left: unset;
+    }
+  }
   .img_view_modal_inner_div {
     max-height: 33rem;
   }
@@ -659,6 +733,29 @@
   }
 }
 @media (min-width: 1024px) {
+  .package_card_header {
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .package_card_top_4 {
+    display: block;
+  }
+  .package_card_box {
+    h3 {
+      position: absolute;
+      top: 12px;
+      left: -13rem;
+    }
+  }
+  .package_card_top_right {
+    margin-top: 1rem;
+  }
+  .package_card_header {
+    h3 {
+      font-size: 15px;
+    }
+  }
   .img_view_modal_inner_div {
     max-height: 43rem;
   }
@@ -843,6 +940,14 @@
   }
 }
 @media (min-width: 1440px) {
+  .package_card_top_right {
+    margin-top: 0;
+  }
+  .package_card_header {
+    h3 {
+      font-size: 17px;
+    }
+  }
   .img_view_modal_inner_div {
     max-height: 43rem;
   }

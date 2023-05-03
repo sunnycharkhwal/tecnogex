@@ -10,13 +10,9 @@ import Checkbox from "@mui/material/Checkbox";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-export const Checkboxes = (props) => {
-  return (
-    <>
-      <Checkbox sx={{ p: 0 }} {...label} {...props} />
-    </>
-  );
-};
+export const Checkboxes = (props) => (
+  <Checkbox sx={{ p: 0 }} {...label} {...props} />
+);
 
 // Select DropDown
 //CKtexteditor
@@ -40,14 +36,16 @@ export const SelectBox = (props) => {
       onChange={handleChange}
       helperText={props.helperText}
       label={props.label}
-      value={currency}>
+      value={currency}
+    >
       {props.data.map((option) => (
         <MenuItem
           onClick={() => {
             if (option.url) navigate(option.url);
           }}
           key={option.value}
-          value={option.value}>
+          value={option.value}
+        >
           {option.label}
         </MenuItem>
       ))}
@@ -85,7 +83,8 @@ export const InputBoxWithSwitch = (props) => {
         "& .MuiTextField-root": { width: "100%" },
       }}
       noValidate
-      autoComplete="off">
+      autoComplete="off"
+    >
       <div>
         {/* Toggle */}
         <div className="input_box_with_switch_div">

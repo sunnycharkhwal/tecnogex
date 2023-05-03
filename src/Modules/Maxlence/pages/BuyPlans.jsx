@@ -2,6 +2,581 @@ import { PackageCard } from "../components/PackageCard";
 import { useState } from "react";
 import EndGif from "../../../img/lo.gif";
 
+const card_data = {
+  // Package One Data
+  PackageOneData: [
+    {
+      recommendedText: "Recommended For You",
+      recommendedDisplay: "none",
+      packageName: "On Page Optimization",
+      packageNameColor: "#DA9E2E",
+      price: "₹2000/m",
+      overview:
+        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+      packageLink: "/",
+      boxData: [
+        {
+          boxbackgroundColor: "#f1f6fa",
+          boxTitle: "Features",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "none",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+        {
+          boxbackgroundColor: "white",
+          boxTitle: "Results to expect",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+        {
+          boxbackgroundColor: "#f1f6fa",
+          boxTitle: "is it for you?",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  // Package One Data end
+  // Package two Data
+  PackagetwoData: [
+    {
+      recommendedText: "Recommended For You",
+      recommendedDisplay: "block",
+      packageName: "Paid Guest Posting",
+      packageNameColor: "#439dd3",
+      price: "₹2001/m",
+      overview:
+        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+      packageLink: "/",
+      boxData: [
+        {
+          boxbackgroundColor: "#f1f6fa",
+          boxTitle: "Features",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+        {
+          boxbackgroundColor: "white",
+          boxTitle: "Results to expect",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+        {
+          boxbackgroundColor: "#f1f6fa",
+          boxTitle: "is it for you?",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  // Package two Data end
+  // Package three Data
+  PackagethreeData: [
+    {
+      recommendedText: "Recommended For You",
+      recommendedDisplay: "none",
+      packageName: "Guest Posting",
+      packageNameColor: "#D86161",
+      price: "₹2002/m",
+      overview:
+        " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+      packageLink: "/",
+      boxData: [
+        {
+          boxbackgroundColor: "#f1f6fa",
+          boxTitle: "Features",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "none",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "none",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+        {
+          boxbackgroundColor: "white",
+          boxTitle: "Features",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+        {
+          boxbackgroundColor: "#f1f6fa",
+          boxTitle: "Features",
+          boxPointsData: [
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+            {
+              boxPoint: "5,7,10 Pages Optimized",
+              boxPointTooltip: "null",
+              boxPointTooltipText:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illo odio obcaecati asperiores, expedita sit rerum culpa inventore aliquam dolore odit non in earum similique nisi at! Incidunt, fuga eos.",
+              boxPointTooltipPlacement: "top",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  PackageRightCardUiData: [
+    {
+      title: "Highly Rated By Clients For",
+      rating: "4.5",
+      ResultsData: [
+        {
+          resultsTitle: "High Results",
+        },
+        {
+          resultsTitle: "High Results2",
+        },
+        {
+          resultsTitle: "High Results3",
+        },
+      ],
+      HighlightsData: [
+        {
+          points: "CTR ipsum dolor pulvinar lacus.",
+        },
+        {
+          points: "CTR ipsum dolor pulvinar lacus.",
+        },
+        {
+          points: "CTR ipsum dolor pulvinar lacus.",
+        },
+        {
+          points: "CTR ipsum dolor pulvinar lacus.",
+        },
+        {
+          points: "CTR ipsum dolor pulvinar lacus.",
+        },
+      ],
+      DefinitionsData: [
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+        {
+          title: "CTR",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+        },
+      ],
+    },
+  ],
+};
+// Package three Data end
 export const BuyPlans = () => {
   const [showEndPage, setShowEndPage] = useState(true);
   const End = () => {
@@ -35,10 +610,8 @@ export const BuyPlans = () => {
 
 const Package = () => {
   return (
-    <>
-      <div className=" container mt-5 mb-5">
-        <PackageCard />
-      </div>
-    </>
+    <div className="mt-5 mb-5">
+      <PackageCard {...card_data} />
+    </div>
   );
 };
