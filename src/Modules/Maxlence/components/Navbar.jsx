@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, NavLink } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { OutlineBtn, BlueBtn } from "../components/Btn";
-import logo from "../assests/maxlogodark.png";
+import HeaderLogo from "../../../img/HeaderLogo.svg";
 import Modal from "react-bootstrap/Modal";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { TextAreaBox } from "../components/form";
@@ -193,7 +193,7 @@ export const Header = () => {
               }}
             >
               <div className=" ">
-                <img width="100" src={logo} alt="companylogo" />
+                <img width="100" src={HeaderLogo} alt="companylogo" />
               </div>
             </Link>
           </Modal.Header>
@@ -485,7 +485,7 @@ export const Header = () => {
           <Modal.Header closeButton>
             <Link to="/home">
               <div className="logo">
-                <img width="100" src={logo} alt="companylogo" />
+                <img width="100" src={HeaderLogo} alt="companylogo" />
               </div>
             </Link>
           </Modal.Header>
@@ -596,7 +596,7 @@ export const Header = () => {
               }}
             >
               <div className=" ">
-                <img width="100" src={logo} alt="companylogo" />
+                <img width="100" src={HeaderLogo} alt="companylogo" />
               </div>
             </Link>
           </Modal.Header>
@@ -686,7 +686,7 @@ export const Header = () => {
               }}
             >
               <div className=" ">
-                <img width="100" src={logo} alt="companylogo" />
+                <img width="100" src={HeaderLogo} alt="companylogo" />
               </div>
             </Link>
           </Modal.Header>
@@ -780,7 +780,7 @@ export const Header = () => {
               }}
             >
               <div className=" ">
-                <img width="100" src={logo} alt="companylogo" />
+                <img width="100" src={HeaderLogo} alt="companylogo" />
               </div>
             </Link>
           </Modal.Header>
@@ -857,7 +857,7 @@ export const Header = () => {
               }}
             >
               <div className=" ">
-                <img width="100" src={logo} alt="companylogo" />
+                <img width="100" src={HeaderLogo} alt="companylogo" />
               </div>
             </Link>
           </Modal.Header>
@@ -1150,7 +1150,7 @@ export const Header = () => {
       <Navbar expand="lg">
         <Navbar.Brand className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 m-0 ">
           <NavLink to="/">
-            <img width="100%" src={logo} alt="companylogo" />
+            <img width="100%" src={HeaderLogo} alt="companylogo" />
           </NavLink>
         </Navbar.Brand>
         <Navbar.Collapse id="navbarScroll">

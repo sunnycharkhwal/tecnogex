@@ -6,6 +6,59 @@
   }
 }
 @media (max-width: 576px) {
+  .view_case_studies_text_div {
+    text-align: center;
+    h3 {
+      font-weight: 700 !important;
+      font-size: 24px !important;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .view_case_studies_img {
+    width: 100%;
+    height: 25rem;
+    margin-top: 3rem;
+  }
+
+  .our_clients_item_div_text {
+    .Svg1 {
+      display: none;
+    }
+    .Svg2 {
+      display: none;
+    }
+  }
+  .our_clients_top_div_title {
+    h3 {
+      font-weight: 700 !important;
+      font-size: 25px !important;
+      margin-bottom: 1rem;
+    }
+  }
+  .our_clients_top_div {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .our_clients_top_union3 {
+    display: none;
+  }
+  .our_clients_top_union2 {
+    display: none;
+  }
+  .our_clients_top_union1 {
+    display: none;
+  }
+  .our_clients_top_div {
+    .our_clients_item_div {
+      width: 95%;
+      h3 {
+        font-weight: 600 !important;
+        font-size: 18px !important;
+      }
+    }
+  }
   .desktop_tab_div_title {
     h3 {
       font-weight: 700 !important;
@@ -563,6 +616,35 @@
   }
 }
 @media (min-width: 768px) {
+  .view_case_studies_img {
+    width: 100%;
+    height: 22rem;
+  }
+  .view_case_studies_text_div {
+    h3 {
+      font-size: 37px;
+    }
+  }
+  .our_clients_top_union3 {
+    position: absolute;
+    bottom: 17px;
+    right: 8rem;
+  }
+  .our_clients_top_union2 {
+    position: absolute;
+    top: 7rem;
+    right: 2rem;
+  }
+  .our_clients_top_union1 {
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+  }
+  .our_clients_top_div {
+    .our_clients_item_div {
+      width: 80%;
+    }
+  }
   .mobile_tab_div {
     display: none;
   }
@@ -733,6 +815,32 @@
   }
 }
 @media (min-width: 1024px) {
+  .view_case_studies_text_div {
+    h3 {
+      font-size: 48px;
+    }
+  }
+  .view_case_studies_img {
+    width: 100%;
+    height: 28rem;
+  }
+  .our_clients_top_div {
+    .our_clients_item_div {
+      width: 50%;
+    }
+  }
+  .our_clients_top_union3 {
+    bottom: 17px;
+    right: 15rem;
+  }
+  .our_clients_top_union2 {
+    top: 7rem;
+    right: 6rem;
+  }
+  .our_clients_top_union1 {
+    top: 9rem;
+    left: 7rem;
+  }
   .package_card_header {
     h3 {
       font-size: 15px;
@@ -940,6 +1048,22 @@
   }
 }
 @media (min-width: 1440px) {
+  .view_case_studies_img {
+    width: 100%;
+    height: 31rem;
+  }
+  .our_clients_top_union3 {
+    bottom: 17px;
+    right: 21rem;
+  }
+  .our_clients_top_union2 {
+    top: 6rem;
+    right: 10rem;
+  }
+  .our_clients_top_union1 {
+    top: 10rem;
+    left: 14rem;
+  }
   .package_card_top_right {
     margin-top: 0;
   }

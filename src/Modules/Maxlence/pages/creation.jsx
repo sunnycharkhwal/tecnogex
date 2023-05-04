@@ -6,9 +6,6 @@ import { Helmet } from "react-helmet";
 export const Creation = () => {
   return (
     <>
-      <Helmet>
-        <title>Tecnogex2</title>
-      </Helmet>
       <div className="container discover position-relative">
         <DrawerLeft data="creation_page" />
         <div className="row justify-content-center">

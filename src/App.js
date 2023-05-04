@@ -23,8 +23,8 @@ export const App = () => {
             <ScrollToTop component={<FaChevronUp />} smooth />
           </div>
           <Routes>
-            {RoutesList.map((route) => (
-              <Route {...route} />
+            {RoutesList.map((route, i) => (
+              <Route key={i} {...route} />
             ))}
           </Routes>
           <Footer />

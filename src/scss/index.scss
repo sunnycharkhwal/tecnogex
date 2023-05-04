@@ -2790,3 +2790,191 @@ ul {
     display: none;
   }
 }
+// card end
+.our_clients_item_div_text {
+  position: relative;
+  .Svg1 {
+    position: absolute;
+    color: #a16657;
+    left: -50px;
+    top: 0;
+    font-size: 32px;
+  }
+  .Svg2 {
+    position: absolute;
+    color: #a16657;
+    right: -45px;
+    bottom: 0;
+    font-size: 32px;
+  }
+}
+.our_clients_top_div {
+  background-color: #434446;
+  padding-top: 4rem;
+  padding-bottom: 12rem;
+  position: relative;
+  border-radius: 10px;
+  .our_clients_item_div {
+    text-align: center;
+    width: 50%;
+    h3 {
+      color: white;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+    span {
+      color: #c1c1c1;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+    p {
+      color: white;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      margin-top: 20px;
+      overflow: scroll;
+      min-height: auto;
+      max-height: 12rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        svg {
+          color: #ffe925;
+          font-size: 20px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+.our_clients_item_div_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our_clients_item_img_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    @include bg_img;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    margin-bottom: 10px;
+  }
+}
+.our_clients_top_div_title {
+  text-align: center;
+  h3 {
+    font-weight: 700 !important;
+    font-size: 36px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+  }
+}
+.our_clients_top_union1 {
+  position: absolute;
+  top: 10rem;
+  left: 14rem;
+  z-index: 20;
+}
+.our_clients_top_union_inner {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    margin-bottom: 0;
+    color: #0a76e5;
+    position: absolute;
+    top: 25px;
+    left: 55px;
+    font-weight: 400 !important;
+    font-size: 24px;
+  }
+}
+
+.our_clients_top_union2 {
+  position: absolute;
+  top: 6rem;
+  right: 10rem;
+  z-index: 20;
+}
+.our_clients_top_union_inner2 {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    margin-bottom: 0;
+    color: #0a76e5;
+    position: absolute;
+    top: 25px;
+    left: 70px;
+    font-weight: 400 !important;
+    font-size: 24px;
+  }
+}
+.our_clients_top_union3 {
+  position: absolute;
+  bottom: 17px;
+  right: 21rem;
+  z-index: 20;
+}
+.our_clients_top_union_inner3 {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    margin-bottom: 0;
+    color: #0a76e5;
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    font-weight: 400 !important;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+//Package Card end
+// View Case Studies
+.view_case_studies_text_div {
+  h3 {
+    font-weight: 700 !important;
+    font-size: 48px;
+  }
+  p {
+    font-weight: 500 !important;
+    font-size: 14px;
+  }
+  .btn_div {
+    margin-top: 2rem;
+    text-align: left;
+  }
+}
+.view_case_studies_img {
+  @include bg_img;
+  width: 100%;
+  height: 31rem;
+  margin: auto;
+  border-radius: 10px;
+}
+// View Case Studies end

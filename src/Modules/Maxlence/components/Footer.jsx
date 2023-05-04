@@ -5,7 +5,7 @@ import logolight from "../assests/maxlogolight.png";
 import Fblighticon from "../assests/fblighticon.png";
 import Instalighticon from "../assests/instalighticon.png";
 import Twitterlighticon from "../assests/twitterlighticon.png";
-
+import FooterLogo from "../../../img/FooterLogo.svg";
 export const Footer = () => {
   return (
     <>
@@ -83,7 +83,7 @@ export const Footer = () => {
             <div className="col-sm-3 col-12 ">
               <div className="footlogo text-center mb-3">
                 <NavLink to="/">
-                  <img src={logolight} alt="f" />
+                  <img src={FooterLogo} alt="f" />
                 </NavLink>
               </div>
               <div className="footabout fontrale font500">
