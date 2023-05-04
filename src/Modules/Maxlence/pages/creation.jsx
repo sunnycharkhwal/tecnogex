@@ -2,10 +2,13 @@ import { NavLink } from "react-router-dom";
 import Discover from "../assests/discover.png";
 import { DrawerLeft } from "../components/DrawerLeft";
 import { FooterContact } from "../components/FooterContact";
-
+import { Helmet } from "react-helmet";
 export const Creation = () => {
   return (
     <>
+      <Helmet>
+        <title>Tecnogex2</title>
+      </Helmet>
       <div className="container discover position-relative">
         <DrawerLeft data="creation_page" />
         <div className="row justify-content-center">

@@ -1,6 +1,7 @@
 import { PackageCard } from "../components/PackageCard";
 import { useState } from "react";
 import EndGif from "../../../img/lo.gif";
+import { Faqs } from "../components/Faqs";
 
 const card_data = {
   // Package One Data
@@ -612,6 +613,19 @@ const Package = () => {
   return (
     <div className="mt-5 mb-5">
       <PackageCard {...card_data} />
+      <Faqs catId={1} />
     </div>
+  );
+};
+
+const OurClients = () => {
+  return (
+    <>
+      <section>
+        <div>
+          <h3>Our Clients Love The Results</h3>
+        </div>
+      </section>
+    </>
   );
 };

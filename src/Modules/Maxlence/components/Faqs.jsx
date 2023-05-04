@@ -53,7 +53,7 @@ export const Faqs = ({ catId }) => {
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <div>
           <div className="d-flex align-items-center wow animate__animated animate__fadeInUp">
             <div className="faqhomevhead text-left">
@@ -74,7 +74,7 @@ export const Faqs = ({ catId }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="faqContainer">
         <section className="title-centerc container border-0">
           <Faq data={faq} config={config} styles={styles} />
