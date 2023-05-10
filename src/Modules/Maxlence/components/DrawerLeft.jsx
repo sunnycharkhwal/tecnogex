@@ -43,6 +43,10 @@ const AllData = {
       title: "Hosting, Maintenance & Support",
       link: "/creation_webhost",
     },
+    {
+      title: "Website Redesign",
+      link: "/website_redesign",
+    },
   ],
 };
 export const DrawerLeft = (props) => {

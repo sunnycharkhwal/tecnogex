@@ -6,6 +6,131 @@
   }
 }
 @media (max-width: 576px) {
+  .our_approach_title_div {
+    p {
+      font-size: 14px;
+      text-align: justify;
+    }
+  }
+  .our_approach_col_div {
+    h3 {
+      font-weight: 500 !important;
+      font-size: 20px !important;
+    }
+    p {
+      font-size: 12px;
+      text-align: justify;
+    }
+  }
+  .our_approach_title_div {
+    margin-bottom: 1rem;
+    h3 {
+      font-weight: 700 !important;
+      font-size: 27px !important;
+    }
+  }
+  .website_redesign_text_div {
+    p {
+      text-align: justify;
+    }
+  }
+  .website_redesign_text_div_btn {
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
+  .your_slow_loading {
+    h3 {
+      margin-top: 1.5rem;
+    }
+  }
+  .your_slow_loading_btn {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .your_slow_loading {
+    h3 {
+      font-weight: 700 !important;
+      font-size: 24px !important;
+      text-align: center;
+    }
+    p {
+      font-size: 15px;
+      text-align: justify;
+    }
+  }
+  .your_slow_loading_ul {
+    margin-bottom: 1rem !important;
+    .first_li {
+      justify-content: center;
+      p {
+        font-weight: 500;
+        font-size: 20px;
+      }
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .why_you_need_number {
+    h3 {
+      font-size: 25px;
+      margin-bottom: 1.5rem;
+    }
+    h4 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .why_you_need_top_text {
+    p {
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
+  .website_redesign_text_img_div {
+    img {
+      width: 100%;
+      height: 25rem;
+      margin-top: 0rem;
+    }
+  }
+  .website_redesign_text_div {
+    text-align: center;
+    padding-top: 5rem !important;
+    h3 {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+    }
+  }
+  .Agreement_btn_div {
+    button {
+      width: 50%;
+    }
+  }
+  .Search_my_div {
+    width: 100%;
+    img {
+      width: 15px;
+    }
+    input {
+      padding-left: 45px;
+    }
+  }
+  .accept_cookies_img_div {
+    img {
+      height: 11rem;
+      width: 17rem;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .accept_cookies_main_div {
+    width: 95%;
+  }
   .video_div {
     width: 100%;
     height: 15rem;
@@ -620,6 +745,55 @@
   }
 }
 @media (min-width: 768px) {
+  .your_slow_loading {
+    h3 {
+      margin-top: 1.5rem;
+    }
+  }
+  .why_you_need_number {
+    h3 {
+      font-size: 25px;
+      margin-bottom: 1.5rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 11px;
+    }
+  }
+  .why_you_need_top_text {
+    p {
+      font-size: 18px;
+    }
+  }
+  .website_redesign_text_img_div {
+    img {
+      width: 100%;
+      height: 25rem;
+      @include bg_img;
+      margin-top: 0rem;
+    }
+  }
+  .website_redesign_text_div {
+    h3 {
+      font-size: 30px;
+    }
+  }
+  .Agreement_btn_div {
+    button {
+      width: 20%;
+    }
+  }
+  .Search_my_div {
+    width: 70%;
+    img {
+      width: 15px;
+    }
+    input {
+      padding-left: 45px;
+    }
+  }
   .video_div {
     width: 100%;
     height: 23rem;
@@ -823,6 +997,59 @@
   }
 }
 @media (min-width: 1024px) {
+  .your_slow_loading {
+    h3 {
+      margin-top: 0;
+    }
+  }
+  .your_slow_loading_img {
+    width: 100%;
+    height: 21rem;
+  }
+  .why_you_need_number {
+    h3 {
+      font-size: 40px;
+      margin-bottom: 3rem;
+    }
+    h4 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .why_you_need_top_text {
+    p {
+      font-size: 28px;
+    }
+  }
+  .website_redesign_text_img_div {
+    img {
+      width: 100%;
+      height: 25rem;
+      @include bg_img;
+      margin-top: 0rem;
+    }
+  }
+  .website_redesign_text_div {
+    h3 {
+      font-size: 40px;
+    }
+  }
+  .Agreement_btn_div {
+    button {
+      width: 15%;
+    }
+  }
+  .Search_my_div {
+    width: 50%;
+    img {
+      width: 15px;
+    }
+    input {
+      padding-left: 45px;
+    }
+  }
   .video_div {
     width: 100%;
     height: 30rem;
@@ -1060,6 +1287,45 @@
   }
 }
 @media (min-width: 1440px) {
+  .your_slow_loading_img {
+    width: 100%;
+    height: 25rem;
+  }
+  .why_you_need_number {
+    h3 {
+      font-size: 40px;
+      margin-bottom: 3rem;
+    }
+    h4 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .website_redesign_text_img_div {
+    img {
+      width: 100%;
+      height: 25rem;
+      margin-top: 3rem;
+    }
+  }
+  .website_redesign_text_div {
+    padding-top: 3rem;
+    h3 {
+      font-size: 48px;
+      margin-bottom: 2rem;
+    }
+  }
+  .Search_my_div {
+    width: 37%;
+    img {
+      width: 15px;
+    }
+    input {
+      padding-left: 45px;
+    }
+  }
   .view_case_studies_img {
     width: 100%;
     height: 31rem;

@@ -50,6 +50,8 @@ import { PrivacyPolicy } from "./Modules/Maxlence/pages/PrivacyPolicy";
 import { RefundPolicy } from "./Modules/Maxlence/pages/RefundPolicy";
 import { TermsConditions } from "./Modules/Maxlence/pages/TermsConditions";
 import { Helmet } from "react-helmet";
+import { Agreement } from "./Modules/Maxlence/pages/Agreement";
+import { WebsiteRedesign } from "./Modules/Maxlence/pages/WebsiteRedesign";
 const Page = (props) => (
   <>
     <Helmet>
@@ -466,6 +468,22 @@ export default [
     element: (
       <Page title="TermsConditions">
         <TermsConditions />
+      </Page>
+    ),
+  },
+  {
+    path: "/agreement",
+    element: (
+      <Page title="TermsConditions">
+        <Agreement />
+      </Page>
+    ),
+  },
+  {
+    path: "/website_redesign",
+    element: (
+      <Page title="TermsConditions">
+        <WebsiteRedesign />
       </Page>
     ),
   },

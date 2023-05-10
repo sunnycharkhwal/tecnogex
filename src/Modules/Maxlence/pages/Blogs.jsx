@@ -51,7 +51,7 @@ const BlogsList = () => {
       title: "Lorem ipsum dolor sit amet.",
       category: "Maxlence",
       date: "Oct 19, 2021",
-      titme: "5 min",
+      time: "5 min",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
       link: "/",
     },
@@ -60,7 +60,7 @@ const BlogsList = () => {
       title: "Lorem ipsum dolor sit amet.",
       category: "Maxlence",
       date: "Oct 19, 2021",
-      titme: "5 min",
+      time: "5 min",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
       link: "/",
     },
@@ -69,7 +69,7 @@ const BlogsList = () => {
       title: "Lorem ipsum dolor sit amet.",
       category: "Maxlence",
       date: "Oct 19, 2021",
-      titme: "5 min",
+      time: "5 min",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
       link: "/",
     },
@@ -78,7 +78,7 @@ const BlogsList = () => {
       title: "Lorem ipsum dolor sit amet.",
       category: "Maxlence",
       date: "Oct 19, 2021",
-      titme: "5 min",
+      time: "5 min",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
       link: "/",
     },
@@ -87,7 +87,7 @@ const BlogsList = () => {
       title: "Lorem ipsum dolor sit amet.",
       category: "Maxlence",
       date: "Oct 19, 2021",
-      titme: "5 min",
+      time: "5 min",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
       link: "/",
     },
@@ -113,11 +113,10 @@ const BlogsList = () => {
                 </div>
                 <div className="row blogsubinfo col-12 my-2 justify-content-between ">
                   <div>
-                    <small className="text-white">{props.category}</small>{" "}
+                    <small className="text-white">{props.category}</small>
                     &nbsp;
                     <small className="blogdate text-white">{props.date}</small>
-                  </div>
-                  <div>
+                    &nbsp; &nbsp;
                     <small className="text-white">{props.time} read</small>
                   </div>
                 </div>

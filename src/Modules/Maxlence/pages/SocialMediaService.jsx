@@ -23,8 +23,10 @@ import Linkedincard from "../assests/linkedincard.png";
 import Pinterestcard from "../assests/pinterestcard.png";
 import Twittercard from "../assests/twittercard.png";
 import Youtubecard from "../assests/youtubecard.png";
-
+import { AiFillCloseCircle } from "react-icons/ai";
+import Modal from "react-bootstrap/Modal";
 export const SocialMediaService = () => {
+  const [showVideoModal, setShowVideoModal] = React.useState(false);
   return (
     <>
       <div
@@ -487,7 +489,17 @@ export const SocialMediaService = () => {
         </div>
       </div>
       <div className="container-fluid gadsvideo px-0">
-        <img className="w-100" src={Gadsvideo} alt="hfd" />
+        <img
+          className="w-100"
+          style={{ cursor: "pointer" }}
+          src={Gadsvideo}
+          alt="hfd"
+          onClick={() => setShowVideoModal(true)}
+        />
+        <VideoModal
+          show={showVideoModal}
+          onHide={() => setShowVideoModal(false)}
+        />
       </div>
       <div className="container my-sm-4 py-sm-3 py-3 my-3 ">
         <div className="campworkhead py-3 my-3 text-center">
@@ -696,3 +708,27 @@ const SliderBottom = () => {
     </>
   );
 };
+const VideoModal = (props) => (
+  <Modal
+    {...props}
+    size="lg"
+    aria-labelledby="contained-modal-title-vcenter"
+    centered
+    className="video_div_top"
+  >
+    <Modal.Body className="video_div_body">
+      <iframe
+        className="video_div"
+        src="https://www.youtube.com/embed/mq508HXzccI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <AiFillCloseCircle
+        className="video_modal_close_btn"
+        onClick={props.onHide}
+      />
+    </Modal.Body>
+  </Modal>
+);

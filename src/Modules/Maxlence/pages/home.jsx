@@ -26,7 +26,7 @@ import { MainSlider } from "../components/TestimonialComp";
 import Tab from "react-bootstrap/Tab";
 import { VscStarFull, VscStarHalf } from "react-icons/vsc";
 import ENDPOINT from "../config/ENDPOINT";
-
+import Ctasearch from "../assests/ctasearch.png";
 export const Shoptabs = (props) => {
   return (
     <Tab.Container
@@ -187,7 +187,7 @@ export const Home = () => {
   return (
     <>
       <Container fluid className="" style={{ backgroundColor: "#fafafa" }}>
-        <Container className="py-3 mt-3">
+        <Container className="py-3">
           <div className="row py-3">
             <div>
               <Slider {...settings}>
@@ -271,8 +271,30 @@ export const Home = () => {
         ctaheading="Search your digital solution here"
         btntype="out_line_btn"
         btntext="Get In Touch"
+        className="Search_my_div"
       >
-        <Form className="d-flex mt-3">
+        <div class="p-1  ">
+          <div class="input-group justify-content-around align-items-center">
+            <img
+              style={{ position: "absolute", left: "2.2rem", zIndex: "10" }}
+              src={Ctasearch}
+              alt=""
+            />
+            <input
+              type="search"
+              placeholder="Search Here"
+              aria-describedby="button-addon1"
+              class="form-control ctasearch rounded-pill  fontrale border-0 bg-light m-3"
+            />
+            <br />
+          </div>
+        </div>
+        {/* <Form className="d-flex mt-3">
+          <img
+            style={{ position: "absolute", left: "2.2rem", zIndex: "10" }}
+            src={Ctasearch}
+            alt=""
+          ></img>
           <Form.Control
             type="search"
             placeholder="Search"
@@ -280,7 +302,7 @@ export const Home = () => {
             aria-label="Search"
           />
           <span className=""></span>
-        </Form>
+        </Form> */}
         {/* <TextField
           fullWidth
           id="standard-bare"

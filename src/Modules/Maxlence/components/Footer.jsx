@@ -58,6 +58,11 @@ export const Footer = () => {
                     <NavLink to="/support">Support</NavLink>
                   </Nav.Link>
                 </li>
+                <li>
+                  <Nav.Link>
+                    <NavLink to="/agreement">Agreement</NavLink>
+                  </Nav.Link>
+                </li>
               </ul>
             </div>
             <div className="col-sm-3 col-12 ">
@@ -112,9 +117,9 @@ export const Footer = () => {
                   </a>
                 </div>
                 <div className="curr text-center">
-                  <NavLink to="/">
+                  <a href="https://twitter.com/tecnogex_" target="_blank">
                     <img src={Twitterlighticon} alt="f" />
-                  </NavLink>
+                  </a>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ import youtubecamp from "../assests/youtubecamp.jpg";
 import pageseo from "../assests/pageseo.jpg";
 import socialmediamarketing from "../assests/socialmediamarketing.jpg";
 import emailmarketing from "../assests/emailmarketing.jpg";
-//
+// Package  Data end
 let demoImg = "https://source.unsplash.com/random/500x500/?seo";
 const card_data = {
   // Package One Data
@@ -589,7 +589,7 @@ const card_data = {
     },
   ],
 };
-// Package three Data end
+// Package  Data end
 export const BuyPlans = () => {
   const [showEndPage, setShowEndPage] = useState(true);
   const End = () => {
@@ -618,7 +618,7 @@ export const BuyPlans = () => {
       </>
     );
   };
-  return <>{showEndPage ? <Package /> : <Package />}</>;
+  return <>{showEndPage ? <End /> : <Package />}</>;
 };
 
 const Package = () => {
