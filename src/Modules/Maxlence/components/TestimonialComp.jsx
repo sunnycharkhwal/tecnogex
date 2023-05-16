@@ -50,9 +50,10 @@ export const MainSlider = ({
     <Container
       fluid
       className="my-sm-4 py-sm-4 py-3 my-3"
-      style={{ backgroundColor: "#F5F5F5" }}>
+      style={{ backgroundColor: "#F5F5F5" }}
+    >
       <Container className="">
-        <h1 className={titleClass}>{SliderTitle}</h1>
+        <h2 className={titleClass}>{SliderTitle}</h2>
         <Slider className={"slidebluearrows " + sliderClass} {...settings}>
           {data.map((val, i) => (
             <SliderCard key={i} {...val} />

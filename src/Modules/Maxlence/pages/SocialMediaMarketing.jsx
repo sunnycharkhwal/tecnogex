@@ -28,11 +28,11 @@ export const SocialMediaMarketing = () => {
           </div>
           <div className="row  justify-content-around align-items-center">
             <div className="col-12 col-md-12 col-lg-6 my-3 text-sm-left ">
-              <h1 className="my-4">
+              <h1 className="my-4 all_h1_title">
                 Combining the <span>Power of Paid</span> and
                 <span> Organic Social</span>
               </h1>
-              <p>
+              <p className="all_h1_title_p">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Doloremque nostrum quibusdam possimus labore adipisci cum ut,
                 soluta consequuntur nemo sapiente quo voluptatum sunt at cumque.
@@ -58,10 +58,10 @@ export const SocialMediaMarketing = () => {
             className="text-center my-3"
             style={{ visibility: "visible", animationName: "fadeInDown" }}
           >
-            <h1 className="font-weight-bold my-sm-4">
+            <h2 className="font-weight-bold my-sm-4 all_h1_title">
               What services are covered in
               <span> Enterprise Social Media </span>
-            </h1>
+            </h2>
           </div>
 
           <div
@@ -110,11 +110,11 @@ export const SocialMediaMarketing = () => {
       <div className="container my-4">
         <div className="row justify-content-around align-items-center">
           <div className="col-12 col-md-12 col-lg-6 my-3  text-sm-left">
-            <h1 className="my-4">
+            <h2 className="my-4 all_h1_title">
               Experience the full <span>impact</span> of
               <span> Social Media</span>
-            </h1>
-            <p>
+            </h2>
+            <p className="all_h1_title_p">
               With more social media channels in existence than ever before,
               it’s easy to get overwhelmed and overlook its potential. With the
               help of our team, our team can help you create and implement a
@@ -138,8 +138,13 @@ export const SocialMediaMarketing = () => {
               <img className="w-100" src={Socialeffect} alt="cd" />
             </div>
             <div className="col-md-6 text-white text-md-right text-center">
-              <h2 className="mb-5">Is Social Media Marketing Effective?</h2>
-              <p style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              <h2 className="mb-5 all_h1_title">
+                Is Social Media Marketing Effective?
+              </h2>
+              <p
+                className="all_h1_title_p"
+                style={{ color: "rgba(255, 255, 255, 0.7)" }}
+              >
                 Social media marketing is essential to every company’s growth
                 and maturity. As a business, you must always be present where
                 your customers are to inform them of deals and news, but also to
@@ -158,10 +163,10 @@ export const SocialMediaMarketing = () => {
       <div className="container my-5">
         <div className="row justify-content-around align-items-center">
           <div className="col-12 my-3 text-center">
-            <h1 className="my-4">
+            <h2 className="my-4 all_h1_title">
               Don’t let non-experts touch your social media platform!
-            </h1>
-            <p style={{ color: "#212529b2" }}>
+            </h2>
+            <p className="all_h1_title_p" style={{ color: "#212529b2" }}>
               Posting consistent, accurate, and on-brand content is critical to
               always being in your audience’s feeds and is something best left
               to an expert. Don’t feel forced to purchase PPC or social ads in
@@ -173,7 +178,7 @@ export const SocialMediaMarketing = () => {
       </div>
       <div className="container-fluid bg grsocialmedia bgproperty">
         <div className="container p-sm-5">
-          <h1 className="text-center">How it works</h1>
+          <h2 className="text-center all_h1_title">How it works</h2>
           <div className="row my-4 justify-content-between align-items-center">
             <div className="col-sm-6 order-2 order-sm-0 text-center">
               <img className="w-100" src={Grsocialpng} alt="df" />

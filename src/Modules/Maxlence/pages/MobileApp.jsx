@@ -66,8 +66,8 @@ export const MobileApp = () => {
         </div>
         <div className="row  justify-content-around align-items-center">
           <div className="col-12 col-md-12 col-lg-7 my-3  text-sm-start ">
-            <h6>WEBSITE CREATION SERVICES</h6>
-            <h1 className="my-4">
+            <p className=" mb-1 fw-bold">WEBSITE CREATION SERVICES</p>
+            <h1 className="my-4 all_h1_title">
               It’s not about how great our app is, but the effect it has on your
               organization
             </h1>
@@ -120,7 +120,9 @@ export const MobileApp = () => {
         <div className="container">
           <div className="row py-3">
             <div className="col-md-6">
-              <h2 className="">For native and cross-platform applications</h2>
+              <h2 className="all_h1_title">
+                For native and cross-platform applications
+              </h2>
               <br />
               <p>
                 Our experience across multiple industries allows us to build
@@ -147,7 +149,7 @@ export const MobileApp = () => {
       <div className="container mmdash">
         <div className="row justify-content-between my-3 py-4">
           <div className="col-lg-4 my-3">
-            <h2>
+            <h2 className="all_h1_title">
               How We <span>Carve App UI/UX Differently?</span>
             </h2>
             <img className="w-100 my-5" src={Mobileapp_craveui} alt="f" />
@@ -157,7 +159,7 @@ export const MobileApp = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>1</h1>
+                    <h2>1</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -177,7 +179,7 @@ export const MobileApp = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>2</h1>
+                    <h2>2</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -197,7 +199,7 @@ export const MobileApp = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>3</h1>
+                    <h2>3</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -218,7 +220,7 @@ export const MobileApp = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>4</h1>
+                    <h2>4</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -238,7 +240,7 @@ export const MobileApp = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>5</h1>
+                    <h2>5</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -274,7 +276,7 @@ export const MobileApp = () => {
           <div className="row justify-content-around align-items-center ">
             <div className="col-lg-4">
               <div>
-                <h2 className="text-white">
+                <h2 className="text-white all_h1_title">
                   Ideal Process of App UI/UX Design
                 </h2>
                 <p
@@ -302,7 +304,7 @@ export const MobileApp = () => {
         <div className="row pt-sm-0 pb-sm-0 pt-5 pb-3">
           <div className="col-12 text-center">
             <div>
-              <h1>Services We Offer</h1>
+              <h2 className="all_h1_title">Services We Offer</h2>
             </div>
             <div className="my-3">
               <p>
@@ -497,7 +499,9 @@ const Tabs = () => {
       <div className="container-fluid shop filter__wrap my-sm-4 py-sm-5 py-0 my-3">
         <div className="container">
           <div className="homeshophead text-center py-sm-0 pt-5 pb-3 wow animate__animated animate__fadeIn animate__slow">
-            <h1>Tools & Technologies Used in UI/UX Design</h1>
+            <h2 className="all_h1_title">
+              Tools & Technologies Used in UI/UX Design
+            </h2>
             <p className="mt-4">
               We take each work as unique and custom, keeping the process very
               personalized for the product. However, in most scenarios, our

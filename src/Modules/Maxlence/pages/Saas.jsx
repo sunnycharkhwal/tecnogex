@@ -23,8 +23,10 @@ export const Saas = () => {
         </div>
         <div className="row  justify-content-around align-items-center">
           <div className="col-12 col-md-12 col-lg-7 my-3  ">
-            <h6>SaaS Product Creation</h6>
-            <h1 className="my-4">Pragmatic UI/UX design agency for SaaS</h1>
+            <p className=" mb-1 fw-bold">SaaS Product Creation</p>
+            <h1 className="my-4 all_h1_title">
+              Pragmatic UI/UX design agency for SaaS
+            </h1>
             <div className="py-4">
               <NavLink
                 to="/Questionare_Page"
@@ -58,7 +60,7 @@ export const Saas = () => {
       <div className="container">
         <div className="row  justify-content-around align-items-center">
           <div className="col-12 col-md-12 col-lg-5 my-3  ">
-            <h2 className="my-4">
+            <h2 className="my-4 all_h1_title">
               The UI design must be easy, but your product can be complex
             </h2>
             <p>
@@ -93,7 +95,7 @@ export const Saas = () => {
           </div>
 
           <div className="col-md-6 mb-3 mt-0 text-md-right text-center wow animate__animated animate__fadeInUp">
-            <h2 className="font-weight-bold text-white my-4">
+            <h2 className="font-weight-bold text-white my-4 all_h1_title">
               <b>It's because designing SaaS apps is a drag</b>
             </h2>
             <p style={{ color: "rgb(255, 255, 255, 0.7) " }}>
@@ -122,8 +124,10 @@ export const Saas = () => {
       <div className="container py-3 my-5">
         <div className="row  justify-content-around align-items-center">
           <div className="col-12 col-md-12 col-lg-7 my-3">
-            <h6>Design can make or break a SaaS</h6>
-            <h1 className="my-4">You can still find the right people</h1>
+            <p className=" mb-1 fw-bold">Design can make or break a SaaS</p>
+            <h2 className="my-4 all_h1_title">
+              You can still find the right people
+            </h2>
             <p style={{ color: "#212529B2" }}>
               When users stop using your product and there’s a new competitor
               luring them away, it's often a design problem.
@@ -144,10 +148,10 @@ export const Saas = () => {
       >
         <div className="row justify-content-center py-5">
           <div className="col-12 text-center wow animate__animated animate__fadeInDown">
-            <h1 className="text-dark">'Hands-on' UX/UI design</h1>
+            <h2 className="text-dark all_h1_title">'Hands-on' UX/UI design</h2>
           </div>
           <div className="my-3 text-center col-10">
-            <p>
+            <p className="all_h1_title_p">
               We'll work together to improve your SaaS product by prioritising
               areas that will help you retain and engage more users. We do this
               through wireframes and high-fidelity visual design mockups.
@@ -165,7 +169,7 @@ export const Saas = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>1</h1>
+                    <h2>1</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -186,7 +190,7 @@ export const Saas = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>2</h1>
+                    <h2>2</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -206,7 +210,7 @@ export const Saas = () => {
               <div className="row my-3 justify-content-around align-content-start">
                 <div className="col-2">
                   <div>
-                    <h1>3</h1>
+                    <h2>3</h2>
                   </div>
                 </div>
                 <div className="col-10">
@@ -239,7 +243,7 @@ export const Saas = () => {
         <div className="row">
           <div className="text-center">
             <div>
-              <h2>Full Product Design</h2>
+              <h2 className="all_h1_title">Full Product Design</h2>
             </div>
             <div className="my-3">
               <p>

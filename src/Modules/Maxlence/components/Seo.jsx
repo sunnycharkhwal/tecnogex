@@ -23,10 +23,10 @@ export const Seo = () => {
           </div>
           <div className="row  justify-content-around align-items-center">
             <div className="col-12 col-md-12 col-lg-7 my-3 text-sm-left ">
-              <h1 className="my-4">
+              <h1 className="my-4 all_h1_title">
                 <span>More Traffic. More Revenue.</span> Boost Your Ranking
               </h1>
-              <p>
+              <p className="all_h1_title_p">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Doloremque nostrum quibusdam possimus labore adipisci cum ut,
                 soluta consequuntur nemo sapiente quo voluptatum sunt at cumque.
@@ -49,10 +49,10 @@ export const Seo = () => {
       <div className="container py-5 my-3 secoservices">
         <div className="row justify-content-center">
           <div className="latestprojecttitle col-md-8 text-center">
-            <h1 className="font-weight-bold my-4  wow animate__animated animate__fadeInDown animate__delay-1s">
+            <h2 className=" all_h1_title font-weight-bold my-4  wow animate__animated animate__fadeInDown animate__delay-1s">
               How Do You Get <span>Top Ranks</span> In SEO?
-            </h1>
-            <p className="  wow animate__animated animate__fadeInUp animate__delay-1s">
+            </h2>
+            <p className="all_h1_title_p  wow animate__animated animate__fadeInUp animate__delay-1s">
               Well optimized sites get more and more traffic over time, and that
               means more leads and sales. Without SEO, searcher won’t be able to
               find your site, and all your hard work will be for nothing.
@@ -123,8 +123,8 @@ export const Seo = () => {
         <div className="container py-3 my-2">
           <div className="row  justify-content-between align-items-center">
             <div className="col-12 col-md-12 col-lg-7 my-3 text-sm-left ">
-              <h2 className="my-4">What we do.</h2>
-              <p style={{ color: "#212529B2" }}>
+              <h2 className="my-4 all_h1_title">What we do.</h2>
+              <p className="all_h1_title_p" style={{ color: "#212529B2" }}>
                 Our campaigns build a website's relevance and trust with search
                 engines. Every task performed has a specific purpose that
                 improves your website's ranking. Some of these tasks include
@@ -167,7 +167,7 @@ export const Seo = () => {
             <img className="w-100" src={Seoresult} alt="dd" />
           </div>
           <div className="col-md-4 text-md-right text-center">
-            <h2>Be found first</h2>
+            <h2 className="all_h1_title">Be found first</h2>
             <h6>93% of online queries start on a search engine.</h6>
             <p>
               If you're not one of the first results, you’re losing traffic to
@@ -184,9 +184,9 @@ export const Seo = () => {
           <div className="row text-center justify-content-between">
             <div className="col-md-4">
               <div className="dataperc my-3">
-                <h1 className="fontpop" style={{ color: "#FE8080" }}>
+                <h2 className="fontpop" style={{ color: "#FE8080" }}>
                   50%
-                </h1>
+                </h2>
                 <p className="text-white">
                   of local searches bring a consumer to a real store within 24
                   hours
@@ -195,9 +195,9 @@ export const Seo = () => {
             </div>
             <div className="col-md-4">
               <div className="dataperc my-3">
-                <h1 className="fontpop" style={{ color: "#FE8080" }}>
+                <h2 className="fontpop" style={{ color: "#FE8080" }}>
                   50%
-                </h1>
+                </h2>
                 <p className="text-white">
                   Of consumers who perform a local search visit a store within 5
                   miles of their current location
@@ -206,9 +206,9 @@ export const Seo = () => {
             </div>
             <div className="col-md-4">
               <div className="dataperc my-3">
-                <h1 className="fontpop" style={{ color: "#FE8080" }}>
+                <h2 className="fontpop" style={{ color: "#FE8080" }}>
                   50%
-                </h1>
+                </h2>
                 <p className="text-white">
                   of mobile searches are more likely to contact a local business
                   if they have a mobile-friendly site
@@ -221,9 +221,9 @@ export const Seo = () => {
       <div className="container py-5 my-3 secoservices">
         <div className="row justify-content-center">
           <div className="latestprojecttitle col-md-8 text-center">
-            <h1 className="font-weight-bold my-4  wow animate__animated animate__fadeInDown animate__delay-1s">
+            <h2 className="font-weight-bold all_h1_title my-4  wow animate__animated animate__fadeInDown animate__delay-1s">
               How Do SEO Process <span>here's how it works</span>
-            </h1>
+            </h2>
           </div>
         </div>
         <div className="row">

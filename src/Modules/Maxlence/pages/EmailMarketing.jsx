@@ -28,11 +28,11 @@ export const EmailMarketing = () => {
               <img className="w-100" src={Emailcamp} alt="f" />
             </div>
             <div className="col-12 col-md-12 col-lg-5 my-3 text-end ">
-              <h1 className="my-4">
+              <h1 className="my-4 all_h1_title">
                 Everybody is doing it.
                 <span>Email Marketing Drives Sales. Period!</span>
               </h1>
-              <p>
+              <p className="all_h1_title_p">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo
                 amet mauris amet, nulla auctor ipsum. Cursus in arcu integer
                 pellentesque sed in mattis.
@@ -80,8 +80,10 @@ export const EmailMarketing = () => {
       <div className="container my-5">
         <div className="row  justify-content-around align-items-center">
           <div className="col-12  my-3 text-center ">
-            <h1 className="my-4">Email Marketing Management & Strategy</h1>
-            <p style={{ color: "#212529B2" }}>
+            <h2 className="my-4 all_h1_title">
+              Email Marketing Management & Strategy
+            </h2>
+            <p className="all_h1_title_p" style={{ color: "#212529B2" }}>
               DMi Partners is an email marketing agency that understands the
               value of our clients’ investment. Our clients routinely tell us
               that their 1st party owned database of email subscribers is their
@@ -107,7 +109,7 @@ export const EmailMarketing = () => {
                   <h5>Technical Integration</h5>
                 </div>
                 <div>
-                  <p>
+                  <p className="all_h1_title_p">
                     Our clients invest a ton of money into email before they
                     even considering the marketing dollars they spent to acquire
                     their database of subscribers. Routinely our clients are
@@ -131,7 +133,7 @@ export const EmailMarketing = () => {
                   <h5>Full Service Email Management</h5>
                 </div>
                 <div>
-                  <p>
+                  <p className="all_h1_title_p">
                     With our Full-Service email management, our clients step out
                     of everything required for their email marketing initiatives
                     except for the pieces they want to provide guidance. DMi is
@@ -156,7 +158,7 @@ export const EmailMarketing = () => {
                   <h5>Comprehensive Email Audit</h5>
                 </div>
                 <div>
-                  <p>
+                  <p className="all_h1_title_p">
                     Our clients invest a ton of money into email before they
                     even considering the marketing dollars they spent to acquire
                     their database of subscribers. Routinely our clients are
@@ -180,7 +182,7 @@ export const EmailMarketing = () => {
                   <h5>Subscriber Onboarding & Welcome Series</h5>
                 </div>
                 <div>
-                  <p>
+                  <p className="all_h1_title_p">
                     Our clients invest a ton of money into email before they
                     even considering the marketing dollars they spent to acquire
                     their database of subscribers. Routinely our clients are
@@ -203,11 +205,11 @@ export const EmailMarketing = () => {
       <div className="container py-3 my-2">
         <div className="row justify-content-between align-items-center">
           <div className="col-12 col-md-12 col-lg-7 my-3 text-sm-left">
-            <h2 className="my-4">
+            <h2 className="my-4 all_h1_title">
               Email Deliverability <br />
               Diagnosis & Repair
             </h2>
-            <p style={{ color: "#212529b2" }}>
+            <p className="all_h1_title_p" style={{ color: "#212529b2" }}>
               The perfectly timed personalized email is worthless if it doesn’t
               reach your subscriber’s inbox. While all of DMi’s marketing
               efforts are designed to prevent inboxing concerns across the

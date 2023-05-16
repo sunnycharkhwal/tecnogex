@@ -2550,7 +2550,7 @@ ul {
   p {
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
     text-transform: capitalize;
   }
   img {
@@ -3277,3 +3277,18 @@ ul {
   }
 }
 // Website Redesign end
+// seo
+.all_h1_title {
+  font-weight: 600 !important;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: capitalize;
+}
+.all_p_title {
+  font-weight: 500 !important;
+  font-size: 24px;
+  line-height: 28px;
+  color: white;
+  margin-bottom: 5px;
+}
+// seo end

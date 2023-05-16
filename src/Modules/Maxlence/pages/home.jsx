@@ -193,11 +193,11 @@ export const Home = () => {
               <Slider {...settings}>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1>
+                    <h1 className="all_h1_title">
                       We pour our heart into every design,
                       <span>Mobile Apps</span>
                     </h1>
-                    <p>
+                    <p className="all_h1_title_p">
                       This is a Dummy text This is a Dummy text This is a Dummy
                       text This is a Dummy textThis is a Dummy text This is a
                       Dummy text.This is a Dummy text This is a Dummy text This
@@ -216,11 +216,11 @@ export const Home = () => {
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1>
+                    <h2 className="all_h1_title">
                       We pour our heart into every design,
                       <span>Mobile Apps</span>
-                    </h1>
-                    <p>
+                    </h2>
+                    <p className="all_h1_title_p">
                       This is a Dummy text This is a Dummy text This is a Dummy
                       text This is a Dummy textThis is a Dummy text This is a
                       Dummy text.This is a Dummy text This is a Dummy text This
@@ -239,11 +239,11 @@ export const Home = () => {
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1>
+                    <h2 className="all_h1_title">
                       We pour our heart into every design,
                       <span>Mobile Apps</span>
-                    </h1>
-                    <p>
+                    </h2>
+                    <p className="all_h1_title_p">
                       This is a Dummy text This is a Dummy text This is a Dummy
                       text This is a Dummy textThis is a Dummy text This is a
                       Dummy text.This is a Dummy text This is a Dummy text This
@@ -325,10 +325,10 @@ export const Home = () => {
               <img width="100%" alt="demo" src={webview} />
             </div>
             <div className="col-12 col-md-12 col-lg-6 col-xl-6">
-              <h1>
+              <h2 className="all_h1_title">
                 We make it <span>easier</span> for you to
                 <span>understand</span> the digital landscape
-              </h1>
+              </h2>
 
               <p>Get your business online, Maximize your exposure.</p>
 
@@ -389,10 +389,10 @@ export const Home = () => {
               <Slider {...settings}>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1>
+                    <h2 className="all_h1_title">
                       Design your own personalised, <span>Logos</span>
-                    </h1>
-                    <p>
+                    </h2>
+                    <p className="all_h1_title_p">
                       This is a Dummy text This is a Dummy text This is a Dummy
                       text This is a Dummy textThis is a Dummy text This is a
                       Dummy text.This is a Dummy text This is a Dummy text This
@@ -411,10 +411,10 @@ export const Home = () => {
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1>
+                    <h2 className="all_h1_title">
                       Design your own personalised, <span>Logos</span>
-                    </h1>
-                    <p>
+                    </h2>
+                    <p className="all_h1_title_p">
                       This is a Dummy text This is a Dummy text This is a Dummy
                       text This is a Dummy textThis is a Dummy text This is a
                       Dummy text.This is a Dummy text This is a Dummy text This
@@ -433,10 +433,10 @@ export const Home = () => {
                 </div>
                 <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1>
+                    <h2 className="all_h1_title">
                       Design your own personalised, <span>Logos</span>
-                    </h1>
-                    <p>
+                    </h2>
+                    <p className="all_h1_title_p">
                       This is a Dummy text This is a Dummy text This is a Dummy
                       text This is a Dummy textThis is a Dummy text This is a
                       Dummy text.This is a Dummy text This is a Dummy text This
@@ -459,7 +459,7 @@ export const Home = () => {
 
           <div className="row align-items-center g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4 py-3 mt-3 ">
             <div className="text-center">
-              <h1>What do you need to design?</h1>
+              <h2 className="all_h1_title">What do you need to design?</h2>
             </div>
             <BluePills
               className="col-12 col-md-6 col-lg-3"
@@ -492,10 +492,10 @@ export const Home = () => {
               <img width="100%" src={homegif} className="" alt="demo" />
             </div>
             <div className="col-12 col-md-12 col-lg-6">
-              <h1>
-                All you need to power your <span>online stores.</span>{" "}
-              </h1>
-              <p>
+              <h2 className="all_h1_title">
+                All you need to power your <span>online stores.</span>
+              </h2>
+              <p className="all_h1_title_p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Doloremque excepturi voluptas magnam eum consectetur tempore.
               </p>
@@ -508,9 +508,9 @@ export const Home = () => {
       </Container>
 
       <Container className="shoptabs py-3 mt-3">
-        <h1 className="text-center my-2">
+        <h2 className="text-center my-2 all_h1_title">
           Shop our services with <span>best offers</span>
-        </h1>
+        </h2>
         <Shoptabs className="productscrollcontainer my-2" />
         <div className="col-md-3 col-7 m-auto">
           {/* <BlueBtn to="/shop" title="View More" /> */}
@@ -528,9 +528,9 @@ export const Home = () => {
         <Container>
           <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-              <h1>
+              <h2 className="all_h1_title">
                 We differentiate between <span>local & enterprise growth</span>
-              </h1>
+              </h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien
                 adipiscing nulla urna dictum tristique porttitor purus. Mattis
@@ -1047,10 +1047,10 @@ export const Home = () => {
             />
           </div>
           <div className="col-12 col-md-12 col-lg-6">
-            <h1>
+            <h2 className="all_h1_title">
               Easily track your projects through <span>client dashborad</span>
-            </h1>
-            <p>
+            </h2>
+            <p className="all_h1_title_p">
               Whether you’re just getting started or are an established brand,
               our powerful platform helps your business grow.
             </p>
@@ -1059,10 +1059,10 @@ export const Home = () => {
 
         <div className="row align-items-center py-3 g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
           <div className="col-12 col-md-12 col-lg-6">
-            <h1>
+            <h2 className="all_h1_title">
               <span>Pellentesque</span> morbi
-            </h1>
-            <p>
+            </h2>
+            <p className="all_h1_title_p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
               feugiat ut blandit nam eget ornare senectus ut. Ultrices
               pellentesque eleifend vehicula volutpat rhoncus metus hendrerit
@@ -1070,7 +1070,7 @@ export const Home = () => {
               tincidunt convallis turpis ipsum. Porttitor eu fusce in non
               porttitor commodo. Fusce ullamcorper urna, amet donec aliquet ut.
             </p>
-            <p>
+            <p className="all_h1_title_p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
               feugiat ut blandit nam eget ornare senectus ut. Ultrices
               pellentesque eleifend vehicula volutpat rhoncus metus hendrerit
@@ -1100,9 +1100,9 @@ export const Home = () => {
               <div className="counter1">
                 <div className="d-flex justify-content-center align-items-start">
                   <div>
-                    <h1 className="counter-value" data-count="98">
+                    <h2 className="counter-value" data-count="98">
                       98
-                    </h1>
+                    </h2>
                   </div>
                   <div>
                     <img className="" src={arrowup} alt="demo" />
@@ -1117,9 +1117,9 @@ export const Home = () => {
               <div className="counter1">
                 <div className="d-flex justify-content-center align-items-start">
                   <div>
-                    <h1 className="counter-value" data-count="98">
+                    <h2 className="counter-value" data-count="98">
                       98
-                    </h1>
+                    </h2>
                   </div>
                   <div>
                     <img className="" src={arrowup} alt="demo" />
@@ -1134,9 +1134,9 @@ export const Home = () => {
               <div className="counter1">
                 <div className="d-flex justify-content-center align-items-start">
                   <div>
-                    <h1 className="counter-value" data-count="98">
+                    <h2 className="counter-value" data-count="98">
                       98
-                    </h1>
+                    </h2>
                   </div>
                   <div>
                     <img className="" src={arrowup} alt="demo" />
@@ -1164,19 +1164,20 @@ export const Home = () => {
       <MainSlider
         data={testimonial}
         SliderCard={TestimonialCard}
-        titleclassName="text-md-end text-center"
+        titleClass="all_h1_title"
         SliderTitle={
           <>
-            <span>Thanks</span> for your <span>sweet</span> words
+            <span>Thanks</span> for your
+            <span> sweet</span> words
           </>
         }
       />
 
       <Container className="py-3 mt-3">
         <div className="text-center my-2">
-          <h1>
+          <h2 className="all_h1_title">
             Our <span>Partners</span>
-          </h1>
+          </h2>
         </div>
         <div className="row align-items-center justify-content-center g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
           <PartnersList />

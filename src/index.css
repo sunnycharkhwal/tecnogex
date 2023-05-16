@@ -2615,7 +2615,7 @@ ul.ab-form-list {
   top: 25%;
   right: -135%;
 }
-.mmdashbullet h1 {
+.mmdashbullet h2 {
   font-size: 100px;
   margin-top: -30px;
   color: #c4c4c4;
@@ -2742,7 +2742,7 @@ ul.ab-form-list {
   /* .pricecardtitle,.question{
 		margin-top:-12rem;
 	} */
-  .mmdashbullet h1 {
+  .mmdashbullet h2 {
     margin-top: -5px;
   }
   .sideactions {

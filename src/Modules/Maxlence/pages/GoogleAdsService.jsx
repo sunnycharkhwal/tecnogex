@@ -33,7 +33,7 @@ export const GoogleAdsService = () => {
             </div>
 
             <div className="col-sm-6 col-12 my-3 order-md-2 order-sm-1 order-1  ">
-              <h1 className="font-weight-bold my-sm-4 ">
+              <h1 className="font-weight-bold my-sm-4 all_h1_title">
                 <b>
                   Enterprise <span>Google Ads </span> Service
                 </b>
@@ -68,10 +68,10 @@ export const GoogleAdsService = () => {
         <div className="container my-sm-4 py-0 my-0">
           <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
             <div className="col-sm-7 col-12 my-3 ">
-              <h1 className="font-weight-bold my-sm-4 ">
+              <h2 className="font-weight-bold my-sm-4 all_h1_title">
                 Enterprise <span> Expand </span> your business with our
                 <span>Google Ads </span> Service
-              </h1>
+              </h2>
               <p className="">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
                 architecto, inventore placeat est porro atque tempore nobis
@@ -123,9 +123,9 @@ export const GoogleAdsService = () => {
         <div className="container my-sm-4 py-0 my-0">
           <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
             <div className="col-md-6 col-12 my-3 ">
-              <h1 className="font-weight-bold my-sm-4">
+              <h2 className="font-weight-bold my-sm-4 all_h1_title">
                 Lorem ipsum <span>dolor</span> sit.
-              </h1>
+              </h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
                 architecto, inventore placeat est porro atque tempore nobis
@@ -150,17 +150,19 @@ export const GoogleAdsService = () => {
       </div>
       <div className="container my-5">
         <div className="gadsservicehead py-3 text-center ">
-          <h1>
+          <h2 className="all_h1_title">
             What <span>services</span>are covered in
             <span>Enterprise Google Ads</span>
-          </h1>
+          </h2>
         </div>
         <img className="w-100 my-3" src={Gadsservices} alt="f" />
       </div>
       <div className="container-fluid mt-5 mystyle">
         <div className="row justify-content-center py-5">
           <div className="col-12 text-center wow animate__animated animate__fadeInDown">
-            <h1 className="text-white">We’d love to be your partner</h1>
+            <h2 className="text-white all_h1_title">
+              We’d love to be your partner
+            </h2>
           </div>
           <div className="text-center mt-4  ">
             <a
@@ -180,12 +182,12 @@ export const GoogleAdsService = () => {
       </div>
       <div className="container py-2 mt-5">
         <div className="gadsservicehead py-3 text-center wow animate__animated animate__fadeInDown">
-          <h1>
+          <h2 className="all_h1_title">
             <b>
               What <span> different</span> we do for
               <span>Enterprise SEO</span>
             </b>
-          </h1>
+          </h2>
         </div>
         <div className="row my-3 justify-content-center">
           <div className="col-sm-5 m-3">
@@ -248,9 +250,9 @@ export const GoogleAdsService = () => {
       </div>
       <div className="container table-responsive my-2 py-2">
         <div className="my-5 py-2 text-center ">
-          <h1>
+          <h2 className="all_h1_title">
             <span>Google Ads Enterprise</span> Services{" "}
-          </h1>
+          </h2>
         </div>
 
         <table className="table  table-bordered planpricetable   table-striped">
@@ -473,16 +475,16 @@ export const GoogleAdsService = () => {
       >
         <div className="container my-sm-4 py-0 my-0">
           <div className="gadsoptimisehead text-center py-3">
-            <h1 className="font-weight-bold my-sm-4 ">
+            <h2 className="font-weight-bold my-sm-4 all_h1_title">
               Optimize your <span> Google Ads </span> account for{" "}
               <span>ROAS</span>
-            </h1>
+            </h2>
           </div>
           <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
             <div className="col-sm-7 col-12 my-3  wow animate__animated animate__fadeInUp">
-              <h1 className="font-weight-bold my-sm-4 ">
+              <h3 className="font-weight-bold my-sm-4 ">
                 What is <span> ROAS </span>
-              </h1>
+              </h3>
               <p className="">
                 ROAS stands for return on ad spend—a marketing metric that
                 measures the amount of revenue your business earns for each
@@ -515,11 +517,11 @@ export const GoogleAdsService = () => {
 
             <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
               <div className="col-sm-7 col-12 my-3  wow animate__animated animate__fadeInUp">
-                <h1 className="font-weight-bold text-center my-sm-4 ">
+                <h2 className="font-weight-bold text-center my-sm-4 all_h1_title">
                   <b>
                     Maximize <span>ROAS</span>
                   </b>
-                </h1>
+                </h2>
                 <p className="">
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -560,7 +562,7 @@ export const GoogleAdsService = () => {
       </div>
       <div className="container my-sm-4 py-sm-3 py-3 my-3 ">
         <div className="campworkhead py-3 my-3 text-center">
-          <h1>Why Our Campaigns Work</h1>
+          <h2 className="all_h1_title">Why Our Campaigns Work</h2>
           <p>We use the best tools</p>
         </div>
 

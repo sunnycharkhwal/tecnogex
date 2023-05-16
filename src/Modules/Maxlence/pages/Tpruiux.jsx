@@ -26,10 +26,10 @@ export const Tpruiux = () => {
       <div className="container  my-sm-4 py-sm-3 py-3 my-3">
         <div className="row justify-content-center">
           <div className="col-md-9">
-            <h1 className="casestudytitle position-relative">
+            <h1 className="casestudytitle position-relative all_h1_title">
               Expanding the business of Plumbing and Gas Services
             </h1>
-            <p>
+            <p className="all_h1_title_p">
               With over 15 years of experience in the Plumbing and Gas industry,
               TPR Plumbing & Gas are your friendly local, and best plumbers in
               Perth , providing professional, quality services for all your
@@ -81,7 +81,7 @@ export const Tpruiux = () => {
                 </h5>
               </div>
               <div className="col-md-9 col-12 px-0">
-                <p>
+                <p className="all_h1_title_p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   at etiam elit fermentum nisl. Dis sed lorem dictum phasellus
                   enim, odio lectus sed. Id tortor sit nisi leo donec. Eget
@@ -113,7 +113,7 @@ export const Tpruiux = () => {
                 </h5>
               </div>
               <div className="col-md-9 col-12 px-0">
-                <p>
+                <p className="all_h1_title_p">
                   The stakeholders were involved in every ideation &
                   brainstorming workshop. This ensured that the users’ needs
                   were taken care of without a disconnect. Maxlence team
@@ -174,8 +174,8 @@ export const Tpruiux = () => {
       >
         <div className="row py-4">
           <div className="col-md-6">
-            <h2 className="mb-4">Wireframes</h2>
-            <p>
+            <h2 className="mb-4 all_h1_title">Wireframes</h2>
+            <p className="all_h1_title_p">
               Initially we had a concept of bold design which client had
               rejected as TPR wanted to focus on luxury services and so wanted a
               website which has elegant and luxurious aesthetics. Then we
@@ -499,9 +499,9 @@ export const Tpruiux = () => {
       >
         <div className="container">
           <div className="col-md-7">
-            <h1 className="text-white my-3">
+            <h2 className="text-white my-3 all_h1_title">
               <b>Listen to what our esteemed client has to say</b>
-            </h1>
+            </h2>
             <small className="text-white mb-0 my-5">
               Steve, Co-founder of BEPE, on how we took his idea to market and
               scale his business
@@ -510,7 +510,7 @@ export const Tpruiux = () => {
 
           <div className="py-3 px-5 my-3 bg-white">
             <div className="py-5">
-              <p className="mb-0">
+              <p className="mb-0 all_h1_title_p">
                 <i>
                   “ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Auctor arcu suspendisse vitae pellentesque. Sollicitudin

@@ -13,8 +13,8 @@ export const Cta = (props) => {
                 props.bgcolor === "greengradient" ? "text-white" : "text-dark"
               }
             >
-              <h5>{props.ctasubheading}</h5>
-              <h1>{props.ctaheading}</h1>
+              <p className="all_p_title">{props.ctasubheading}</p>
+              <h2 className="all_h1_title">{props.ctaheading}</h2>
             </div>
           </div>
         </div>

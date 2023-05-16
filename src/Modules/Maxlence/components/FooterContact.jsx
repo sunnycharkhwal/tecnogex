@@ -5,9 +5,9 @@ export const FooterContact = () => {
       <div className="container-fluid mt-5" style={{ background: "#f5f5f5" }}>
         <div className="row justify-content-center py-5">
           <div className="col-12 text-center">
-            <h1 className="text-dark" style={{ marginBottom: "2.5rem" }}>
+            <h2 className="text-dark" style={{ marginBottom: "2.5rem" }}>
               We’d love to be your partner
-            </h1>
+            </h2>
           </div>
           <div className="getstarted text-center col-12 ">
             <NavLink to="/getintouch" className="whitebgbtn fontrale mt-3">

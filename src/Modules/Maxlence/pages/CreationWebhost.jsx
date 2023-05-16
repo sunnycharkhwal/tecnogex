@@ -21,7 +21,7 @@ export const CreationWebhost = () => {
           <p>
             <b>Hosting, Maintenance & Support</b>
           </p>
-          <h1>
+          <h1 className="all_h1_title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
             vitae condimentum risus.
           </h1>
@@ -41,7 +41,7 @@ export const CreationWebhost = () => {
       >
         <div className="row justify-content-between align-items-start">
           <div className="col-md-5 my-3 text-end ">
-            <h2 className="font-weight-bold my-3 ">
+            <h2 className="font-weight-bold my-3 all_h1_title ">
               <b>
                 <span>
                   <b>Domain Name </b>
@@ -52,7 +52,7 @@ export const CreationWebhost = () => {
                 </span>
               </b>
             </h2>
-            <p>
+            <p className="all_h1_title_p">
               The first thing to check out of your list should be finding a
               domain name. Select on a name that is catchy at first look
               therefore imprinting on your client/customer’s mind. And next time
@@ -128,7 +128,7 @@ export const CreationWebhost = () => {
           </div>
 
           <div className="col-md-4 my-3 text-sm-left">
-            <h2 className="font-weight-bold my-4 ">
+            <h2 className="font-weight-bold my-4 all_h1_title">
               <b>
                 World Class
                 <span>
@@ -169,13 +169,13 @@ export const CreationWebhost = () => {
       <div className="container my-md-5 py-md-3 mt-2 pt-5">
         <div className="row justify-content-center text-center">
           <div className="col-md-10">
-            <h1>
+            <h2 className="all_h1_title">
               <b>
                 We provide ad-hoc and retained support and maintenance for
                 websites
               </b>
-            </h1>
-            <p className="my-5">
+            </h2>
+            <p className="my-5 all_h1_title_p">
               No matter how tight our product cycles are, we never jump straight
               into Sketch too early. We invest time in bringing order to your
               requirements and understanding what we're about to design. This

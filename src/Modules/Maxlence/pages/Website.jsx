@@ -30,17 +30,17 @@ export const Website = () => {
     // <Getintouch />
     <>
       <div className="container-fluid" style={{ backgroundColor: "#fafafa" }}>
-        <div className="container py-3 mt-3">
+        <div className="container py-3">
           <div className="row py-3">
             <div>
               <DrawerLeft data="creation_page" />
               <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                  <h1>
+                  <h1 className="all_h1_title">
                     We pour our heart into every design,
                     <span>Mobile Apps</span>
                   </h1>
-                  <p>
+                  <p className="all_h1_title_p">
                     This is a Dummy text This is a Dummy text This is a Dummy
                     text This is a Dummy textThis is a Dummy text This is a
                     Dummy text.This is a Dummy text This is a Dummy text This is
@@ -89,8 +89,9 @@ export const Website = () => {
         <div className="container">
           <div className="row py-3">
             <div className="col-md-6">
-              <h2 className="">A website you can be proud of</h2> <br />
-              <p>
+              <h2 className="all_h1_title">A website you can be proud of</h2>{" "}
+              <br />
+              <p className="all_h1_title_P">
                 It’s more competitive out there than ever for businesses. Your
                 current website design might be ok, but you need better than ok
                 to meet your business goals. Whether you have an ecommerce store
@@ -148,7 +149,7 @@ export const Website = () => {
 
       <div className="container my-5 py-3">
         <div className="text-center">
-          <h2>Our Approach To Websites</h2>
+          <h2 className="all_h1_title">Our Approach To Websites</h2>
         </div>
         <div className="row my-5 justify-content-around">
           <div className="col-md-3 my-2">
@@ -156,7 +157,7 @@ export const Website = () => {
               <span className="numpink">1</span>
             </div>
             <div>
-              <p className="text-left mb-0">
+              <p className="text-left mb-0 all_h1_title_p">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
                 voluptatibus mollitia iusto voluptas esse, dolores tempore vero
                 cumque ea nihil.
@@ -168,7 +169,7 @@ export const Website = () => {
               <span className="numpink">2</span>
             </div>
             <div>
-              <p className="text-left mb-0">
+              <p className="text-left mb-0 all_h1_title_p">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
                 voluptatibus mollitia iusto voluptas esse, dolores tempore vero
                 cumque ea nihil.
@@ -180,7 +181,7 @@ export const Website = () => {
               <span className="numpink">3</span>
             </div>
             <div>
-              <p className="text-left mb-0">
+              <p className="text-left mb-0 all_h1_title_p">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
                 voluptatibus mollitia iusto voluptas esse, dolores tempore vero
                 cumque ea nihil.
@@ -197,11 +198,11 @@ export const Website = () => {
             <img className="w-100 mb-4" src={creatopti} alt="f" />
           </div>
           <div className="col-md-6 order-md-2 order-sm-1 order-1 my-2">
-            <h2>
+            <h2 className="all_h1_title">
               Optimize your website to turn target audiences into paying
               customers
             </h2>
-            <p>
+            <p className="all_h1_title_p">
               Turning a website visitor into a paying customer is no easy task.
               Redesigning your site to improve user experience and clarity of
               messaging needs to be your next step.
@@ -248,11 +249,11 @@ export const Website = () => {
 
         <div className="row my-md-5 py-md-5 my-2 py-2 justify-content-between">
           <div className="col-md-6">
-            <h2>
+            <h2 className="all_h1_title">
               Responsive web design that differentiates you in a competitive
               marketplace
             </h2>
-            <p>
+            <p className="all_h1_title_p">
               You need a professional website with a look and feel that
               showcases your brand personality. Your redesigned site will be all
               that and more. Whether you're on WordPress, Drupal, HubSpot, or
@@ -307,11 +308,11 @@ export const Website = () => {
             <img className="w-100 mb-4" src={creatopti} alt="f" />
           </div>
           <div className="col-md-6 order-md-2 order-sm-1 order-1">
-            <h2>
+            <h2 className="all_h1_title">
               Professional website redesign to meet the demands of your growing
               company
             </h2>
-            <p>
+            <p className="all_h1_title_p">
               Your company is rapidly growing and your industry is constantly
               changing. Our custom themes are built to grow with the demands of
               your business.
@@ -367,12 +368,12 @@ export const Website = () => {
         style={{ backgroundColor: "#FFD429F2" }}
       >
         <div className="latestprojecttitle text-center">
-          <h1 className="font-weight-bold my-sm-5 my-2">
-            Our{" "}
+          <h2 className=" all_h1_title font-weight-bold my-sm-5 my-2">
+            Our
             <span style={{ color: "#FF4365" }}>
-              <b>Latest Projects</b>{" "}
+              <b> Latest Projects</b>
             </span>
-          </h1>
+          </h2>
         </div>
         <div className="row justify-content-around ">
           <div className="col-md-5 mb-3 mt-0 text-sm-end text-center">

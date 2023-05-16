@@ -25,7 +25,7 @@ export const GoogleAds = () => {
             style={{ position: "relative" }}
           >
             <div className="col-sm-6 col-12 my-3">
-              <h1 className="font-weight-bold my-4 text-md-right text-center wow animate__animated animate__fadeInDown">
+              <h1 className=" all_h1_title font-weight-bold my-4 text-md-right text-center wow animate__animated animate__fadeInDown">
                 Get <span>10x more leads</span> and <span>double</span> the
                 conversion rate
               </h1>
@@ -86,7 +86,7 @@ export const GoogleAds = () => {
                   border: "5px solid white",
                 }}
               >
-                <h1>Specialised In</h1>
+                <h2>Specialised In</h2>
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ export const GoogleAds = () => {
       <div className="container my-5">
         <div className="row justify-content-around align-items-center">
           <div className="col-12 my-3 text-center">
-            <h1 className="my-4">
+            <h2 className="my-4 all_h1_title">
               Add an Experienced AdWords Management Company to Your Team
-            </h1>
-            <p style={{ color: "#212529b2" }}>
+            </h2>
+            <p className="all_h1_title_p" style={{ color: "#212529b2" }}>
               Not every business has the resources to hire a team of AdWords
               experts. If you’re not seeing results from your paid campaign
               efforts and you feel like you’re just washing money down the
@@ -144,8 +144,11 @@ export const GoogleAds = () => {
         <div className="container py-4">
           <div className="row justify-content-around align-items-center">
             <div className="col-md-6 text-white">
-              <h2 className="mb-5">Paid Search Marketing</h2>
-              <p style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              <h2 className="mb-5 all_h1_title">Paid Search Marketing</h2>
+              <p
+                className="all_h1_title_p"
+                style={{ color: "rgba(255, 255, 255, 0.7)" }}
+              >
                 Paid Search Marketing can be an incredibly valuable tool—but
                 only if the person manning the campaigns has had their fair
                 share of experience. That’s where our AdWords management agency
@@ -180,8 +183,8 @@ export const GoogleAds = () => {
             <img className="w-100 mb-4" src={Gadsdisplayad} alt="i" />
           </div>
           <div className="col-md-6 text-right order-md-2 order-sm-1 order-1 my-2">
-            <h2 className="mb-4">Display Advertising</h2>
-            <p>
+            <h2 className="mb-4 all_h1_title">Display Advertising</h2>
+            <p className="all_h1_title_p">
               Most people have become oblivious to the ads that they see when
               browsing a website. In order to make sure that your display ads
               actually get noticed, you need a great design and a compelling
@@ -196,8 +199,8 @@ export const GoogleAds = () => {
 
         <div className="row my-md-5 py-md-5 my-2 py-2 justify-content-between">
           <div className="col-md-6 text-left">
-            <h2 className="mb-4">Video Advertising</h2>
-            <p>
+            <h2 className="mb-4 all_h1_title">Video Advertising</h2>
+            <p className="all_h1_title_p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra
               nam sit adipiscing orci eget ac, nunc. Consequat, enim,
               pellentesque ornare gravida ultrices. Lobortis mauris malesuada
@@ -221,8 +224,8 @@ export const GoogleAds = () => {
             <img className="w-100 mb-4" src={Gadsshop} alt="i" />
           </div>
           <div className="col-md-6 text-right order-md-2 order-sm-1 order-1 my-2">
-            <h2 className="mb-4">Shopping Campaigns</h2>
-            <p>
+            <h2 className="mb-4 all_h1_title">Shopping Campaigns</h2>
+            <p className="all_h1_title_p">
               Using Google Shopping campaigns, you can put your products right
               under the noses of potential consumers. In other words, when a
               user searches for something in Google, your product feed will be

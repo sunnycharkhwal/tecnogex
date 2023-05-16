@@ -12,10 +12,10 @@ export const Bepeseo = () => {
       <div className="container my-sm-4 py-sm-3 py-3 my-3">
         <div className="row justify-content-center">
           <div className="col-md-9">
-            <h1 className="casestudytitle position-relative">
+            <h1 className="casestudytitle position-relative all_h1_title">
               SEO Service for Ballarat Emergency Plumbing & Electrical
             </h1>
-            <p>
+            <p className="all_h1_title_p">
               Ballarat Emergency Plumbing and Electrical can help you 24 hours,
               Seven days a week. They are your friendly plumbers and gas
               installers in Ballarat and offer a comprehensive range of same-day
@@ -66,7 +66,7 @@ export const Bepeseo = () => {
                 </h5>
               </div>
               <div className="col-md-9 col-12 px-0">
-                <p>
+                <p className="all_h1_title_p">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Dicta suscipit, voluptas unde dolore cum amet vel earum
                   doloribus error, necessitatibus harum quis nostrum hic?
@@ -84,7 +84,7 @@ export const Bepeseo = () => {
                 </h5>
               </div>
               <div className="col-md-9 col-12 px-0">
-                <p>
+                <p className="all_h1_title_p">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Dicta suscipit, voluptas unde dolore cum amet vel earum
                   doloribus error, necessitatibus harum quis nostrum hic?
@@ -108,7 +108,7 @@ export const Bepeseo = () => {
                 </h5>
               </div>
               <div className="col-md-9 col-12 px-0">
-                <p>
+                <p className="all_h1_title_p">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Dicta suscipit, voluptas unde dolore cum amet vel earum
                   doloribus error, necessitatibus harum quis nostrum hic?
@@ -120,7 +120,7 @@ export const Bepeseo = () => {
 
           <div className="col-12 my-md-4 py-md-3 my-1 py-2">
             <h5 className="text-dark">Massa dui aliquam nam fermentum</h5>
-            <p>
+            <p className="all_h1_title_p">
               Ballarat Emergency Plumbing and Electrical can help you 24 hours,
               Seven days a week. They are your friendly plumbers and gas
               installers in Ballarat and offer a comprehensive range of same-day
@@ -159,12 +159,12 @@ export const Bepeseo = () => {
           <div className="col-12 md-4 py-md-3 my-1 py-2">
             <div className="row justify-content-between align-items-center">
               <div className="col-md-6 col-12">
-                <p>
+                <p className="all_h1_title_p">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Beatae nam facere voluptate eligendi voluptatum corporis id
                   laudantium sed dolores sit?
                 </p>
-                <p>
+                <p className="all_h1_title_p">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Minus voluptatibus obcaecati veniam quos provident quisquam
                   eaque? Cumque similique, officia animi dolorem dolores
@@ -228,7 +228,7 @@ export const Bepeseo = () => {
                   </h5>
                 </div>
                 <div className="col-md-9 col-12 px-0">
-                  <p>
+                  <p className="all_h1_title_p">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Viverra mollis tempus aliquet amet viverra sem pellentesque.
                     Eget cursus amet, cursus tortor sodales at nisi. Magna
@@ -250,9 +250,9 @@ export const Bepeseo = () => {
       >
         <div className="container">
           <div className="col-md-7">
-            <h1 className="text-white my-3">
+            <h2 className="text-white my-3 all_h1_title">
               <b>Listen to what our esteemed client has to say</b>
-            </h1>
+            </h2>
             <small className="text-white mb-0 my-5">
               Steve, Co-founder of BEPE, on how we took his idea to market and
               scale his business
@@ -261,7 +261,7 @@ export const Bepeseo = () => {
 
           <div className="py-3 px-5 my-3 bg-white">
             <div className="py-5">
-              <p className="mb-0">
+              <p className="mb-0 all_h1_title_p">
                 <i>
                   “ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Auctor arcu suspendisse vitae pellentesque. Sollicitudin

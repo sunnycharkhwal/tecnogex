@@ -10,7 +10,7 @@ export const Business2 = () => {
         <div className="container my-sm-4 py-0 my-0">
           <div className="row my-4 justify-content-center align-items-center text-sm-left text-center">
             <div className="col-sm-8 col-12 my-3 text-center  wow animate__animated animate__fadeInUp">
-              <h1 className="font-weight-bold my-sm-4 ">
+              <h1 className="font-weight-bold my-sm-4 all_h1_title">
                 <span>
                   <b>Create, Advertise, Analyse and Optimise !</b>
                 </span>
@@ -32,13 +32,13 @@ export const Business2 = () => {
           <div className="row justify-content-around align-items-center">
             <div className="homesec3info col-sm-6 my-3 ">
               <div className="m-0 p-0 ">
-                <h1>
+                <h2 className="all_h1_title">
                   Lorem ipsum dolor sit amet
                   <span>
                     <b> consectetur, adipisicing </b>
                   </span>
                   elit.
-                </h1>
+                </h2>
                 <br />
                 <small>Lorem ipsum dolor sit amet consectetur.</small>
               </div>
@@ -96,13 +96,13 @@ export const Business2 = () => {
             />
           </div>
           <div className="col-sm-5 my-4 pb-3 ">
-            <h1 className="my-4 ">
+            <h2 className="my-4 all_h1_title">
               <span>
                 <b>Lorem, ipsum dolor</b>
               </span>
               amet consectetur adipisicing elit.
-            </h1>
-            <p>
+            </h2>
+            <p className="all_h1_title_p">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
               nulla dolorem nostrum placeat rem reprehenderit quia ex, facere
               harum doloribus eaque, velit voluptate error provident dolorum
@@ -133,14 +133,14 @@ export const Business2 = () => {
           <div className="row justify-content-around align-items-center">
             <div className=" col-sm-5 my-3 ">
               <div className="m-0 p-0 ">
-                <h1>
+                <h2 className="all_h1_title">
                   <span>Eleifend</span> pulvinar ut non orci
                   <span>venenatis in.</span>
-                </h1>
+                </h2>
                 <br />
               </div>
               <div>
-                <p>
+                <p className="all_h1_title_p">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
                   necessitatibus nemo, recusandae assumenda labore cupiditate
                   aperiam tempore inventore cum officiis perferendis optio

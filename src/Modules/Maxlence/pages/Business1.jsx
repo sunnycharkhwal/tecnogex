@@ -10,7 +10,7 @@ export const Businessone = () => {
         <div className="container my-sm-4 py-0 my-0">
           <div className="row my-4 justify-content-center align-items-center text-sm-left text-center">
             <div className="col-sm-8 col-12 my-3 text-center  wow animate__animated animate__fadeInUp">
-              <h1 className="my-sm-4 ">
+              <h1 className="my-sm-4 all_h1_title">
                 Create an <span>Online Store</span> for your
                 <span>ecommerce business</span>
               </h1>
@@ -28,12 +28,12 @@ export const Businessone = () => {
             <img className="w-100" src={Businesshero} alt="f" />
           </div>
           <div className="col-sm-6 mb-4">
-            <h1 className="my-4 wow animate__animated animate__fadeInUp animate__slow">
+            <h2 className="my-4 all_h1_title wow animate__animated animate__fadeInUp animate__slow">
               <span>
                 <b>Lorem, ipsum dolor </b>
               </span>
               amet consectetur adipisicing elit.
-            </h1>
+            </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
               nulla!
@@ -57,13 +57,13 @@ export const Businessone = () => {
         <div className="row justify-content-around align-items-center">
           <div className="homesec3info col-sm-6 my-3">
             <div className="m-0 p-0">
-              <h1>
+              <h2 className="all_h1_title">
                 Lorem ipsum dolor sit amet
                 <span>
                   <b> consectetur, adipisicing </b>
                 </span>
                 elit.
-              </h1>
+              </h2>
               <br />
               <small>Lorem ipsum dolor sit amet consectetur.</small>
             </div>
