@@ -1,6 +1,26 @@
+import { useState } from "react";
 import { OutlineBtn } from "../components/Btn";
 
 export const Agreement = () => {
+  const [signfeeinput, setSignfeeinput] = useState("");
+  const [signfeeinput2, setSignfeeinput2] = useState("");
+  const [add2input, setAdd2input] = useState("");
+  const [date, setDate] = useState("");
+  const [totalfeeinput, setTotalfeeinput] = useState("");
+  const [onboardagree, setOnboardagree] = useState("");
+  const [onboardfee1input, setOnboardfee1input] = useState("");
+  const [commissioninput, setCommissioninput] = useState("");
+  // console.log(
+  //   signfeeinput,
+  //   signfeeinput2,
+  //   add2input,
+  //   date,
+  //   totalfeeinput,
+  //   onboardagree,
+  //   onboardfee1input,
+  //   commissioninput
+  // );
+
   return (
     <>
       <div class="container-fluid px-5 my-5">
@@ -71,12 +91,24 @@ export const Agreement = () => {
               Sohna Road, Gurgaon, Haryana, Pincode – 122018) ("TECNOGEX")
             </b>
             and
-            <input class="agreementinput" type="text" name="add2input" /> (legal
-            name of MERCHANT]&ZeroWidthSpace; (in short the “MERCHANT”),
+            <input
+              onChange={(e) => setAdd2input(e.target.value)}
+              value={add2input}
+              class="agreementinput"
+              type="text"
+              name="add2input"
+            />
+            (legal name of MERCHANT]&ZeroWidthSpace; (in short the “MERCHANT”),
             mutually agree to the terms and conditions which are incorporated
             into this agreement as of <b>[ insert current date]</b>
             &ZeroWidthSpace;:
-            <input class="agreementinput" type="date" name="date" />
+            <input
+              onChange={(e) => setDate(e.target.value)}
+              value={date}
+              class="agreementinput"
+              type="date"
+              name="date"
+            />
           </p>
           <h5>A. Definition or meanings</h5>
           <p>
@@ -146,6 +178,8 @@ export const Agreement = () => {
           <p>
             <b>3.1.</b> &nbsp; MERCHANT agrees to pay onboarding fee of Rs.
             <input
+              onChange={(e) => setTotalfeeinput(e.target.value)}
+              value={totalfeeinput}
               class="agreementinput mx-2"
               type="text"
               name="totalfeeinput"
@@ -177,12 +211,22 @@ export const Agreement = () => {
                     <td class=" my-2">
                       <div class="d-flex justify-content-around align-items-center">
                         <div class="form-check pl-0">
-                          <input type="radio" name="onboardagree" value="0" />
+                          <input
+                            value="yes"
+                            type="radio"
+                            name="onboardagree"
+                            onChange={(e) => setOnboardagree("yes")}
+                          />
                           <label for="yesboardopt">Yes</label>
                         </div>
 
                         <div class="form-check">
-                          <input type="radio" name="onboardagree" value="0" />
+                          <input
+                            value="no"
+                            type="radio"
+                            name="onboardagree"
+                            onChange={(e) => setOnboardagree("no")}
+                          />
                           <label for="noboardopt">No</label>
                         </div>
                       </div>
@@ -198,6 +242,8 @@ export const Agreement = () => {
                     </td>
                     <td class="text-center">
                       <input
+                        onChange={(e) => setOnboardfee1input(e.target.value)}
+                        value={onboardfee1input}
                         class="agreementinput"
                         type="text"
                         name="onboardfee1input"
@@ -224,6 +270,8 @@ export const Agreement = () => {
                       <td>The merchant shall agree to this commission %</td>
                       <td class="text-center">
                         <input
+                          onChange={(e) => setCommissioninput(e.target.value)}
+                          value={commissioninput}
                           class="agreementinput form-control"
                           type="text"
                           name="commissioninput"
@@ -689,7 +737,13 @@ export const Agreement = () => {
           <p>
             <b>
               By:
-              <input class="agreementinput" type="text" name="signfeeinput" />
+              <input
+                onChange={(e) => setSignfeeinput(e.target.value)}
+                value={signfeeinput}
+                class="agreementinput"
+                type="text"
+                name="signfeeinput"
+              />
             </b>
           </p>
           <p>Title Date: _____</p>
@@ -699,7 +753,13 @@ export const Agreement = () => {
           <p>
             <b>
               By:
-              <input class="agreementinput" type="text" name="signfeeinput" />
+              <input
+                onChange={(e) => setSignfeeinput2(e.target.value)}
+                value={signfeeinput2}
+                class="agreementinput"
+                type="text"
+                name="signfeeinput"
+              />
             </b>
           </p>
           <p>Title Date: _____</p>
