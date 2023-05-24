@@ -21,6 +21,7 @@ import Gadsservices from "../assests/gadsservices.png";
 import { Faqs } from "../components/Faqs";
 import { AiFillCloseCircle } from "react-icons/ai";
 import Modal from "react-bootstrap/Modal";
+import { BsDot } from "react-icons/bs";
 export const GoogleAdsService = () => {
   const [showVideoModal, setShowVideoModal] = React.useState(false);
   return (
@@ -35,13 +36,15 @@ export const GoogleAdsService = () => {
             <div className="col-sm-6 col-12 my-3 order-md-2 order-sm-1 order-1  ">
               <h1 className="font-weight-bold my-sm-4 all_h1_title">
                 <b>
-                  Enterprise <span>Google Ads </span> Service
+                  Maximize Your <span> ROI and Crush </span> the Enterprise
+                  -level Competition!
                 </b>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                architecto, inventore placeat est porro atque tempore nobis
-                harum minima. Eum?
+                With our experience and knowledge, we can help you take your
+                enterprise business to new heights, just like CommBank has done
+                with their financial services. Contact us today to learn more
+                about our enterprise-level Google Ads services!
               </p>
               <div className="mt-4">
                 <NavLink
@@ -69,13 +72,17 @@ export const GoogleAdsService = () => {
           <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
             <div className="col-sm-7 col-12 my-3 ">
               <h2 className="font-weight-bold my-sm-4 all_h1_title">
-                Enterprise <span> Expand </span> your business with our
-                <span>Google Ads </span> Service
+                Reach your business <span>expectations </span> With our
+                <span> Enterprise ads </span> Services!
               </h2>
               <p className="">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                architecto, inventore placeat est porro atque tempore nobis
-                harum minima. Eum?
+                Are you struggling to see the results you want from your Google
+                Ads campaigns? Our Enterprise Ads services can help! With our
+                proven tactics and strategies, we can optimize your campaigns
+                for maximum ROI and generate high-quality leads for your
+                business. Don't settle for lackluster results - let us help you
+                reach your full potential with Google Ads. Contact us today to
+                get started!
               </p>
               <div className="mt-5">
                 <NavLink
@@ -151,7 +158,7 @@ export const GoogleAdsService = () => {
       <div className="container my-5">
         <div className="gadsservicehead py-3 text-center ">
           <h2 className="all_h1_title">
-            What <span>services</span>are covered in
+            What <span>services</span> are covered in
             <span>Enterprise Google Ads</span>
           </h2>
         </div>
@@ -185,7 +192,7 @@ export const GoogleAdsService = () => {
           <h2 className="all_h1_title">
             <b>
               What <span> different</span> we do for
-              <span>Enterprise SEO</span>
+              <span> Enterprise SEO</span>
             </b>
           </h2>
         </div>
@@ -193,56 +200,65 @@ export const GoogleAdsService = () => {
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Advance Keyword Search</b>
+                <b>Dynamic Search Ads</b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Don't let potential customers slip away! With dynamic search
+                ads, we can target specific keywords, potential customers, like
+                those who are searching for "best deals on smartphones in
+                Sydney," and search queries to drive traffic to your website and
+                increase your online visibility.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Tactics for Optimization</b>
+                <b>Advanced Conversion and Attribution</b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                By utilizing our advanced tracking and analysis tools, we can
+                identify the roadblocks that are preventing your campaigns from
+                delivering the results you desire. From there, we can optimize
+                your campaigns to achieve maximum ROI and ensure that every
+                dollar you spend is working hard to generate revenue for your
+                business.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Advancement in SEO Strategic Speed</b>
+                <b>Advanced Google Ads Optimization</b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Imagine an Australian e-commerce store drawing in customers
+                searching for "online clothing stores in Melbourne" with
+                targeted ads. This is simply possible with powerful features
+                like dynamic search ads and keyword targeting, you can attract
+                your ideal audience and drive traffic to your website.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Lorem ipsum dolor sit.</b>
+                <b>SKAGs - Single Keyword Ad Groups </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                You know that Australian-based dental clinic uses SKAGs to
+                target users searching for "teeth whitening services in Sydney.
+                Simply, by grouping your ads into highly specific ad groups
+                centered around a single keyword, we can ensure your ads are
+                highly targeted and optimized for maximum impact.
               </p>
             </div>
           </div>
@@ -476,35 +492,71 @@ export const GoogleAdsService = () => {
         <div className="container my-sm-4 py-0 my-0">
           <div className="gadsoptimisehead text-center py-3">
             <h2 className="font-weight-bold my-sm-4 all_h1_title">
-              Optimize your <span> Google Ads </span> account for{" "}
-              <span>ROAS</span>
+              ROAS First, Everything Else Second. Optimize Now!{" "}
+              <span> Everything Else Second.</span> Optimize Now!
             </h2>
           </div>
           <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
             <div className="col-sm-7 col-12 my-3  wow animate__animated animate__fadeInUp">
               <h3 className="font-weight-bold my-sm-4 ">
-                What is <span> ROAS </span>
+                What is <span> Maximizing ROAS? </span>
               </h3>
               <p className="">
-                ROAS stands for return on ad spend—a marketing metric that
-                measures the amount of revenue your business earns for each
-                dollar it spends on advertising. For all intents and purposes,
-                ROAS is practically the same as another metric you’re probably
-                familiar with: return on investment, or ROI. In this case, the
-                money you’re spending on digital advertising is the investment
-                on which you’re tracking returns.
+                Are you a large e-commerce retailer selling a large number of
+                products in multiple locations and want to attract more
+                customers? The first thing you decide to do is run a Google Ads
+                campaign or simply paid ads to promote your business. You spend
+                $1000 on advertising and generate $3000 in revenue from the
+                customers who come in after seeing your ads. Your ROAS would be
+                3:1 (or 300%).
                 <br />
-                <br /> At the most basic level, ROAS measures the effectiveness
-                of your advertising efforts; the more effectively your
-                advertising messages connect with your prospects, the more
-                revenue you’ll earn from each dollar of ad spend. The higher
-                your ROAS, the better.
+                <br /> ROAS is a way to measure the effectiveness of your
+                advertising campaigns. It helps you understand whether you're
+                getting a good return on your investment. By focusing on
+                optimising your ad spend, you can increase the effectiveness of
+                your campaigns and improve your ROI.
                 <br />
-                <br /> If you’re so inclined, you can measure ROAS at a variety
-                of levels within your Google Ads account: the account level, the
-                campaign level, the ad group level, and so on. As long as you
-                know how much you’re spending and earning at that particular
-                level, you can calculate ROAS.
+                <p className="mb-0 mt-3">
+                  <b>
+                    To maximise your ROAS (return on ad spend), we use
+                    strategies like:
+                  </b>
+                  <br />
+                  <span>
+                    <b className="text-black">
+                      <span>
+                        <BsDot style={{ fontSize: "30px", color: "black" }} />
+                      </span>
+                      Audience targeting
+                    </b>
+                    <br />
+                    <b className="text-black">
+                      <span>
+                        <BsDot style={{ fontSize: "30px", color: "black" }} />
+                      </span>
+                      Creating ad copy and creatives
+                    </b>
+                    <br />
+                    <b className="text-black">
+                      <span>
+                        <BsDot style={{ fontSize: "30px", color: "black" }} />
+                      </span>
+                      Optimising landing pages
+                    </b>
+                    <br />
+                    <b className="text-black">
+                      <span>
+                        <BsDot style={{ fontSize: "30px", color: "black" }} />
+                      </span>
+                      Continuous bid management
+                    </b>
+                  </span>
+                </p>
+                <br /> Don't let your advertising budget go to waste. By
+                optimising your campaigns for maximum ROAS, you can ensure that
+                every dollar you spend is working hard to drive growth and
+                profitability for your business. So take action today and start
+                maximising your ROAS!
               </p>
 
               <div>
@@ -519,28 +571,27 @@ export const GoogleAdsService = () => {
               <div className="col-sm-7 col-12 my-3  wow animate__animated animate__fadeInUp">
                 <h2 className="font-weight-bold text-center my-sm-4 all_h1_title">
                   <b>
-                    Maximize <span>ROAS</span>
+                    Get more bang for your buck with <span>ROAS</span>{" "}
+                    optimization for Google Ads
                   </b>
                 </h2>
                 <p className="">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident facere repellat blanditiis magnam accusantium
-                    perspiciatis, repudiandae ullam tempora delectus vitae.
-                  </p>{" "}
-                  <br />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident facere repellat blanditiis magnam accusantium
-                    perspiciatis, repudiandae ullam tempora delectus vitae.
+                    Are you tired of spending a fortune on poorly managed Google
+                    Ad campaigns? Don't worry, you're not alone. Many businesses
+                    are making the same mistakes, such as bidding on the wrong
+                    keywords or sending visitors to low-converting landing
+                    pages. But with our expertise, we can help you avoid these
+                    costly errors.
                   </p>
                   <br />
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident facere repellat blanditiis magnam accusantium
-                    perspiciatis, repudiandae ullam tempora delectus vitae.
+                    At Tecnogex, we conduct a comprehensive 75-point Google Ads
+                    audit to identify areas of improvement and help you achieve
+                    more leads or sales without increasing your budget. Let us
+                    show you how effective your campaign can be with our
+                    specialized management techniques.
                   </p>
-                  <br />
                 </p>
               </div>
             </div>
@@ -562,8 +613,10 @@ export const GoogleAdsService = () => {
       </div>
       <div className="container my-sm-4 py-sm-3 py-3 my-3 ">
         <div className="campworkhead py-3 my-3 text-center">
-          <h2 className="all_h1_title">Why Our Campaigns Work</h2>
-          <p>We use the best tools</p>
+          <h2 className="all_h1_title">
+            Powering Your Google Ads Success But How?{" "}
+          </h2>
+          <p>Our Top-Notch Tools Make the Difference</p>
         </div>
 
         <div className="row justify-content-around">
@@ -573,13 +626,15 @@ export const GoogleAdsService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Seo</b>
+                <b>Competitor analysis </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Our team uses Semrush for competitor analysis I.e. the backbone
+                of paid ads. This allows us to gain insights into your industry,
+                identify your competitors' strengths and weaknesses, and create
+                an effective strategy to stay ahead of the game.
               </small>
             </div>
           </div>
@@ -590,13 +645,14 @@ export const GoogleAdsService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Competitive Research</b>
+                <b>Market research</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                By analysing search trends and doing market research with the
+                help of Google Trends, we can tailor your content strategy to
+                target popular topics and search queries.
               </small>
             </div>
           </div>
@@ -607,13 +663,15 @@ export const GoogleAdsService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Site Audit</b>
+                <b>Analytics </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                For improvisation, analysing website performance and user
+                behaviour is more important. We use Google Analytics to identify
+                which pages have a high bounce rate, so we can optimise those
+                pages to improve user engagement.
               </small>
             </div>
           </div>
@@ -624,13 +682,15 @@ export const GoogleAdsService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Keywords</b>
+                <b>Landing Page Heat Maps and Session Recordings </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                After creating and optimising landing pages, the next step is
+                analysing them. We do this part by using Microsoft Clarity and
+                gaining insights into user behaviour through heat maps and
+                session recordings for improvement and increased conversions
               </small>
             </div>
           </div>
@@ -641,13 +701,15 @@ export const GoogleAdsService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Ads</b>
+                <b> Ad Fraud Prevention </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Using Clickcease for ad fraud prevention, we can protect your ad
+                budget from fraudulent clicks and ensure that your ads are shown
+                to genuine users. By detecting and blocking invalid clicks, we
+                can improve the accuracy of your ad performance metrics
               </small>
             </div>
           </div>
@@ -658,13 +720,15 @@ export const GoogleAdsService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Analysis</b>
+                <b>Custom Dashboards </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                By creating a custom dashboard that tracks website traffic, user
+                behaviour, and conversion rates with the help of Looker Studio,
+                we can make data-driven decisions to improve your online
+                performance.
               </small>
             </div>
           </div>

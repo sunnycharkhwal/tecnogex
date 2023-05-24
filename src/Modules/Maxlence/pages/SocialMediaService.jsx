@@ -37,12 +37,13 @@ export const SocialMediaService = () => {
           <div className="row my-4 justify-content-center align-items-center text-sm-start text-center">
             <div className="col-sm-7 col-12 my-3 ">
               <h1 className="font-weight-bold my-sm-4 all_h1_title">
-                Enterprise <span> Social Media </span> <br /> Service
+                Optimize <span> Social </span> <br /> For Enterprises
               </h1>
               <p className="">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                architecto, inventore placeat est porro atque tempore nobis
-                harum minima. Eum?
+                Tired of your enterprise social media falling flat? Our
+                cutting-edge solutions will breathe new life into your strategy,
+                ignite compelling content, and skyrocket engagement. Let's turn
+                your social media into a powerhouse!
               </p>
               <div className="mt-5">
                 <NavLink
@@ -83,14 +84,16 @@ export const SocialMediaService = () => {
             <div className="col-sm-6 col-12 my-3 order-md-2 order-sm-1 order-1  ">
               <h2 className="font-weight-bold my-sm-4 all_h1_title">
                 <b>
-                  <span> Expand </span> your business with our
-                  <span> Enterprise Social Media</span> Service
+                  <span> Turn social data </span> into business intelligence 
+                  <span> With our enterprise</span> SMM service!
                 </b>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                architecto, inventore placeat est porro atque tempore nobis
-                harum minima. Eum?
+                Managing social media for a large corporation with a complex
+                organizational structure and multiple brands can be a daunting
+                task. But with our expertise in social media strategy, content
+                creation, influencer marketing, social listening, and data
+                analytics, we have the tools to help your business succeed.
               </p>
               <div className="mt-4">
                 <NavLink
@@ -253,56 +256,62 @@ export const SocialMediaService = () => {
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Remarketing</b>
+                <b>Focus on internal communication </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Break down the barriers of large organizations! With our
+                prioritization of collaboration and communication, we unite
+                teams and departments, aligning social media goals with business
+                objectives. Embrace teamwork and transparency for unrivaled
+                success.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Specialized media buys on website</b>
+                <b>Monitor and measure </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Crack the code of social media data! Our skilled team utilizes
+                cutting-edge analytics and real-time insights to fuel your
+                campaigns, ride the waves of emerging trends, and continuously
+                optimize your strategy for exceptional outcomes.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Development of ad creatives and landing pages</b>
+                <b>Develop a content strategy</b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Our team masters the art of captivating diverse audiences in
+                large organizations. We create visually stunning,
+                platform-optimized content that effortlessly aligns with your
+                brand messaging. Spark conversations and leave a lasting
+                impression!
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Geofencing.</b>
+                <b>Keep up with Trends and updates</b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Our team embrace the winds of change in social media with our
+                proactive approach. We stay informed about emerging trends and
+                updates, making sure your channels are always optimized for
+                maximum impact and success.
               </p>
             </div>
           </div>
@@ -505,8 +514,8 @@ export const SocialMediaService = () => {
       </div>
       <div className="container my-sm-4 py-sm-3 py-3 my-3 ">
         <div className="campworkhead py-3 my-3 text-center">
-          <h2 className="all_h1_title">Why Our Campaigns Work</h2>
-          <p>We use the best tools</p>
+          <h2 className="all_h1_title">How We Drive Results?</h2>
+          <p>Our Enterprise Social Media Toolkit</p>
         </div>
 
         <div className="row justify-content-around">
@@ -516,13 +525,14 @@ export const SocialMediaService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Seo</b>
+                <b> Task automation</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Automate scheduling, engagement, and monitoring on social media.
+                Boost reach and brand awareness with optimized hashtag
+                engagement.
               </small>
             </div>
           </div>
@@ -533,13 +543,14 @@ export const SocialMediaService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Competitive Research</b>
+                <b>Social media streamlining</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Our team boost your social media efficiency with Hootsuite's
+                collaboration, listening, and analytics tools, perfect for
+                retail brands. .
               </small>
             </div>
           </div>
@@ -550,13 +561,14 @@ export const SocialMediaService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Site Audit</b>
+                <b> Managing multiple acoounts</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Sprout Social is our go-to tool for seamless management of
+                multiple social media accounts, post scheduling, performance
+                analysis, and customer engagement.
               </small>
             </div>
           </div>
@@ -567,13 +579,14 @@ export const SocialMediaService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Keywords</b>
+                <b>Cross-posting automation </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Our team leverages Friends+Me to automate cross-posting,
+                ensuring a consistent online presence across LinkedIn, Facebook,
+                Twitter, and Instagram.
               </small>
             </div>
           </div>
@@ -584,13 +597,14 @@ export const SocialMediaService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Ads</b>
+                <b>Post scheduling </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Our team relies on Buffer for efficient post scheduling across
+                multiple platforms and data-driven insights to optimize social
+                media strategy.
               </small>
             </div>
           </div>
@@ -601,13 +615,14 @@ export const SocialMediaService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Analysis</b>
+                <b>Advanced analysis</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext ">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                With Predis.ai, our team dives deep into audience behavior and
+                engagement patterns, delivering personalized recommendations for
+                improved social media performance.
               </small>
             </div>
           </div>

@@ -27,12 +27,15 @@ export const SeoService = () => {
           <div className="row my-4 justify-content-center align-items-center text-sm-star text-center">
             <div className="col-sm-6 col-12 my-3 ">
               <h1 className="font-weight-bold my-sm-4 all_h1_title">
-                Enterprise <span> SEO </span> Service
+                Expertly Crafted <span> SEO Solutions </span> for Maximum Impact
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                architecto, inventore placeat est porro atque tempore nobis
-                harum minima. Eum?
+                Are you feeling overwhelmed trying to manage the SEO for your
+                large website, like an ecommerce store with thousands of
+                products? We understand the challenges that come with managing
+                SEO at this scale. But the good news is, with our
+                enterprise-level SEO services, you can leave the heavy lifting
+                to us.
               </p>
               <div>
                 <NavLink
@@ -64,13 +67,17 @@ export const SeoService = () => {
 
             <div className="col-sm-6 col-12 my-3 order-md-2 order-sm-1 order-1 ">
               <h2 className="font-weight-bold my-sm-4 all_h1_title">
-                <span> Expand </span> your business with our
-                <span>Enterprise Seo </span> Service
+                <span>Scaling up </span> your SEO game with our
+                <span> enterprise level </span> solutions.
               </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                architecto, inventore placeat est porro atque tempore nobis
-                harum minima. Eum?
+                Unlock the full potential of your big brand with enterprise SEO
+                solutions. Managing SEO for a 500,000-page website is a whole
+                new ballgame, and it takes skilled back-end development and
+                automation to stay ahead of the game. Global SEO, multiple
+                websites, branding guidelines, legal requirements, and complex
+                chains of command - an enterprise SEO agency has the expertise
+                to navigate it all. Don't settle for anything les
               </p>
               <div>
                 <NavLink
@@ -163,10 +170,11 @@ export const SeoService = () => {
                 src="https://wewakedev.github.io/Maxlence-Official-Website/assests/audit.png"
                 alt="d"
               />
-              <h5>Audit</h5>
+              <h5>Exciting Auditing Discoveries</h5>
               <small>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolorem, quibusdam?
+                Auditing may seem like a dry and technical topic, but it can be
+                quite exciting. It's like being a detective, searching for clues
+                to ensure everything is in order and uncovering ways to improve.
               </small>
             </div>
 
@@ -178,10 +186,12 @@ export const SeoService = () => {
                 src="https://wewakedev.github.io/Maxlence-Official-Website/assests/reporting.png"
                 alt="d"
               />
-              <h5>Research</h5>
+              <h5>Enterprise-level keyword research </h5>
               <small>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem itaque maiores delectus.
+                Our team meticulously analyzes search volume data, delves deep
+                into keyword trends, and thoroughly understands the competitive
+                landscape to curate a comprehensive list of high-value keywords
+                to help your business rise above the competition.
               </small>
             </div>
 
@@ -193,9 +203,12 @@ export const SeoService = () => {
                 src="https://wewakedev.github.io/Maxlence-Official-Website/assests/companal.png"
                 alt="d"
               />
-              <h5>Competitive Analysis</h5>
+              <h5>Advanced Competitive Analysis </h5>
               <small>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Competitive analysis in SEO is like playing detective - by
+                analyzing your competitor's backlinks and content strategy, we
+                identify new opportunities and develop a more effective SEO
+                strategy to outrank them.
               </small>
             </div>
           </div>
@@ -212,9 +225,12 @@ export const SeoService = () => {
                 src="https://wewakedev.github.io/Maxlence-Official-Website/assests/strat.png"
                 alt="d"
               />
-              <h5>Strategy</h5>
+              <h5>Customized SEO Strategy </h5>
               <small>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta?
+                Our expert team studies your business, conducts comprehensive
+                keyword research, optimises your website content, and builds
+                high-quality backlinks to attract more relevant traffic to your
+                site.
               </small>
             </div>
 
@@ -226,10 +242,11 @@ export const SeoService = () => {
                 src="https://wewakedev.github.io/Maxlence-Official-Website/assests/optimisation.png"
                 alt="d"
               />
-              <h5>Optimisation</h5>
+              <h5>Multiple optimization strategies </h5>
               <small>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
-                asperiores earum magni dolores?
+                Our expert team can help you with advanced local SEO, on-page
+                optimization, and technical SEO optimization to help you outrank
+                your competitors.
               </small>
             </div>
 
@@ -241,10 +258,11 @@ export const SeoService = () => {
                 src="https://wewakedev.github.io/Maxlence-Official-Website/assests/reporting.png"
                 alt="d"
               />
-              <h5>Reporting</h5>
+              <h5>In-depth analytics and reporting </h5>
               <small>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Pariatur, corporis dolore quae tenetur minima rem.
+                Want to make sure your SEO efforts are paying off? Analytics and
+                reporting can help you measure the effectiveness of your
+                strategies and identify areas for improvement.
               </small>
             </div>
           </div>
@@ -278,7 +296,7 @@ export const SeoService = () => {
           <h2 className="all_h1_title">
             <b>
               What <span> different</span> we do for
-              <span>Enterprise SEO</span>
+              <span> Enterprise SEO</span>
             </b>
           </h2>
         </div>
@@ -286,56 +304,63 @@ export const SeoService = () => {
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Advance Keyword Search</b>
+                <b>Brand messaging & reputation strategy </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                In today's digital world, your brand image and reputation can
+                make or break your business. We’re here to craft a powerful
+                brand message and establish a positive reputation in your
+                industry. By doing so, you can attract more loyal customers,
+                outrank your competitors, and achieve your enterprise SEO goals.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Tactics for Optimization</b>
+                <b>Comprehensive Global coverage strategy </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Are you ready to take your business to the global stage? Our
+                expert team can help you. By optimizing your website and content
+                for specific languages and regions, we can help you reach a
+                wider audience and attract more relevant traffic from around the
+                world.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Advancement in SEO Strategic Speed</b>
+                <b>Rate of innovation & Development Cycles </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                By implementing advanced AI and machine learning tools, we can
+                help you analyze data and optimize your website and content for
+                maximum performance, keeping your enterprise ahead of the curve
+                and ensuring long-term success.
               </p>
             </div>
           </div>
           <div className="col-sm-5 m-3">
             <div className="h4">
               <span>
-                <b>Lorem ipsum dolor sit.</b>
+                <b>Advanced technology and Artificial Intelligence </b>
               </span>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                blanditiis porro saepe, officia natus cumque commodi. Officia
-                illum maxime aut!
+                Our team provides a competitive edge with enterprise SEO
+                solutions. They leverage AI-powered tools to analyze data and
+                automate routine tasks, giving our team more time to focus on
+                high-level strategy and delivering measurable results that drive
+                business growth.
               </p>
             </div>
           </div>
@@ -639,8 +664,8 @@ export const SeoService = () => {
       </div>
       <div className="container my-sm-4 py-sm-3 py-3 my-3">
         <div className="campworkhead py-3 my-3 text-center">
-          <h3 className="all_h1_title">Why Our Campaigns Work</h3>
-          <p>We use the best tools</p>
+          <h3 className="all_h1_title">Why Our SEO Campaigns Succeed</h3>
+          <p>Our Winning Strategies Revealed!</p>
         </div>
 
         <div className="row justify-content-around">
@@ -650,13 +675,13 @@ export const SeoService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Seo</b>
+                <b>All-in-one SEO tool</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Our team track keyword rankings, analyze backlink profiles, and
+                identify content gaps that need to be filled.
               </small>
             </div>
           </div>
@@ -667,13 +692,14 @@ export const SeoService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Competitive Research</b>
+                <b>Detailed Analysis</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                A powerful analytics tool that provides us with detailed
+                insights into your website traffic, user behavior, and
+                conversion rates.
               </small>
             </div>
           </div>
@@ -684,13 +710,13 @@ export const SeoService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Site Audit</b>
+                <b>Competitive research</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                This tool offers a comprehensive set of features for website
+                crawling, analysis, and optimization.
               </small>
             </div>
           </div>
@@ -701,13 +727,14 @@ export const SeoService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Keywords</b>
+                <b>Keyword planner</b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                By providing data on search volume, competition, and estimated
+                cost-per-click, this allows us to make informed decisions about
+                our SEO strategies.
               </small>
             </div>
           </div>
@@ -718,13 +745,13 @@ export const SeoService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Ads</b>
+                <b>Website performance insights </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Our team use Search Console to monitor website health, track
+                search performance, and identify opportunities for optimization.
               </small>
             </div>
           </div>
@@ -735,13 +762,15 @@ export const SeoService = () => {
             </div>
             <div className="videocamptooltitle campworktitle my-3">
               <h6>
-                <b>Analysis</b>
+                <b>Search trend insights </b>
               </h6>
             </div>
             <div className="videocamptooltext campworktext">
               <small>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti expedita dolor quam laborum nostrum placeat!.
+                Using Google Trends, we found that searches for "vegan protein
+                powder" have increased by 200% in the past year, which led us to
+                optimize your website content and target that keyword, resulting
+                in a significant increase in organic traffic and sales.
               </small>
             </div>
           </div>

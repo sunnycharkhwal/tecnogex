@@ -12,13 +12,13 @@ export const Business2 = () => {
             <div className="col-sm-8 col-12 my-3 text-center  wow animate__animated animate__fadeInUp">
               <h1 className="font-weight-bold my-sm-4 all_h1_title">
                 <span>
-                  <b>Create, Advertise, Analyse and Optimise !</b>
+                  <b>Sell Smarter, Not Harder </b>
                 </span>
-                We do it all for you.
+                Transform Your E-commerce Strategy Today
               </h1>
               <small className="font-weight-bold">
-                Let's craft a website that gives your business an online
-                presence
+                All-in-one e-commerce marketing solution, complete with expert
+                strategies and a user-friendly client management dashboard.
               </small>
             </div>
           </div>
@@ -33,48 +33,48 @@ export const Business2 = () => {
             <div className="homesec3info col-sm-6 my-3 ">
               <div className="m-0 p-0 ">
                 <h2 className="all_h1_title">
-                  Lorem ipsum dolor sit amet
+                  Your one-stop
                   <span>
-                    <b> consectetur, adipisicing </b>
+                    <b> e-commerce </b>
                   </span>
-                  elit.
+                  growth partner
                 </h2>
                 <br />
-                <small>Lorem ipsum dolor sit amet consectetur.</small>
+                <small>Marrying media, tech, and creativity for success.</small>
               </div>
 
               <div className="row my-1 ">
                 <div className="col-sm-6 mt-4 mb-2 ">
-                  <p>Lorem, ipsum dolor.</p>
+                  <p>Influencer Marketing </p>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Mollitia inventore dolore ducimus rem nisi velit accusantium
-                    nostrum iure ut harum?
+                    It’s time to have a celebrity endorsement, without the
+                    paparazzi. Let our team connect you with the right
+                    influencers and skyrocket your sales to A-list status.
                   </p>
                 </div>
                 <div className="col-sm-6 mt-4 mb-2   ">
-                  <p>Lorem, ipsum dolor.</p>
+                  <p>Shopping Cart Abandonment Solutions </p>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatibus recusandae, repudiandae reprehenderit
-                    perferendis minima sapiente.
+                    Rescue lost visitors with our cart abandonment solutions
+                    where we track carts, simplify checkout, send emails, and
+                    use retargeting ads.
                   </p>
                 </div>
                 <div className="col-sm-6 mt-4 mb-2   ">
-                  <p>Lorem, ipsum.</p>
+                  <p>UX Optimization </p>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Animi incidunt praesentium aperiam aut tenetur minus
-                    doloribus fugit sequi consectetur!
+                    Our design team will create a website that anticipates your
+                    customer's every need. Let us be your mind reader and create
+                    a magical shopping experience that leads to increased sales.
+                    !
                   </p>
                 </div>
                 <div className="col-sm-6 mt-4 mb-2  ">
-                  <p>Lorem, ipsum dolor.</p>
+                  <p>Chatbots </p>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Similique culpa nobis explicabo molestias veniam corrupti
-                    quisquam dignissimos reprehenderit iste, doloremque,
-                    necessitatibus iure..
+                    Our team provides 24/7 personalized recommendations and
+                    improves customer experience. Our team recommends AI-powered
+                    tools to skyrocket your sales while you take a coffee break.
                   </p>
                 </div>
               </div>
@@ -98,23 +98,24 @@ export const Business2 = () => {
           <div className="col-sm-5 my-4 pb-3 ">
             <h2 className="my-4 all_h1_title">
               <span>
-                <b>Lorem, ipsum dolor</b>
+                <b>All-in-one Dashboard and </b>
               </span>
-              amet consectetur adipisicing elit.
+              Multichannel Marketing Solutions
             </h2>
             <p className="all_h1_title_p">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-              nulla dolorem nostrum placeat rem reprehenderit quia ex, facere
-              harum doloribus eaque, velit voluptate error provident dolorum
-              culpa consectetur optio alias iure necessitatibus odit quod
-              voluptatum. Necessitatibus consectetur, omnis natus expedita,
-              officiis, culpa tenetur aliquam veniam ad voluptates illo
-              dignissimos ipsam!
+              From tracking your sales channels to monitoring inventory and
+              orders, our client management dashboard does the heavy lifting, so
+              you can focus on growing your business. At the same time, our team
+              of experts will work with you to develop a tailored strategy that
+              utilises a variety of channels, including email, social media,
+              SEM, SEO, and SMS. By leveraging these channels, we can help you
+              connect with customers wherever they are and guide them seamlessly
+              through the buying process
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ipsam
-              consequuntur ipsa voluptate, odio dolores. Veritatis, porro
-              officiis? Quae, rem.
+              At one time, seize the reins of your business with our expert
+              multichannel marketing solutions and take control in your hand.
+              Discuss with us now!
             </p>
 
             <div className="py-3">
@@ -134,23 +135,27 @@ export const Business2 = () => {
             <div className=" col-sm-5 my-3 ">
               <div className="m-0 p-0 ">
                 <h2 className="all_h1_title">
-                  <span>Eleifend</span> pulvinar ut non orci
-                  <span>venenatis in.</span>
+                  <span>Empower your </span> e-commerce growth
+                  <span> with Martec Integrations.</span>
                 </h2>
                 <br />
               </div>
               <div>
                 <p className="all_h1_title_p">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-                  necessitatibus nemo, recusandae assumenda labore cupiditate
-                  aperiam tempore inventore cum officiis perferendis optio
-                  quidem iure! Tempore dicta sed animi nemo distinctio, quaerat
-                  adipisci hic alias? Distinctio exercitationem ut perspiciatis
-                  esse repellat?
+                  Our suite of marketing technology solutions allows you to
+                  track, analyze, and optimize your online presence across
+                  multiple platforms, including Shopify, WooCommerce, and
+                  Magento.
                   <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                  error accusamus vitae corporis, obcaecati cumque officiis
-                  perferendis! Consectetur, illo inventore.
+                  From Google Analytics to Facebook Pixel, our integrations
+                  offer valuable insights into user behavior, advertising
+                  campaign performance, and revenue tracking. Plus, our
+                  tools/our team uses tools like VWO and LinkedIn Insights Tag
+                  to allow you to optimize your website content and measure the
+                  effectiveness of your advertising campaigns. 
+                  Contact us to take your online presence to new heights and drive your
+                  business forward.
+                
                 </p>
               </div>
 

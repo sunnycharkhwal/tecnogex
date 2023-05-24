@@ -11,12 +11,11 @@ export const Businessone = () => {
           <div className="row my-4 justify-content-center align-items-center text-sm-left text-center">
             <div className="col-sm-8 col-12 my-3 text-center  wow animate__animated animate__fadeInUp">
               <h1 className="my-sm-4 all_h1_title">
-                Create an <span>Online Store</span> for your
-                <span>ecommerce business</span>
+              Get An <span>E-commerce Store</span> That Sells Like 
+                <span> Crazy </span>
               </h1>
               <small className="font-weight-bold">
-                Let's craft a website that gives your business an online
-                presence
+              Building the bridge between you and your customers with our e-commerce solutions. 
               </small>
             </div>
           </div>
@@ -30,13 +29,12 @@ export const Businessone = () => {
           <div className="col-sm-6 mb-4">
             <h2 className="my-4 all_h1_title wow animate__animated animate__fadeInUp animate__slow">
               <span>
-                <b>Lorem, ipsum dolor </b>
+                <b>From Concept To Checkout, We've  </b>
               </span>
-              amet consectetur adipisicing elit.
+              We've Got You Covered!
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-              nulla!
+            Don't let a poorly-designed website hold you back from reaching your e-commerce goals. Our expert team offers comprehensive design and development services, including payment integration and optimization for search engines and mobile devices. Let us take your online store to the next level. 
             </p>
             <div className="py-3">
               <NavLink
@@ -58,56 +56,50 @@ export const Businessone = () => {
           <div className="homesec3info col-sm-6 my-3">
             <div className="m-0 p-0">
               <h2 className="all_h1_title">
-                Lorem ipsum dolor sit amet
+              Effortless 
                 <span>
-                  <b> consectetur, adipisicing </b>
+                  <b> Control, Maximum Impact:  </b>
                 </span>
-                elit.
+                Business Management Made Easy
               </h2>
               <br />
-              <small>Lorem ipsum dolor sit amet consectetur.</small>
+              <small>Take the lead and master your website’s performance 
+
+</small>
             </div>
 
             <div className="row my-1 ">
               <div className="col-sm-6 mt-4 mb-2 ">
                 <p className="mb-1">
-                  <b>Lorem, ipsum dolor.</b>
+                  <b>Manage Your Users with Ease  
+</b>
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia inventore dolore ducimus rem nisi velit accusantium
-                  nostrum iure ut harum?
+                Keep track of active and inactive user profiles, update profile and address, enable password change. Plus, simplify the process for customers with Wishlist management. Managing your e-commerce website has never been simpler. 
                 </p>
               </div>
               <div className="col-sm-6 mt-4 mb-2   ">
                 <p className="mb-1">
-                  <b>Lorem, ipsum dolor.</b>
+                  <b> Control Your Website's Performance </b>
                 </p>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatibus recusandae, repudiandae reprehenderit perferendis
-                  minima sapiente.
+                Our user-friendly client management dashboard puts you in the driver's seat, allowing you to effortlessly customize your website's menu, banners, brand, testimonials and more. Get started now and rev up your website's performance! 
                 </p>
               </div>
               <div className="col-sm-6 mt-4 mb-2   ">
                 <p className="mb-1">
-                  <b>Lorem, ipsum.</b>
+                  <b>Effortlessly Manage Your Products</b>
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Animi incidunt praesentium aperiam aut tenetur minus doloribus
-                  fugit sequi consectetur!
+                Say goodbye to the headache of managing your products! With our easy-to-use platform, you can effortlessly keep track of your active and inactive products, manage your stock levels, and receive low stock alerts straight to your email.  
                 </p>
               </div>
               <div className="col-sm-6 mt-4 mb-2  ">
                 <p className="mb-1">
-                  <b>Lorem, ipsum dolor.</b>
+                  <b>Streamline Your Orders </b>
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique culpa nobis explicabo molestias veniam corrupti
-                  quisquam dignissimos reprehenderit iste, doloremque,
-                  necessitatibus iure..
+                Our tagline says it all - streamline your orders with our efficient and user-friendly system. Whether it's delivery order management, cancelled order management, discount management, or coupon management, we've got you covered. 
                 </p>
               </div>
             </div>
@@ -117,7 +109,7 @@ export const Businessone = () => {
                 className="whitebgbtn fontrale"
                 title="Create Now"
               >
-                Create Now
+                Request Now 
               </NavLink>
             </div>
           </div>

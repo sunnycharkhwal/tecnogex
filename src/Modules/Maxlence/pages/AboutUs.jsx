@@ -86,7 +86,7 @@ export const AboutUs = () => {
           <div className="ceotitle text-center my-sm-4 py-sm-4 py-3  wow animate__animated animate__fadeInDown">
             <h1>
               <span>
-                <b>CEO</b>
+                <b>CEO </b>
               </span>
               Speaks
             </h1>
@@ -97,21 +97,21 @@ export const AboutUs = () => {
             </div>
             <div className="col-sm-6  wow animate__animated animate__fadeInUp">
               <p>
-                With ruthless competition in the digital industry, momentous
-                skills are the saviour. At Maxlence Consulting, qualified
-                professionals of distinct interests collaborate to treat the
-                clients with instant and unswerving digital solutions. We rely
-                on both experience and knowledge and always encourage fresh and
+                Imagine a world where boundaries are shattered and the
+                unimaginable becomes reality. At Tecnogex, we are trailblazers,
+                relentlessly pushing the limits of technology. But our success
+                story is not just about cutting-edge solutions; it's about the
+                people behind them. Our team is a tapestry of brilliant minds,
+                driven by a shared passion for making a difference. We rely on
+                both experience and knowledge and always encourage fresh and
                 unorthodox ideas. We strive to be the kingpin of digital
-                marketing on an international level, aiming to help accelerate
-                the growth of businesses using our meticulous digital services
-                which are infallible at all extent. Maxlence Consulting is
-                building on its expertise to bring the power of artificial
-                intelligence to meet the needs of real world organizations.
+                marketing and IT software on an international level. Last but
+                not least, we embody the spirit of collaboration, harnessing our
+                collective expertise to solve complex challenges.
               </p>
 
               <p>
-                <span>Our mission:</span> To bring value to the customers at an
+                <span>Our mission:</span>To bring value to the customers at an
                 affordable cost & to help businesses expand by increasing their
                 sales and recognition. We help organizations to reach their true
                 potential by leveraging the power of creativity and technology
@@ -129,9 +129,9 @@ export const AboutUs = () => {
       <div className="identities container my-sm-4 py-sm-5 py-0 my-3">
         <div className="identitestitle text-center my-3 py-3 wow animate__animated animate__fadeInDown">
           <h1>
-            Our
+          We at  
             <span>
-              <b>Identity</b>
+              <b> Tecnogex encourage</b>
             </span>
           </h1>
         </div>
@@ -145,10 +145,7 @@ export const AboutUs = () => {
                 <b>Integrity</b>
               </h4>
               <small>
-                We promote and practice transparency to build a strong
-                relationship with our workforce and clientele. With an honest
-                and confident stance we stay put to our commitments; and we are
-                capable of any demanding project that comes our way.
+              We as a team firmly believe in practicing transparency, building trust with our workforce and clients. Our commitment to honesty and confidence empowers us to take on any challenging project that comes our way. 
               </small>
             </div>
           </div>
@@ -162,10 +159,7 @@ export const AboutUs = () => {
                 <b>Professionalism</b>
               </h4>
               <small>
-                We exercise professionalism at all levels, every individual at
-                Maxlence possess values of accountability, responsibility and
-                excellence. The ethical conduct of our employees represents our
-                strong foundation.
+              Each member of our team upholds a strong sense of accountability, responsibility, and a pursuit of excellence. Our ethical conduct serves as a solid foundation for delivering exceptional results. 
               </small>
             </div>
           </div>
@@ -179,10 +173,7 @@ export const AboutUs = () => {
                 <b>Teamwork</b>
               </h4>
               <small>
-                Working together is extremely necessary for any organization’s
-                success. Our strength lies in our combined experience and
-                expertise, with which we are competent to accomplish great
-                things.
+              By harnessing the collective experience and expertise of our team, we are able to overcome obstacles and achieve extraordinary outcomes. Together, we are a unified force capable of achieving greatness. 
               </small>
             </div>
           </div>
@@ -197,9 +188,9 @@ export const AboutUs = () => {
             <div className="col-sm-4 text-light text-sm-start text-center wow animate__animated animate__fadeInDown">
               <h1>
                 <span style={{ color: "#AAD4FF" }}>
-                  <b> Maxlence's</b>
+                  <b> People Behind </b>
                 </span>
-                Team
+                Progress 
               </h1>
             </div>
             <div className="col-sm-6">

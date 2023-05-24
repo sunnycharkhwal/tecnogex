@@ -617,13 +617,10 @@ const TopDiv = () => {
         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 order-md-1 order-2 col-12  video_TopDiv_title_div">
           <div className="video_TopDiv_title">
             <h1 className="all_h1_title">
-              <span>Power to Engage.</span> <br /> Hold the Attention.
+              <span>Want to make an impact?</span> <br /> Turn to video marketing. 
             </h1>
             <p className="all_h1_title_p">
-              Video has the power to engage and hold the attention of your
-              customers like no other type of content. We can help you produce
-              video marketing campaigns that reach your potential customers
-              where and when they’re buying.
+            If you want to take your brand to the next level and rise above the noise, give our video marketing services a try today. Check out our sizzle reel for a taste of what our video production services can do for your brand. Don't wait - click now and get ready to be wowed! 
             </p>
             <NavLink to="/Questionare_Page" className="btn full_btn">
               Get Started
@@ -657,14 +654,10 @@ const StopVideo = () => {
         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12 order-md-2 order-1  video_TopDiv_title_div">
           <div className=" video_TopDiv_title_2">
             <h2 className="all_h1_title">
-              Stop avoiding video marketing and jump in
+            Ready To Tell Your Story? 
             </h2>
             <p className="all_h1_title_p">
-              Lorem ipsum dolor sit amet consectetur. Dolor turpis felis varius
-              a iaculis. Aliquet mauris ut aenean cras et amet diam donec.
-              Turpis purus egestas a vel tellus libero adipiscing. Vehicula
-              etiam viverra faucibus enim feugiat est purus scelerisque
-              volutpat. Libero ac morbi.
+            Whether you're looking to launch a new product, showcase your services, or simply tell your brand's story, our expert team of videographers and editors have got you covered. Our video production services are top-notch, and we guarantee that you'll be thrilled with the result. Contact us today to make your mark. 
             </p>
           </div>
         </div>
@@ -679,11 +672,11 @@ const MyCountUp = () => {
         <div className="row g-4">
           <div className="col-12">
             <div className="MyCountUp_text_div">
-              <h3 className="all_h1_title">Did You Know?</h3>
+              <h3 className="all_h1_title">The ROI-Boosting Power of Video Marketing</h3>
               <p className="all_h1_title_p">
                 You already know that video marketing is rapidly becoming the
                 must-have component to every digital marketing <br />
-                <span>strategy, but here’s why it matters:</span>
+                <span>unleash its power today.</span>
               </p>
             </div>
           </div>
@@ -692,13 +685,12 @@ const MyCountUp = () => {
               <img src={VM3} alt="icon" />
               <div className="MyCountUp_div">
                 <div className="MyCountUp_div_inner">
-                  <CountUp start={0} end={88} duration={2} />
+                  <CountUp start={0} end={95} duration={2} />
                   <small>%</small>
                 </div>
               </div>
               <p>
-                88% of brands are dedicated to spending more on video campaigns
-                in the future
+              of businesses say video helps people better understand their offerings.  
               </p>
             </div>
           </div>
@@ -707,13 +699,12 @@ const MyCountUp = () => {
               <img src={VM4} alt="icon" />
               <div className="MyCountUp_div">
                 <div className="MyCountUp_div_inner">
-                  <CountUp start={0} end={95} duration={2} />
+                  <CountUp start={0} end={49} duration={2} />
                   <small>%</small>
                 </div>
               </div>
               <p>
-                Video marketing increase user understanding of product or
-                service by 95%
+              faster revenue growth is seen in businesses that use video marketing compared to those that don't. 
               </p>
             </div>
           </div>
@@ -722,13 +713,12 @@ const MyCountUp = () => {
               <img src={VM5} alt="icon" />
               <div className="MyCountUp_div">
                 <div className="MyCountUp_div_inner">
-                  <CountUp start={0} end={78} duration={2} />
+                  <CountUp start={0} end={93} duration={2} />
                   <small>%</small>
                 </div>
               </div>
               <p>
-                78% of businesses say they received more traffic after
-                implementing videos in their content strategies
+              of marketers have converted using video  
               </p>
             </div>
           </div>
@@ -737,13 +727,12 @@ const MyCountUp = () => {
               <img src={VM6} alt="icon" />
               <div className="MyCountUp_div">
                 <div className="MyCountUp_div_inner">
-                  <CountUp start={0} end={52} duration={2} />
+                  <CountUp start={0} end={100} duration={2} />
                   <small>%</small>
                 </div>
               </div>
               <p>
-                52% of marketers say video is the type of content with the best
-                ROI
+              annual growth in mobile video consumption highlights the growing popularity of video in the digital realm. 
               </p>
             </div>
           </div>
@@ -757,22 +746,20 @@ const Banner = () => {
     <>
       <div className="Banner_text_div">
         <h3 className="all_h1_title">
-          Even small businesses can make <br />
+        Lights, camera, action, <br />
           <span>
-            a <span>big impact</span>
+            and <span>Conversion!</span>
           </span>
         </h3>
         <p className="all_h1_title_p">
-          DMi Partners is an email marketing agency that understands the value
-          of our clients’ investment. Our clients routinely tell us that their
-          1st party owned database of email subscribers is their most valuable
-          investment. Additionally, our clients understand that the success of
-          nearly all of their marketing campaigns rely on email to achieve
-          positive ROI for those additional channels. Executing through email to
-          persuade a conversion, retain customers, re-engage cold conversations
-          and drive additional/repeat purchases are crucial to our customers’
-          businesses. Optimizations to these initiatives funnels additional
-          dollars to future marketing and makes additional channels viable.
+        Transform your brand with our expert video marketing services. Whether you're looking for promotional, educational, explainer, testimonial, or other types of videos, we have the expertise to deliver. Unsure of where to begin? Our dedicated team of video solutions works directly with you to understand your brand, vision, and future. From custom video solutions to achieving your marketing goals, we’ve got you covered.  
+
+
+ 
+        </p>
+        <p>
+Ready to increase your conversion rates? Let’s make your brand stand out with our lights, camera, and action approach. 
+
         </p>
       </div>
     </>
