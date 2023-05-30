@@ -3292,3 +3292,34 @@ ul {
   margin-bottom: 5px;
 }
 // seo end
+// b2
+.title_div {
+  text-align: center;
+  margin-bottom: 2rem;
+  h2 {
+    text-transform: capitalize;
+    color: #212529;
+  }
+}
+.Advanced_div {
+  .p_up {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30px;
+    text-transform: capitalize;
+    border-left: 4px solid black;
+    padding-left: 6px;
+  }
+  .p_down {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #212529;
+    padding-left: 12px;
+    margin-top: 10px;
+    letter-spacing: 0.5px !important;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+}

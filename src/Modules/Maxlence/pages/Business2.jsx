@@ -4,6 +4,38 @@ import Business2third from "../assests/business2third.png";
 
 import { NavLink } from "react-router-dom";
 export const Business2 = () => {
+  const AdvancedData = [
+    {
+      title: "Push marketing",
+      text: "In the world of e-commerce, it’s like a game of hide-and-seek, except we're the ones doing the seeking. We use targeted messages and promotions to track down potential customers and push clients' products right in front of their noses. No hiding from us!",
+      borderColor: "#FF5B37v",
+    },
+    {
+      title: "Personalization",
+      text: "We create a tailor-made e-commerce website that understands your customers' preferences and delivers an exceptional shopping experience. Let us take care of the details so you can sit back and enjoy the fruits of your success!",
+      borderColor: "#50B432",
+    },
+    {
+      title: "Voice search optimization",
+      text: "Get this like having a personal butler at your beck and call. Let us optimize your e-commerce website for voice assistants like Siri and Alexa, so you can sit back, relax, and let us drive traffic and sales with expert optimization services.",
+      borderColor: "#F59300",
+    },
+    {
+      title: "Tag management",
+      text: "Our team of tag wranglers manages your website tags and ensures your e-commerce site is running like a well-oiled machine. This keeps your website organized and running smoothly. Let us wrangle your tags and tame the chaos!",
+      borderColor: "#A737FF",
+    },
+    {
+      title: "A/B testing",
+      text: "Think of A/B testing in e-commerce marketing as a fashion show for your website. By trying out variations, you can see which one is more attractive to your audience and will ultimately lead to more sales. Let us dress up your website and increase your sales fashionably!",
+      borderColor: "#40F1E7",
+    },
+    {
+      title: "Social proof pop-ups",
+      text: "Our social proof pop-up services for e-commerce boost credibility with customer reviews. Let our team be your cheerleading squad for increased sales and customer trust. Go team sales!",
+      borderColor: "#E3E800",
+    },
+  ];
   return (
     <>
       <div className="container-fluid m-0 py-3">
@@ -152,10 +184,9 @@ export const Business2 = () => {
                   campaign performance, and revenue tracking. Plus, our
                   tools/our team uses tools like VWO and LinkedIn Insights Tag
                   to allow you to optimize your website content and measure the
-                  effectiveness of your advertising campaigns. 
-                  Contact us to take your online presence to new heights and drive your
+                  effectiveness of your advertising campaigns. Contact us to
+                  take your online presence to new heights and drive your
                   business forward.
-                
                 </p>
               </div>
 
@@ -172,6 +203,23 @@ export const Business2 = () => {
           </div>
         </div>
       </div>
+      <section className="container my-5">
+        <div className="title_div">
+          <h2 className="all_h1_title">Advanced E-Commerce Solutions</h2>
+        </div>
+        <div className="row g-lg-4 g-3">
+          {AdvancedData.map((val, i) => (
+            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-md-6 col-sm-12 col-12">
+              <div className="Advanced_div">
+                <p className="p_up" style={{ borderColor: val.borderColor }}>
+                  {val.title}
+                </p>
+                <p className="p_down">{val.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 };
