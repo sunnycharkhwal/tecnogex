@@ -2809,3 +2809,18 @@ ul.ab-form-list {
     background: #00c99c;
   }
 }
+@media (min-width: 768px) {
+  .seoservice {
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .seoservice {
+    height: auto;
+  }
+}
+@media (min-width: 1440px) {
+  .seoservice {
+    height: 23rem;
+  }
+}

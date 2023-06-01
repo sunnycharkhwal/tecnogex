@@ -109,7 +109,7 @@ const CartList = () => {
   };
   return (
     <>
-      <table class="table cart_tabel">
+      <table className="table cart_tabel">
         <thead>
           <tr className="cart_title_div_top_tr">
             <th scope="col">Product/Service Title</th>

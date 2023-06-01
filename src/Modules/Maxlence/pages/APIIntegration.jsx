@@ -283,11 +283,11 @@ const Service = () => {
           <p className="text">{isReadMore ? text.slice(0, 0) : text}</p>
           <span onClick={toggleReadMore} className="read-or-hide">
             {isReadMore ? (
-              <button class="getstartbtn getstartbtn_new fontpop ">
+              <button className="getstartbtn getstartbtn_new fontpop ">
                 View More Integration
               </button>
             ) : (
-              <button class="getstartbtn getstartbtn_new fontpop ">
+              <button className="getstartbtn getstartbtn_new fontpop ">
                 Less Integration
               </button>
             )}

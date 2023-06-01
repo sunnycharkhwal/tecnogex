@@ -23,6 +23,13 @@ import Linkedincard from "../assests/linkedincard.png";
 import Pinterestcard from "../assests/pinterestcard.png";
 import Twittercard from "../assests/twittercard.png";
 import Youtubecard from "../assests/youtubecard.png";
+import S1 from "../assests/1.png";
+import S2 from "../assests/2.png";
+import S3 from "../assests/3.png";
+import S4 from "../assests/4.png";
+import S5 from "../assests/5.png";
+import S6 from "../assests/6.png";
+
 import { AiFillCloseCircle } from "react-icons/ai";
 import Modal from "react-bootstrap/Modal";
 export const SocialMediaService = () => {
@@ -182,17 +189,17 @@ export const SocialMediaService = () => {
           >
             <div className="col-md-3 my-3 col-6">
               <div>
-                <img className="w-100" src={Facebookcard} alt="d" />
+                <img className="w-100" src={S1} alt="d" />
               </div>
             </div>
             <div className="col-md-3 my-3 col-6">
               <div>
-                <img className="w-100" src={Instagramcard} alt="d" />
+                <img className="w-100" src={S2} alt="d" />
               </div>
             </div>
             <div className="col-md-3 my-3 col-6">
               <div>
-                <img className="w-100" src={Linkedincard} alt="d" />
+                <img className="w-100" src={S3} alt="d" />
               </div>
             </div>
           </div>
@@ -203,17 +210,17 @@ export const SocialMediaService = () => {
           >
             <div className="col-md-3 my-3 col-6">
               <div>
-                <img className="w-100" src={Pinterestcard} alt="d" />
+                <img className="w-100" src={S4} alt="d" />
               </div>
             </div>
             <div className="col-md-3 my-3 col-6">
               <div>
-                <img className="w-100" src={Twittercard} alt="d" />
+                <img className="w-100" src={S5} alt="d" />
               </div>
             </div>
             <div className="col-md-3 my-3 col-6">
               <div>
-                <img className="w-100" src={Youtubecard} alt="d" />
+                <img className="w-100" src={S6} alt="d" />
               </div>
             </div>
           </div>

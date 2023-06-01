@@ -17,7 +17,7 @@ import Videocamptool3 from "../assests/videocamptool3.png";
 import Videocamptool4 from "../assests/videocamptool4.png";
 import Videocamptool5 from "../assests/videocamptool5.png";
 import Videocamptool6 from "../assests/videocamptool6.png";
-import Gadsservices from "../assests/gadsservices.png";
+import Gadsservices from "../assests/gadsservices.svg";
 import { Faqs } from "../components/Faqs";
 import { AiFillCloseCircle } from "react-icons/ai";
 import Modal from "react-bootstrap/Modal";

@@ -1,7 +1,7 @@
 import { Creation } from "./Modules/Maxlence/pages/Creation";
 import { Growth } from "../src/Modules/Maxlence/pages/Growth";
 import { Home } from "../src/Modules/Maxlence/pages/home";
-import { Design } from "../src/Modules/Maxlence/pages/design";
+import { Design } from "../src/Modules/Maxlence/pages/Design";
 import { Shop } from "../src/Modules/Maxlence/pages/shop";
 import { Getintouch } from "../src/Modules/Maxlence/pages/getintouch";
 import { Careersjd } from "../src/Modules/Maxlence/pages/careersjd";

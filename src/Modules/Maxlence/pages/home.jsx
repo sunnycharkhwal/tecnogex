@@ -165,13 +165,13 @@ export const Home = () => {
 
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     fade: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     cssEase: "linear",
   };
@@ -191,7 +191,7 @@ export const Home = () => {
           <div className="row py-3">
             <div>
               <Slider {...settings}>
-                <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
+                {/* <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <h1 className="all_h1_title">
                       We pour our heart into every design,
@@ -207,14 +207,14 @@ export const Home = () => {
                       Dummy text This is a Dummy text
                     </p>
                     <div className="col-md-4 col-7">
-                      <BlueBtn to="/creation" title="Get Started" />
+                      <BlueBtn link="/creation" title="Get Started" />
                     </div>
                   </div>
                   <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <img className="w-md-80 w-100" alt="demo" src={homehero1} />
                   </div>
-                </div>
-                <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
+                </div> */}
+                {/* <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                   <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <h2 className="all_h1_title">
                       We pour our heart into every design,
@@ -230,34 +230,67 @@ export const Home = () => {
                       Dummy text This is a Dummy text
                     </p>
                     <div className="col-md-4 col-7">
-                      <BlueBtn to="/creation" title="Get Started" />
+                      <BlueBtn link="/creation" title="Get Started" />
                     </div>
                   </div>
                   <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <img className="w-md-80 w-100" alt="demo" src={homehero2} />
                   </div>
-                </div>
-                <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h2 className="all_h1_title">
-                      We pour our heart into every design,
-                      <span>Mobile Apps</span>
-                    </h2>
-                    <p className="all_h1_title_p">
-                      This is a Dummy text This is a Dummy text This is a Dummy
-                      text This is a Dummy textThis is a Dummy text This is a
-                      Dummy text.This is a Dummy text This is a Dummy text This
-                      is a Dummy text This is a Dummy textThis is a Dummy text
-                      This is a Dummy text This is a Dummy text This is a Dummy
-                      text This is a Dummy text This is a Dummy textThis is a
-                      Dummy text This is a Dummy text
-                    </p>
-                    <div className="col-md-4 col-7">
-                      <BlueBtn to="/creation" title="Get Started" />
+                </div> */}
+                <div>
+                  <div className="row">
+                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                      <h2 className="all_h1_title">
+                        We pour our heart into every design,
+                        <span>Mobile Apps</span>
+                      </h2>
+                      <p className="all_h1_title_p">
+                        This is a Dummy text This is a Dummy text This is a
+                        Dummy text This is a Dummy textThis is a Dummy text This
+                        is a Dummy text.This is a Dummy text This is a Dummy
+                        text This is a Dummy text This is a Dummy textThis is a
+                        Dummy text This is a Dummy text This is a Dummy text
+                        This is a Dummy text This is a Dummy text This is a
+                        Dummy textThis is a Dummy text This is a Dummy text
+                      </p>
+                      {/* <BlueBtn link="/creation" title="Get Started" /> */}
+                    </div>
+                    <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                      <img
+                        className="w-md-80 w-100"
+                        alt="demo"
+                        src={homehero2}
+                      />
                     </div>
                   </div>
-                  <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <img className="w-md-80 w-100" alt="demo" src={homehero3} />
+                </div>
+                <div>
+                  <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
+                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                      <h2 className="all_h1_title">
+                        We pour our heart into every design,
+                        <span>Mobile Apps</span>
+                      </h2>
+                      <p className="all_h1_title_p">
+                        This is a Dummy text This is a Dummy text This is a
+                        Dummy text This is a Dummy textThis is a Dummy text This
+                        is a Dummy text.This is a Dummy text This is a Dummy
+                        text This is a Dummy text This is a Dummy textThis is a
+                        Dummy text This is a Dummy text This is a Dummy text
+                        This is a Dummy text This is a Dummy text This is a
+                        Dummy textThis is a Dummy text This is a Dummy text
+                      </p>
+                      {/* <div className="col-md-4 col-7">
+                        <BlueBtn link="/creation" title="Get Started" />
+                      </div> */}
+                    </div>
+                    <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                      <img
+                        className="w-md-80 w-100"
+                        alt="demo"
+                        src={homehero3}
+                      />
+                    </div>
                   </div>
                 </div>
               </Slider>
@@ -273,8 +306,8 @@ export const Home = () => {
         btntext="Get In Touch"
         className="Search_my_div"
       >
-        <div class="p-1  ">
-          <div class="input-group justify-content-around align-items-center">
+        <div className="p-1  ">
+          <div className="input-group justify-content-around align-items-center">
             <img
               style={{ position: "absolute", left: "2.2rem", zIndex: "10" }}
               src={Ctasearch}
@@ -284,7 +317,7 @@ export const Home = () => {
               type="search"
               placeholder="Search Here"
               aria-describedby="button-addon1"
-              class="form-control ctasearch rounded-pill  fontrale border-0 bg-light m-3"
+              className="form-control ctasearch rounded-pill  fontrale border-0 bg-light m-3"
             />
             <br />
           </div>
@@ -402,7 +435,7 @@ export const Home = () => {
                       Dummy text This is a Dummy text
                     </p>
                     <div className="col-md-4 col-7">
-                      <BlueBtn to="/creation" title="Explore Now" />
+                      <BlueBtn link="/creation" title="Explore Now" />
                     </div>
                   </div>
                   <div className="col-12 col-md-12 col-lg-5">
@@ -424,7 +457,7 @@ export const Home = () => {
                       Dummy text This is a Dummy text
                     </p>
                     <div className="col-md-4 col-7">
-                      <BlueBtn to="/creation" title="Explore Now" />
+                      <BlueBtn link="/creation" title="Explore Now" />
                     </div>
                   </div>
                   <div className="col-12 col-md-12 col-lg-5">
@@ -446,7 +479,7 @@ export const Home = () => {
                       Dummy text This is a Dummy text
                     </p>
                     <div className="col-md-4 col-7">
-                      <BlueBtn to="/creation" title="Explore Now" />
+                      <BlueBtn link="/creation" title="Explore Now" />
                     </div>
                   </div>
                   <div className="col-12 col-md-12 col-lg-5">
@@ -1031,7 +1064,7 @@ export const Home = () => {
             />
           </div>
           <div className="mt-4 m-auto col-md-3 col-lg-2 col-7">
-            <BlueBtn to="/creation" title="Get Started" />
+            <BlueBtn link="/creation" title="Get Started" />
           </div>
         </Container>
       </Container>
@@ -1164,7 +1197,7 @@ export const Home = () => {
       <MainSlider
         data={testimonial}
         SliderCard={TestimonialCard}
-        titleClass="all_h1_title"
+        titleclassName="all_h1_title"
         SliderTitle={
           <>
             <span>Thanks</span> for your

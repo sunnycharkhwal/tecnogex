@@ -6,6 +6,26 @@
   }
 }
 @media (max-width: 576px) {
+  .agreemet_top_div {
+    p {
+      font-size: 15px;
+    }
+    .agreemet_title_div {
+      h3 {
+        font-size: 20px !important;
+      }
+    }
+  }
+  .agreement_table_div {
+    table {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1rem;
+      input {
+        width: 100%;
+      }
+    }
+  }
   .title_div {
     text-align: left;
   }

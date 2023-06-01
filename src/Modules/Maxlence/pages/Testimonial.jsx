@@ -74,7 +74,7 @@ export const Testimonial = () => {
         </div>
       </div>
       <section className=" container mt-5">
-        <div class="text-center">
+        <div className="text-center">
           <h1>
             Read What Our <span>Customers Say</span>
           </h1>

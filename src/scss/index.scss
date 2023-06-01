@@ -3323,3 +3323,90 @@ ul {
     margin-bottom: 0;
   }
 }
+// b2 end
+// agreemet
+
+.agreemet_top_div {
+  p {
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 500;
+    letter-spacing: 0.5px !important;
+    span {
+      color: black;
+      font-family: auto;
+      margin-right: 5px;
+      font-weight: 500 !important;
+    }
+  }
+  .agreemet_title_div {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    span {
+      color: black;
+      font-family: auto;
+      margin-right: 5px;
+    }
+    h2 {
+      font-size: 30px;
+      font-weight: 600 !important;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 600 !important;
+    }
+  }
+}
+.agreement_table_div {
+  display: flex;
+  justify-content: center;
+  table {
+    border-spacing: 0;
+    width: 600px;
+    margin: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 1px #cccccc;
+    input {
+      width: 17rem;
+      padding: 5px;
+    }
+    th {
+      background-color: #dce9f9;
+      background-image: -moz-linear-gradient(center top, #f8f8f8, #ececec);
+      background-image: -webkit-gradient(
+        linear,
+        0 0,
+        0 bottom,
+        from(#f8f8f8),
+        to(#ececec),
+        color-stop(0.4, #f8f8f8)
+      );
+      border-top: medium none;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      border-left: 1px solid #cccccc;
+      border-top: 1px solid #cccccc;
+      padding: 10px;
+      text-align: center;
+      &:first-child {
+        border-radius: 6px 0 0 0;
+        -moz-border-radius: 6px 0 0 0;
+        -webkit-border-radius: 6px 0 0 0;
+      }
+      &:last-child {
+        border-radius: 0 6px 0 0;
+        -moz-border-radius: 0 6px 0 0;
+        -webkit-border-radius: 0 6px 0 0;
+      }
+    }
+    td {
+      border-left: 1px solid #cccccc;
+      border-top: 1px solid #cccccc;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}
