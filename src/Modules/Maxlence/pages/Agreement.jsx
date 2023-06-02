@@ -1,85 +1,11 @@
 import { useState } from "react";
 import { BlueBtn } from "../components/Btn";
-
+import { RiDeleteBinLine } from "react-icons/ri";
 export const Agreement = () => {
-  // const [signfeeinput, setSignfeeinput] = useState("");
-  // const [signfeeinput2, setSignfeeinput2] = useState("");
   const [add2input, setAdd2input] = useState("");
-  // const [date, setDate] = useState("");
-  // const [totalfeeinput, setTotalfeeinput] = useState("");
-  // const [onboardagree, setOnboardagree] = useState("");
-  // const [onboardfee1input, setOnboardfee1input] = useState("");
-  // const [commissioninput, setCommissioninput] = useState("");
-  // // console.log(
-  // //   signfeeinput,
-  // //   signfeeinput2,
-  // //   add2input,
-  // //   date,
-  // //   totalfeeinput,
-  // //   onboardagree,
-  // //   onboardfee1input,
-  // //   commissioninput
-  // // );
-
+  console.log(add2input);
   return (
     <>
-      {/* <div>
-        <input
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-          className="agreementinput"
-          type="date"
-          name="date"
-        />
-        <input
-          onChange={(e) => setTotalfeeinput(e.target.value)}
-          value={totalfeeinput}
-          className="agreementinput mx-2"
-          type="text"
-          name="totalfeeinput"
-        />
-        <input
-          value="yes"
-          type="radio"
-          name="onboardagree"
-          onChange={(e) => setOnboardagree("yes")}
-        />
-        <input
-          value="no"
-          type="radio"
-          name="onboardagree"
-          onChange={(e) => setOnboardagree("no")}
-        />
-        <input
-          onChange={(e) => setOnboardfee1input(e.target.value)}
-          value={onboardfee1input}
-          className="agreementinput"
-          type="text"
-          name="onboardfee1input"
-        />
-        <input
-          onChange={(e) => setCommissioninput(e.target.value)}
-          value={commissioninput}
-          className="agreementinput form-control"
-          type="text"
-          name="commissioninput"
-        />
-        <input
-          onChange={(e) => setSignfeeinput(e.target.value)}
-          value={signfeeinput}
-          className="agreementinput"
-          type="text"
-          name="signfeeinput"
-        />
-        <input
-          onChange={(e) => setSignfeeinput2(e.target.value)}
-          value={signfeeinput2}
-          className="agreementinput"
-          type="text"
-          name="signfeeinput"
-        />
-      </div> */}
-
       <div className=" container">
         <div className="agreemet_top_div">
           <div className="agreemet_title_div text-center">
@@ -793,75 +719,77 @@ export const Agreement = () => {
   );
 };
 
-const data = [
-  {
-    employeeId: "01",
-    name: "Website hosting",
-    email: "99%",
-  },
-  {
-    employeeId: "02",
-    name: "Website hosting2",
-    email: "99%",
-  },
-  {
-    employeeId: "03",
-    name: "Website hosting3",
-    email: "99%",
-  },
-];
 const EditableTable = () => {
-  const [employeeData, setEmployeeData] = useState(data);
-
-  const onChangeInput = (e, employeeId) => {
-    const { name, value } = e.target;
-    console.log("name", name);
-    console.log("value", value);
-    console.log("employeeId", employeeId);
-
-    const editData = employeeData.map((item) =>
-      item.employeeId === employeeId && name ? { ...item, [name]: value } : item
-    );
-
-    console.log("editData", editData);
-
-    setEmployeeData(editData);
+  const [inputFields, setInputFields] = useState([{ service: "", uptime: "" }]);
+  const addInputField = () => {
+    setInputFields((old) => [...old, { service: "", uptime: "" }]);
   };
 
   return (
-    <div className="agreement_table_div">
-      <table>
-        <thead>
-          <tr>
-            <th>Service</th>
-            <th>Uptime [%]</th>
-          </tr>
-        </thead>
-        <tbody>
-          {employeeData.map(({ employeeId, name, email }) => (
-            <tr key={employeeId}>
-              <td>
-                <input
-                  name="name"
-                  value={name}
-                  type="text"
-                  onChange={(e) => onChangeInput(e, employeeId)}
-                  placeholder="Service Name"
-                />
-              </td>
-              <td>
-                <input
-                  name="email"
-                  value={email}
-                  type="text"
-                  onChange={(e) => onChangeInput(e, employeeId)}
-                  placeholder="Uptime"
-                />
-              </td>
+    <>
+      <div className="agreement_table_div">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Uptime [%]</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {inputFields.map((row, i) => (
+              <tr className="agreement_table_tr" key={i}>
+                <td>
+                  {/* <input type="text" placeholder="Service Name" /> */}
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    name="userName"
+                    onChange={(e) => {
+                      setInputFields((old) => {
+                        let arr = old.slice();
+                        arr[i].service = e.target.value;
+                        return arr;
+                      });
+                    }}
+                    value={inputFields[i].service}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    placeholder="Uptime"
+                    onChange={(e) => {
+                      setInputFields((old) => {
+                        let arr = old.slice();
+                        arr[i].uptime = e.target.value;
+                        return arr;
+                      });
+                    }}
+                    value={inputFields[i].uptime}
+                  />
+                </td>
+                {i > 0 ? (
+                  <RiDeleteBinLine
+                    className="agreement_table_del_btn"
+                    onClick={() => {
+                      setInputFields((old) => {
+                        let arr = old.slice();
+                        arr.splice(i, 1);
+                        return arr;
+                      });
+                    }}
+                  />
+                ) : null}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="Agreement_add_fild_div">
+        <button className="BlueBtn" onClick={addInputField}>
+          Add Input Field
+        </button>
+      </div>
+    </>
   );
 };

@@ -3410,3 +3410,27 @@ ul {
     }
   }
 }
+.Agreement_add_fild_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  button {
+    width: 12rem;
+  }
+}
+.agreement_table_tr {
+  position: relative;
+}
+.agreement_table_del_btn {
+  position: absolute;
+  top: 18px;
+  right: -29px;
+  font-size: 20px;
+  color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: #0a76e5;
+  }
+}
