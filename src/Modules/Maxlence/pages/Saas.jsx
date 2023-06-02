@@ -17,10 +17,7 @@ import Saasproductdesign from "../assests/saas_productdesign.jpg";
 export const Saas = () => {
   return (
     <>
-      <div className="container services_modal_page_div">
-        <div className="services_modal_page_inner" style={{ left: "0" }}>
-          <DrawerLeft data="creation_page" />
-        </div>
+      <div className="container ">
         <div className="row  justify-content-around align-items-center">
           <div className="col-12 col-md-12 col-lg-7 my-3  ">
             <p className=" mb-1 fw-bold">SaaS Product Creation</p>

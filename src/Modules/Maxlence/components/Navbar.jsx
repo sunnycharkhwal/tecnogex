@@ -1196,6 +1196,12 @@ export const Header = () => {
               >
                 Social Media Service
               </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/mobile_app")}>
+                mobile app
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/saas")}>
+                SaaS
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link onClick={() => navigate("/shop")}>Shop</Nav.Link>
             <NavDropdown title="Solutions" id="navbarScrollingDropdown">

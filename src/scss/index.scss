@@ -3434,3 +3434,49 @@ ul {
     color: #0a76e5;
   }
 }
+// agreement end
+//creation & growth new tab
+
+.creation_and_growth_col_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  a {
+    text-align: center;
+    img {
+      @include bg_img;
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 5px;
+    }
+    span {
+      font-weight: 700 !important;
+      font-size: 14px;
+      line-height: 16px;
+      color: #717171;
+      text-transform: capitalize;
+    }
+  }
+}
+.creation_and_growth_top_div {
+  padding: 1rem 0;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+.creation_and_growth_activ {
+  background: black;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+}
+.growth_top_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .creation_and_growth_col_div {
+    margin: auto;
+  }
+}

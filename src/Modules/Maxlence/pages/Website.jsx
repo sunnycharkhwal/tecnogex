@@ -19,21 +19,77 @@ import questioncheck from "../assests/comments-question-check 1.svg";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Faqs } from "../components/Faqs";
-import { DrawerLeft } from "../components/DrawerLeft";
 import { FooterContact } from "../components/FooterContact";
-
+import { NavLink } from "react-router-dom";
+//
+import WebsiteDesignIcon from "../../../img/WebsiteDesignIcon.svg";
+import WebsiteReDesignIcon from "../../../img/WebsiteReDesignIcon.svg";
+import MaintenanceIcon from "../../../img/MaintenanceIcon.svg";
+import Hosting from "../../../img/Hosting.svg";
+const TopLinkData = [
+  {
+    linkName: "Website Design",
+    linkIcon: WebsiteDesignIcon,
+    link: "/website/6",
+    activeNav: "block",
+    linkNameColor: "black",
+  },
+  {
+    linkName: "Website Re-Design",
+    linkIcon: WebsiteReDesignIcon,
+    link: "/website_redesign",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Maintenance",
+    linkIcon: MaintenanceIcon,
+    link: "/maintenance",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Hosting",
+    linkIcon: Hosting,
+    link: "/hosting",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+];
 export const Website = () => {
   const navigate = useNavigate();
   let { id } = useParams();
 
   return (
-    // <Getintouch />
     <>
+      <div className=" creation_and_growth_top_div mb-2">
+        <div className=" container">
+          <div className="row  g-3 justify-content-center">
+            {TopLinkData.map((val, i) => (
+              <div
+                key={i}
+                className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4 creation_and_growth_col_div"
+              >
+                <NavLink to={val.link}>
+                  <img src={val.linkIcon} alt="icon" />
+                  <br />
+                  <span style={{ color: val.linkNameColor }}>
+                    {val.linkName}{" "}
+                  </span>
+                </NavLink>
+                <div
+                  style={{ display: val.activeNav }}
+                  className="creation_and_growth_activ"
+                ></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="container-fluid" style={{ backgroundColor: "#fafafa" }}>
         <div className="container py-3">
           <div className="row py-3">
             <div>
-              <DrawerLeft data="creation_page" />
               <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                   <h1 className="all_h1_title">

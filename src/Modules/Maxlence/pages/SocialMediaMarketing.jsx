@@ -13,19 +13,95 @@ import Grsocialpng from "../assests/grsocialpng.png";
 import { FooterContact } from "../components/FooterContact";
 import Gadsclient from "../assests/gadsclient.png";
 import Bottomfadestroke from "../assests/bottomfadestroke.png";
-import { DrawerLeft } from "../components/DrawerLeft";
+//
+import GoogleAdsIcon from "../../../img/GoogleAdsIcon.svg";
+import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
+import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
+import GMBIcon from "../../../img/GMBIcon.svg";
+import SEOIcon from "../../../img/SEOIcon.svg";
+import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
+import CROIcon from "../../../img/CROIcon.svg";
 
+const TopLinkData = [
+  {
+    linkName: "Google Ads",
+    linkIcon: GoogleAdsIcon,
+    link: "/google_ads",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "CRO",
+    linkIcon: CROIcon,
+    link: "/cro",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Social Media",
+    linkIcon: SocialMediaIcon,
+    link: "/social_media_marketing",
+    activeNav: "block",
+    linkNameColor: "black",
+  },
+  {
+    linkName: "SEO",
+    linkIcon: SEOIcon,
+    link: "/seo",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "GMB",
+    linkIcon: GMBIcon,
+    link: "/gmb",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Video Marketing",
+    linkIcon: VideoMarketingIcon,
+    link: "/video_marketing",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Email Marketing",
+    linkIcon: EmailMarketingIcon,
+    link: "/email_marketing",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+];
 export const SocialMediaMarketing = () => {
   return (
     <>
+      <div className=" creation_and_growth_top_div mb-2">
+        <div className=" container">
+          <div className="growth_top_div">
+            {TopLinkData.map((val, i) => (
+              <div key={i} className=" creation_and_growth_col_div">
+                <NavLink to={val.link}>
+                  <img src={val.linkIcon} alt="icon" />
+                  <br />
+                  <span style={{ color: val.linkNameColor }}>
+                    {val.linkName}
+                  </span>
+                </NavLink>
+                <div
+                  style={{ display: val.activeNav }}
+                  className="creation_and_growth_activ"
+                ></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div
         className="container-fluid services_modal_page_div2"
         style={{ background: "#F5F5F5" }}
       >
         <div className="container py-5">
-          <div className="services_modal_page_inner">
-            <DrawerLeft data="growth_page" />
-          </div>
           <div className="row  justify-content-around align-items-center">
             <div className="col-12 col-md-12 col-lg-6 my-3 text-sm-left ">
               <h1 className="my-4 all_h1_title">

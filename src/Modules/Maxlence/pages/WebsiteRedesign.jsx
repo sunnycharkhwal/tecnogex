@@ -1,5 +1,4 @@
 import * as React from "react";
-import { DrawerLeft } from "../components/DrawerLeft";
 import { NavLink } from "react-router-dom";
 import { BiShareAlt } from "react-icons/bi";
 import { MdOutlineClose } from "react-icons/md";
@@ -22,6 +21,41 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
+//
+import WebsiteDesignIcon from "../../../img/WebsiteDesignIcon.svg";
+import WebsiteReDesignIcon from "../../../img/WebsiteReDesignIcon.svg";
+import MaintenanceIcon from "../../../img/MaintenanceIcon.svg";
+import Hosting from "../../../img/Hosting.svg";
+const TopLinkData = [
+  {
+    linkName: "Website Design",
+    linkIcon: WebsiteDesignIcon,
+    link: "/website/6",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Website Re-Design",
+    linkIcon: WebsiteReDesignIcon,
+    link: "/website_redesign",
+    activeNav: "block",
+    linkNameColor: "black",
+  },
+  {
+    linkName: "Maintenance",
+    linkIcon: MaintenanceIcon,
+    link: "/maintenance",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Hosting",
+    linkIcon: Hosting,
+    link: "/hosting",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+];
 export const WebsiteRedesign = () => {
   const YouSlowData = [
     {
@@ -56,9 +90,28 @@ export const WebsiteRedesign = () => {
   ];
   return (
     <>
-      <div className="container services_modal_page_div">
-        <div className="services_modal_page_inner" style={{ left: "0" }}>
-          <DrawerLeft data="creation_page" />
+      <div className=" creation_and_growth_top_div mb-2">
+        <div className=" container">
+          <div className="row  g-3 justify-content-center">
+            {TopLinkData.map((val, i) => (
+              <div
+                key={i}
+                className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4 creation_and_growth_col_div"
+              >
+                <NavLink to={val.link}>
+                  <img src={val.linkIcon} alt="icon" />
+                  <br />
+                  <span style={{ color: val.linkNameColor }}>
+                    {val.linkName}{" "}
+                  </span>
+                </NavLink>
+                <div
+                  style={{ display: val.activeNav }}
+                  className="creation_and_growth_activ"
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="website_redesign_text_topmain">

@@ -41,8 +41,8 @@ const TopLinkData = [
     linkName: "GMB",
     linkIcon: GMBIcon,
     link: "/gmb",
-    activeNav: "none",
-    linkNameColor: "",
+    activeNav: "block",
+    linkNameColor: "black",
   },
   {
     linkName: "Video Marketing",
@@ -55,11 +55,11 @@ const TopLinkData = [
     linkName: "Email Marketing",
     linkIcon: EmailMarketingIcon,
     link: "/email_marketing",
-    activeNav: "block",
-    linkNameColor: "black",
+    activeNav: "none",
+    linkNameColor: "",
   },
 ];
-export const EmailMarketing = () => {
+export const Gmb = () => {
   return (
     <>
       <div className=" creation_and_growth_top_div mb-2">
@@ -83,7 +83,7 @@ export const EmailMarketing = () => {
           </div>
         </div>
       </div>
-      <h1>Email Marketing</h1>
+      <h1>GMB</h1>
     </>
   );
 };

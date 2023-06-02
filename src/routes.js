@@ -25,7 +25,7 @@ import { Seo } from "./Modules/Maxlence/components/Seo";
 import { EmailMarketing } from "./Modules/Maxlence/pages/EmailMarketing";
 import { MobileApp } from "./Modules/Maxlence/pages/MobileApp";
 import { Saas } from "./Modules/Maxlence/pages/Saas";
-import { CreationWebhost } from "./Modules/Maxlence/pages/CreationWebhost";
+
 import { Careers } from "./Modules/Maxlence/pages/Careers";
 import { Business2 } from "./Modules/Maxlence/pages/Business2";
 import { DesignInspiration } from "./Modules/Maxlence/pages/DesignInspiration";
@@ -52,6 +52,10 @@ import { TermsConditions } from "./Modules/Maxlence/pages/TermsConditions";
 import { Helmet } from "react-helmet";
 import { Agreement } from "./Modules/Maxlence/pages/Agreement";
 import { WebsiteRedesign } from "./Modules/Maxlence/pages/WebsiteRedesign";
+import { Maintenance } from "./Modules/Maxlence/pages/Maintenance";
+import { HostingNew } from "./Modules/Maxlence/pages/Hosting";
+import { Gmb } from "./Modules/Maxlence/pages/Gmb";
+import { Cro } from "./Modules/Maxlence/pages/Cro";
 const Page = (props) => (
   <>
     <Helmet>
@@ -280,10 +284,10 @@ export default [
     ),
   },
   {
-    path: "/creation_webhost",
+    path: "/maintenance",
     element: (
-      <Page title="CreationWebhost">
-        <CreationWebhost />
+      <Page title="maintenance">
+        <Maintenance />
       </Page>
     ),
   },
@@ -484,6 +488,30 @@ export default [
     element: (
       <Page title="TermsConditions">
         <WebsiteRedesign />
+      </Page>
+    ),
+  },
+  {
+    path: "/hosting",
+    element: (
+      <Page title="Hosting page">
+        <HostingNew />
+      </Page>
+    ),
+  },
+  {
+    path: "/gmb",
+    element: (
+      <Page title="gmb page">
+        <Gmb />
+      </Page>
+    ),
+  },
+  {
+    path: "/cro",
+    element: (
+      <Page title="cro page">
+        <Cro />
       </Page>
     ),
   },

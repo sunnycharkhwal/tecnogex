@@ -8,7 +8,66 @@ import VM6 from "../../../img/vm6.svg";
 import React from "react";
 import CountUp from "react-countup";
 import { PackageCard } from "../components/PackageCard";
-import { DrawerLeft } from "../components/DrawerLeft";
+//
+import GoogleAdsIcon from "../../../img/GoogleAdsIcon.svg";
+import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
+import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
+import GMBIcon from "../../../img/GMBIcon.svg";
+import SEOIcon from "../../../img/SEOIcon.svg";
+import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
+import CROIcon from "../../../img/CROIcon.svg";
+
+const TopLinkData = [
+  {
+    linkName: "Google Ads",
+    linkIcon: GoogleAdsIcon,
+    link: "/google_ads",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "CRO",
+    linkIcon: CROIcon,
+    link: "/cro",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Social Media",
+    linkIcon: SocialMediaIcon,
+    link: "/social_media_marketing",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "SEO",
+    linkIcon: SEOIcon,
+    link: "/seo",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "GMB",
+    linkIcon: GMBIcon,
+    link: "/gmb",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+  {
+    linkName: "Video Marketing",
+    linkIcon: VideoMarketingIcon,
+    link: "/video_marketing",
+    activeNav: "block",
+    linkNameColor: "black",
+  },
+  {
+    linkName: "Email Marketing",
+    linkIcon: EmailMarketingIcon,
+    link: "/email_marketing",
+    activeNav: "none",
+    linkNameColor: "",
+  },
+];
 const card_data = {
   // Package One Data
   PackageOneData: [
@@ -586,10 +645,28 @@ const card_data = {
 export const VideoMarketing = () => {
   return (
     <>
-      <div className="video_top_main_div services_modal_page_div">
-        <div className="services_modal_page_inner" style={{ left: "0" }}>
-          <DrawerLeft data="growth_page" />
+      <div className=" creation_and_growth_top_div mb-2">
+        <div className=" container">
+          <div className="growth_top_div">
+            {TopLinkData.map((val, i) => (
+              <div key={i} className=" creation_and_growth_col_div">
+                <NavLink to={val.link}>
+                  <img src={val.linkIcon} alt="icon" />
+                  <br />
+                  <span style={{ color: val.linkNameColor }}>
+                    {val.linkName}
+                  </span>
+                </NavLink>
+                <div
+                  style={{ display: val.activeNav }}
+                  className="creation_and_growth_activ"
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
+      </div>
+      <div className="video_top_main_div ">
         <TopDiv />
       </div>
       <section className=" container mt-5 mb-5">
@@ -617,10 +694,15 @@ const TopDiv = () => {
         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 order-md-1 order-2 col-12  video_TopDiv_title_div">
           <div className="video_TopDiv_title">
             <h1 className="all_h1_title">
-              <span>Want to make an impact?</span> <br /> Turn to video marketing. 
+              <span>Want to make an impact?</span> <br /> Turn to video
+              marketing.
             </h1>
             <p className="all_h1_title_p">
-            If you want to take your brand to the next level and rise above the noise, give our video marketing services a try today. Check out our sizzle reel for a taste of what our video production services can do for your brand. Don't wait - click now and get ready to be wowed! 
+              If you want to take your brand to the next level and rise above
+              the noise, give our video marketing services a try today. Check
+              out our sizzle reel for a taste of what our video production
+              services can do for your brand. Don't wait - click now and get
+              ready to be wowed!
             </p>
             <NavLink to="/Questionare_Page" className="btn full_btn">
               Get Started
@@ -653,11 +735,13 @@ const StopVideo = () => {
         </div>
         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12 order-md-2 order-1  video_TopDiv_title_div">
           <div className=" video_TopDiv_title_2">
-            <h2 className="all_h1_title">
-            Ready To Tell Your Story? 
-            </h2>
+            <h2 className="all_h1_title">Ready To Tell Your Story?</h2>
             <p className="all_h1_title_p">
-            Whether you're looking to launch a new product, showcase your services, or simply tell your brand's story, our expert team of videographers and editors have got you covered. Our video production services are top-notch, and we guarantee that you'll be thrilled with the result. Contact us today to make your mark. 
+              Whether you're looking to launch a new product, showcase your
+              services, or simply tell your brand's story, our expert team of
+              videographers and editors have got you covered. Our video
+              production services are top-notch, and we guarantee that you'll be
+              thrilled with the result. Contact us today to make your mark.
             </p>
           </div>
         </div>
@@ -672,7 +756,9 @@ const MyCountUp = () => {
         <div className="row g-4">
           <div className="col-12">
             <div className="MyCountUp_text_div">
-              <h3 className="all_h1_title">The ROI-Boosting Power of Video Marketing</h3>
+              <h3 className="all_h1_title">
+                The ROI-Boosting Power of Video Marketing
+              </h3>
               <p className="all_h1_title_p">
                 You already know that video marketing is rapidly becoming the
                 must-have component to every digital marketing <br />
@@ -690,7 +776,8 @@ const MyCountUp = () => {
                 </div>
               </div>
               <p>
-              of businesses say video helps people better understand their offerings.  
+                of businesses say video helps people better understand their
+                offerings.
               </p>
             </div>
           </div>
@@ -704,7 +791,8 @@ const MyCountUp = () => {
                 </div>
               </div>
               <p>
-              faster revenue growth is seen in businesses that use video marketing compared to those that don't. 
+                faster revenue growth is seen in businesses that use video
+                marketing compared to those that don't.
               </p>
             </div>
           </div>
@@ -717,9 +805,7 @@ const MyCountUp = () => {
                   <small>%</small>
                 </div>
               </div>
-              <p>
-              of marketers have converted using video  
-              </p>
+              <p>of marketers have converted using video</p>
             </div>
           </div>
           <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
@@ -732,7 +818,8 @@ const MyCountUp = () => {
                 </div>
               </div>
               <p>
-              annual growth in mobile video consumption highlights the growing popularity of video in the digital realm. 
+                annual growth in mobile video consumption highlights the growing
+                popularity of video in the digital realm.
               </p>
             </div>
           </div>
@@ -746,20 +833,23 @@ const Banner = () => {
     <>
       <div className="Banner_text_div">
         <h3 className="all_h1_title">
-        Lights, camera, action, <br />
+          Lights, camera, action, <br />
           <span>
             and <span>Conversion!</span>
           </span>
         </h3>
         <p className="all_h1_title_p">
-        Transform your brand with our expert video marketing services. Whether you're looking for promotional, educational, explainer, testimonial, or other types of videos, we have the expertise to deliver. Unsure of where to begin? Our dedicated team of video solutions works directly with you to understand your brand, vision, and future. From custom video solutions to achieving your marketing goals, we’ve got you covered.  
-
-
- 
+          Transform your brand with our expert video marketing services. Whether
+          you're looking for promotional, educational, explainer, testimonial,
+          or other types of videos, we have the expertise to deliver. Unsure of
+          where to begin? Our dedicated team of video solutions works directly
+          with you to understand your brand, vision, and future. From custom
+          video solutions to achieving your marketing goals, we’ve got you
+          covered.
         </p>
         <p>
-Ready to increase your conversion rates? Let’s make your brand stand out with our lights, camera, and action approach. 
-
+          Ready to increase your conversion rates? Let’s make your brand stand
+          out with our lights, camera, and action approach.
         </p>
       </div>
     </>
