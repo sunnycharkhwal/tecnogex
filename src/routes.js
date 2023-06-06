@@ -56,6 +56,7 @@ import { Maintenance } from "./Modules/Maxlence/pages/Maintenance";
 import { HostingNew } from "./Modules/Maxlence/pages/Hosting";
 import { Gmb } from "./Modules/Maxlence/pages/Gmb";
 import { Cro } from "./Modules/Maxlence/pages/Cro";
+import { ThankYou } from "./Modules/Maxlence/pages/ThankYou";
 const Page = (props) => (
   <>
     <Helmet>
@@ -512,6 +513,14 @@ export default [
     element: (
       <Page title="cro page">
         <Cro />
+      </Page>
+    ),
+  },
+  {
+    path: "/thankyou",
+    element: (
+      <Page title="Thank you page">
+        <ThankYou />
       </Page>
     ),
   },

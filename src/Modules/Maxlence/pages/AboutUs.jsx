@@ -20,6 +20,9 @@ import Logo1 from "../assests/partners/logo 1.png";
 import LogoGekko11 from "../assests/partners/logo_gekko-1 1.png";
 import Velaqualogo from "../assests/partners/velaqualogo.png";
 import Baysidelogo from "../assests/partners/baysidelogo.png";
+import { AiOutlineLeft } from "react-icons/ai";
+import ArrowDown from "../../../img/down.svg";
+import ArrowUp from "../../../img/up.svg";
 
 export const AboutUs = () => {
   return (
@@ -35,50 +38,9 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="container py-0 my-0">
-        <div className="row my-4 justify-content-center align-items-end">
-          <div className="col-12 text-center">
-            <h2 className="font-weight-bold text-dark my-4">
-              Discover Our <span>History</span>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          className="wrapper position-relative container-fluid"
-          style={{
-            zIndex: "0",
-            background: "linear-gradient(180deg, #00C99C 0%, #035946 100%)",
-            height: "12rem",
-          }}
-        >
-          <div className="CenterMode_top">
-            <MultipleItems />
-          </div>
-          <div className="timetri new2 ">
-            <img src={Whitetriangle} alt="k" />
-          </div>
-
-          <div className="new3">
-            <img src={Timelinefadeline} alt="ds" />
-          </div>
-        </div>
-        <div className="container-fluid d-flex align-items-center new4">
-          <div className="container py-5">
-            <div className="row justify-content-center align-items-center">
-              <div>
-                <p className="text-white text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                  vero cum iusto aliquid odit praesentium minus expedita, et nam
-                  reiciendis explicabo ea esse dignissimos, corporis blanditiis
-                  illo? Ullam iusto asperiores iste veniam velit accusantium quo
-                  perferendis mollitia quos. Atque, iusto recusandae repudiandae
-                  necessitatibus at asperiores.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className=" container">
+        <div className=" my-5">
+          <MultipleItems />
         </div>
       </div>
       <div className="ceosection container-fluid bg-light  ">
@@ -129,7 +91,7 @@ export const AboutUs = () => {
       <div className="identities container my-sm-4 py-sm-5 py-0 my-3">
         <div className="identitestitle text-center my-3 py-3 wow animate__animated animate__fadeInDown">
           <h1>
-          We at  
+            We at
             <span>
               <b> Tecnogex encourage</b>
             </span>
@@ -145,7 +107,10 @@ export const AboutUs = () => {
                 <b>Integrity</b>
               </h4>
               <small>
-              We as a team firmly believe in practicing transparency, building trust with our workforce and clients. Our commitment to honesty and confidence empowers us to take on any challenging project that comes our way. 
+                We as a team firmly believe in practicing transparency, building
+                trust with our workforce and clients. Our commitment to honesty
+                and confidence empowers us to take on any challenging project
+                that comes our way.
               </small>
             </div>
           </div>
@@ -159,7 +124,10 @@ export const AboutUs = () => {
                 <b>Professionalism</b>
               </h4>
               <small>
-              Each member of our team upholds a strong sense of accountability, responsibility, and a pursuit of excellence. Our ethical conduct serves as a solid foundation for delivering exceptional results. 
+                Each member of our team upholds a strong sense of
+                accountability, responsibility, and a pursuit of excellence. Our
+                ethical conduct serves as a solid foundation for delivering
+                exceptional results.
               </small>
             </div>
           </div>
@@ -173,7 +141,10 @@ export const AboutUs = () => {
                 <b>Teamwork</b>
               </h4>
               <small>
-              By harnessing the collective experience and expertise of our team, we are able to overcome obstacles and achieve extraordinary outcomes. Together, we are a unified force capable of achieving greatness. 
+                By harnessing the collective experience and expertise of our
+                team, we are able to overcome obstacles and achieve
+                extraordinary outcomes. Together, we are a unified force capable
+                of achieving greatness.
               </small>
             </div>
           </div>
@@ -190,7 +161,7 @@ export const AboutUs = () => {
                 <span style={{ color: "#AAD4FF" }}>
                   <b> People Behind </b>
                 </span>
-                Progress 
+                Progress
               </h1>
             </div>
             <div className="col-sm-6">
@@ -289,24 +260,49 @@ export const AboutUs = () => {
   );
 };
 const MultipleItems = () => {
+  const SampleNextArrow = (props) => {
+    const { style, onClick } = props;
+    return (
+      <div
+        className="slick-arrow"
+        style={{ ...style, display: "block", cursor: "pointer" }}
+        onClick={onClick}
+      >
+        <img src={ArrowUp} alt="down" />
+      </div>
+    );
+  };
+  const SamplePrevArrow = (props) => {
+    const { style, onClick } = props;
+    return (
+      <div
+        className="slick-arrow"
+        style={{ ...style, display: "block", cursor: "pointer" }}
+        onClick={onClick}
+      >
+        <img src={ArrowDown} alt="down" />
+      </div>
+    );
+  };
   const settings = {
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
     dots: false,
     arrows: true,
     infinite: true,
     autoplay: false,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    // speed: 3000,
+    // autoplaySpeed: 3000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: false,
         },
       },
       {
@@ -314,8 +310,6 @@ const MultipleItems = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: false,
         },
       },
       {
@@ -327,72 +321,67 @@ const MultipleItems = () => {
       },
     ],
   };
+  const SliderData = [
+    {
+      years: "2017",
+      blueTile: "The Birth of a ",
+      title: "Dream",
+      text: "In 2017, Maxlence Consulting was founded as a side hustle, igniting a journey fueled by passion and ambition. In the same year, the team achieved a significant milestone by securing their very first website building contract from D-Celebrations. This early triumph set the stage for what was to come. ",
+    },
+    {
+      years: "2018",
+      blueTile: "New",
+      title: "Horizons",
+      text: "With unwavering dedication, Maxlence team moved into our first office, expanding our operations and delivering five impactful digital marketing projects, solidifying our reputation as a reliable and results-driven partner. ",
+    },
+    {
+      years: "2019",
+      blueTile: "Rising to ",
+      title: "Excellence",
+      text: "We unveiled our own website, showcased our expertise and completed an impressive array of 35 projects, encompassing digital marketing and website building. In August, we received the prestigious 'The Clutch Award, Top 10 Australian Companies'. ",
+    },
+    {
+      years: "2020",
+      blueTile: "Testimonials of  ",
+      title: "Success",
+      text: "We soared to new heights by winning Service Seeking's Top Businesses award for 2020, with an impressive 52 glowing reviews on Google and Facebook while our team embraced innovation in a new corporate building.",
+    },
+    {
+      years: "2021",
+      blueTile: "A Year of",
+      title: "Victories",
+      text: "We rocked the industry with our first-ever SaaS application for a mover company, while securing our second consecutive Techbehemoths Award for Aftercare. Our dedication and expertise propelled us to revolutionize the digital landscape and meet the evolving needs of our clients. ",
+    },
+    {
+      years: "2022",
+      blueTile: "Trust and Expertise ",
+      title: "Recognized",
+      text: "In 2022, our team achieved yet another remarkable milestone by becoming a Google Partner and completed 80+ projects. This recognition affirmed our expertise in digital marketing and our commitment to providing top-notch services. ",
+    },
+    {
+      years: "2023",
+      blueTile: "Elevate Your Business",
+      title: "with Tecnogex",
+      text: "Formerly known as Maxlence Consulting, we've undergone an exhilarating rebranding journey. Our brand-new website is your gateway to a world of multiple services, accompanied by our revolutionary client dashboard solutions to experience the power of real-time data-driven decision-making like never before! ",
+    },
+  ];
   return (
     <>
       <div>
         <Slider {...settings}>
-          <div>
-            <span>
-              2014
-              <span>
-                <GoPrimitiveDot />
-              </span>
-            </span>
-          </div>
-          <span>
-            2015
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2016
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2017
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2018
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2019
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2020
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2021
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2022
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
-          <span>
-            2023
-            <span>
-              <GoPrimitiveDot />
-            </span>
-          </span>
+          {SliderData.map((val, i) => (
+            <div>
+              <div className="About_slaider_topdiav">
+                <div className="About_slaider_years">{val.years}</div>
+                <div className="About_slaider_inner">
+                  <h3>
+                    <span>{val.blueTile}</span> {val.title}
+                  </h3>
+                  <p>{val.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </Slider>
       </div>
     </>

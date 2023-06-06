@@ -3480,3 +3480,209 @@ ul {
     margin: auto;
   }
 }
+// growth end
+// Maintenance
+.Maintenance_Audit_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Maintenance_Audit_div_inner {
+  text-align: center;
+  h1 {
+    font-weight: 700 !important;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 1.5rem;
+  }
+}
+.Maintenance_Audit_search_div {
+  display: flex;
+  align-items: center;
+  .BlueBtn {
+    width: 7rem;
+    margin-left: 2rem;
+  }
+}
+.Maintenance_Audit_search_div_inner {
+  width: 100%;
+  position: relative;
+  input {
+    height: 45px;
+    border-radius: 20px;
+    border-color: #3f3f3f;
+    color: #21252980;
+    padding-left: 42px;
+  }
+  svg {
+    position: absolute;
+    transform: rotate(86deg);
+    font-size: 23px;
+    color: #21252980;
+    top: 12px;
+    left: 14px;
+  }
+}
+.maintenance_hero_top {
+  background-color: #f5f5f5;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+.maintenance_hero_titlt_div {
+  h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #212529;
+    text-transform: capitalize;
+    margin-bottom: 2.5rem;
+    width: 20rem;
+  }
+}
+.maintenance_hero_img {
+  @include bg_img;
+  width: 100%;
+  height: 34rem;
+}
+.maintenance_hero_titlt_points {
+  position: relative;
+  width: 24rem;
+  margin-bottom: 22px;
+  p {
+    margin-bottom: 0;
+    height: 40px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #ff9393;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 4px;
+  }
+  div {
+    background-color: #85c1ff;
+    height: 40px;
+    border: 1px solid black;
+  }
+}
+.maintenance_provide_title_div {
+  text-align: center;
+  margin-bottom: 2rem;
+  h3 {
+    font-weight: 700 !important;
+    font-size: 40px;
+    text-transform: capitalize;
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+.maintenance_provide_title_top_div {
+  padding: 0 11rem;
+}
+.maintenance_provide_data_div {
+  h4 {
+    color: #ffac97;
+    border: 4px solid #ffac97;
+    font-weight: 700 !important;
+    font-size: 40px;
+    display: flex;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    font-family: auto;
+  }
+  p {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+}
+.maintenance_development_top {
+  background-color: #515151;
+  padding: 4rem 0;
+}
+.maintenance_development_title {
+  color: white;
+  h3 {
+    font-weight: 700 !important;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 0;
+    color: white;
+    text-align: justify;
+    letter-spacing: 0.5px !important;
+    width: 90%;
+  }
+}
+.maintenance_development_data_div {
+  border: 1px solid white;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  h4 {
+    font-weight: 700 !important;
+    font-size: 20px;
+  }
+  p {
+    margin-bottom: 0;
+    color: white;
+    font-weight: 500 !important;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.maintenance_Satisfaction_img {
+  @include bg_img;
+  width: 25rem;
+  height: 25rem;
+  margin: auto;
+}
+// Maintenance end
+// about slaider new
+.About_slaider_topdiav {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  padding-left: 3rem;
+}
+.About_slaider_years {
+  color: #0a76e5;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 200px;
+}
+
+.About_slaider_inner {
+  padding-left: 5rem;
+  width: 55rem;
+  h3 {
+    font-weight: 500;
+    font-size: 56px;
+    text-transform: capitalize;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+// about slaider new end

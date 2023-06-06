@@ -6,6 +6,97 @@
   }
 }
 @media (max-width: 576px) {
+  .About_slaider_inner {
+    padding-left: 0;
+    width: 100%;
+    h3 {
+      font-weight: 500 !important;
+      font-size: 20px !important;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .About_slaider_topdiav {
+    display: block;
+  }
+  .About_slaider_years {
+    font-size: 50px;
+  }
+  .maintenance_Satisfaction_img {
+    width: 100%;
+    height: 20rem;
+  }
+  .maintenance_development_title {
+    text-align: center;
+    p {
+      font-size: 15px;
+      width: 100%;
+      letter-spacing: 1px !important;
+    }
+    h3 {
+      font-size: 25px !important;
+    }
+  }
+  .maintenance_provide_title_top_div {
+    padding: 0;
+    h3 {
+      font-size: 25px !important;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .maintenance_provide_data_div {
+    h4 {
+      font-size: 25px;
+      width: 45px;
+      height: 45px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .Maintenance_Audit_div_inner {
+    h1 {
+      font-size: 25px !important;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .maintenance_hero_img {
+    width: 18rem;
+    height: 16rem;
+    margin: auto;
+    display: none;
+  }
+  .maintenance_hero_top {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .maintenance_hero_titlt_points {
+    width: 100%;
+  }
+  .maintenance_hero_titlt_div {
+    text-align: center;
+    h2 {
+      font-weight: 600 !important;
+      font-size: 25px !important;
+      line-height: 35px;
+      width: 100%;
+    }
+  }
+  .Maintenance_Audit_search_div {
+    display: block;
+    .BlueBtn {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
   .growth_top_div {
     overflow: auto;
     white-space: nowrap;
@@ -814,6 +905,22 @@
   }
 }
 @media (min-width: 768px) {
+  .About_slaider_inner {
+    padding-left: 0;
+    width: 55rem;
+  }
+  .About_slaider_years {
+    font-size: 100px;
+  }
+  .About_slaider_topdiav {
+    display: block;
+  }
+  .maintenance_provide_title_top_div {
+    padding: 0 0;
+  }
+  .maintenance_hero_img {
+    height: 38rem;
+  }
   .growth_top_div {
     overflow: auto;
     white-space: nowrap;
@@ -1089,6 +1196,28 @@
   }
 }
 @media (min-width: 1024px) {
+  .About_slaider_inner {
+    padding-left: 5rem;
+    width: 55rem;
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .About_slaider_topdiav {
+    display: flex;
+  }
+  .About_slaider_years {
+    font-size: 100px;
+  }
+  .maintenance_provide_title_top_div {
+    padding: 0 11rem;
+  }
+  .maintenance_hero_img {
+    height: 25rem;
+  }
   .growth_top_div {
     display: flex;
     overflow: unset;
@@ -1395,6 +1524,17 @@
   }
 }
 @media (min-width: 1440px) {
+  .About_slaider_inner {
+    h3 {
+      font-size: 56px;
+    }
+  }
+  .About_slaider_years {
+    font-size: 200px;
+  }
+  .maintenance_hero_img {
+    height: 34rem;
+  }
   .all_h1_title {
     font-size: 40px;
   }

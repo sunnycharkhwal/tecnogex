@@ -83,6 +83,11 @@ export const Footer = () => {
                     <NavLink to="/careers">Careers</NavLink>
                   </Nav.Link>
                 </li>
+                <li>
+                  <Nav.Link>
+                    <NavLink to="/ThankYou">Thank you page</NavLink>
+                  </Nav.Link>
+                </li>
               </ul>
             </div>
             <div className="col-sm-3 col-12 ">
