@@ -18,7 +18,12 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { Nav, Container } from "react-bootstrap";
 import { PartnersList } from "../components/Partners";
-import { BlueBtn, OutlineBtn, OutlineLinkBtn } from "../components/Btn";
+import {
+  BlueBtn,
+  BlueLinkBtn,
+  OutlineBtn,
+  OutlineLinkBtn,
+} from "../components/Btn";
 import { Faqs } from "../components/Faqs";
 import { ProductLists } from "../components/ProductLists";
 import { Cta } from "../components/Cta";
@@ -163,18 +168,6 @@ export const Home = () => {
     );
   };
 
-  const settings = {
-    dots: false,
-    arrows: true,
-    fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
-  };
   const BluePills = (props) => (
     <div className={props.className}>
       <div className="bluepills">
@@ -184,118 +177,25 @@ export const Home = () => {
       </div>
     </div>
   );
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+  };
   return (
     <>
       <Container fluid className="" style={{ backgroundColor: "#fafafa" }}>
         <Container className="py-3">
-          <div className="row py-3">
-            <div>
-              <Slider {...settings}>
-                {/* <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1 className="all_h1_title">
-                      We pour our heart into every design,
-                      <span>Mobile Apps</span>
-                    </h1>
-                    <p className="all_h1_title_p">
-                      This is a Dummy text This is a Dummy text This is a Dummy
-                      text This is a Dummy textThis is a Dummy text This is a
-                      Dummy text.This is a Dummy text This is a Dummy text This
-                      is a Dummy text This is a Dummy textThis is a Dummy text
-                      This is a Dummy text This is a Dummy text This is a Dummy
-                      text This is a Dummy text This is a Dummy textThis is a
-                      Dummy text This is a Dummy text
-                    </p>
-                    <div className="col-md-4 col-7">
-                      <BlueBtn link="/creation" title="Get Started" />
-                    </div>
-                  </div>
-                  <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <img className="w-md-80 w-100" alt="demo" src={homehero1} />
-                  </div>
-                </div> */}
-                {/* <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h2 className="all_h1_title">
-                      We pour our heart into every design,
-                      <span>Mobile Apps</span>
-                    </h2>
-                    <p className="all_h1_title_p">
-                      This is a Dummy text This is a Dummy text This is a Dummy
-                      text This is a Dummy textThis is a Dummy text This is a
-                      Dummy text.This is a Dummy text This is a Dummy text This
-                      is a Dummy text This is a Dummy textThis is a Dummy text
-                      This is a Dummy text This is a Dummy text This is a Dummy
-                      text This is a Dummy text This is a Dummy textThis is a
-                      Dummy text This is a Dummy text
-                    </p>
-                    <div className="col-md-4 col-7">
-                      <BlueBtn link="/creation" title="Get Started" />
-                    </div>
-                  </div>
-                  <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <img className="w-md-80 w-100" alt="demo" src={homehero2} />
-                  </div>
-                </div> */}
-                <div>
-                  <div className="row">
-                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                      <h2 className="all_h1_title">
-                        We pour our heart into every design,
-                        <span>Mobile Apps</span>
-                      </h2>
-                      <p className="all_h1_title_p">
-                        This is a Dummy text This is a Dummy text This is a
-                        Dummy text This is a Dummy textThis is a Dummy text This
-                        is a Dummy text.This is a Dummy text This is a Dummy
-                        text This is a Dummy text This is a Dummy textThis is a
-                        Dummy text This is a Dummy text This is a Dummy text
-                        This is a Dummy text This is a Dummy text This is a
-                        Dummy textThis is a Dummy text This is a Dummy text
-                      </p>
-                      {/* <BlueBtn link="/creation" title="Get Started" /> */}
-                    </div>
-                    <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                      <img
-                        className="w-md-80 w-100"
-                        alt="demo"
-                        src={homehero2}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="row d-flex align-items-center justify-content-around g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
-                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                      <h2 className="all_h1_title">
-                        We pour our heart into every design,
-                        <span>Mobile Apps</span>
-                      </h2>
-                      <p className="all_h1_title_p">
-                        This is a Dummy text This is a Dummy text This is a
-                        Dummy text This is a Dummy textThis is a Dummy text This
-                        is a Dummy text.This is a Dummy text This is a Dummy
-                        text This is a Dummy text This is a Dummy textThis is a
-                        Dummy text This is a Dummy text This is a Dummy text
-                        This is a Dummy text This is a Dummy text This is a
-                        Dummy textThis is a Dummy text This is a Dummy text
-                      </p>
-                      {/* <div className="col-md-4 col-7">
-                        <BlueBtn link="/creation" title="Get Started" />
-                      </div> */}
-                    </div>
-                    <div className="col-xxl-6 d-flex justify-content-end col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                      <img
-                        className="w-md-80 w-100"
-                        alt="demo"
-                        src={homehero3}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Slider>
-            </div>
-          </div>
+          <HomeSlider />
+          {/* <SliderBottom /> */}
         </Container>
       </Container>
 
@@ -406,7 +306,7 @@ export const Home = () => {
                     mollit. Exercitation veniam consequat sunt nostrud amet.
                   </small>
                 </div>
-                <div className="col-md-4 col-7 mr-0">
+                <div className="col-md-4 col-7 mr-0 sec_div">
                   <OutlineBtn title="Get Started" />
                 </div>
               </div>
@@ -1241,6 +1141,206 @@ export const Home = () => {
       />
 
       <Faqs catId={1} />
+    </>
+  );
+};
+const HomeSlider = () => {
+  const settings = {
+    dots: false,
+    arrows: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+  };
+  const HomeSliderData = [
+    {
+      title: "We’re touching new heights with",
+      titleBlue: "Websites",
+      HomeSlidertextData: [
+        {
+          text1: "We are committed to making your",
+          text2: "website development",
+          text3:
+            "and design a roaring success. With our comprehensive all-in-one package, we provide you with a customized dashboard to track your website analytics. And we don't just deliver quality - wbuild custom solutions in just 7 days, so you can start seeing results in no time. Choose us, and let us help you take your website to the next level.",
+        },
+      ],
+      img: homehero1,
+      link: "/creation",
+    },
+    {
+      title: "We’re touching new heights with",
+      titleBlue: " Mobile Apps",
+      HomeSlidertextData: [
+        {
+          text1: "Get ready to supercharge your business with custom",
+          text2: "mobile app development",
+          text3:
+            "and design! No guesswork; no wondering if your page is performing well. Take help from our team of skilled developers and designers to create a stunning app. Plus a customised dashboard to track analytics. Don't miss out on this opportunity to engage your customers like never before; contact us today to get started!",
+        },
+      ],
+      img: homehero2,
+      link: "/creation",
+    },
+    {
+      title: "We’re touching new heights with",
+      titleBlue: " Mobile Apps",
+      HomeSlidertextData: [
+        {
+          text1: "Get ready to supercharge your business with custom",
+          text2: "mobile app development",
+          text3:
+            "and design! No guesswork; no wondering if your page is performing well. Take help from our team of skilled developers and designers to create a stunning app. Plus a customised dashboard to track analytics. Don't miss out on this opportunity to engage your customers like never before; contact us today to get started!",
+        },
+      ],
+      img: homehero3,
+      link: "/creation",
+    },
+  ];
+  return (
+    <>
+      <Slider {...settings}>
+        {HomeSliderData.map((val, i) => (
+          <div key={i}>
+            <div className="row g-4">
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 home_slider_text_title">
+                <div>
+                  <h1 className="all_h1_title">
+                    {val.title}
+                    <span> {val.titleBlue}</span>
+                  </h1>
+                  {val.HomeSlidertextData.map((val, i) => (
+                    <p class="all_h1_title_p" key={i}>
+                      {val.text1}
+                      <span> {val.text2} </span>
+                      {val.text3}
+                    </p>
+                  ))}
+                  <div className="home_slider_btn_div">
+                    <BlueLinkBtn link={val.link} title="Get Started" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div>
+                  <img className="home_slider_img" alt="demo" src={val.img} />
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </>
+  );
+};
+const SliderBottom = () => {
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: false,
+    // autoplay: true,
+    // speed: 4000,
+    // autoplaySpeed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
+  };
+  return (
+    <>
+      <div className="my_slick_slider_title">
+        <h2 className="py-2">Frequently purchased</h2>
+      </div>
+      <Slider className="slidebluearrows my_slick_slider py-2" {...settings}>
+        <div>
+          <div className="row">
+            <div className="col-6">
+              <div>
+                <h1 className="all_h1_title">
+                  We’re touching new heights with
+                  <span> Websites</span>
+                </h1>
+                <p class="all_h1_title_p">
+                  We are committed to making your
+                  <span>website development</span> and design a roaring success.
+                  With our comprehensive all-in-one package, we provide you with
+                  a customized dashboard to track your website analytics. And we
+                  don't just deliver quality - we build custom solutions in just
+                  7 days, so you can start seeing results in no time. Choose us,
+                  and let us help you take your website to the next level.
+                </p>
+                <div>
+                  <BlueLinkBtn link="/creation" title="Get Started" />
+                </div>
+              </div>
+            </div>
+            <div className="col-6">
+              <div>
+                <img className="w-md-80 w-100" alt="demo" src={homehero1} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="row">
+            <div className="col-6">
+              <div>
+                <h1 className="all_h1_title">
+                  We’re touching new heights with
+                  <span> Websites</span>
+                </h1>
+                <p class="all_h1_title_p">
+                  We are committed to making your
+                  <span>website development</span> and design a roaring success.
+                  With our comprehensive all-in-one package, we provide you with
+                  a customized dashboard to track your website analytics. And we
+                  don't just deliver quality - we build custom solutions in just
+                  7 days, so you can start seeing results in no time. Choose us,
+                  and let us help you take your website to the next level.
+                </p>
+                <div>
+                  <BlueLinkBtn link="/creation" title="Get Started" />
+                </div>
+              </div>
+            </div>
+            <div className="col-6">
+              <div>
+                <img className="w-md-80 w-100" alt="demo" src={homehero1} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Slider>
     </>
   );
 };

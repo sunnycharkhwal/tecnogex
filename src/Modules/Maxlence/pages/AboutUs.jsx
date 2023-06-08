@@ -38,11 +38,12 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className=" container">
+      {/* <div className=" container">
         <div className=" my-5">
           <MultipleItems />
         </div>
-      </div>
+      </div> */}
+
       <div className="ceosection container-fluid bg-light  ">
         <div className="container mb-sm-4 py-sm-3 py-4 ">
           <div className="ceotitle text-center my-sm-4 py-sm-4 py-3  wow animate__animated animate__fadeInDown">

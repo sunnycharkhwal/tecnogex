@@ -3656,6 +3656,13 @@ ul {
   height: 25rem;
   margin: auto;
 }
+.maintenance_Satisfaction_img2 {
+  @include bg_img;
+  width: 15rem;
+  height: 15rem;
+  margin: auto;
+  margin: 3rem 0;
+}
 // Maintenance end
 // about slaider new
 .About_slaider_topdiav {
@@ -3686,3 +3693,137 @@ ul {
   }
 }
 // about slaider new end
+// Hosting New page
+.hosting_title_div {
+  padding-top: 4rem;
+  h2 {
+    width: 94%;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-weight: 500 !important;
+    font-size: 24px;
+    margin-bottom: 2.5rem;
+  }
+}
+.hosting_benefits_div {
+  position: relative;
+  background-color: #f7f0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 9.5rem;
+}
+.hosting_benefits_title {
+  p {
+    margin-bottom: 0;
+    font-weight: 600 !important;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  img {
+    width: 24px;
+    height: 21px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+.hosting_benefits_text {
+  margin-bottom: 0;
+  text-align: justify;
+  font-weight: 400 !important;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 20px;
+  letter-spacing: 0.5px !important;
+}
+.hosting_benefits_line {
+  background-color: #c8c8c8;
+  height: 117px;
+  width: 1px;
+  position: absolute;
+  right: -12px;
+  bottom: 1rem;
+}
+.customers_top_div {
+  background-color: #dbecfe;
+  padding: 4rem 0;
+  h2 {
+    font-weight: 700 !important;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+  }
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    color: #212529b2;
+  }
+  .Maintenance_Audit_search_div {
+    width: 70%;
+  }
+  .customers_top_search_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.Hosting_Satisfaction_img {
+  @include bg_img;
+  width: 64rem;
+  height: 64rem;
+  margin: auto;
+  margin-top: -13rem;
+}
+.hosting_img_left_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hosting_img_left {
+  @include bg_img;
+  width: 34rem;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+}
+.hosting_img_left_title {
+  h3 {
+    font-weight: 600 !important;
+    font-size: 40px;
+    width: 94%;
+    margin-bottom: 1rem;
+  }
+  p {
+    display: flex;
+    // align-items: center;
+    color: #212529b2;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+    svg {
+      font-size: 30px;
+      color: #212529b2;
+    }
+  }
+}
+// Hosting New page end
+// home
+.home_slider_img {
+  height: 30rem;
+  width: 30rem;
+  margin: auto;
+}
+.home_slider_text_title {
+  padding-top: 3rem;
+}
+.home_slider_btn_div {
+  margin-top: 2rem;
+}
+.sec_div {
+  .out_line_btn {
+    background-color: transparent;
+  }
+}
+// home end

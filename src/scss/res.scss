@@ -6,6 +6,60 @@
   }
 }
 @media (max-width: 576px) {
+  .home_slider_btn_div {
+    text-align: center;
+  }
+  .home_slider_text_title {
+    padding-top: 0;
+  }
+  .home_slider_img {
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  .hosting_img_left_title {
+    h3 {
+      font-size: 25px !important;
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 6px;
+      line-height: 18px;
+    }
+  }
+  .hosting_img_left {
+    width: 100%;
+  }
+  .Hosting_Satisfaction_img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0rem;
+  }
+  .customers_top_div {
+    padding: 2rem 0;
+    h2 {
+      font-size: 25px !important;
+      margin-bottom: 1.5rem;
+      margin-top: 1rem;
+    }
+    .Maintenance_Audit_search_div {
+      width: 100%;
+    }
+  }
+  .hosting_benefits_div {
+    height: auto;
+  }
+  .hosting_title_div {
+    padding-top: 0rem;
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
   .About_slaider_inner {
     padding-left: 0;
     width: 100%;
@@ -905,6 +959,25 @@
   }
 }
 @media (min-width: 768px) {
+  .home_slider_text_title {
+    padding-top: 0;
+  }
+  .hosting_img_left_title h3 {
+    font-size: 32px;
+    width: 100%;
+  }
+  .hosting_img_left {
+    width: 23rem;
+  }
+  .Hosting_Satisfaction_img {
+    width: 35rem;
+    height: 35rem;
+    margin-top: -7rem;
+    margin-bottom: -7rem;
+  }
+  .hosting_img_div {
+    height: 26rem;
+  }
   .About_slaider_inner {
     padding-left: 0;
     width: 55rem;
@@ -1196,6 +1269,30 @@
   }
 }
 @media (min-width: 1024px) {
+  .home_slider_text_title {
+    padding-top: 3rem;
+  }
+  .hosting_img_left_title h3 {
+    font-size: 40px;
+    width: 94%;
+  }
+  .hosting_img_left {
+    width: 30rem;
+  }
+  .Hosting_Satisfaction_img {
+    width: 45rem;
+    height: 45rem;
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+  }
+  .hosting_benefits_text {
+    font-size: 10px;
+  }
+  .hosting_benefits_title {
+    p {
+      font-size: 15px;
+    }
+  }
   .About_slaider_inner {
     padding-left: 5rem;
     width: 55rem;
@@ -1524,6 +1621,23 @@
   }
 }
 @media (min-width: 1440px) {
+  .hosting_img_left {
+    width: 34rem;
+  }
+  .Hosting_Satisfaction_img {
+    width: 64rem;
+    height: 64rem;
+    margin-top: -13rem;
+    margin-bottom: -13rem;
+  }
+  .hosting_benefits_text {
+    font-size: 14px;
+  }
+  .hosting_benefits_title {
+    p {
+      font-size: 20px;
+    }
+  }
   .About_slaider_inner {
     h3 {
       font-size: 56px;
