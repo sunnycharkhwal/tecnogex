@@ -3826,4 +3826,133 @@ ul {
     background-color: transparent;
   }
 }
+.all_h1_title_p {
+  font-weight: 500;
+  font-size: 14px;
+}
 // home end
+// cro
+.cro_img {
+  @include bg_img;
+  width: 25rem;
+  height: 25rem;
+  margin: auto;
+}
+.cro_img_title_div {
+  p {
+    margin-bottom: 2rem;
+  }
+}
+.we_do_img {
+  @include bg_img;
+  width: 530px;
+  height: 352px;
+}
+.maintenance_provide_text_div {
+  text-align: end;
+}
+.cro_developed_div_text {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.cro_points_div {
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    svg {
+      font-size: 25px;
+    }
+  }
+}
+// cro end
+// gmb
+.gmb_top_img {
+  @include bg_img;
+  width: 28rem;
+  height: 21rem;
+  margin: auto;
+}
+.gmb_benefits_div {
+  text-align: center;
+  img {
+    @include bg_img;
+    height: 90px;
+    width: 90px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-weight: 600 !important;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+.gmb_expectations_img {
+  @include bg_img;
+  width: 100%;
+  height: 21rem;
+  margin: auto;
+}
+.gmb_Manage_img {
+  @include bg_img;
+  width: 100%;
+  height: 46rem;
+  margin: auto;
+}
+.gmb_Manage_text {
+  padding: 0 7rem;
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: justify;
+    letter-spacing: 0.5px !important;
+  }
+}
+.gmb_impression_img {
+  @include bg_img;
+  width: 30rem;
+  height: 53rem;
+  margin: auto;
+  margin-top: -16rem;
+}
+.gmb_impression_top_div {
+  padding-bottom: 0;
+  margin-top: 12rem;
+}
+.gmb_rankings_img {
+  @include bg_img;
+  width: 33rem;
+  height: 33rem;
+  margin: auto;
+}
+.gmb_img_left_title {
+  h3 {
+    font-weight: 600 !important;
+    font-size: 40px;
+    text-transform: capitalize;
+  }
+  p {
+    font-weight: 500 !important;
+    font-size: 16px;
+  }
+}
+// gmb end
+.home_slider_img1 {
+  @include bg_img;
+  height: 30rem;
+  width: auto;
+  margin: auto;
+}
+.home_slider_img2 {
+  @include bg_img;
+  height: 30rem;
+  width: auto;
+  margin: auto;
+}

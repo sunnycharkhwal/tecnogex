@@ -15,7 +15,7 @@ import demovideo from "../assests/demovideo.mp4";
 import arrowup from "../assests/arrowup.png";
 import dashboardagency from "../assests/dashboardagency.svg";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Nav, Container } from "react-bootstrap";
 import { PartnersList } from "../components/Partners";
 import {
@@ -32,6 +32,9 @@ import Tab from "react-bootstrap/Tab";
 import { VscStarFull, VscStarHalf } from "react-icons/vsc";
 import ENDPOINT from "../config/ENDPOINT";
 import Ctasearch from "../assests/ctasearch.png";
+import TopSlider from "../../../img/homeTop1.png";
+import TopSlider2 from "../../../img/home3.png";
+
 export const Shoptabs = (props) => {
   return (
     <Tab.Container
@@ -192,12 +195,22 @@ export const Home = () => {
   };
   return (
     <>
-      <Container fluid className="" style={{ backgroundColor: "#fafafa" }}>
+      <div className=" container py-3">
+        {/* <HomeSlider /> */}
+        <div className="row">
+          <div className="col-8">
+            <HomeSlider2 />
+          </div>
+          <div className="col-4">
+            <HomeSlider3 />
+          </div>
+        </div>
+      </div>
+      {/* <Container fluid className="" style={{ backgroundColor: "#fafafa" }}>
         <Container className="py-3">
           <HomeSlider />
-          {/* <SliderBottom /> */}
         </Container>
-      </Container>
+      </Container> */}
 
       <Cta
         bgcolor="greengradient"
@@ -1147,7 +1160,7 @@ export const Home = () => {
 const HomeSlider = () => {
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     fade: true,
     infinite: true,
     speed: 500,
@@ -1184,7 +1197,7 @@ const HomeSlider = () => {
         },
       ],
       img: homehero2,
-      link: "/creation",
+      link: "/",
     },
     {
       title: "We’re touching new heights with",
@@ -1237,108 +1250,113 @@ const HomeSlider = () => {
     </>
   );
 };
-const SliderBottom = () => {
+const HomeSlider2 = () => {
   const settings = {
-    dots: true,
+    // dots: true,
+    // arrows: true,
+    // // fade: true,
+    infinite: true,
+    // speed: 500,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    autoplay: true,
+    // autoplaySpeed: 5000,
+    // cssEase: "linear",
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: true,
-    infinite: false,
-    // autoplay: true,
-    // speed: 4000,
-    // autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
+    // fade: true,
+    dots: false,
+    swipe: true,
+    adaptiveHeight: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 767,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
+          autoplay: false,
+          autoplaySpeed: 4000,
+          swipe: true,
         },
       },
     ],
   };
+  const TopSliderData2 = [
+    {
+      link: "/hosting",
+      img: TopSlider,
+    },
+    {
+      link: "/website_redesign",
+      img: TopSlider,
+    },
+    {
+      link: "/maintenance",
+      img: TopSlider,
+    },
+  ];
   return (
     <>
-      <div className="my_slick_slider_title">
-        <h2 className="py-2">Frequently purchased</h2>
-      </div>
-      <Slider className="slidebluearrows my_slick_slider py-2" {...settings}>
-        <div>
-          <div className="row">
-            <div className="col-6">
-              <div>
-                <h1 className="all_h1_title">
-                  We’re touching new heights with
-                  <span> Websites</span>
-                </h1>
-                <p class="all_h1_title_p">
-                  We are committed to making your
-                  <span>website development</span> and design a roaring success.
-                  With our comprehensive all-in-one package, we provide you with
-                  a customized dashboard to track your website analytics. And we
-                  don't just deliver quality - we build custom solutions in just
-                  7 days, so you can start seeing results in no time. Choose us,
-                  and let us help you take your website to the next level.
-                </p>
-                <div>
-                  <BlueLinkBtn link="/creation" title="Get Started" />
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div>
-                <img className="w-md-80 w-100" alt="demo" src={homehero1} />
-              </div>
-            </div>
+      <Slider {...settings}>
+        {TopSliderData2.map((val, i) => (
+          <div key={i}>
+            <NavLink to={val.link}>
+              <img className="home_slider_img1" src={val.img} alt="img" />
+            </NavLink>
           </div>
+        ))}
+      </Slider>
+    </>
+  );
+};
+const HomeSlider3 = () => {
+  const settings = {
+    // dots: false,
+    // arrows: true,
+    // // fade: true,
+    infinite: true,
+    // speed: 500,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    autoplay: true,
+    // autoplaySpeed: 5000,
+    // cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    dots: false,
+    swipe: true,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 4000,
+          swipe: true,
+        },
+      },
+    ],
+  };
+
+  return (
+    <>
+      <Slider {...settings}>
+        <div>
+          <img className="home_slider_img2" src={TopSlider2} alt="img" />
         </div>
         <div>
-          <div className="row">
-            <div className="col-6">
-              <div>
-                <h1 className="all_h1_title">
-                  We’re touching new heights with
-                  <span> Websites</span>
-                </h1>
-                <p class="all_h1_title_p">
-                  We are committed to making your
-                  <span>website development</span> and design a roaring success.
-                  With our comprehensive all-in-one package, we provide you with
-                  a customized dashboard to track your website analytics. And we
-                  don't just deliver quality - we build custom solutions in just
-                  7 days, so you can start seeing results in no time. Choose us,
-                  and let us help you take your website to the next level.
-                </p>
-                <div>
-                  <BlueLinkBtn link="/creation" title="Get Started" />
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div>
-                <img className="w-md-80 w-100" alt="demo" src={homehero1} />
-              </div>
-            </div>
-          </div>
+          <img className="home_slider_img2" src={TopSlider} alt="img" />
+        </div>
+        <div>
+          <img className="home_slider_img2" src={TopSlider2} alt="img" />
+        </div>
+        <div>
+          <img className="home_slider_img2" src={TopSlider} alt="img" />
         </div>
       </Slider>
     </>

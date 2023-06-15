@@ -6,6 +6,82 @@
   }
 }
 @media (max-width: 576px) {
+  .gmb_img_left_title {
+    text-align: center;
+    h3 {
+      font-weight: 600 !important;
+      font-size: 30px !important;
+    }
+    p {
+      font-size: 15px !important;
+      text-align: justify;
+      letter-spacing: 0.5px;
+    }
+  }
+  .gmb_rankings_img {
+    width: 26rem;
+    height: 26rem;
+  }
+  .gmb_Manage_img {
+    width: 18rem;
+    height: 11rem;
+  }
+  .gmb_Manage_text {
+    padding: 0 0;
+    p {
+      font-size: 15px;
+    }
+  }
+  .gmb_impression_img {
+    width: 19rem;
+    height: 39rem;
+  }
+  .gmb_impression_top_div {
+    padding-bottom: 2rem;
+    margin-top: 12rem;
+  }
+  .gmb_expectations_img {
+    width: 19rem;
+    height: 10rem;
+  }
+  .gmb_benefits_div {
+    img {
+      height: 70px;
+    }
+    p {
+      font-size: 12px;
+      margin-bottom: 0;
+      line-height: 18px;
+    }
+  }
+  .gmb_top_img {
+    width: 18rem;
+    height: 14rem;
+  }
+  .cro_icon_top_mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .cro_icon_div_bottom {
+    width: 12rem;
+    height: 12rem;
+  }
+  .cro_developed_div_text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .maintenance_provide_text_div {
+    text-align: center;
+  }
+  .we_do_img {
+    width: 100%;
+    height: 352px;
+  }
+  .cro_img {
+    width: 17rem;
+    height: 17rem;
+  }
+
   .home_slider_btn_div {
     text-align: center;
   }
@@ -96,6 +172,7 @@
     padding: 0;
     h3 {
       font-size: 25px !important;
+      line-height: 35px;
     }
     p {
       font-size: 15px;
@@ -959,6 +1036,29 @@
   }
 }
 @media (min-width: 768px) {
+  .gmb_Manage_text {
+    padding: 0 4rem;
+  }
+  .gmb_Manage_img {
+    width: 100%;
+    height: 25rem;
+  }
+  .gmb_impression_top_div {
+    padding-bottom: 2rem;
+    margin-top: 12rem;
+  }
+  .gmb_expectations_img {
+    width: 100%;
+    height: 21rem;
+  }
+  .cro_developed_div_text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .we_do_img {
+    width: 100%;
+    height: 352px;
+  }
   .home_slider_text_title {
     padding-top: 0;
   }
@@ -1269,6 +1369,29 @@
   }
 }
 @media (min-width: 1024px) {
+  .gmb_Manage_text {
+    padding: 0 7rem;
+  }
+  .gmb_Manage_img {
+    width: 100%;
+    height: 33rem;
+  }
+  .gmb_impression_top_div {
+    padding-bottom: 0;
+    margin-top: 12rem;
+  }
+  .gmb_expectations_img {
+    width: 100%;
+    height: 15rem;
+  }
+  .cro_developed_div_text {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .we_do_img {
+    width: 100%;
+    height: 352px;
+  }
   .home_slider_text_title {
     padding-top: 3rem;
   }
@@ -1621,6 +1744,22 @@
   }
 }
 @media (min-width: 1440px) {
+  .gmb_Manage_img {
+    width: 100%;
+    height: 46rem;
+  }
+  .gmb_expectations_img {
+    width: 100%;
+    height: 21rem;
+  }
+  .cro_developed_div_text {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .we_do_img {
+    width: 530px;
+    height: 352px;
+  }
   .hosting_img_left {
     width: 34rem;
   }
