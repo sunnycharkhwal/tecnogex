@@ -3956,3 +3956,24 @@ ul {
   width: auto;
   margin: auto;
 }
+.home_page_links {
+  text-transform: capitalize;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  font-weight: 600 !important;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #0a76e5;
+    color: white !important;
+  }
+}

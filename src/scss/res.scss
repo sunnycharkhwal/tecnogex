@@ -6,6 +6,15 @@
   }
 }
 @media (max-width: 576px) {
+  .home_page_links {
+    font-size: 15px;
+  }
+  .home_slider_img1 {
+    height: 15rem;
+  }
+  .home_slider_img2 {
+    height: 15rem;
+  }
   .gmb_img_left_title {
     text-align: center;
     h3 {
@@ -1036,6 +1045,12 @@
   }
 }
 @media (min-width: 768px) {
+  .home_slider_img1 {
+    height: 20rem;
+  }
+  .home_slider_img2 {
+    height: 20rem;
+  }
   .gmb_Manage_text {
     padding: 0 4rem;
   }
@@ -1369,6 +1384,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .home_slider_img1 {
+    height: 25rem;
+  }
+  .home_slider_img2 {
+    height: 25rem;
+  }
   .gmb_Manage_text {
     padding: 0 7rem;
   }
@@ -1744,6 +1765,12 @@
   }
 }
 @media (min-width: 1440px) {
+  .home_slider_img1 {
+    height: 30rem;
+  }
+  .home_slider_img2 {
+    height: 30rem;
+  }
   .gmb_Manage_img {
     width: 100%;
     height: 46rem;

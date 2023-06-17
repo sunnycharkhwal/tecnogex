@@ -34,7 +34,7 @@ import ENDPOINT from "../config/ENDPOINT";
 import Ctasearch from "../assests/ctasearch.png";
 import TopSlider from "../../../img/homeTop1.png";
 import TopSlider2 from "../../../img/home3.png";
-
+import OwlCarousel from "react-owl-carousel2";
 export const Shoptabs = (props) => {
   return (
     <Tab.Container
@@ -193,24 +193,78 @@ export const Home = () => {
     autoplaySpeed: 5000,
     cssEase: "linear",
   };
+  const HomePageLinksData = [
+    {
+      linkName: "Website Design",
+      pageLink: "/website/6",
+    },
+    {
+      linkName: "Website Re-Design",
+      pageLink: "/website_redesign",
+    },
+    {
+      linkName: "Maintenance",
+      pageLink: "/maintenance",
+    },
+    {
+      linkName: "Hosting",
+      pageLink: "/hosting",
+    },
+    {
+      linkName: "Google Ads",
+      pageLink: "/google_ads",
+    },
+    {
+      linkName: "CRO",
+      pageLink: "/cro",
+    },
+    {
+      linkName: "SEO",
+      pageLink: "/seo",
+    },
+    {
+      linkName: "social media marketing",
+      pageLink: "/social_media_marketing",
+    },
+    {
+      linkName: "SEO",
+      pageLink: "/seo",
+    },
+    {
+      linkName: "GMB",
+      pageLink: "/gmb",
+    },
+    {
+      linkName: "video marketing",
+      pageLink: "/video_marketing",
+    },
+    {
+      linkName: "email marketing",
+      pageLink: "/email_marketing",
+    },
+  ];
   return (
     <>
       <div className=" container py-3">
-        {/* <HomeSlider /> */}
-        <div className="row">
-          <div className="col-8">
-            <HomeSlider2 />
-          </div>
-          <div className="col-4">
-            <HomeSlider3 />
+        <div className="pb-3">
+          <HomeSlider />
+          <div className="mt-3">
+            <div className="row g-1">
+              {HomePageLinksData.map((val, i) => (
+                <div
+                  className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6"
+                  key={i}
+                >
+                  <NavLink to={val.pageLink} className="home_page_links">
+                    {val.linkName}
+                  </NavLink>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+        <HomeSlider2 />
       </div>
-      {/* <Container fluid className="" style={{ backgroundColor: "#fafafa" }}>
-        <Container className="py-3">
-          <HomeSlider />
-        </Container>
-      </Container> */}
 
       <Cta
         bgcolor="greengradient"
@@ -1158,17 +1212,64 @@ export const Home = () => {
   );
 };
 const HomeSlider = () => {
-  const settings = {
-    dots: false,
-    arrows: true,
-    fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const options = {
+    animateOut: "fadeOut",
+    items: 1,
+    loop: true,
+    nav: false,
+    margin: 10,
     autoplay: true,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
+    smartSpeed: 600,
+  };
+  const HomeSliderData = [
+    {
+      Img1: TopSlider,
+      Img1Link: "/google_ads",
+      Img2: TopSlider2,
+      Img2Link: "/seo",
+    },
+  ];
+  return (
+    <>
+      <OwlCarousel options={options}>
+        {HomeSliderData.map((val, i) => (
+          <div key={i}>
+            <div className="row g-3">
+              <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-sm-12 col-12">
+                <NavLink to={val.Img1Link}>
+                  <img
+                    className="home_slider_img1"
+                    src={val.Img1}
+                    alt="photo"
+                  />
+                </NavLink>
+              </div>
+              <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-sm-12 col-12">
+                <NavLink to={val.Img2Link}>
+                  <img
+                    className="home_slider_img2"
+                    src={val.Img2}
+                    alt="photo"
+                  />
+                </NavLink>
+              </div>
+            </div>
+          </div>
+        ))}
+      </OwlCarousel>
+    </>
+  );
+};
+
+const HomeSlider2 = () => {
+  const options = {
+    animateOut: "fadeOut",
+    items: 1,
+    loop: true,
+    nav: false,
+    margin: 10,
+    autoplay: true,
+    smartSpeed: 600,
   };
   const HomeSliderData = [
     {
@@ -1197,7 +1298,7 @@ const HomeSlider = () => {
         },
       ],
       img: homehero2,
-      link: "/",
+      link: "/seo",
     },
     {
       title: "We’re touching new heights with",
@@ -1211,12 +1312,12 @@ const HomeSlider = () => {
         },
       ],
       img: homehero3,
-      link: "/creation",
+      link: "/cro",
     },
   ];
   return (
     <>
-      <Slider {...settings}>
+      <OwlCarousel options={options}>
         {HomeSliderData.map((val, i) => (
           <div key={i}>
             <div className="row g-4">
@@ -1227,7 +1328,7 @@ const HomeSlider = () => {
                     <span> {val.titleBlue}</span>
                   </h1>
                   {val.HomeSlidertextData.map((val, i) => (
-                    <p class="all_h1_title_p" key={i}>
+                    <p className="all_h1_title_p" key={i}>
                       {val.text1}
                       <span> {val.text2} </span>
                       {val.text3}
@@ -1246,119 +1347,7 @@ const HomeSlider = () => {
             </div>
           </div>
         ))}
-      </Slider>
-    </>
-  );
-};
-const HomeSlider2 = () => {
-  const settings = {
-    // dots: true,
-    // arrows: true,
-    // // fade: true,
-    infinite: true,
-    // speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    autoplay: true,
-    // autoplaySpeed: 5000,
-    // cssEase: "linear",
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: true,
-    // fade: true,
-    dots: false,
-    swipe: true,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: false,
-          autoplaySpeed: 4000,
-          swipe: true,
-        },
-      },
-    ],
-  };
-  const TopSliderData2 = [
-    {
-      link: "/hosting",
-      img: TopSlider,
-    },
-    {
-      link: "/website_redesign",
-      img: TopSlider,
-    },
-    {
-      link: "/maintenance",
-      img: TopSlider,
-    },
-  ];
-  return (
-    <>
-      <Slider {...settings}>
-        {TopSliderData2.map((val, i) => (
-          <div key={i}>
-            <NavLink to={val.link}>
-              <img className="home_slider_img1" src={val.img} alt="img" />
-            </NavLink>
-          </div>
-        ))}
-      </Slider>
-    </>
-  );
-};
-const HomeSlider3 = () => {
-  const settings = {
-    // dots: false,
-    // arrows: true,
-    // // fade: true,
-    infinite: true,
-    // speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    autoplay: true,
-    // autoplaySpeed: 5000,
-    // cssEase: "linear",
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    dots: false,
-    swipe: true,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: false,
-          autoplaySpeed: 4000,
-          swipe: true,
-        },
-      },
-    ],
-  };
-
-  return (
-    <>
-      <Slider {...settings}>
-        <div>
-          <img className="home_slider_img2" src={TopSlider2} alt="img" />
-        </div>
-        <div>
-          <img className="home_slider_img2" src={TopSlider} alt="img" />
-        </div>
-        <div>
-          <img className="home_slider_img2" src={TopSlider2} alt="img" />
-        </div>
-        <div>
-          <img className="home_slider_img2" src={TopSlider} alt="img" />
-        </div>
-      </Slider>
+      </OwlCarousel>
     </>
   );
 };
