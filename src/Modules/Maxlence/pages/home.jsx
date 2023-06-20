@@ -34,6 +34,9 @@ import ENDPOINT from "../config/ENDPOINT";
 import Ctasearch from "../assests/ctasearch.png";
 import TopSlider from "../../../img/homeTop1.png";
 import TopSlider2 from "../../../img/home3.png";
+import TopSlider3 from "../../../img/h3.png";
+import TopSlider4 from "../../../img/h4.png";
+
 import OwlCarousel from "react-owl-carousel2";
 export const Shoptabs = (props) => {
   return (
@@ -1226,6 +1229,12 @@ const HomeSlider = () => {
       Img1: TopSlider,
       Img1Link: "/google_ads",
       Img2: TopSlider2,
+      Img2Link: "/seo",
+    },
+    {
+      Img1: TopSlider4,
+      Img1Link: "/google_ads",
+      Img2: TopSlider3,
       Img2Link: "/seo",
     },
   ];

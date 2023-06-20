@@ -6,6 +6,9 @@
   }
 }
 @media (max-width: 576px) {
+  .smo_btn_div {
+    justify-content: center;
+  }
   .home_page_links {
     font-size: 15px;
   }
@@ -1045,6 +1048,9 @@
   }
 }
 @media (min-width: 768px) {
+  .smo_btn_div {
+    justify-content: center;
+  }
   .home_slider_img1 {
     height: 20rem;
   }
@@ -1384,6 +1390,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .smo_btn_div {
+    justify-content: flex-start;
+  }
   .home_slider_img1 {
     height: 25rem;
   }

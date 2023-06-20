@@ -3977,3 +3977,22 @@ ul {
     color: white !important;
   }
 }
+.smo_btn_div {
+  display: flex;
+  .btn_div {
+    margin-right: 10px;
+  }
+  .btn_div2 {
+    margin-left: 10px;
+  }
+}
+.smo_btn_div2 {
+  display: flex;
+  justify-content: center;
+  .btn_div {
+    margin-right: 10px;
+  }
+  .btn_div2 {
+    margin-left: 10px;
+  }
+}

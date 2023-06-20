@@ -113,13 +113,23 @@ export const SocialMediaMarketing = () => {
                 Doloremque nostrum quibusdam possimus labore adipisci cum ut,
                 soluta consequuntur nemo sapiente quo voluptatum sunt at cumque.
               </p>
-              <div className="py-4">
-                <NavLink
-                  to="/Questionare_Page"
-                  className="getstartbtn  fontrale my-5 "
-                >
-                  Get Started
-                </NavLink>
+              <div className="py-4 smo_btn_div">
+                <div className="btn_div">
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn  fontrale my-5 "
+                  >
+                    Smo
+                  </NavLink>
+                </div>
+                <div className="btn_div2">
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn  fontrale my-5 "
+                  >
+                    Smm
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className="col-12 col-md-12 col-lg-6 my-2 my-sm-0 my-3 rounded text-center ">
@@ -300,13 +310,23 @@ export const SocialMediaMarketing = () => {
                 </p>
               </div>
 
-              <div className="py-4">
-                <NavLink
-                  to="/Questionare_Page"
-                  className="getstartbtn fontrale my-5"
-                >
-                  Get Started
-                </NavLink>
+              <div className="py-4 smo_btn_div">
+                <div className="btn_div">
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn  fontrale my-5 "
+                  >
+                    Smo
+                  </NavLink>
+                </div>
+                <div className="btn_div2">
+                  <NavLink
+                    to="/Questionare_Page"
+                    className="getstartbtn  fontrale my-5 "
+                  >
+                    Smm
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>
@@ -341,13 +361,23 @@ export const SocialMediaMarketing = () => {
                   directly through your marketing efforts last year that has
                   resulted in over half a million dollars in revenue!”
                 </p>
-                <div className="text-center py-4">
-                  <NavLink
-                    to="/Questionare_Page"
-                    className="getstartbtn fontrale my-2"
-                  >
-                    Get Started
-                  </NavLink>
+                <div className="py-4 smo_btn_div2">
+                  <div className="btn_div">
+                    <NavLink
+                      to="/Questionare_Page"
+                      className="getstartbtn  fontrale my-5 "
+                    >
+                      Smo
+                    </NavLink>
+                  </div>
+                  <div className="btn_div2">
+                    <NavLink
+                      to="/Questionare_Page"
+                      className="getstartbtn  fontrale my-5 "
+                    >
+                      Smm
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>
