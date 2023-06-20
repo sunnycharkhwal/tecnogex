@@ -6,12 +6,14 @@ import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
 import GMBIcon from "../../../img/GMBIcon.svg";
 import SEOIcon from "../../../img/SEOIcon.svg";
 import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
-import CROIcon from "../../../img/CROIcon.svg";
+import CROIcon from "../../../img/croa.svg";
 import Photo1 from "../../../img/cro1.svg";
 import Photo2 from "../../../img/cro2.png";
 import Photo3 from "../../../img/cro4.svg";
 import { BsDot } from "react-icons/bs";
 import { BlueLinkBtn } from "../components/Btn";
+import { Faqs } from "../components/Faqs";
+import { FooterContact } from "../components/FooterContact";
 //
 const TopLinkData = [
   {
@@ -330,6 +332,8 @@ export const Cro = () => {
           </div>
         </div>
       </section>
+      <Faqs catId={2} />
+      <FooterContact />
     </>
   );
 };

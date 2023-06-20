@@ -1,4 +1,3 @@
-import { DrawerLeft } from "../components/DrawerLeft";
 import Doubleclicks from "../assests/doubleclicks.png";
 import Seosersearch from "../assests/seosersearch.png";
 import Seoserdisplay from "../assests/seoserdisplay.png";
@@ -13,7 +12,7 @@ import Gadsclient from "../assests/gadsclient.png";
 import Bottomfadestroke from "../assests/bottomfadestroke.png";
 import { FooterContact } from "../components/FooterContact";
 //
-import GoogleAdsIcon from "../../../img/GoogleAdsIcon.svg";
+import GoogleAdsIcon from "../../../img/ga.svg";
 import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
 import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
 import GMBIcon from "../../../img/GMBIcon.svg";

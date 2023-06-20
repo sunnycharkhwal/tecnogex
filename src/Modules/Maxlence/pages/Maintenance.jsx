@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import WebsiteDesignIcon from "../../../img/WebsiteDesignIcon.svg";
 import WebsiteReDesignIcon from "../../../img/WebsiteReDesignIcon.svg";
-import MaintenanceIcon from "../../../img/MaintenanceIcon.svg";
+import MaintenanceIcon from "../../../img/ma.png";
 import Hosting from "../../../img/Hosting.svg";
 import { BlueBtn, BlueLinkBtn } from "../components/Btn";
 import { BiSearch } from "react-icons/bi";

@@ -6,7 +6,7 @@ import { BiSearch } from "react-icons/bi";
 import WebsiteDesignIcon from "../../../img/WebsiteDesignIcon.svg";
 import WebsiteReDesignIcon from "../../../img/WebsiteReDesignIcon.svg";
 import MaintenanceIcon from "../../../img/MaintenanceIcon.svg";
-import Hosting from "../../../img/Hosting.svg";
+import Hosting from "../../../img/ha.svg";
 import Uptime from "../../../img/Uptime.svg";
 import Ssl from "../../../img/SSL.svg";
 import Php from "../../../img/php.svg";

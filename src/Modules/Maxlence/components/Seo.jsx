@@ -13,7 +13,7 @@ import GoogleAdsIcon from "../../../img/GoogleAdsIcon.svg";
 import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
 import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
 import GMBIcon from "../../../img/GMBIcon.svg";
-import SEOIcon from "../../../img/SEOIcon.svg";
+import SEOIcon from "../../../img/seoa.svg";
 import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
 import CROIcon from "../../../img/CROIcon.svg";
 

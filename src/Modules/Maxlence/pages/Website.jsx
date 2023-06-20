@@ -22,14 +22,16 @@ import { Faqs } from "../components/Faqs";
 import { FooterContact } from "../components/FooterContact";
 import { NavLink } from "react-router-dom";
 //
-import WebsiteDesignIcon from "../../../img/WebsiteDesignIcon.svg";
+
 import WebsiteReDesignIcon from "../../../img/WebsiteReDesignIcon.svg";
 import MaintenanceIcon from "../../../img/MaintenanceIcon.svg";
 import Hosting from "../../../img/Hosting.svg";
+import Wa from "../../../img/wa.svg";
+
 const TopLinkData = [
   {
     linkName: "Website Design",
-    linkIcon: WebsiteDesignIcon,
+    linkIcon: Wa,
     link: "/website/6",
     activeNav: "block",
     linkNameColor: "black",

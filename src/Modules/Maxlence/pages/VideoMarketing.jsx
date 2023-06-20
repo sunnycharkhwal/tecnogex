@@ -11,11 +11,12 @@ import { PackageCard } from "../components/PackageCard";
 //
 import GoogleAdsIcon from "../../../img/GoogleAdsIcon.svg";
 import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
-import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
+import VideoMarketingIcon from "../../../img/vma.png";
 import GMBIcon from "../../../img/GMBIcon.svg";
 import SEOIcon from "../../../img/SEOIcon.svg";
 import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
 import CROIcon from "../../../img/CROIcon.svg";
+import { Faqs } from "../components/Faqs";
 
 const TopLinkData = [
   {
@@ -682,6 +683,9 @@ export const VideoMarketing = () => {
         <PackageCard {...card_data} />
       </section>
       <section className="mt-5 ">
+        <Faqs catId={2} />
+      </section>
+      <section className="mt-5 ">
         <GetInTouchVideo />
       </section>
     </>
@@ -855,7 +859,6 @@ const Banner = () => {
     </>
   );
 };
-
 const GetInTouchVideo = () => {
   return (
     <>

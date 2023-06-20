@@ -23,9 +23,10 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 //
 import WebsiteDesignIcon from "../../../img/WebsiteDesignIcon.svg";
-import WebsiteReDesignIcon from "../../../img/WebsiteReDesignIcon.svg";
+import WebsiteReDesignIcon from "../../../img/wra.svg";
 import MaintenanceIcon from "../../../img/MaintenanceIcon.svg";
 import Hosting from "../../../img/Hosting.svg";
+
 const TopLinkData = [
   {
     linkName: "Website Design",

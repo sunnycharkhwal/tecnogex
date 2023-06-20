@@ -11,8 +11,8 @@ export const Footer = () => {
     <>
       <Container fluid className="greengradient pb-0" id="footer">
         <Container>
-          <div className="row">
-            <div className="col-sm-3 col-12 ">
+          <div className="row g-3">
+            <div className="col-xxl-3 col-xxl-3 col-lg-3 col-md-4 col-sm-12 col-12 ">
               <ul className="footercol">
                 <p>Let Us Help You</p>
                 <li>
@@ -45,7 +45,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-sm-3 col-12 ">
+            <div className="col-xxl-3 col-xxl-3 col-lg-3 col-md-4 col-sm-12 col-12 ">
               <ul className="footercol">
                 <p>Quick Links</p>
                 <li>
@@ -65,7 +65,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-sm-3 col-12 ">
+            <div className="col-xxl-3 col-xxl-3 col-lg-3 col-md-4 col-sm-12 col-12 ">
               <ul className="footercol">
                 <p>Get To Know Us</p>
                 <li>
@@ -90,22 +90,22 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-sm-3 col-12 ">
-              <div className="footlogo text-center mb-3">
+            <div className="col-xxl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-12 col-12 ">
+              <div className="footlogo mb-3">
                 <NavLink to="/">
                   <img src={FooterLogo} alt="f" />
                 </NavLink>
               </div>
               <div className="footabout fontrale font500">
                 <p>
-                  Aenean lorem enim faucibus at neque libero, in. In sed tempor
-                  diam habitasse ut. Tortor id augue molestie nisi, non. Vitae,
-                  tempor adipiscing massa, ultrices donec purus risus lectus.
-                  Amet integer dolor consectetur convallis in risus adipiscing.
+                  Tecnogex is an Australian-based company offering IT software
+                  solutions and digital marketing services. From custom
+                  development to web design, SEO, SMM, we provide tailored
+                  solutions to meet unique client needs.
                 </p>
               </div>
-              <div className="footicons  d-flex justify-content-around">
-                <div className="fb text-center">
+              <div className="footicons  d-flex">
+                <div className="fb text-center footicons_my">
                   <a
                     href="https://www.facebook.com/people/TecnoGex/100091787680738/"
                     target="_blank"
@@ -113,7 +113,7 @@ export const Footer = () => {
                     <img src={Fblighticon} alt="f" />
                   </a>
                 </div>
-                <div className="curr text-center">
+                <div className="curr text-center footicons_my">
                   <a
                     href="https://www.instagram.com/tecnogexofficial/?igshid=YmMyMTA2M2Y%3D"
                     target="_blank"
@@ -121,7 +121,7 @@ export const Footer = () => {
                     <img src={Instalighticon} alt="f" />
                   </a>
                 </div>
-                <div className="curr text-center">
+                <div className="curr text-center footicons_my">
                   <a href="https://twitter.com/tecnogex_" target="_blank">
                     <img src={Twitterlighticon} alt="f" />
                   </a>

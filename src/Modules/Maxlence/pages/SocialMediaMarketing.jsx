@@ -19,7 +19,7 @@ import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
 import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
 import GMBIcon from "../../../img/GMBIcon.svg";
 import SEOIcon from "../../../img/SEOIcon.svg";
-import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
+import SocialMediaIcon from "../../../img/sma.png";
 import CROIcon from "../../../img/CROIcon.svg";
 
 const TopLinkData = [

@@ -6,6 +6,26 @@
   }
 }
 @media (max-width: 576px) {
+  .email_marketing_solutions_div {
+    h3 {
+      font-size: 18px !important;
+    }
+  }
+  .email_marketing_research_box_div {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    height: auto;
+    p {
+      font-size: 15px !important;
+      margin-top: 1rem;
+    }
+    h3 {
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      margin: 0rem 0;
+    }
+  }
   .smo_btn_div {
     justify-content: center;
   }
@@ -1048,6 +1068,11 @@
   }
 }
 @media (min-width: 768px) {
+  .email_marketing_research_box_div {
+    p {
+      font-size: 13px;
+    }
+  }
   .smo_btn_div {
     justify-content: center;
   }
@@ -1390,6 +1415,16 @@
   }
 }
 @media (min-width: 1024px) {
+  .email_marketing_research_box_div {
+    p {
+      font-size: 11px;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 14px;
+      margin: 1rem 0;
+    }
+  }
   .smo_btn_div {
     justify-content: flex-start;
   }
@@ -1774,6 +1809,15 @@
   }
 }
 @media (min-width: 1440px) {
+  .email_marketing_research_box_div {
+    p {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 16px;
+      margin: 2rem 0;
+    }
+  }
   .home_slider_img1 {
     height: 30rem;
   }

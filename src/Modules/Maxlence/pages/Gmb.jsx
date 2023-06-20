@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import GoogleAdsIcon from "../../../img/GoogleAdsIcon.svg";
 import EmailMarketingIcon from "../../../img/EmailMarketingIcon.svg";
 import VideoMarketingIcon from "../../../img/VideoMarketingIcon.svg";
-import GMBIcon from "../../../img/GMBIcon.svg";
+import GMBIcon from "../../../img/gmba.svg";
 import SEOIcon from "../../../img/SEOIcon.svg";
 import SocialMediaIcon from "../../../img/SocialMediaIcon.svg";
 import CROIcon from "../../../img/CROIcon.svg";
@@ -18,7 +18,6 @@ import Photo8 from "../../../img/gmb8.svg";
 import Photo9 from "../../../img/gmb9.svg";
 import Photo10 from "../../../img/gmb10.svg";
 import { Faqs } from "../components/Faqs";
-
 import { BlueLinkBtn } from "../components/Btn";
 //
 const TopLinkData = [
