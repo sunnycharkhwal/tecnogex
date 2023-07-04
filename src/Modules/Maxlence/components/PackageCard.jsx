@@ -309,6 +309,7 @@ const PackageCardUi = (props) => {
                     className="package_card_box"
                     style={{
                       backgroundColor: val.boxbackgroundColor,
+                      height: val.height,
                     }}
                   >
                     <div>
@@ -367,6 +368,7 @@ const PackageCardUi = (props) => {
                     className="package_card_box package_two_box_title"
                     style={{
                       backgroundColor: val.boxbackgroundColor,
+                      height: val.height,
                     }}
                   >
                     <div>
@@ -425,6 +427,7 @@ const PackageCardUi = (props) => {
                     className="package_card_box package_two_box_title"
                     style={{
                       backgroundColor: val.boxbackgroundColor,
+                      height: val.height,
                     }}
                   >
                     <div>

@@ -23,7 +23,8 @@ import Baysidelogo from "../assests/partners/baysidelogo.png";
 import { AiOutlineLeft } from "react-icons/ai";
 import ArrowDown from "../../../img/down.svg";
 import ArrowUp from "../../../img/up.svg";
-
+import OwlCarousel from "react-owl-carousel2";
+import Carousel, { consts } from "react-elastic-carousel";
 export const AboutUs = () => {
   return (
     <>
@@ -38,11 +39,11 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-      {/* <div className=" container">
+      <div className=" container">
         <div className=" my-5">
-          <MultipleItems />
+          <AboutPageSlider />
         </div>
-      </div> */}
+      </div>
 
       <div className="ceosection container-fluid bg-light  ">
         <div className="container mb-sm-4 py-sm-3 py-4 ">
@@ -260,67 +261,18 @@ export const AboutUs = () => {
     </>
   );
 };
-const MultipleItems = () => {
-  const SampleNextArrow = (props) => {
-    const { style, onClick } = props;
-    return (
-      <div
-        className="slick-arrow"
-        style={{ ...style, display: "block", cursor: "pointer" }}
-        onClick={onClick}
-      >
-        <img src={ArrowUp} alt="down" />
-      </div>
-    );
-  };
-  const SamplePrevArrow = (props) => {
-    const { style, onClick } = props;
-    return (
-      <div
-        className="slick-arrow"
-        style={{ ...style, display: "block", cursor: "pointer" }}
-        onClick={onClick}
-      >
-        <img src={ArrowDown} alt="down" />
-      </div>
-    );
-  };
-  const settings = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    vertical: true,
-    dots: false,
-    arrows: true,
-    infinite: true,
-    autoplay: false,
-    // speed: 3000,
-    // autoplaySpeed: 3000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+
+const HomeSlider = () => {
+  const options = {
+    animateOut: "fadeOut",
+    items: 1,
+    loop: true,
+    nav: true,
+    margin: 10,
+    autoplay: true,
+    smartSpeed: 600,
+    // animateOut: "slideOutUp",
+    // animateIn: "slideInUp",
   };
   const SliderData = [
     {
@@ -368,22 +320,208 @@ const MultipleItems = () => {
   ];
   return (
     <>
-      <div>
-        <Slider {...settings}>
-          {SliderData.map((val, i) => (
-            <div>
-              <div className="About_slaider_topdiav">
-                <div className="About_slaider_years">{val.years}</div>
-                <div className="About_slaider_inner">
-                  <h3>
-                    <span>{val.blueTile}</span> {val.title}
-                  </h3>
-                  <p>{val.text}</p>
-                </div>
+      <OwlCarousel options={options}>
+        {SliderData.map((item, i) => (
+          <div key={i}>
+            <div className="About_slaider_topdiav">
+              <div className="About_slaider_years">{item.years}</div>
+              <div className="About_slaider_inner">
+                <h3>
+                  <span>{item.blueTile}</span> {item.title}
+                </h3>
+                <p>{item.text}</p>
               </div>
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
+      </OwlCarousel>
+    </>
+  );
+};
+const AboutPageSlider = () => {
+  const settings = {
+    verticalMode: true,
+    enableAutoPlay: false,
+    autoPlaySpeed: 1500,
+    showArrows: true,
+    infinite: true,
+  };
+
+  const myArrow = ({ type, onClick, isEdge }) => {
+    const pointer = type === consts.PREV ? "{ 1 }" : "{ 2 }";
+    return (
+      <button onClick={onClick} disabled={isEdge}>
+        {pointer}
+      </button>
+    );
+  };
+
+  return (
+    <>
+      <div className="About_slaider_topdiav_main">
+        <Carousel {...settings} renderArrow={myArrow} pagination={false}>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2017</div>
+            <div className="About_slaider_inner">
+              <h3>
+                <span>The Birth of a</span> Dream
+              </h3>
+              <p>
+                In 2017, Maxlence Consulting was founded as a side hustle,
+                igniting a journey fueled by passion and ambition. In the same
+                year, the team achieved a significant milestone by securing
+                their very first website building contract from D-Celebrations.
+                This early triumph set the stage for what was to come.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2017</div>
+            <div className="About_slaider_inner">
+              <h3>
+                <span>The Birth of a</span> Dream
+              </h3>
+              <p>
+                In 2017, Maxlence Consulting was founded as a side hustle,
+                igniting a journey fueled by passion and ambition. In the same
+                year, the team achieved a significant milestone by securing
+                their very first website building contract from D-Celebrations.
+                This early triumph set the stage for what was to come.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2017</div>
+            <div className="About_slaider_inner">
+              <h3>
+                <span>The Birth of a</span> Dream
+              </h3>
+              <p>
+                In 2017, Maxlence Consulting was founded as a side hustle,
+                igniting a journey fueled by passion and ambition. In the same
+                year, the team achieved a significant milestone by securing
+                their very first website building contract from D-Celebrations.
+                This early triumph set the stage for what was to come.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2017</div>
+            <div className="About_slaider_inner">
+              <h3>
+                <span>The Birth of a</span> Dream
+              </h3>
+              <p>
+                In 2017, Maxlence Consulting was founded as a side hustle,
+                igniting a journey fueled by passion and ambition. In the same
+                year, the team achieved a significant milestone by securing
+                their very first website building contract from D-Celebrations.
+                This early triumph set the stage for what was to come.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2017</div>
+            <div className="About_slaider_inner">
+              <h3>
+                <span>The Birth of a</span> Dream
+              </h3>
+              <p>
+                In 2017, Maxlence Consulting was founded as a side hustle,
+                igniting a journey fueled by passion and ambition. In the same
+                year, the team achieved a significant milestone by securing
+                their very first website building contract from D-Celebrations.
+                This early triumph set the stage for what was to come.
+              </p>
+            </div>
+          </div>
+          {/* <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2018</div>
+            <div className="About_slaider_inner About_slaider_inner_18">
+              <h3>
+                <span>New</span> Horizons
+              </h3>
+              <p>
+                With unwavering dedication, Maxlence team moved into our first
+                office, expanding our operations and delivering five impactful
+                digital marketing projects, solidifying our reputation as a
+                reliable and results-driven partner.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2019</div>
+            <div className="About_slaider_inner About_slaider_inner_19">
+              <h3>
+                <span>Rising to</span> Excellence
+              </h3>
+              <p>
+                We unveiled our own website, showcased our expertise and
+                completed an impressive array of 35 projects, encompassing
+                digital marketing and website building. In August, we received
+                the prestigious 'The Clutch Award, Top 10 Australian Companies'.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2020</div>
+            <div className="About_slaider_inner About_slaider_inner_20">
+              <h3>
+                <span>Testimonials of</span> Success
+              </h3>
+              <p>
+                We soared to new heights by winning Service Seeking's Top
+                Businesses award for 2020, with an impressive 52 glowing reviews
+                on Google and Facebook while our team embraced innovation in a
+                new corporate building."
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2021</div>
+            <div className="About_slaider_inner About_slaider_inner_21">
+              <h3>
+                <span>A Year of</span> Victories
+              </h3>
+              <p>
+                We rocked the industry with our first-ever SaaS application for
+                a mover company, while securing our second consecutive
+                Techbehemoths Award for Aftercare. Our dedication and expertise
+                propelled us to revolutionize the digital landscape and meet the
+                evolving needs of our clients.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2022</div>
+            <div className="About_slaider_inner">
+              <h3>
+                <span>Trust and Expertise</span> Recognized
+              </h3>
+              <p>
+                In 2022, our team achieved yet another remarkable milestone by
+                becoming a Google Partner and completed 80+ projects. This
+                recognition affirmed our expertise in digital marketing and our
+                commitment to providing top-notch services.
+              </p>
+            </div>
+          </div>
+          <div className="About_slaider_topdiav">
+            <div className="About_slaider_years">2023</div>
+            <div className="About_slaider_inner About_slaider_inner_23">
+              <h3>
+                <span>Elevate Your Business</span> with Tecnogex
+              </h3>
+              <p>
+                Formerly known as Maxlence Consulting, we've undergone an
+                exhilarating rebranding journey. Our brand-new website is your
+                gateway to a world of multiple services, accompanied by our
+                revolutionary client dashboard solutions to experience the power
+                of real-time data-driven decision-making like never before!
+              </p>
+            </div>
+          </div> */}
+        </Carousel>
       </div>
     </>
   );

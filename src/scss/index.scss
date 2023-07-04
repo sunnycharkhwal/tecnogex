@@ -3677,13 +3677,23 @@ ul {
   font-weight: 600;
   font-size: 200px;
 }
-
+// .About_slaider_topdiav_main {
+//   .rec-carousel-item-prev {
+//     display: none;
+//   }
+//   .rec-carousel-item-next {
+//     display: none;
+//   }
+//   .rec-carousel-item {
+//     height: 20rem;
+//   }
+// }
 .About_slaider_inner {
   padding-left: 5rem;
-  width: 55rem;
+  // width: 55rem;
   h3 {
     font-weight: 500;
-    font-size: 56px;
+    font-size: 50px;
     text-transform: capitalize;
   }
   p {
@@ -3713,6 +3723,12 @@ ul {
   border-radius: 8px;
   height: 9.5rem;
 }
+// .rec-carousel-item-prev {
+//   position: relative;
+//   .About_slaider_years {
+//     position: absolute;
+//   }
+// }
 .hosting_benefits_title {
   p {
     margin-bottom: 0;

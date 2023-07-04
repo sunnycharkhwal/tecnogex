@@ -159,7 +159,7 @@ export const GoogleAdsService = () => {
         <div className="gadsservicehead py-3 text-center ">
           <h2 className="all_h1_title">
             What <span>services</span> are covered in
-            <span>Enterprise Google Ads</span>
+            <span> Enterprise Google Ads</span>
           </h2>
         </div>
         <img className="w-100 my-3" src={Gadsservices} alt="f" />

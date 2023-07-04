@@ -222,10 +222,6 @@ export const Home = () => {
       pageLink: "/cro",
     },
     {
-      linkName: "SEO",
-      pageLink: "/seo",
-    },
-    {
       linkName: "social media marketing",
       pageLink: "/social_media_marketing",
     },

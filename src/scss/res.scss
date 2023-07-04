@@ -168,17 +168,7 @@
       font-size: 18px;
     }
   }
-  .About_slaider_inner {
-    padding-left: 0;
-    width: 100%;
-    h3 {
-      font-weight: 500 !important;
-      font-size: 20px !important;
-    }
-    p {
-      text-align: justify;
-    }
-  }
+
   .About_slaider_topdiav {
     display: block;
   }
@@ -1068,6 +1058,53 @@
   }
 }
 @media (min-width: 768px) {
+  // .About_slaider_inner_18 {
+  //   h3 {
+  //     font-size: 50px !important;
+  //   }
+  //   p {
+  //     font-size: 15px !important;
+  //   }
+  // }
+  // .About_slaider_inner_19 {
+  //   h3 {
+  //     font-size: 43px !important;
+  //   }
+  //   p {
+  //     font-size: 15px !important;
+  //     margin-bottom: 12px !important;
+  //   }
+  // }
+  // .About_slaider_inner_20 {
+  //   h3 {
+  //     font-size: 45px !important;
+  //   }
+  //   p {
+  //     font-size: 15px !important;
+  //     margin-bottom: 10px !important;
+  //   }
+  // }
+  // .About_slaider_inner_21 {
+  //   // h3 {
+  //   //   font-size: 45px !important;
+  //   // }
+  //   p {
+  //     // font-size: 15px !important;
+  //     // margin-bottom: 10px !important;
+  //   }
+  // }
+
+  .About_slaider_inner {
+    padding-left: 0;
+  }
+  .About_slaider_inner {
+    h3 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
   .email_marketing_research_box_div {
     p {
       font-size: 13px;
@@ -1124,12 +1161,9 @@
   .hosting_img_div {
     height: 26rem;
   }
-  .About_slaider_inner {
-    padding-left: 0;
-    width: 55rem;
-  }
+
   .About_slaider_years {
-    font-size: 100px;
+    font-size: 60px;
   }
   .About_slaider_topdiav {
     display: block;
@@ -1415,6 +1449,17 @@
   }
 }
 @media (min-width: 1024px) {
+  .About_slaider_inner {
+    padding-left: 5rem;
+  }
+  .About_slaider_inner_23 {
+    h3 {
+      font-size: 40px !important;
+    }
+    p {
+      font-size: 13px !important;
+    }
+  }
   .email_marketing_research_box_div {
     p {
       font-size: 11px;
@@ -1481,16 +1526,7 @@
       font-size: 15px;
     }
   }
-  .About_slaider_inner {
-    padding-left: 5rem;
-    width: 55rem;
-    h3 {
-      font-size: 25px;
-    }
-    p {
-      font-size: 12px;
-    }
-  }
+
   .About_slaider_topdiav {
     display: flex;
   }
@@ -1857,11 +1893,7 @@
       font-size: 20px;
     }
   }
-  .About_slaider_inner {
-    h3 {
-      font-size: 56px;
-    }
-  }
+
   .About_slaider_years {
     font-size: 200px;
   }

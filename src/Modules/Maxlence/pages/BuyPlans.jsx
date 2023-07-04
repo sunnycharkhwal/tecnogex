@@ -31,6 +31,7 @@ const card_data = {
         {
           boxbackgroundColor: "#f1f6fa",
           boxTitle: "Features",
+          height: "33rem",
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -72,6 +73,7 @@ const card_data = {
         {
           boxbackgroundColor: "white",
           boxTitle: "Results to expect",
+          height: "13rem",
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -113,6 +115,7 @@ const card_data = {
         {
           boxbackgroundColor: "#f1f6fa",
           boxTitle: "is it for you?",
+          height: "33rem",
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -170,6 +173,8 @@ const card_data = {
         {
           boxbackgroundColor: "#f1f6fa",
           boxTitle: "Features",
+          height: "33rem",
+
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -211,6 +216,8 @@ const card_data = {
         {
           boxbackgroundColor: "white",
           boxTitle: "Results to expect",
+          height: "13rem",
+
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -252,6 +259,8 @@ const card_data = {
         {
           boxbackgroundColor: "#f1f6fa",
           boxTitle: "is it for you?",
+          height: "33rem",
+
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -309,6 +318,7 @@ const card_data = {
         {
           boxbackgroundColor: "#f1f6fa",
           boxTitle: "Features",
+          height: "33rem",
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -406,6 +416,7 @@ const card_data = {
         {
           boxbackgroundColor: "white",
           boxTitle: "Features",
+          height: "13rem",
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",
@@ -447,6 +458,7 @@ const card_data = {
         {
           boxbackgroundColor: "#f1f6fa",
           boxTitle: "Features",
+          height: "33rem",
           boxPointsData: [
             {
               boxPoint: "5,7,10 Pages Optimized",

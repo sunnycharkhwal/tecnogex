@@ -17,12 +17,6 @@ import Videocamptool5 from "../assests/videocamptool5.png";
 import Videocamptool6 from "../assests/videocamptool6.png";
 import { Faqs } from "../components/Faqs";
 
-import Facebookcard from "../assests/facebookcard.png";
-import Instagramcard from "../assests/instagramcard.png";
-import Linkedincard from "../assests/linkedincard.png";
-import Pinterestcard from "../assests/pinterestcard.png";
-import Twittercard from "../assests/twittercard.png";
-import Youtubecard from "../assests/youtubecard.png";
 import S1 from "../assests/1.png";
 import S2 from "../assests/2.png";
 import S3 from "../assests/3.png";
