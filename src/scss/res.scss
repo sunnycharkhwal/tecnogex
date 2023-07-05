@@ -6,6 +6,75 @@
   }
 }
 @media (max-width: 576px) {
+  .video_up_col_row_div {
+    justify-content: center;
+  }
+  .video_up_col_btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem !important;
+  }
+  .shoptabs {
+    .nav-item {
+      background-color: #b7daff;
+      margin: 5px;
+      width: 16rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+  }
+  .online_store_top_div {
+    margin-top: 2rem;
+  }
+  .online_store_img {
+    width: 100%;
+    height: 15rem;
+  }
+  .personalised_img {
+    width: 100% !important;
+    height: 18rem;
+    margin: auto;
+  }
+  .personalised_btn_div {
+    justify-content: center;
+  }
+  .online_presence_img {
+    img {
+      width: 100%;
+      height: 20rem;
+    }
+  }
+  .sec_div {
+    justify-content: center;
+  }
+  .online_presence_top_div {
+    .online_presence_card_div {
+      h3 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .home_slider_btn_div {
+    text-align: center;
+  }
+  .title_all_new {
+    font-size: 25px !important;
+    text-align: center;
+    line-height: 31px;
+    br {
+      display: none;
+    }
+  }
+  .title_all_new_p {
+    font-size: 14px;
+    text-align: center;
+  }
   .email_marketing_solutions_div {
     h3 {
       font-size: 18px !important;
@@ -121,9 +190,9 @@
     padding-top: 0;
   }
   .home_slider_img {
-    height: auto;
-    width: 100%;
-    margin: auto;
+    height: 20rem;
+    width: 100% !important;
+    margin: auto !important;
   }
   .hosting_img_left_title {
     h3 {
@@ -1058,42 +1127,49 @@
   }
 }
 @media (min-width: 768px) {
-  // .About_slaider_inner_18 {
-  //   h3 {
-  //     font-size: 50px !important;
-  //   }
-  //   p {
-  //     font-size: 15px !important;
-  //   }
-  // }
-  // .About_slaider_inner_19 {
-  //   h3 {
-  //     font-size: 43px !important;
-  //   }
-  //   p {
-  //     font-size: 15px !important;
-  //     margin-bottom: 12px !important;
-  //   }
-  // }
-  // .About_slaider_inner_20 {
-  //   h3 {
-  //     font-size: 45px !important;
-  //   }
-  //   p {
-  //     font-size: 15px !important;
-  //     margin-bottom: 10px !important;
-  //   }
-  // }
-  // .About_slaider_inner_21 {
-  //   // h3 {
-  //   //   font-size: 45px !important;
-  //   // }
-  //   p {
-  //     // font-size: 15px !important;
-  //     // margin-bottom: 10px !important;
-  //   }
-  // }
-
+  .video_up_col_btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem !important;
+  }
+  .shoptabs {
+    .nav-item {
+      background-color: transparent;
+      margin: unset;
+      width: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+  }
+  .online_store_img {
+    width: 70%;
+    height: 20rem;
+    margin: auto;
+  }
+  .personalised_btn_div {
+    justify-content: center;
+  }
+  .sec_div {
+    justify-content: center;
+  }
+  .home_slider_btn_div {
+    text-align: center;
+  }
+  .title_all_new {
+    font-size: 40px;
+    text-align: center;
+  }
+  .title_all_new_p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .home_slider_img {
+    height: 23rem;
+    width: 30rem !important;
+  }
   .About_slaider_inner {
     padding-left: 0;
   }
@@ -1449,6 +1525,74 @@
   }
 }
 @media (min-width: 1024px) {
+  .logo_div_index2 {
+    font-size: 9px !important;
+  }
+  .logo_div_index {
+    .logo_div_index {
+      font-size: 11px;
+      img {
+        width: 20px;
+      }
+    }
+  }
+  .video_up_col_btn_div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: unset !important;
+  }
+  .video_up_div {
+    p {
+      font-size: 12px;
+    }
+  }
+  .online_store_img {
+    width: 95%;
+    height: 20rem;
+  }
+  .personalised_btn_div {
+    justify-content: flex-start;
+  }
+  .sec_div {
+    justify-content: flex-start;
+  }
+  .online_presence_top_div {
+    .title_all_new {
+      font-size: 40px;
+      text-align: unset;
+      line-height: 52px;
+    }
+    .online_presence_card_div {
+      p {
+        line-height: 19px;
+        text-align: left;
+        letter-spacing: normal;
+      }
+    }
+  }
+  .online_presence_img {
+    img {
+      width: 100%;
+      height: 20rem;
+    }
+  }
+  .home_slider_btn_div {
+    text-align: unset;
+  }
+  .home_slider_img {
+    height: 30rem;
+    width: 100% !important;
+  }
+
+  .title_all_new {
+    font-size: 40px;
+    text-align: unset;
+  }
+  .title_all_new_p {
+    font-size: 14px;
+    text-align: unset;
+  }
   .About_slaider_inner {
     padding-left: 5rem;
   }
@@ -1845,6 +1989,50 @@
   }
 }
 @media (min-width: 1440px) {
+  .logo_div_index2 {
+    font-size: 14px !important;
+  }
+  .logo_div_index {
+    .logo_div_index {
+      font-size: 16px;
+      img {
+        width: 20px;
+      }
+    }
+  }
+  .video_up_div {
+    p {
+      font-size: 14px;
+    }
+  }
+  .online_store_img {
+    width: 95%;
+    height: 29rem;
+  }
+  .online_presence_top_div {
+    .title_all_new {
+      font-size: 48px;
+      text-align: unset;
+      line-height: 58px;
+    }
+    .online_presence_card_div {
+      p {
+        line-height: 20px;
+      }
+    }
+  }
+  .online_presence_img {
+    img {
+      width: 36rem;
+      height: 26rem;
+    }
+  }
+  .title_all_new {
+    font-size: 48px;
+  }
+  .title_all_new_p {
+    font-size: 14px;
+  }
   .email_marketing_research_box_div {
     p {
       font-size: 14px;

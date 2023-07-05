@@ -21,37 +21,6 @@ body {
   font-family: "Raleway", sans-serif;
   overflow-y: auto;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h5,
-p {
-  letter-spacing: 0.1rem !important;
-}
-span,
-p {
-  /* letter-spacing: .009rem !important; */
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 500;
-  color: #383838;
-  line-height: 28px;
-}
-h1 span,
-h2 span {
-  font-weight: bold;
-}
-
 .dropdown-menu a {
   font-size: 0.8rem;
 }
@@ -108,10 +77,6 @@ a {
 }
 .fontrobo {
   font-family: "Roboto", sans-serif;
-}
-
-span {
-  color: #0a76e5;
 }
 .form-control:focus {
   box-shadow: none;
@@ -2749,30 +2714,6 @@ ul.ab-form-list {
   .sideactions {
     right: 7%;
     top: 35%;
-  }
-  h1 {
-    font-size: 2.2rem !important;
-  }
-  h2 {
-    font-size: 2rem !important;
-  }
-  h3 {
-    font-size: 1.8rem !important;
-  }
-  h4 {
-    font-size: 1.6rem;
-  }
-  h5 {
-    font-size: 1.4rem;
-  }
-  h6 {
-    font-size: 1.2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  small {
-    font-size: 0.8rem;
   }
 
   @media (max-width: 575.98px) {

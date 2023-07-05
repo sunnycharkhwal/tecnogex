@@ -1,82 +1,5 @@
 * {
   font-family: "Raleway";
-  /* width */
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    border-radius: 15px;
-    ul {
-      list-style-type: none;
-    }
-  }
-  .popuplink {
-    cursor: pointer;
-  }
-  .w-80 {
-    width: 80%;
-  }
-  .w-70 {
-    width: 70%;
-  }
-  .w-60 {
-    width: 60%;
-  }
-  .w-50 {
-    width: 50%;
-  }
-  .w-40 {
-    width: 40%;
-  }
-  .w-30 {
-    width: 30%;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 15px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #94badff7;
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 15px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0a76e5;
-  }
-
-  /* Hide scrollbar for IE, Edge and Firefox */
-  // body {
-  //     -ms-overflow-style: none;  /* IE and Edge */
-  //     scrollbar-width: none;  /* Firefox */
-  //   }
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600 !important;
-  margin-bottom: 0px;
-}
-span,
-p {
-  /* letter-spacing: .009rem !important; */
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 500;
-  color: #383838;
-  line-height: 28px;
-}
-small {
-  font-size: 14px;
-  line-height: 25px;
-  color: rgba(33, 37, 41, 0.7);
 }
 
 .dropdown-item {
@@ -119,11 +42,6 @@ a:hover {
 a {
   text-decoration: none !important;
   cursor: pointer;
-}
-
-span {
-  color: #0a76e5;
-  font-weight: 600;
 }
 .form-control:focus {
   box-shadow: none;
@@ -287,27 +205,9 @@ body.modal-open {
   padding: 0.8rem 0.7rem;
   text-align: center;
 }
-.shoptabs {
-  .flex-row.nav {
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow-x: auto;
-    justify-content: space-between;
-  }
-}
 
 ///PRODUCT STYLES ///
 
-.shoptabs {
-  a.nav-link.active,
-  a.nav-link:hover {
-    color: #0a76e5 !important;
-  }
-  a.nav-link {
-    color: #212529cc !important;
-    font-weight: 500;
-  }
-}
 .productscrollcontainer {
   .row {
     width: 100%;
