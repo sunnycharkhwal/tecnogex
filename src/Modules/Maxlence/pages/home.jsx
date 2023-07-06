@@ -343,7 +343,7 @@ export const Home = () => {
                       audience in a powerful way? Look no further than our
                       Google paid ads services, my friend. We don't just run ads
                       in isolation-
-                      <NavLink to="/google_ads">read more</NavLink>
+                      <NavLink to="/google_ads">Read more</NavLink>
                     </p>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ export const Home = () => {
                       through the cracks and into the arms of your competitors?
                       Let us help you take control of your online presence with
                       our powerful SEO services. As a full-service agency-
-                      <NavLink to="/seo"> read more</NavLink>
+                      <NavLink to="/seo"> Read more</NavLink>
                     </p>
                   </div>
                 </div>
@@ -367,7 +367,7 @@ export const Home = () => {
                       media platforms like Facebook, Instagram, and Google? Do
                       you feel like your social media presence is mediocre at
                       best? Let us help you achieve social media success today-
-                      <NavLink to="/social_media_marketing"> read more</NavLink>
+                      <NavLink to="/social_media_marketing"> Read more</NavLink>
                     </p>
                   </div>
                 </div>
@@ -379,7 +379,7 @@ export const Home = () => {
                       campaigns that ignite conversations, cultivate customer
                       relationships, and deliver extraordinary results. Our
                       personalized approach and targeted messaging-
-                      <NavLink to="/email_marketing"> read more</NavLink>
+                      <NavLink to="/email_marketing"> Read more</NavLink>
                     </p>
                   </div>
                 </div>
@@ -599,13 +599,13 @@ export const Home = () => {
       <MainSlider
         data={testimonial}
         SliderCard={TestimonialCard}
-        SliderTitle="Testimonials"
+        SliderTitle="Words from people"
       />
 
       <section className="mt-lg-5 mt-4 container">
         <div className=" text-center">
           <h2 className="title_all_new">
-            Words from <span>people</span>
+            Our <span>Partners</span>
           </h2>
         </div>
         <div className="row align-items-center justify-content-center mt-3 g-xxl-4 g-xl-4 g-lg-4 g-md-4 g-sm-4 g-4">
