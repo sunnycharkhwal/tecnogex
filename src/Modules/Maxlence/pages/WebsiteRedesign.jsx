@@ -62,31 +62,31 @@ export const WebsiteRedesign = () => {
     {
       title: "Guaranteed Enhancement",
       icon: WrIcon,
-      text: "Lorem ipsum dolor sit amet consectetur. A nibh eu nisi quisque hendrerit amet etiam. Sagittis tristique at gravida senectus id purus. Elit sed est suscipit egestas duis urna at ut. Tortor et tristique accumsan id aenean consectetur. Pellentesque mauris sit et gravida nunc integer velit dolor at. Diam accumsan cursus netus arcu. Id vitae scelerisque varius augue lectus bibendum ornare euismod placerat.",
+      text: "Our team conducts thorough UI/UX audits to uncover weak points and create a custom plan to achieve your redesign goals, such as faster page load times to minimize bounce rates, and more ",
     },
     {
       title: "Smooth Content Migration",
       icon: WrIcon1,
-      text: "Lorem ipsum dolor sit amet consectetur. A nibh eu nisi quisque hendrerit amet etiam. Sagittis tristique at gravida senectus id purus. Elit sed est suscipit egestas duis urna at ut. Tortor et tristique accumsan id aenean consectetur. Pellentesque mauris sit et gravida nunc integer velit dolor at. Diam accumsan cursus netus arcu. Id vitae scelerisque varius augue lectus bibendum ornare euismod placerat.",
+      text: "We carefully plan and execute content migration, combining automated and manual approaches to ensure a safe and seamless transition of your valuable content. ",
     },
     {
       title: "Preserved SEO Equity",
       icon: WrIcon2,
-      text: "Lorem ipsum dolor sit amet consectetur. A nibh eu nisi quisque hendrerit amet etiam. Sagittis tristique at gravida senectus id purus. Elit sed est suscipit egestas duis urna at ut. Tortor et tristique accumsan id aenean consectetur. Pellentesque mauris sit et gravida nunc integer velit dolor at. Diam accumsan cursus netus arcu. Id vitae scelerisque varius augue lectus bibendum ornare euismod placerat.",
+      text: "Our team works closely with stakeholders to develop an SEO migration strategy and conduct comprehensive audits, fix issues hindering ranking growth, and more to enhance organic traffic.  ",
     },
   ];
   const OurApproachData = [
     {
-      title: "Analyze the current website",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis sed morbi adipiscing diam tempor. Aliquam vehicula quis tincidunt arcu, risus diam, tincidunt eu dictum. Ullamcorper.",
+      title: "Evaluation and Assessment",
+      text: "Our expert team analyzes your current website, identify pain points, and evaluate design trends and competitors' approaches. ",
     },
     {
-      title: "Define the goal",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis sed morbi adipiscing diam tempor. Aliquam vehicula quis tincidunt arcu, risus diam, tincidunt eu dictum. Ullamcorper.",
+      title: "Strategy Development ",
+      text: "After this, they brainstorm, create wireframes, and collaborate to develop a winning website redesign strategy. ",
     },
     {
-      title: "Design & Develop",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis sed morbi adipiscing diam tempor. Aliquam vehicula quis tincidunt arcu, risus diam, tincidunt eu dictum. Ullamcorper.",
+      title: "Implementation and Launch ",
+      text: "Trust our team to bring your vision to life, transforming wireframes into visually stunning designs, and launch the redesigned website. ",
     },
   ];
   return (
@@ -103,7 +103,7 @@ export const WebsiteRedesign = () => {
                   <img src={val.linkIcon} alt="icon" />
                   <br />
                   <span style={{ color: val.linkNameColor }}>
-                    {val.linkName}{" "}
+                    {val.linkName}
                   </span>
                 </NavLink>
                 <div
@@ -120,11 +120,11 @@ export const WebsiteRedesign = () => {
           <div className="row">
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="website_redesign_text_div">
-                <h3>
-                  Site re-design that
-                  <span> communicates clearly, stands out, and sells </span>
-                  more.
+                <h3 className="title_all_new">
+                  Revitalize your online presence with a website redesign that
+                  <span> delivers proven results</span>
                 </h3>
+
                 <NavLink
                   to="/Questionare_Page"
                   className="getstartbtn fontrale my-5"
@@ -173,33 +173,36 @@ export const WebsiteRedesign = () => {
         <div className="container">
           <div className="why_you_need_top_text">
             <p>
-              Website redesign services help to transform a website’s existing
-              look and feel via UX and UI revamp. Tecnogex covers the full cycle
-              of website redesign – including UI and UX audit, loading speed
-              optimization, and content migration – to ensure longer visitor
-              sessions and a higher conversion rate.
+              Experience a website makeover like never before with Tecnogex's
+              top-notch redesign services. Our skilled team conducts meticulous
+              UI and UX audits, ensures lightning-fast loading speed, and
+              seamlessly migrates your content. Witness longer visitor sessions
+              and a remarkable boost in conversion rates.
             </p>
           </div>
           <div className="why_you_need_number">
             <h3>Why You Need Website Redesign</h3>
             <div className="row g-md-0 g-4">
               <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                <h4>68%</h4>
+                <h4>34%</h4>
                 <p>
-                  Visitors immediately leave a company website that has poor UI
-                  or/and UX design
+                  increase in conversion rates after a website redesign, leading
+                  to a significant growth in online sales and revenue.
                 </p>
               </div>
               <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                <h4>46%</h4>
+                <h4>88%</h4>
                 <p>
-                  Visitors make business decisions based on a company’s website
-                  visuals
+                  of online consumers are less likely to return to a website
+                  after a poor user experience.
                 </p>
               </div>
               <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                <h4>$1.73 Billion</h4>
-                <p>Annual revenue is lost by slow-loading ecommerce websites</p>
+                <h4>76%</h4>
+                <p>
+                  of consumers judge a company's credibility based on its
+                  website design.
+                </p>
               </div>
             </div>
           </div>
@@ -216,14 +219,14 @@ export const WebsiteRedesign = () => {
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="your_slow_loading">
-              <h3>
-                Your Slow-loading, Dated Website Design Holds Your Business
-                Back?
+              <h3 className=" title_all_new">
+                Is Your Website Design Dragging Your Business Down?
+                <span>It's Time for a Change.</span>
               </h3>
-              <p>
-                Turning a website visitor into a paying customer is no easy
-                task. Redesigning your site to improve user experience and
-                clarity of messaging needs to be your next step.
+              <p className="title_all_new_p">
+                Transform your digital presence with a striking website redesign
+                that amplifies brand impact brand and boosts bottom-line
+                results.
               </p>
             </div>
             {YouSlowData.map((val, i) => (
@@ -253,13 +256,15 @@ export const WebsiteRedesign = () => {
           <div className="row">
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="website_redesign_text_div p-0">
-                <h3>
-                  Revamp Your Website’s <span>Visual Aesthetics</span>
+                <h3 className=" title_all_new">
+                  Optimizing Visual Hierarchy for
+                  <span> Enhanced Experiences</span>
                 </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mattis sed morbi adipiscing diam tempor. Aliquam vehicula quis
-                  tincidunt arcu, risus diam, tincidunt eu dictum. Ullamcorper.
+                <p className="title_all_new_p">
+                  Our team makes important information stand out with colors,
+                  size, and typography. We at Tecnogex also create a pleasant
+                  and interactive experience for users, ensuring their
+                  satisfaction and enjoyment.
                 </p>
                 <div className="website_redesign_text_div_btn">
                   <NavLink
@@ -281,7 +286,10 @@ export const WebsiteRedesign = () => {
       </div>
       <section className="container my-5">
         <div className="our_approach_title_div">
-          <h3>Our Approach To Website Redesigns</h3>
+          <h3 className="title_all_new">
+            Comprehensive Website Redesign <br />
+            <span>Process</span>
+          </h3>
         </div>
         <div className="row  g-3">
           {OurApproachData.map((val, i) => (
@@ -313,7 +321,7 @@ export const WebsiteRedesign = () => {
         </div>
       </section>
       <Faqs catId={2} />
-      <FooterContact />
+      <FooterContact title="We’d love to be your partner" />
     </>
   );
 };

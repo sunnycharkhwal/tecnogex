@@ -6,6 +6,9 @@
   }
 }
 @media (max-width: 576px) {
+  .website_redesign_text_topmain {
+    padding: 3rem 0;
+  }
   .bottom_contact_title {
     font-size: 20px;
     br {
@@ -523,10 +526,15 @@
       font-size: 15px;
     }
   }
+  .your_slow_loading_img {
+    height: 20rem;
+  }
   .why_you_need_top_text {
     p {
-      font-size: 18px;
+      font-size: 14px;
       text-align: justify;
+      line-height: 20px;
+      letter-spacing: 0.5px;
     }
   }
   .website_redesign_text_img_div {
@@ -538,7 +546,7 @@
   }
   .website_redesign_text_div {
     text-align: center;
-    padding-top: 5rem !important;
+    padding-top: 0rem !important;
     h3 {
       font-size: 18px !important;
       font-weight: 600 !important;
