@@ -1,6 +1,6 @@
 import React from "react";
 import homehero2 from "../assests/homehero2.png";
-import { BlueBtn, OutlineLinkBtn } from "../components/Btn";
+import { OutlineLinkBtn } from "../components/Btn";
 import velaqualogo from "../assests/partners/velaqualogo.png";
 import flooring from "../assests/partners/logo 1.png";
 import latestproj1 from "../assests/latestproj1.png";
@@ -11,7 +11,6 @@ import creatweb1 from "../assests/creatweb1.svg";
 import palette from "../assests/palette 1.svg";
 import desktop from "../assests/desktop.svg";
 import stats from "../assests/stats 1.svg";
-import creatimg2 from "../assests/creatimg2.jpg";
 import creatopti from "../assests/creatopti.jpg";
 import aligncenter from "../assests/01 align center.svg";
 import lightbulb from "../assests/lightbulb-dollar 1.svg";

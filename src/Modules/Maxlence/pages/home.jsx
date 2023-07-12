@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import homehero1 from "../assests/homehero1.png";
-import homehero2 from "../assests/homehero2.png";
-import homehero3 from "../assests/homehero3.png";
-import dashboardagency from "../assests/dashboardagency.svg";
+import homehero1 from "../../../img/homehero1.png";
+import homehero2 from "../../../img/homehero2.png";
+import homehero3 from "../../../img/homehero3.png";
+import dashboardagency from "../../../img/indexLogoIcon7.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { Nav } from "react-bootstrap";
@@ -28,11 +28,11 @@ import LogoIndex5 from "../../../img/indexLogoIcon5.svg";
 import LogoIndex6 from "../../../img/indexLogoIcon6.svg";
 import IndexM from "../../../img/indexM.svg";
 import IndexUp from "../../../img/indexUp.svg";
-import IndexNew from "../../../img/indexNew1.svg";
-import IndexNew2 from "../../../img/indexNew2.svg";
-import IndexNew3 from "../../../img/indexNew3.svg";
-import IndexNew4 from "../../../img/indexNew4.svg";
-import IndexNew5 from "../../../img/indexNew5.svg";
+import IndexNew from "../../../img/indexNew1.png";
+import IndexNew2 from "../../../img/indexNew2.webp";
+import IndexNew3 from "../../../img/indexNew3.webp";
+import IndexNew4 from "../../../img/indexNew4.webp";
+import IndexNew5 from "../../../img/indexNew5.webp";
 import IndexNewVideo from "../../../img/indexVideo.mp4";
 export const Shoptabs = (props) => {
   return (
