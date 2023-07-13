@@ -4,12 +4,17 @@
 /node_modules
 /.pnp
 .pnp.js
+/src
+/public
+AgreementTaable.html
+package-lock.json
+package.json
 
 # testing
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store

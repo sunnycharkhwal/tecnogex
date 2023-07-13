@@ -14,6 +14,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { BiMinus, BiPlus } from "react-icons/bi";
 //
 import { NavLink } from "react-router-dom";
 //
@@ -100,6 +101,36 @@ export const Design = () => {
 };
 const PageRightFilters = () => {
   const [showFilters, setShowFilters] = React.useState(false);
+  const [showMore, setShowMore] = React.useState(false);
+  const FiltersItemboxData = [
+    {
+      boxTitle: "Style",
+      boxEventKey: "0",
+      OptionListData: [
+        {
+          label: "Modern",
+        },
+        {
+          label: "Minimalist",
+        },
+        {
+          label: "Simple",
+        },
+        {
+          label: "Elegant",
+        },
+        {
+          label: "Creative",
+        },
+        {
+          label: "Elegant",
+        },
+        {
+          label: "Creative",
+        },
+      ],
+    },
+  ];
   return (
     <>
       <div className="design_filter_new_btn_div">
@@ -127,23 +158,35 @@ const PageRightFilters = () => {
             </div>
             <div className="filter_new_top_div_inner">
               <Accordion alwaysOpen>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Request</Accordion.Header>
-                  <Accordion.Body>
-                    <div>
-                      <FormGroup>
-                        <FormControlLabel
-                          control={<Checkbox />}
-                          label="Website Hompeage Design Review"
-                        />
-                        <FormControlLabel
-                          control={<Checkbox />}
-                          label="Website Hompeage Design Review"
-                        />
-                      </FormGroup>
-                    </div>
-                  </Accordion.Body>
-                </Accordion.Item>
+                {FiltersItemboxData.map((val, i) => (
+                  <Accordion.Item eventKey={val.boxEventKey} key={i}>
+                    <Accordion.Header>{val.boxTitle}</Accordion.Header>
+                    <Accordion.Body>
+                      <div>
+                        <FormGroup>
+                          {val.OptionListData.slice(
+                            0,
+                            showMore ? undefined : 3
+                          ).map((val, i) => (
+                            <FormControlLabel
+                              key={i}
+                              control={<Checkbox />}
+                              className="text-animation"
+                              label={val.label}
+                            />
+                          ))}
+                          <p
+                            className="filter_aad_more_btn"
+                            onClick={() => setShowMore(!showMore)}
+                          >
+                            <span>{showMore ? <BiMinus /> : <BiPlus />}</span>
+                            View {showMore ? "Less" : "More"}
+                          </p>
+                        </FormGroup>
+                      </div>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                ))}
               </Accordion>
             </div>
             <div className=" mt-4 d-flex justify-content-center align-items-center">

@@ -4629,4 +4629,38 @@ ul {
   line-height: normal;
   text-transform: capitalize;
 }
+.filter_aad_more_btn {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #0a76e5;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  width: 90px;
+  margin-bottom: 0;
+  cursor: pointer;
+  span {
+    svg {
+      font-size: 18px;
+    }
+  }
+}
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.text-animation {
+  animation: textAnimation 1s ease-in-out;
+}
 // filter new end
