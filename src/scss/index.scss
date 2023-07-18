@@ -2734,6 +2734,7 @@ ul {
   h3 {
     font-weight: 700 !important;
     font-size: 17px;
+    text-transform: capitalize;
   }
   h4 {
     font-weight: 700 !important;
@@ -3963,12 +3964,14 @@ ul {
   height: 30rem;
   width: auto;
   margin: auto;
+  border-radius: 10px;
 }
 .home_slider_img2 {
   @include bg_img;
   height: 30rem;
   width: auto;
   margin: auto;
+  border-radius: 10px;
 }
 .home_page_links {
   flex-direction: column;
@@ -4483,13 +4486,26 @@ ul {
   }
 }
 .bottom_contact_title {
-  color: #212529;
+  color: #404040;
+  text-align: center;
   font-family: Raleway;
-  font-size: 35px;
-  margin-bottom: 1.5rem;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  letter-spacing: 0.98px;
+  text-transform: capitalize;
+}
+.bottom_contact_title_p {
+  color: #0a76e5;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
 }
 // website end
 // filter new
@@ -4664,3 +4680,315 @@ ul {
   animation: textAnimation 1s ease-in-out;
 }
 // filter new end
+// Design page
+.design_page_search_div {
+  display: flex;
+  align-items: center;
+  border-radius: 58px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  position: relative;
+  height: 40px;
+  input {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .form-control:focus {
+    color: #212529;
+    background-color: transparent;
+    border-color: #d9d9d9;
+    outline: 0;
+    box-shadow: none;
+  }
+  .design_page_search_icon {
+    transform: rotate(87deg);
+    font-size: 22px;
+    margin-left: 12px;
+    color: #2a3957;
+  }
+}
+.design_page_search_div_top_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.design_page_search_data_div {
+  width: 40%;
+  height: 10rem;
+  background-color: #00c99c;
+  p {
+    margin-bottom: 0;
+  }
+}
+.search_result_data_div {
+  width: 40%;
+  left: 30%;
+  position: absolute;
+  background-color: white;
+
+  // bottom: -5rem;
+  margin-top: 7px;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: auto;
+  max-height: 22rem;
+  overflow: scroll;
+  z-index: 10;
+}
+.search_result_no_data_div {
+  font-size: 20px;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+  text-transform: capitalize;
+}
+.search_result_data_div_inner {
+  background-color: #ececec;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  p {
+    margin-bottom: 0;
+    padding: 6px 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  svg {
+    font-size: 17px;
+  }
+  &:hover {
+    background-color: #ccd4fe;
+  }
+}
+.top_nav_man_input_div {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+.select_logo_template_title_div {
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  .h1 {
+    color: #212529;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.select_logo_template_img_col {
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+}
+.select_logo_template_img_div {
+  border-radius: 12px;
+  border: 1.5px solid #bebebe;
+  position: relative;
+  width: 100%;
+  height: 294px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border: 1.5px solid transparent;
+    transition: all 0.3s ease-in-out;
+    .select_logo_template_img_overlay {
+      display: flex;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.select_logo_template_img {
+  @include bg_img;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.select_logo_template_img_overlay {
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0.8799999952316284;
+  background: #303030;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  p {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+    transition: all 0.3s ease-in-out;
+  }
+  img {
+    width: 134px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.select_logo_template_bottom_title {
+  margin-top: 10px;
+  p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.package_card_box_new {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.design_package_title {
+  text-align: center;
+  h2 {
+    color: #212529;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+  }
+}
+.logo_brand_top {
+  span {
+    color: #ffac97;
+    border: 4px solid #ffac97;
+    font-weight: 700 !important;
+    font-size: 40px;
+    display: flex;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    font-family: auto;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: #434242;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+  }
+  p {
+    color: rgba(33, 37, 41, 0.7);
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+.logo_brand_title_div {
+  margin-bottom: 2rem;
+  h2 {
+    color: #212529;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+  p {
+    margin-bottom: 0;
+    color: #3f3f3f;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+.design_blogs_list_title {
+  background: #3a3a3a;
+}
+.design_blogs_list_title {
+  .logo_brand_title_div {
+    h2 {
+      color: white;
+    }
+  }
+  .img-gradientgray {
+    img {
+      border-top-right-radius: 30px;
+    }
+  }
+}
+.select_logo_template_title_link {
+  color: #0a76e5;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline !important;
+  text-transform: capitalize;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.design_inner_page_tab {
+  .nav {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .nav-link {
+    color: #767676;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0;
+    margin-right: 30px;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    padding: 0;
+    color: #0a76e5;
+    background-color: transparent;
+  }
+}
+// Design page end

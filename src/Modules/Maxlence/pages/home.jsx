@@ -607,12 +607,33 @@ const HomeSlider = () => {
     items: 1,
     loop: true,
     nav: false,
-    dots: true,
+    dots: false,
     margin: 10,
     autoplay: true,
     smartSpeed: 600,
   };
   const HomeSliderData = [
+    {
+      Img1: "https://picsum.photos/512/512?grayscale",
+      Img1Link: "/google_ads",
+      Img2: TopSlider3,
+      Img2Link: "/seo",
+      Img2Mobile: TopSlider,
+    },
+    {
+      Img1: "https://picsum.photos/seed/picsum/512/512",
+      Img1Link: "/google_ads",
+      Img2: TopSlider3,
+      Img2Link: "/seo",
+      Img2Mobile: TopSlider,
+    },
+    {
+      Img1: "https://picsum.photos/512/512",
+      Img1Link: "/google_ads",
+      Img2: TopSlider3,
+      Img2Link: "/seo",
+      Img2Mobile: TopSlider,
+    },
     {
       Img1: TopSlider,
       Img1Link: "/google_ads",

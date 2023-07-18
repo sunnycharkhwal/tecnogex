@@ -1,23 +1,301 @@
+import { PageRightFilters } from "../components/Design/PageRightFilters";
+import { SearchBar } from "../components/Design/SearchBar";
+import { NavLink } from "react-router-dom";
 import DA1 from "../../../img/dA1.png";
 import D2 from "../../../img/d2.svg";
 import D3 from "../../../img/d3.svg";
 import D4 from "../../../img/d4.svg";
 import D5 from "../../../img/d5.svg";
 import D6 from "../../../img/d6.svg";
-import FilterIcon from "../../../img/filter.svg";
 //
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Accordion from "react-bootstrap/Accordion";
-import { IoCloseSharp } from "react-icons/io5";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import { BiMinus, BiPlus } from "react-icons/bi";
+import LogoTemplateImg from "../../../img/dt1.svg";
+import LogoTemplateImg2 from "../../../img/dt2.svg";
+import LogoTemplateImg3 from "../../../img/dt3.svg";
+import LogoTemplateImg4 from "../../../img/dt4.svg";
+import B1 from "../../../img/dd1.png";
+import B2 from "../../../img/dd2.png";
+import B3 from "../../../img/dd3.png";
+import { LogoTemplateApp } from "../components/Design/LogoTemplateApp";
+import { DesignPackage } from "../components/Design/DesignPackage";
+import { LogoBrand } from "../components/Design/LogoBrand";
+import { DesignBlogsList } from "../components/Design/DesignBlogsList";
+import { Faqs } from "../components/Faqs";
+import { FooterContact } from "../components/FooterContact";
 //
-import { NavLink } from "react-router-dom";
+
+const BlogCardData = [
+  {
+    img: B1,
+    title: "Lorem ipsum dolor sit amet.",
+    category: "Maxlence",
+    date: "Oct 19, 2021",
+    time: "5 min",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
+    link: "/",
+  },
+  {
+    img: B2,
+    title: "Lorem ipsum dolor sit amet.",
+    category: "Maxlence",
+    date: "Oct 19, 2021",
+    time: "5 min",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
+    link: "/",
+  },
+  {
+    img: B3,
+    title: "Lorem ipsum dolor sit amet.",
+    category: "Maxlence",
+    date: "Oct 19, 2021",
+    time: "5 min",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi consequuntur porro deleniti. Commodi aut animi in doloribus vel sapiente ipsa, ipsam saepe? Ut, esse provident adipisci iure illo enim!",
+    link: "/",
+  },
+];
+const LogoBrandData = [
+  {
+    number: "1",
+    title: "Discovery and Research",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo lacus ornare in habitant dui augue in lectus. Non ultricies diam egestas suspendisse viverra commodo ut feugiat. Maecenas cursus dictum diam sapien nunc. In.",
+  },
+  {
+    number: "2",
+    title: "Concept Development",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo lacus ornare in habitant dui augue in lectus. Non ultricies diam egestas suspendisse viverra commodo ut feugiat. Maecenas cursus dictum diam sapien nunc. In.",
+  },
+  {
+    number: "3",
+    title: "Design Refinement and Revisions",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo lacus ornare in habitant dui augue in lectus. Non ultricies diam egestas suspendisse viverra commodo ut feugiat. Maecenas cursus dictum diam sapien nunc. In.",
+  },
+  {
+    number: "4",
+    title: "Finalization and Delivery",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo lacus ornare in habitant dui augue in lectus. Non ultricies diam egestas suspendisse viverra commodo ut feugiat. Maecenas cursus dictum diam sapien nunc. In.",
+  },
+];
+const DesignPackageData = [
+  {
+    packageName: "Basic Package",
+    packageNameColor: "#DA9E2E",
+    recommended: "none",
+    recommendedText: "Recommended For You",
+    price: "₹2000",
+    overviewtext:
+      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    link: "/",
+    boxData: [
+      {
+        boxHeight: "18",
+        boxPointData: [
+          {
+            points: "1 initial logo concept",
+            boxPointTooltipText: "new",
+            TooltipShow: "block",
+          },
+          {
+            points: "2 rounds of revisions",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "High-resolution PNG and JPEG files",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "Delivery time: 3-5 business days",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    packageName: "Standard Package",
+    packageNameColor: "#439DD3",
+    recommended: "block",
+    recommendedText: "Recommended For You",
+    price: "₹2000",
+    overviewtext:
+      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    link: "/",
+    boxData: [
+      {
+        boxHeight: "18",
+        boxPointData: [
+          {
+            points: "1 initial logo concept",
+            boxPointTooltipText: "new",
+            TooltipShow: "block",
+          },
+          {
+            points: "2 rounds of revisions",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points:
+              "High-resolution PNG, JPEG, and vector files (AI, EPS, PDF)",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "Brand style guide with color palette and font selection",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "Delivery time: 5-7 business days",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    packageName: "Premium Package",
+    packageNameColor: "#D86161",
+    recommended: "none",
+    recommendedText: "Recommended For You",
+    price: "₹2000",
+    overviewtext:
+      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ut dapibus pulvinar lacus amet",
+    link: "/",
+    boxData: [
+      {
+        boxHeight: "18",
+        boxPointData: [
+          {
+            points: "5 initial logo concepts",
+            boxPointTooltipText: "new",
+            TooltipShow: "block",
+          },
+          {
+            points: "Unlimited revisions",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points:
+              "High-resolution PNG, JPEG, and vector files (AI, EPS, PDF)",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "Brand style guide with color palette, font selection",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "Stationery design (business card, letterhead, envelope)",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+          {
+            points: "Delivery time: 7-10 business days",
+            boxPointTooltipText: "new",
+            TooltipShow: "none",
+          },
+        ],
+      },
+    ],
+  },
+];
+const LogoTemplateData = [
+  {
+    title: "Select Logo Template",
+    LogoData: [
+      {
+        logoImg: LogoTemplateImg,
+        logoTitle: "Food Logo",
+        link: "/logo_inner_page",
+      },
+      {
+        logoImg: LogoTemplateImg2,
+        logoTitle: "Fitness Logo",
+        link: "/logo_inner_page",
+      },
+      {
+        logoImg: LogoTemplateImg3,
+        logoTitle: "Construction Logo",
+        link: "/logo_inner_page",
+      },
+      {
+        logoImg: LogoTemplateImg4,
+        logoTitle: "Fashion Logo",
+        link: "/logo_inner_page",
+      },
+    ],
+  },
+];
 //
+const PageRightFiltersData = [
+  {
+    boxTitle: "Style",
+    boxEventKey: "0",
+    OptionListData: [
+      {
+        label: "Modern",
+      },
+      {
+        label: "Minimalist",
+      },
+      {
+        label: "Simple",
+      },
+      {
+        label: "Elegant",
+      },
+      {
+        label: "Creative",
+      },
+      {
+        label: "Elegant",
+      },
+      {
+        label: "Creative",
+      },
+    ],
+  },
+];
+const SearchResultiIemsData = [
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+  {
+    title: "Fitness Logo",
+  },
+];
 const TopLinkData = [
   {
     linkName: "Logo",
@@ -29,35 +307,35 @@ const TopLinkData = [
   {
     linkName: "Business Essentials",
     linkIcon: D2,
-    link: "/",
+    link: "/business-essentials",
     activeNav: "none",
     linkNameColor: "",
   },
   {
     linkName: "Marketing",
     linkIcon: D3,
-    link: "/",
+    link: "/marketing",
     activeNav: "none",
     linkNameColor: "",
   },
   {
     linkName: "Social Media",
     linkIcon: D4,
-    link: "/",
+    link: "/Social_Media_Design",
     activeNav: "none",
     linkNameColor: "",
   },
   {
     linkName: "Landing Page",
     linkIcon: D5,
-    link: "/",
+    link: "/landing_page",
     activeNav: "none",
     linkNameColor: "",
   },
   {
     linkName: "Website Templates",
     linkIcon: D6,
-    link: "/",
+    link: "/website_templates",
     activeNav: "none",
     linkNameColor: "",
   },
@@ -65,7 +343,7 @@ const TopLinkData = [
 export const Design = () => {
   return (
     <>
-      <div className=" creation_and_growth_top_div mb-2 design_filter">
+      <div className="creation_and_growth_top_div mb-2 design_filter">
         <div className=" container">
           <div className="row g-3">
             <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 order-lg-1 order-2  ">
@@ -91,120 +369,31 @@ export const Design = () => {
               </div>
             </div>
             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12  design_filter_btn_top_div  order-lg-2 order-1 ">
-              <PageRightFilters />
+              <PageRightFilters Data={PageRightFiltersData} />
             </div>
           </div>
         </div>
       </div>
-    </>
-  );
-};
-const PageRightFilters = () => {
-  const [showFilters, setShowFilters] = React.useState(false);
-  const [showMore, setShowMore] = React.useState(false);
-  const FiltersItemboxData = [
-    {
-      boxTitle: "Style",
-      boxEventKey: "0",
-      OptionListData: [
-        {
-          label: "Modern",
-        },
-        {
-          label: "Minimalist",
-        },
-        {
-          label: "Simple",
-        },
-        {
-          label: "Elegant",
-        },
-        {
-          label: "Creative",
-        },
-        {
-          label: "Elegant",
-        },
-        {
-          label: "Creative",
-        },
-      ],
-    },
-  ];
-  return (
-    <>
-      <div className="design_filter_new_btn_div">
-        <button
-          className="design_filter_btn"
-          onClick={() => setShowFilters(true)}
-        >
-          <img src={FilterIcon} alt="icon" /> Filters
-        </button>
-        <Drawer
-          anchor="right"
-          open={showFilters}
-          onClose={() => setShowFilters(false)}
-          className="filter_new_top_div_mobile"
-        >
-          <Box role="presentation" className="filter_new_top_div">
-            <IoCloseSharp onClick={() => setShowFilters(false)} />
-            <div className="row mt-3 mb-4">
-              <div className="col-6">
-                <p className="filter_title_1">All Filters</p>
-              </div>
-              <div className="col-6 text-end">
-                <p className="filter_title_2">Clear All</p>
-              </div>
-            </div>
-            <div className="filter_new_top_div_inner">
-              <Accordion alwaysOpen>
-                {FiltersItemboxData.map((val, i) => (
-                  <Accordion.Item eventKey={val.boxEventKey} key={i}>
-                    <Accordion.Header>{val.boxTitle}</Accordion.Header>
-                    <Accordion.Body>
-                      <div>
-                        <FormGroup>
-                          {val.OptionListData.slice(
-                            0,
-                            showMore ? undefined : 3
-                          ).map((val, i) => (
-                            <FormControlLabel
-                              key={i}
-                              control={<Checkbox />}
-                              className="text-animation"
-                              label={val.label}
-                            />
-                          ))}
-                          <p
-                            className="filter_aad_more_btn"
-                            onClick={() => setShowMore(!showMore)}
-                          >
-                            <span>{showMore ? <BiMinus /> : <BiPlus />}</span>
-                            View {showMore ? "Less" : "More"}
-                          </p>
-                        </FormGroup>
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                ))}
-              </Accordion>
-            </div>
-            <div className=" mt-4 d-flex justify-content-center align-items-center">
-              <div className=" me-3">
-                <button className="filter_apply_btn">Apply</button>
-              </div>
-              <div className="add_project_modal_btn_one">
-                <button
-                  className="filter_close_btn"
-                  onClick={() => setShowFilters(false)}
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </Box>
-        </Drawer>
-      </div>
+      <SearchBar Data={SearchResultiIemsData} />
+      <LogoTemplateApp Data={LogoTemplateData} />
+      <DesignPackage
+        Data={DesignPackageData}
+        PackageTitle="Flexi Plans For Your Custom Logo"
+      />
+      <LogoBrand
+        Data={LogoBrandData}
+        LogoBrandTitle="How We Create a Logo for Your Brand"
+        LogoBrandTitle2="To make your customized logo, we follow these 4 simple steps"
+      />
+      <DesignBlogsList
+        Data={BlogCardData}
+        blogTitle="Design the best logo for your brand"
+      />
+      <Faqs catId={2} />
+      <FooterContact
+        title="Not finding what you are looking for?"
+        title2="Let Us Find It For You"
+      />
     </>
   );
 };

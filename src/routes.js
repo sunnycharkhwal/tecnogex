@@ -57,6 +57,12 @@ import { HostingNew } from "./Modules/Maxlence/pages/Hosting";
 import { Gmb } from "./Modules/Maxlence/pages/Gmb";
 import { Cro } from "./Modules/Maxlence/pages/Cro";
 import { ThankYou } from "./Modules/Maxlence/pages/ThankYou";
+import { BusinessEssentials } from "./Modules/Maxlence/pages/BusinessEssentials";
+import { Marketing } from "./Modules/Maxlence/pages/Marketing";
+import { SocialMediaDesign } from "./Modules/Maxlence/pages/SocialMediaDesign";
+import { LandingPage } from "./Modules/Maxlence/pages/LandingPage";
+import { WebsiteTemplates } from "./Modules/Maxlence/pages/WebsiteTemplates";
+import { LogoInnerPage } from "./Modules/Maxlence/pages/LogoInnerPage";
 const Page = (props) => (
   <>
     <Helmet>
@@ -521,6 +527,54 @@ export default [
     element: (
       <Page title="Thank you page">
         <ThankYou />
+      </Page>
+    ),
+  },
+  {
+    path: "/business-essentials",
+    element: (
+      <Page title="business essentials">
+        <BusinessEssentials />
+      </Page>
+    ),
+  },
+  {
+    path: "/marketing",
+    element: (
+      <Page title="marketing">
+        <Marketing />
+      </Page>
+    ),
+  },
+  {
+    path: "/Social_Media_Design",
+    element: (
+      <Page title="Social Media Design">
+        <SocialMediaDesign />
+      </Page>
+    ),
+  },
+  {
+    path: "/landing_page",
+    element: (
+      <Page title="landing page">
+        <LandingPage />
+      </Page>
+    ),
+  },
+  {
+    path: "/website_templates",
+    element: (
+      <Page title="website templates">
+        <WebsiteTemplates />
+      </Page>
+    ),
+  },
+  {
+    path: "/logo_inner_page",
+    element: (
+      <Page title="logo inner page">
+        <LogoInnerPage />
       </Page>
     ),
   },
