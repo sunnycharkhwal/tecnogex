@@ -6,6 +6,58 @@
   }
 }
 @media (max-width: 576px) {
+  .design_package_top {
+    margin-top: 2rem;
+  }
+  .business_details_modal_form {
+    small {
+      font-size: 14px;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+  }
+  .business_details_modal_upload_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  .business_details_modal_form {
+    width: 95%;
+    label {
+      font-size: 15px;
+    }
+  }
+  .select_logo_template_inner_modal_item2 {
+    .select_logo_template_img_overlay {
+      height: 125px;
+    }
+  }
+  .select_logo_inner_modal_Details {
+    width: 100%;
+  }
+  .select_logo_template_inner_modal_div {
+    width: 95%;
+    height: 30rem;
+  }
+  .select_logo_template_inner_modal_item2 {
+    .select_logo_template_img_overlay {
+      p {
+        font-size: 14px;
+      }
+      img {
+        width: 100px;
+      }
+    }
+  }
+  .select_logo_template_inner_modal_item {
+    .select_logo_template_img_div {
+      height: 125px;
+    }
+  }
   .design_inner_page_tab {
     .nav-link {
       width: 10rem;
@@ -1299,6 +1351,13 @@
   }
 }
 @media (min-width: 768px) {
+  .business_details_modal_form {
+    width: 90%;
+  }
+  .select_logo_template_inner_modal_div {
+    width: 90%;
+    height: 30rem;
+  }
   .design_inner_page_tab {
     .nav-link {
       font-size: 14px;
@@ -1755,6 +1814,13 @@
   }
 }
 @media (min-width: 1024px) {
+  .business_details_modal_form {
+    width: 80%;
+  }
+  .select_logo_template_inner_modal_div {
+    width: 70%;
+    height: 30rem;
+  }
   .design_inner_page_tab {
     .nav-link {
       font-size: 16px;
@@ -2278,6 +2344,13 @@
   }
 }
 @media (min-width: 1440px) {
+  .business_details_modal_form {
+    width: 50%;
+  }
+  .select_logo_template_inner_modal_div {
+    width: 50%;
+    height: 30rem;
+  }
   .select_logo_template_img_overlay {
     p {
       font-size: 20px;
