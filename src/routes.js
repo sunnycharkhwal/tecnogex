@@ -63,6 +63,7 @@ import { SocialMediaDesign } from "./Modules/Maxlence/pages/SocialMediaDesign";
 import { LandingPage } from "./Modules/Maxlence/pages/LandingPage";
 import { WebsiteTemplates } from "./Modules/Maxlence/pages/WebsiteTemplates";
 import { LogoInnerPage } from "./Modules/Maxlence/pages/LogoInnerPage";
+import { BlogDetailPage } from "./Modules/Maxlence/pages/BlogDetailPage";
 const Page = (props) => (
   <>
     <Helmet>
@@ -575,6 +576,14 @@ export default [
     element: (
       <Page title="logo inner page">
         <LogoInnerPage />
+      </Page>
+    ),
+  },
+  {
+    path: "/blog_Detail",
+    element: (
+      <Page title="Blog Detail Page">
+        <BlogDetailPage />
       </Page>
     ),
   },

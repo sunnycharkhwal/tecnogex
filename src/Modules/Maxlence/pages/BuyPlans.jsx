@@ -630,7 +630,7 @@ export const BuyPlans = () => {
       </>
     );
   };
-  return <>{showEndPage ? <Package /> : <Package />}</>;
+  return <>{showEndPage ? <End /> : <Package />}</>;
 };
 
 const Package = () => {
