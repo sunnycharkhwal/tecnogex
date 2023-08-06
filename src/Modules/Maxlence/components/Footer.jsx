@@ -88,6 +88,11 @@ export const Footer = () => {
                     <NavLink to="/ThankYou">Thank you page</NavLink>
                   </Nav.Link>
                 </li>
+                <li>
+                  <Nav.Link>
+                    <NavLink to="/error">Error Page</NavLink>
+                  </Nav.Link>
+                </li>
               </ul>
             </div>
             <div className="col-xxl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-12 col-12 ">

@@ -3668,7 +3668,7 @@ ul {
 // Maintenance end
 // about slaider new
 .About_slaider_topdiav {
-  display: flex;
+  display: flex !important;
   justify-self: center;
   align-items: center;
   padding-left: 3rem;
@@ -5934,3 +5934,93 @@ ul {
   margin: 5px 0;
 }
 // blog Detail page
+// Error
+.error_section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.error_img_col {
+  display: flex;
+  justify-content: flex-end;
+}
+.error_img {
+  @include bg_img;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.error_col_text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.error_text_div {
+  h1 {
+    color: #212529;
+    font-family: Raleway;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 47px; /* 97.917% */
+    letter-spacing: 0.48px;
+    text-transform: capitalize;
+  }
+  h3 {
+    color: #212529;
+    font-family: Raleway;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 47px; /* 130.556% */
+    letter-spacing: 0.36px;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: #3f3f3f;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    margin-bottom: 0;
+  }
+}
+.error_btn_div {
+  margin-top: 1.5rem;
+  .BlueBtn {
+    width: 12rem;
+  }
+}
+// Error end
+// about slider
+.about_year_slider {
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider_dote_p {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Poppins";
+  }
+  .slick-dots {
+    li {
+      width: 5rem;
+    }
+  }
+  .slick-active {
+    .slider_dote_p {
+      margin-bottom: 0;
+      background: #0976e4;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: "Poppins";
+      border-radius: 6px;
+    }
+  }
+}

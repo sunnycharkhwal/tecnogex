@@ -64,6 +64,7 @@ import { LandingPage } from "./Modules/Maxlence/pages/LandingPage";
 import { WebsiteTemplates } from "./Modules/Maxlence/pages/WebsiteTemplates";
 import { LogoInnerPage } from "./Modules/Maxlence/pages/LogoInnerPage";
 import { BlogDetailPage } from "./Modules/Maxlence/pages/BlogDetailPage";
+import { Error } from "./Modules/Maxlence/pages/Error";
 const Page = (props) => (
   <>
     <Helmet>
@@ -584,6 +585,14 @@ export default [
     element: (
       <Page title="Blog Detail Page">
         <BlogDetailPage />
+      </Page>
+    ),
+  },
+  {
+    path: "/error",
+    element: (
+      <Page title="Blog Detail Page">
+        <Error />
       </Page>
     ),
   },

@@ -6,6 +6,29 @@
   }
 }
 @media (max-width: 576px) {
+  .About_slaider_inner {
+    padding-left: 0;
+    h3 {
+      font-size: 28px;
+    }
+    p {
+      line-height: 21px;
+    }
+  }
+  .About_slaider_topdiav {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  .error_text_div {
+    text-align: center;
+  }
+  .error_col_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .design_filter_new_btn_div {
     margin-bottom: 0;
   }
@@ -1380,6 +1403,14 @@
   }
 }
 @media (min-width: 768px) {
+  .error_text_div {
+    text-align: center;
+  }
+  .error_col_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .blog_detail_main_div {
     padding: 0 3rem;
   }
@@ -1563,7 +1594,9 @@
     font-size: 60px;
   }
   .About_slaider_topdiav {
-    display: block;
+    display: block !important;
+    text-align: center;
+    margin-bottom: 2rem;
   }
   .maintenance_provide_title_top_div {
     padding: 0 0;
@@ -1846,6 +1879,14 @@
   }
 }
 @media (min-width: 1024px) {
+  .error_text_div {
+    text-align: left;
+  }
+  .error_col_text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   .blog_detail_main_div {
     padding: 0 8rem;
   }
@@ -2062,7 +2103,9 @@
   }
 
   .About_slaider_topdiav {
-    display: flex;
+    display: flex !important;
+    text-align: unset;
+    margin-bottom: unset;
   }
   .About_slaider_years {
     font-size: 100px;

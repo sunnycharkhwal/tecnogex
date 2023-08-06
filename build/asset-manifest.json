@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba61ba33.css",
-    "main.js": "/static/js/main.5309795f.js",
+    "main.css": "/static/css/main.b63b4d11.css",
+    "main.js": "/static/js/main.03d35439.js",
     "static/media/h1.svg": "/static/media/h1.08114ca8bb44de6c8d3506da6d0a87e6.svg",
     "static/media/h4.svg": "/static/media/h4.06b59d476565380c5e33ea76296a419e.svg",
     "static/media/indexVideo.mp4": "/static/media/indexVideo.90057a7927b4f8e7630a.mp4",
@@ -84,6 +84,7 @@
     "static/media/gmb9.svg": "/static/media/gmb9.092fff193823331cf9f0eb97a5f54309.svg",
     "static/media/business2second.png": "/static/media/business2second.c27c85411fdb30bcf3cc.png",
     "static/media/maxlenceintroimg.png": "/static/media/maxlenceintroimg.5d0ea4fea7f6b28462c9.png",
+    "static/media/404.svg": "/static/media/404.a894a1bcfc74fbaae0d7a2b9dba26dfc.svg",
     "static/media/homehero2.png": "/static/media/homehero2.ac83846c4fb37c836c26.png",
     "static/media/socialmediamarketing.jpg": "/static/media/socialmediamarketing.73fb04de7e5ae1199f52.jpg",
     "static/media/formtrackerhead.jpg": "/static/media/formtrackerhead.466661c5665de75f6689.jpg",
@@ -237,16 +238,14 @@
     "static/media/d6.svg": "/static/media/d6.8bddbb30bcb98b3820587bccd66c7d7c.svg",
     "static/media/copy.svg": "/static/media/copy.43b499c714ce1a8fbbf98ec420521962.svg",
     "static/media/dtArrow2.svg": "/static/media/dtArrow2.9234ab4fe7ec42cff25ce0637b15676e.svg",
-    "static/media/down.svg": "/static/media/down.06c5c03668e936c7d1271ea000db87bc.svg",
     "static/media/desktop.svg": "/static/media/desktop.298ad33f7796a12e50ad87927195201a.svg",
-    "static/media/up.svg": "/static/media/up.dea2b007b41a1e7e9830771a58eb3be1.svg",
     "static/media/quote.svg": "/static/media/quote.dcfcfda8f29f329a619eb1531f353eda.svg",
     "static/media/indexUp.svg": "/static/media/indexUp.b8803d69b7e6012d4d2608a4ae9e783e.svg",
-    "main.ba61ba33.css.map": "/static/css/main.ba61ba33.css.map",
-    "main.5309795f.js.map": "/static/js/main.5309795f.js.map"
+    "main.b63b4d11.css.map": "/static/css/main.b63b4d11.css.map",
+    "main.03d35439.js.map": "/static/js/main.03d35439.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba61ba33.css",
-    "static/js/main.5309795f.js"
+    "static/css/main.b63b4d11.css",
+    "static/js/main.03d35439.js"
   ]
 }
