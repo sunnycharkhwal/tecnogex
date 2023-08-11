@@ -9,6 +9,9 @@ import ScrollToTop from "react-scroll-to-top";
 import { FaChevronUp } from "react-icons/fa";
 import RoutesList from "./routes";
 import { Cookies } from "./Modules/Maxlence/components/Cookies";
+//
+
+//
 export const App = () => {
   return (
     <React.StrictMode>

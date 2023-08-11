@@ -26,7 +26,14 @@ import { setShowCheckYourEmailModal } from "../redux/modalStateSlice";
 import { setShowPasswordResetModal } from "../redux/modalStateSlice";
 import { setNewPasswordModal } from "../redux/modalStateSlice";
 import { useNavigate } from "react-router-dom";
+import { TopNav } from "./TopNav";
+import C from "../../../img/c.mp4";
+import Ec from "../../../img/ec.gif";
+import LogoVido from "../../../img/logo.gif";
+import SMM from "../../../img/smm.gif";
+import { BsArrowRight } from "react-icons/bs";
 
+//
 export const Header = () => {
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
   const showSignUpModal = useSelector((state) => state.state.showSignUpModal);
@@ -166,17 +173,19 @@ export const Header = () => {
 
     return (
       <>
-        <AccountMenu />
+        {/* <AccountMenu /> */}
 
         {token ? (
           <AccountMenu />
         ) : (
-          <OutlineBtn
-            title="Log In"
-            icon=""
-            // onClick={() => setShowLoginModal(true)}
-            onClick={() => dispatch(setShowLoginModal())}
-          />
+          <div className="nav_login_btn_mobile">
+            <OutlineBtn
+              title="Log In"
+              icon=""
+              // onClick={() => setShowLoginModal(true)}
+              onClick={() => dispatch(setShowLoginModal())}
+            />
+          </div>
         )}
 
         <Modal
@@ -940,199 +949,168 @@ export const Header = () => {
       <>
         <HiOutlineMenuAlt2
           className="mx-2"
-          style={{ width: "2rem" }}
+          style={{ width: "2rem", cursor: "pointer" }}
           onClick={() => dispatch(setShowMenuModal())}
         />
         <Modal
-          className="menumodal fullwidthmodal"
+          className=" fullwidthmodal"
           show={showMenuModal}
           onHide={() => dispatch(setShowMenuModal())}
         >
-          <Modal.Header closeButton className="border-0"></Modal.Header>
-          <Modal.Body className="p-0">
-            <div className="row h-100 align-items-center">
-              <div className="col-md-6 menuleft">
-                <div className="menulinks">
-                  <Nav
-                    className="ms-auto my-2 my-lg-0 align-items-center"
-                    navbarScroll
-                  >
-                    <Nav.Link
-                      onClick={() => {
-                        dispatch(setShowMenuModal());
-                        navigate("/creation");
-                      }}
-                    >
-                      Creation
-                    </Nav.Link>
-                    <Nav.Link
-                      onClick={() => {
-                        dispatch(setShowMenuModal());
-                        navigate("/growth");
-                      }}
-                    >
-                      Growth
-                    </Nav.Link>
-                    <Nav.Link
-                      onClick={() => {
-                        dispatch(setShowMenuModal());
-                        navigate("/design");
-                      }}
-                    >
-                      Design
-                    </Nav.Link>
-                    <NavDropdown title="Business" id="navbarScrollingDropdown">
-                      <NavDropdown.Item
-                        onClick={() => {
-                          dispatch(setShowMenuModal());
-                          navigate("/business1");
-                        }}
-                      >
-                        Business1
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        onClick={() => {
-                          dispatch(setShowMenuModal());
-                          navigate("/business2");
-                        }}
-                      >
-                        Business 2
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                    <NavDropdown title="Resources" id="navbarScrollingDropdown">
-                      <NavDropdown.Item
+          <Modal.Body className="p-0 nav_munu_div">
+            <Modal.Header closeButton className=" header"></Modal.Header>
+            <div className="nav_menu_div">
+              <div className="nav_menu_1">
+                <div className="nav_menu_1_inner">
+                  <ul>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
                           navigate("/design_inspiration");
                         }}
                       >
-                        Design Inspiration
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
+                        Design inspiration
+                      </p>
+                    </li>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
                           navigate("/brochure");
                         }}
                       >
-                        Brochure
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
+                        brochure
+                      </p>
+                    </li>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
-                          navigate("/case_study");
+                          navigate("/case-study");
                         }}
                       >
-                        Case Study
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
+                        case study
+                      </p>
+                    </li>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
                           navigate("/blogs");
                         }}
                       >
-                        Blogs
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                    <NavDropdown
-                      title="Enterprise"
-                      id="navbarScrollingDropdown"
-                    >
-                      <NavDropdown.Item
+                        blogs
+                      </p>
+                    </li>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
-                          navigate("/Seo_service");
+                          navigate("/about_us");
                         }}
                       >
-                        SEO Service
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
+                        About Us
+                      </p>
+                    </li>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
-                          navigate("/google_ads_service");
+                          navigate("/testimonial");
                         }}
                       >
-                        Google Ads Service
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
+                        Testimonials
+                      </p>
+                    </li>
+                    <li>
+                      <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
-                          navigate("/social_media_service");
+                          navigate("/careers");
                         }}
                       >
-                        Social Media Service
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                    <Nav.Link
+                        Careers
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/support");
+                        }}
+                      >
+                        support
+                      </p>
+                    </li>
+                  </ul>
+                  <div className="nav_menu_1_inner_div">
+                    <p
                       onClick={() => {
                         dispatch(setShowMenuModal());
-                        navigate("/shop");
+                        navigate("/getintouch");
                       }}
                     >
-                      Shop
-                    </Nav.Link>
-                    <NavDropdown title="Solutions" id="navbarScrollingDropdown">
-                      <NavDropdown.Item
-                        onClick={() => {
-                          dispatch(setShowMenuModal());
-                          navigate("/api_integration");
-                        }}
-                      >
-                        API Integration
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        onClick={() => {
-                          dispatch(setShowMenuModal());
-                          navigate("/form_tracker");
-                        }}
-                      >
-                        Form Tracker
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        onClick={() => {
-                          dispatch(setShowMenuModal());
-                          navigate("/review_tracker");
-                        }}
-                      >
-                        Review Tracker
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        onClick={() => {
-                          dispatch(setShowMenuModal());
-                          navigate("/agencies");
-                        }}
-                      >
-                        Agencies
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                  </Nav>
+                      get in touch
+                    </p>
+                    <p
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/privacy_policy");
+                      }}
+                    >
+                      privacy policy
+                    </p>
+                    <p
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/refund_policy");
+                      }}
+                    >
+                      refund policy
+                    </p>
+                    <p
+                      onClick={() => {
+                        dispatch(setShowMenuModal());
+                        navigate("/terms_conditions");
+                      }}
+                    >
+                      terms conditions
+                    </p>
+                  </div>
+                  <div className="nav_menu_1_bottom">
+                    <a
+                      href="https://www.facebook.com/people/TecnoGex/100091787680738/"
+                      target="new"
+                    >
+                      facebook
+                    </a>
+                    <a
+                      href="https://www.instagram.com/tecnogexofficial/?igshid=YmMyMTA2M2Y%3D"
+                      target="new"
+                    >
+                      Instagram
+                    </a>
+                    <a href="https://twitter.com/tecnogex_" target="new">
+                      Twitter
+                    </a>
+                  </div>
                 </div>
               </div>
-
-              <div className="col-md-6 menuright">
-                <Container>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="row d-flex flex-column justify-content-center align-items-center ">
-                        <div className="col-md-8 col-sm-12 col-12 my-4 signformstart text-center">
-                          <h1 className="mobile_nav_div_text">
-                            We’d love to be your partner
-                          </h1>
-                        </div>
-                        <div className="col-12 mobile_nav_div">
-                          <button
-                            onClick={() => {
-                              dispatch(setShowMenuModal());
-                              navigate("/getintouch");
-                            }}
-                            className=" getstartbtn"
-                          >
-                            Get In Touch
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Container>
+              <div className="nav_menu_2">
+                <div className="nav_menu_inner_2">
+                  <h3>
+                    We’d love to be <br /> your partner
+                  </h3>
+                  <button
+                    onClick={() => {
+                      dispatch(setShowMenuModal());
+                      navigate("/getintouch");
+                    }}
+                  >
+                    Get In Touch <BsArrowRight />
+                  </button>
+                </div>
               </div>
             </div>
           </Modal.Body>
@@ -1141,97 +1119,530 @@ export const Header = () => {
     );
   };
   const navigate = useNavigate();
+  //
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsSticky(window.scrollY > 50);
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Don't forget to remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  //
   return (
-    <Container
-      fluid
-      bg="light"
-      className="navbarmain  px-xl-5  px-lg-3 px-md-5 "
-    >
-      <Navbar expand="lg">
-        <Navbar.Brand className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 m-0 ">
-          <NavLink to="/">
-            <img width="100%" src={HeaderLogo} alt="companylogo" />
-          </NavLink>
-        </Navbar.Brand>
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="mx-3 w-100 justify-content-around my-2 my-lg-0 align-items-center"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Nav.Link onClick={() => navigate("/creation")}>Creation</Nav.Link>
-            <Nav.Link onClick={() => navigate("/growth")}>Growth</Nav.Link>
-            <Nav.Link onClick={() => navigate("/design")}>Design</Nav.Link>
-            <NavDropdown title="Business" id="navbarScrollingDropdown">
-              <NavDropdown.Item onClick={() => navigate("/business1")}>
-                Business1
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/business2")}>
-                Business 2
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Resources" id="navbarScrollingDropdown">
-              <NavDropdown.Item onClick={() => navigate("/design_inspiration")}>
-                Design Inspiration
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/brochure")}>
-                Brochure
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/case_study")}>
-                Case Study
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/blogs")}>
-                Blogs
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Enterprise" id="navbarScrollingDropdown">
-              <NavDropdown.Item onClick={() => navigate("/Seo_service")}>
-                SEO Service
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/google_ads_service")}>
-                Google Ads Service
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => navigate("/social_media_service")}
+    <div className={`navbar ${isSticky ? "sticky" : ""}`}>
+      <TopNav />
+      <Container
+        fluid
+        bg="light"
+        className="navbarmain  px-xl-5  px-lg-3 px-md-5 "
+      >
+        <Navbar expand="lg">
+          <Navbar.Brand className=" col-md-2 col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 m-0 ">
+            <NavLink to="/">
+              <img width="100%" src={HeaderLogo} alt="companylogo" />
+            </NavLink>
+          </Navbar.Brand>
+          <Navbar.Collapse id="navbarScroll">
+            <Nav className="new_nav_div" navbarScroll>
+              <li class="nav-item dropdown new_nav_li_one">
+                <p
+                  class="nav-link dropdown-toggle nav_drop_title"
+                  data-bs-toggle="dropdown"
+                  onClick={() => navigate("/creation")}
+                >
+                  Creation
+                </p>
+                <div className="dropdown-menu fade-up drop_menu_div_new creation_dropDown">
+                  <div className="drop_menu_inner_div drop_menu_div">
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/website/6")}
+                        >
+                          <p>Website Design</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/website_redesign")}
+                        >
+                          <p>Website Re-Design</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/maintenance")}
+                        >
+                          <p>Maintenance</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/hosting")}
+                        >
+                          <p>hosting</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="drop_video_div">
+                    <video
+                      loop
+                      autoPlay
+                      muted
+                      src={C}
+                      alt="dasboard agency"
+                      className="drop_gif_mar"
+                      type="video/mp4"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <p
+                  class="nav-link dropdown-toggle nav_drop_title"
+                  data-bs-toggle="dropdown"
+                  onClick={() => navigate("/growth")}
+                >
+                  growth
+                </p>
+                <div className="dropdown-menu fade-up drop_menu_div_new drop_menu_div_growth">
+                  <div className="drop_menu_inner_div drop_menu_div">
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/google_ads")}
+                        >
+                          <p>Google Ads</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/cro")}
+                        >
+                          <p>cro</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/social_media_marketing")}
+                        >
+                          <p>Social Media</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/seo")}
+                        >
+                          <p>seo</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/gmb")}
+                        >
+                          <p>gmb</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/video_marketing")}
+                        >
+                          <p>Video Marketing</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/email_marketing")}
+                        >
+                          <p>Email Marketing</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="drop_video_div">
+                    <img src={SMM} alt="img" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <p
+                  class="nav-link dropdown-toggle nav_drop_title"
+                  data-bs-toggle="dropdown"
+                  onClick={() => navigate("/design")}
+                >
+                  design
+                </p>
+                <div className="dropdown-menu fade-up drop_menu_div_new drop_menu_div_design">
+                  <div className="drop_menu_inner_div drop_menu_div">
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/design")}
+                        >
+                          <p>logo</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/business-essentials")}
+                        >
+                          <p>Business Essentials</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/marketing")}
+                        >
+                          <p>Marketing</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/Social_Media_Design")}
+                        >
+                          <p>Social Media</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/landing_page")}
+                        >
+                          <p>Landing Page</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/website_templates")}
+                        >
+                          <p>Website Templates</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="drop_video_div">
+                    <img src={LogoVido} alt="gif" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <p
+                  class="nav-link dropdown-toggle nav_drop_title"
+                  data-bs-toggle="dropdown"
+                >
+                  Business
+                </p>
+                <div className="dropdown-menu fade-up drop_menu_div_new drop_menu_div_business">
+                  <div className="drop_menu_inner_div drop_menu_div">
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/business1")}
+                        >
+                          <p>business 1</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/business2")}
+                        >
+                          <p>business 2</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="drop_video_div">
+                    <img src={Ec} alt="gif" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <p
+                  class="nav-link dropdown-toggle nav_drop_title"
+                  data-bs-toggle="dropdown"
+                >
+                  Enterprise
+                </p>
+                <div className="dropdown-menu fade-up drop_menu_div_new enterprise_dropDown">
+                  <div className="drop_menu_inner_div drop_menu_div">
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/Seo_service")}
+                        >
+                          <p>SEO Service</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/google_ads_service")}
+                        >
+                          <p>Google Ads Service</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/social_media_service")}
+                        >
+                          <p> Social Media Service</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/mobile_app")}
+                        >
+                          <p>mobile app</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/saas")}
+                        >
+                          <p>SaaS</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="drop_video_div">
+                    <video
+                      loop
+                      autoPlay
+                      muted
+                      src={C}
+                      alt="dasboard agency"
+                      className="drop_gif_mar"
+                      type="video/mp4"
+                    />
+                  </div>
+                </div>
+              </li>
+              <Nav.Link
+                className="new_nav_li_shop"
+                onClick={() => navigate("/shop")}
               >
-                Social Media Service
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/mobile_app")}>
-                mobile app
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/saas")}>
-                SaaS
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link onClick={() => navigate("/shop")}>Shop</Nav.Link>
-            <NavDropdown title="Solutions" id="navbarScrollingDropdown">
-              <NavDropdown.Item onClick={() => navigate("/api_integration")}>
-                API Integration
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/form_tracker")}>
-                Form Tracker
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/review_tracker")}>
-                Review Tracker
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => navigate("/agencies")}>
-                Agencies
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-        <Nav className="d-flex flex-row align-items-center justify-content-around">
-          <SignUpmodal />
-          <span className=" d-block d-xxl-none d-xl-none d-lg-none">
+                Shop
+              </Nav.Link>
+              <li class="nav-item dropdown">
+                <p
+                  class="nav-link dropdown-toggle nav_drop_title"
+                  data-bs-toggle="dropdown"
+                >
+                  Solutions
+                </p>
+                <div className="dropdown-menu fade-up drop_menu_div_new resources_dropDown">
+                  <div className="drop_menu_inner_div drop_menu_div">
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/api_integration")}
+                        >
+                          <p>API Integration</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/form_tracker")}
+                        >
+                          <p>Form Tracker</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/review_tracker")}
+                        >
+                          <p>Review Tracker</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul className="drop_link_div_ul">
+                      <li className="drop_link_div">
+                        <div
+                          className="inner_div"
+                          onClick={() => navigate("/agencies")}
+                        >
+                          <p>Agencies</p>
+                          <span>
+                            Discover all the ways you can create and design your
+                            website on tecnogex.
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="drop_video_div">
+                    <video
+                      loop
+                      autoPlay
+                      muted
+                      src={C}
+                      alt="dasboard agency"
+                      className="drop_gif_mar"
+                      type="video/mp4"
+                    />
+                  </div>
+                </div>
+              </li>
+            </Nav>
+          </Navbar.Collapse>
+          <Nav className="d-flex flex-row align-items-center justify-content-around">
+            <SignUpmodal />
             <MenuModal />
-          </span>
-          <LoginModal />
-          <ForgotModal />
-          <CheckYourEmailModal />
-          <PasswordResetModal />
-          <SetNewPasswordModal />
-        </Nav>
-      </Navbar>
-    </Container>
+            <LoginModal />
+            <ForgotModal />
+            <CheckYourEmailModal />
+            <PasswordResetModal />
+            <SetNewPasswordModal />
+          </Nav>
+        </Navbar>
+      </Container>
+    </div>
   );
 };
