@@ -32,7 +32,12 @@ import Ec from "../../../img/ec.gif";
 import LogoVido from "../../../img/logo.gif";
 import SMM from "../../../img/smm.gif";
 import { BsArrowRight } from "react-icons/bs";
-
+import Dropdown from "react-bootstrap/Dropdown";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillTwitterSquare,
+} from "react-icons/ai";
 //
 export const Header = () => {
   const showLoginModal = useSelector((state) => state.state.showLoginModal);
@@ -969,8 +974,18 @@ export const Header = () => {
                           dispatch(setShowMenuModal());
                           navigate("/design_inspiration");
                         }}
+                        className="d-none d-xxl-block d-xl-block d-lg-block"
                       >
                         Design inspiration
+                      </p>
+                      <p
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/creation");
+                        }}
+                        className="d-block d-xxl-none d-xl-none d-lg-none"
+                      >
+                        creation
                       </p>
                     </li>
                     <li>
@@ -979,21 +994,71 @@ export const Header = () => {
                           dispatch(setShowMenuModal());
                           navigate("/brochure");
                         }}
+                        className="d-none d-xxl-block d-xl-block d-lg-block"
                       >
                         brochure
+                      </p>
+                      <p
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/growth");
+                        }}
+                        className="d-block d-xxl-none d-xl-none d-lg-none"
+                      >
+                        growth
                       </p>
                     </li>
                     <li>
                       <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
-                          navigate("/case-study");
+                          navigate("/case_study");
                         }}
+                        className="d-none d-xxl-block d-xl-block d-lg-block"
                       >
                         case study
                       </p>
+                      <p
+                        onClick={() => {
+                          dispatch(setShowMenuModal());
+                          navigate("/design");
+                        }}
+                        className="d-block d-xxl-none d-xl-none d-lg-none"
+                      >
+                        design
+                      </p>
                     </li>
-                    <li>
+                    <li className="d-block d-xxl-none d-xl-none d-lg-none">
+                      <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                          business
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/business1");
+                              }}
+                            >
+                              business 1
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/business2");
+                              }}
+                            >
+                              business 2
+                            </p>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </li>
+                    <li className="d-none d-xxl-block d-xl-block d-lg-block">
                       <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
@@ -1003,7 +1068,66 @@ export const Header = () => {
                         blogs
                       </p>
                     </li>
-                    <li>
+                    <li className="d-block d-xxl-none d-xl-none d-lg-none">
+                      <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                          Enterprise
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/Seo_service");
+                              }}
+                            >
+                              Seo service
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/google_ads_service");
+                              }}
+                            >
+                              google ads service
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/social_media_service");
+                              }}
+                            >
+                              social media service
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/mobile_app");
+                              }}
+                            >
+                              mobile app
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/saas");
+                              }}
+                            >
+                              saas
+                            </p>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </li>
+                    <li className="d-none d-xxl-block d-xl-block d-lg-block">
                       <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
@@ -1013,7 +1137,56 @@ export const Header = () => {
                         About Us
                       </p>
                     </li>
-                    <li>
+                    <li className="d-block d-xxl-none d-xl-none d-lg-none">
+                      <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                          Solutions
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/api_integration");
+                              }}
+                            >
+                              api integration
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/form_tracker");
+                              }}
+                            >
+                              form tracker
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/review_tracker");
+                              }}
+                            >
+                              review tracker
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/agencies");
+                              }}
+                            >
+                              agencies
+                            </p>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </li>
+                    <li className="d-none d-xxl-block d-xl-block d-lg-block">
                       <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
@@ -1023,7 +1196,7 @@ export const Header = () => {
                         Testimonials
                       </p>
                     </li>
-                    <li>
+                    <li className="d-none d-xxl-block d-xl-block d-lg-block">
                       <p
                         onClick={() => {
                           dispatch(setShowMenuModal());
@@ -1032,6 +1205,55 @@ export const Header = () => {
                       >
                         Careers
                       </p>
+                    </li>
+                    <li className="d-block d-xxl-none d-xl-none d-lg-none">
+                      <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                          resources
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/design_inspiration");
+                              }}
+                            >
+                              design inspiration
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/brochure");
+                              }}
+                            >
+                              brochure
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/case_study");
+                              }}
+                            >
+                              case study
+                            </p>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <p
+                              onClick={() => {
+                                dispatch(setShowMenuModal());
+                                navigate("/blogs");
+                              }}
+                            >
+                              blogs
+                            </p>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
                     </li>
                     <li>
                       <p
@@ -1083,16 +1305,19 @@ export const Header = () => {
                       href="https://www.facebook.com/people/TecnoGex/100091787680738/"
                       target="new"
                     >
-                      facebook
+                      <AiFillFacebook />
+                      <span>facebook</span>
                     </a>
                     <a
                       href="https://www.instagram.com/tecnogexofficial/?igshid=YmMyMTA2M2Y%3D"
                       target="new"
                     >
-                      Instagram
+                      <AiFillInstagram />
+                      <span>Instagram</span>
                     </a>
                     <a href="https://twitter.com/tecnogex_" target="new">
-                      Twitter
+                      <AiFillTwitterSquare />
+                      <span>Twitter</span>
                     </a>
                   </div>
                 </div>
